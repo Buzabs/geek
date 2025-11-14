@@ -1,7 +1,7 @@
 class_name State
 extends Node
 
-@export var movement_speed = 400
+@export var movement_speed = 100
 @export var idle_state: State
 
 var parent: Player
