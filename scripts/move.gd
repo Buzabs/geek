@@ -24,10 +24,10 @@ func process_input(event: InputEvent) -> State:
 	return null
 
 func process_frame(_delta: float) -> State:
-	if dir_x < 0:
-		parent.animations.flip_h = true
-	elif dir_x > 0:
-		parent.animations.flip_h = false
+	if parent.velocity.x < 0:
+		parent.get_node("animation").flip_h = true
+	elif parent.velocity.x > 0:
+		parent.get_node("animation").flip_h = false
 		
 	return null
 	
