@@ -3,7 +3,7 @@ extends State
 @export var move_state: State
 
 func enter() -> void:
-	pass
+	parent.animations.play("default")
 
 func exit() -> void:
 	pass

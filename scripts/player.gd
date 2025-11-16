@@ -4,6 +4,8 @@ extends CharacterBody2D
 @onready var animations = $animation
 @onready var state_machine = $state_machine
 
+var direction: Vector2 = Vector2.ZERO
+
 func _ready() -> void:
 	state_machine.init(self)
 
