@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4ed08hohxhyc"]
+
+[ext_resource type="Script" uid="uid://csab6d5wdhmv3" path="res://equ/itemki.gd" id="1_2jlq7"]
+[ext_resource type="Texture2D" uid="uid://8ef5n47sbvyq" path="res://sprites/do_zdobycia/sus.png" id="2_klp81"]
+
+[node name="Itemki" type="Node2D"]
+script = ExtResource("1_2jlq7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 292.0
+offset_top = 174.0
+offset_right = 332.0
+offset_bottom = 214.0
+texture = ExtResource("2_klp81")

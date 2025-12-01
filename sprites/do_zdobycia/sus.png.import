@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://comusruwigyv8"
-path="res://.godot/imported/scientist_walk_down.png-6544cc8e847be955703ff505d8f19578.ctex"
+uid="uid://8ef5n47sbvyq"
+path="res://.godot/imported/sus.png-7bad07480a41703e08a757324ee05776.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/scientist_walk_down.png"
-dest_files=["res://.godot/imported/scientist_walk_down.png-6544cc8e847be955703ff505d8f19578.ctex"]
+source_file="res://sprites/do_zdobycia/sus.png"
+dest_files=["res://.godot/imported/sus.png-7bad07480a41703e08a757324ee05776.ctex"]
 
 [params]
 
