@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cfu5taow1u85g"]
+
+[ext_resource type="Script" uid="uid://csab6d5wdhmv3" path="res://itemy/script/itemki.gd" id="1_lge68"]
+[ext_resource type="Texture2D" uid="uid://tmrl2q8ghms7" path="res://itemy/sprites/Sprite-0002.png" id="2_kffyq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wl0p"]
+atlas = ExtResource("2_kffyq")
+region = Rect2(33.5578, 4.43063, 14.9352, 12.5858)
+
+[resource]
+script = ExtResource("1_lge68")
+name = "potka"
+description = "możesz wypić... ciekawe co sie stanie"
+texture = SubResource("AtlasTexture_0wl0p")
+metadata/_custom_type_script = "uid://csab6d5wdhmv3"

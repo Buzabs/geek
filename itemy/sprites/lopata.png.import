@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buaveo1j8qyh"
-path="res://.godot/imported/equ-tlo.png-88703ad101c874a712a89abe1b07742b.ctex"
+uid="uid://c12ejjfusj5yn"
+path="res://.godot/imported/lopata.png-9643852e841f5254c491c211211dcf8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://equ/equ-tlo.png"
-dest_files=["res://.godot/imported/equ-tlo.png-88703ad101c874a712a89abe1b07742b.ctex"]
+source_file="res://itemy/sprites/lopata.png"
+dest_files=["res://.godot/imported/lopata.png-9643852e841f5254c491c211211dcf8c.ctex"]
 
 [params]
 

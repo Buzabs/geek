@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://ob3pj2utai60"]
+
+[ext_resource type="Script" uid="uid://csab6d5wdhmv3" path="res://itemy/script/itemki.gd" id="1_4g6tw"]
+[ext_resource type="Texture2D" uid="uid://c12ejjfusj5yn" path="res://itemy/sprites/lopata.png" id="2_3sv56"]
+
+[resource]
+script = ExtResource("1_4g6tw")
+name = "lopata"
+description = "moze kopac"
+texture = ExtResource("2_3sv56")
+metadata/_custom_type_script = "uid://csab6d5wdhmv3"

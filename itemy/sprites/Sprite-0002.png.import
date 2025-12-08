@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2ngoxjolw23k"
-path="res://.godot/imported/lopata.png-d1682f4af5ead3b11a490fd7b3d7df89.ctex"
+uid="uid://tmrl2q8ghms7"
+path="res://.godot/imported/Sprite-0002.png-401f713565f2e1de3b5a9496910930c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/do_zdobycia/lopata.png"
-dest_files=["res://.godot/imported/lopata.png-d1682f4af5ead3b11a490fd7b3d7df89.ctex"]
+source_file="res://itemy/sprites/Sprite-0002.png"
+dest_files=["res://.godot/imported/Sprite-0002.png-401f713565f2e1de3b5a9496910930c0.ctex"]
 
 [params]
 

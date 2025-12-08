@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://conh7h8r04b3e"
-path="res://.godot/imported/equ-panel.png-92ade4d3197cf516b0e0e2c639cf5ac1.ctex"
+uid="uid://0u1ahcqq6ok1"
+path="res://.godot/imported/slot.png-c191982909e0205e2728e5545531ca1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://equ/equ-panel.png"
-dest_files=["res://.godot/imported/equ-panel.png-92ade4d3197cf516b0e0e2c639cf5ac1.ctex"]
+source_file="res://itemy/equ/slot.png"
+dest_files=["res://.godot/imported/slot.png-c191982909e0205e2728e5545531ca1e.ctex"]
 
 [params]
 

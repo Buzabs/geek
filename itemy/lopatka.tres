@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cjflwlsyaugem"]
+
+[ext_resource type="Script" uid="uid://csab6d5wdhmv3" path="res://itemy/script/itemki.gd" id="1_nt5kt"]
+[ext_resource type="Texture2D" uid="uid://tmrl2q8ghms7" path="res://itemy/sprites/Sprite-0002.png" id="2_nt5kt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xt7bt"]
+atlas = ExtResource("2_nt5kt")
+region = Rect2(19.701, 0.347827, 13.2571, 16.6972)
+
+[resource]
+script = ExtResource("1_nt5kt")
+name = "lopatka"
+description = "moze kopac jakies kwiatki"
+texture = SubResource("AtlasTexture_xt7bt")
+metadata/_custom_type_script = "uid://csab6d5wdhmv3"
