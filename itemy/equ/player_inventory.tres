@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://u4e63087i02i" path="res://itemy/script/Inventory.gd" id="1_tsptm"]
 [ext_resource type="Script" uid="uid://lcv335ehgt4f" path="res://itemy/script/slot.gd" id="2_ba82o"]
-[ext_resource type="Resource" uid="uid://ob3pj2utai60" path="res://itemy/lopata.tres" id="3_6kqii"]
+[ext_resource type="Resource" path="res://itemy/equ/lopata.tres" id="3_6kqii"]
 [ext_resource type="Resource" uid="uid://dfx8xmoghejxe" path="res://itemy/sus.tres" id="4_0hekc"]
 
 [sub_resource type="Resource" id="Resource_d8jsw"]
