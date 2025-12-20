@@ -1,34 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=8 format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
-[ext_resource type="Texture2D" uid="uid://bmiouw7hmi18s" path="res://icon.svg" id="2_j8ivh"]
 [ext_resource type="PackedScene" uid="uid://8tr4pn21xr2j" path="res://itemy/equ/scenes/inventory.tscn" id="3_nd71p"]
+[ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="5_3qnke"]
+[ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_qjeyg"]
+[ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="6_wtsjf"]
 
 [sub_resource type="GDScript" id="GDScript_nd71p"]
 script/source = "extends Node
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
-size = Vector2(255, 22)
+size = Vector2(320, 25)
 
 [node name="TestScene" type="Node"]
 script = SubResource("GDScript_nd71p")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("1_g7g4h")]
+position = Vector2(-17, 5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-1, -60)
-scale = Vector2(2.01562, 0.175781)
-texture = ExtResource("2_j8ivh")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-2.5, -60)
+position = Vector2(0, -64)
 shape = SubResource("RectangleShape2D_nd71p")
 
 [node name="Inventory" parent="." instance=ExtResource("3_nd71p")]
 position = Vector2(-102, 24)
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Portalwylaczony" type="Sprite2D" parent="Environment"]
+texture_filter = 1
+position = Vector2(92, -49)
+texture = ExtResource("5_3qnke")
+
+[node name="Komputer" type="Sprite2D" parent="Environment"]
+texture_filter = 1
+position = Vector2(60, -47)
+texture = ExtResource("6_wtsjf")
+
+[node name="Tlo320x180" type="Sprite2D" parent="Environment"]
+z_index = -1
+texture_filter = 1
+texture = ExtResource("5_qjeyg")

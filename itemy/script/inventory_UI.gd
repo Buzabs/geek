@@ -6,7 +6,6 @@ const INVENTORY_SLOT = preload("res://itemy/equ/scenes/inventory.tscn")
 
 
 func _ready() -> void:
-	update_inventory()
 	clear_inventory()
 	pass
 	
