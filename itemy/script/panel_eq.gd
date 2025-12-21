@@ -19,3 +19,10 @@ func refresh():
 			btn.texture_normal = GlobalEq.slots[i]
 		else:
 			btn.texture_normal = null
+			
+func _pressed():
+	for child in get_parent().get_children():
+		if child is SlotButton:
+			child.set_selected(false)
+
+	set_selected(true)

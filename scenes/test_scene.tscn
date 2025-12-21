@@ -33,6 +33,7 @@ shape = SubResource("RectangleShape2D_nd71p")
 [node name="Environment" type="Node" parent="."]
 
 [node name="Sus2" parent="Environment" instance=ExtResource("2_wtsjf")]
+position = Vector2(13.08, 12.775)
 
 [node name="Portalwylaczony" type="Sprite2D" parent="Environment"]
 visibility_layer = 4
@@ -52,11 +53,11 @@ texture_filter = 1
 texture = ExtResource("5_qjeyg")
 
 [node name="Sus" parent="Environment" instance=ExtResource("5_rnaij")]
-position = Vector2(103, -3)
+position = Vector2(126, -47)
 
 [node name="Itemki" parent="." instance=ExtResource("5_wtsjf")]
 anchors_preset = -1
-offset_left = -93.0
-offset_top = 48.0
-offset_right = -93.0
-offset_bottom = 48.0
+offset_left = -94.0
+offset_top = 46.0
+offset_right = -94.0
+offset_bottom = 46.0
