@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ltaab7fk80sp"
+path="res://.godot/imported/newton.dialogue-4d6e41434bbd8462b8631a5982ed03db.tres"
+
+[deps]
+
+source_file="res://Dialogi/newton.dialogue"
+dest_files=["res://.godot/imported/newton.dialogue-4d6e41434bbd8462b8631a5982ed03db.tres"]
+
+[params]
+
+defaults=true

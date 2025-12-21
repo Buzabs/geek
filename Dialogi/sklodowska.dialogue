@@ -1,0 +1,39 @@
+~ start
+Maria: Szukasz wiedzy? 
+Maria: To dobrze. Wiedzy nigdy za dużo. Chodź, przyda mi się pomoc. 
+=> END
+
+~ kamienie
+Maria: W moich notatkach masz minerały pokaż mi który z nich świeci najmocniej.
+Maria: Będzie nam on potrzebny później.
+=> END
+
+~ k_kamienie
+Maria: Dobrze. To pokazuje, że materiał zawiera coś… 
+Maria: NIEZWYKŁEGO
+Maria: Coś, co emituje energię samo z siebie.
+=> END
+
+~ polon
+Maria: Teraz spróbujemy wyodrębnić z tej skały jego niewidzialne serce.
+Maria: Aby odkryć nowy pierwiastek, musisz połączyć składniki tak, by ich energia zaczęła świecić mocniej niż wcześniej.
+Maria: Nie chodzi o prawdziwe reakcje… 
+Maria: Chodzi o zrozumienie, że nauka to także myślenie, obserwacja i cierpliwość.
+=> END
+
+~ K_polon
+Maria: Doskonale! Właśnie tak…
+Maria: Nazwiemy ten efekt polonem.
+Maria: Ale to dopiero połowa drogi 
+=> END
+
+~ rad
+Maria: Teraz musimy odkryć drugi pierwiastek. Jest jeszcze potężniejszy… 
+Maria: Ale i piękniejszy.
+=> END
+
+~ k_rad
+Maria: Tak właśnie objawia się rad. Nazwałam go tak od słowa radius, czyli promień.
+Maria: Pamiętaj, odkrycia to nie magia. To setki godzin pracy, błędów i prób. Ale jeśli masz cierpliwość… 
+Maria: Świat zdradzi ci swoje sekrety.
+=> END

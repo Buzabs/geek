@@ -1,0 +1,41 @@
+~ staruszka
+ENZO: Przepraszam, gdzie mógłbym znaleźć pana Newtona?
+Staruszka: Ach, tego młodego uczonego?
+Staruszka: Ostatnio widziałam go u miejscowego zielarza. Spróbuj go tam znaleźć. Niełatwo go dorwać.
+=> END
+
+~ zielarz
+ENZO: Przepraszam…
+ENZO: Szuka…
+ENZO: PRZEPRASZAM SZUKAM ISSACA NEWTONA!
+Zielarz: A co to za maniery żeby krzyczeć. Nie widzisz że jestem zajęty?!
+- Szukam Issaca Newtona, może wie Pan gdzie go znajdę?
+	Zielarz: Jeśli szukasz rozmowy, przygotuj się na wykład. Ten chłopak potrafi opowiadać godzinami… Widziałem go, jak wędrował w stronę sadów za miastem. Często tam przesiaduje.
+=> END
+
+~ newton_spotkanie
+ENZO: Pan Newton? 
+Newton: O, gość. Jeśli chcesz rozmawiać o nauce… 
+Newton: Potrzebuję najpierw pomocy przy pewnym drobiazgu.
+=> END
+
+~ newton_lisc
+Newton: Próbuję zrozumieć, jak światło przechodzi przez różne kształty.
+Newton: Ale ten liść… 
+Newton: Nie odbija światła tak, jak chcę. Musisz ułożyć go tak, żeby promienie przechodziły przez środek i tworzyły najjaśniejszą plamkę na ziemi.
+=> END
+
+~ newton_klisc
+Newton: Widzisz? Każdy przedmiot inaczej rozprasza światło. A białe światło… 
+Newton: Zawiera wszystkie kolory. Odkryłem to, używając pryzmatu.
+=> END
+
+~ newton_jablko
+Newton: A skoro już widziałeś moje zabawy ze światłem… 
+Newton: Opowiem ci o czymś innym. O sile, która działa na wszystko.
+Newton: Wiesz, dlaczego spadło na ziemię? Zastanawiałem się, czy ta sama siła przyciąga księżyc do Ziemi i planety do Słońca. I doszedłem do wniosku, że tak. To jedno, powszechne prawo.
+=> END
+
+~ koniec
+ENZO: Dziękuję za tę rozmowę Issa… 
+=> END

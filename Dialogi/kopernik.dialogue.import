@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cox0kvrgbdx01"
+path="res://.godot/imported/kopernik.dialogue-69812dd7d0fa6b506de3bae0db1a3321.tres"
+
+[deps]
+
+source_file="res://Dialogi/kopernik.dialogue"
+dest_files=["res://.godot/imported/kopernik.dialogue-69812dd7d0fa6b506de3bae0db1a3321.tres"]
+
+[params]
+
+defaults=true

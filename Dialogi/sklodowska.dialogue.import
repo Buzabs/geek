@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dtfneiqgew8ef"
+path="res://.godot/imported/sklodowska.dialogue-4cf54b8254f869a0bb51d3316fa97575.tres"
+
+[deps]
+
+source_file="res://Dialogi/sklodowska.dialogue"
+dest_files=["res://.godot/imported/sklodowska.dialogue-4cf54b8254f869a0bb51d3316fa97575.tres"]
+
+[params]
+
+defaults=true

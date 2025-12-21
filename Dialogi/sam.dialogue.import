@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d4mopxenxhjpm"
+path="res://.godot/imported/sam.dialogue-3434e70fa5545daff55ae2812d2f2802.tres"
+
+[deps]
+
+source_file="res://Dialogi/sam.dialogue"
+dest_files=["res://.godot/imported/sam.dialogue-3434e70fa5545daff55ae2812d2f2802.tres"]
+
+[params]
+
+defaults=true
