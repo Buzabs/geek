@@ -1,5 +1,15 @@
-class_name Slot extends Resource
+extends TextureButton
+class_name Slot
 
-@export var item_data: ItemData
-@export var quantity : int = 0
-	
+@onready var icon = $Icon
+var current_item: ItemData = null
+
+func set_item(item: ItemData):
+	current_item = item
+	if icon:
+		icon.texture = item.icon
+
+func clear():
+	current_item = null
+	if icon:
+		icon.texture = null

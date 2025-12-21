@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://lceuq6u6ewdw"]
+
+[ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_bvr1l"]
+[ext_resource type="Texture2D" uid="uid://tmrl2q8ghms7" path="res://itemy/sprites/Sprite-0002.png" id="2_aal3s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvr1l"]
+atlas = ExtResource("2_aal3s")
+region = Rect2(0, 0, 19.4477, 17)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rf3fb"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ko3y"]
+atlas = ExtResource("2_aal3s")
+region = Rect2(0, 0, 20.0943, 17)
+
+[node name="Sus" type="Area2D"]
+script = ExtResource("1_bvr1l")
+item_icon = SubResource("AtlasTexture_bvr1l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_rf3fb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = SubResource("AtlasTexture_1ko3y")

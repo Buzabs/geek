@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=10 format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
-[ext_resource type="PackedScene" uid="uid://8tr4pn21xr2j" path="res://itemy/equ/scenes/inventory.tscn" id="3_nd71p"]
+[ext_resource type="PackedScene" uid="uid://b2fsc3yn7gygp" path="res://itemy/scenes/potka.tscn" id="2_wtsjf"]
 [ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="5_3qnke"]
 [ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_qjeyg"]
+[ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="5_rnaij"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://itemy/equ/scenes/slot.tscn" id="5_wtsjf"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="6_wtsjf"]
 
 [sub_resource type="GDScript" id="GDScript_nd71p"]
@@ -28,17 +30,18 @@ position = Vector2(-17, 5)
 position = Vector2(0, -64)
 shape = SubResource("RectangleShape2D_nd71p")
 
-[node name="Inventory" parent="." instance=ExtResource("3_nd71p")]
-position = Vector2(-102, 24)
-
 [node name="Environment" type="Node" parent="."]
 
+[node name="Sus2" parent="Environment" instance=ExtResource("2_wtsjf")]
+
 [node name="Portalwylaczony" type="Sprite2D" parent="Environment"]
+visibility_layer = 4
 texture_filter = 1
 position = Vector2(92, -49)
 texture = ExtResource("5_3qnke")
 
 [node name="Komputer" type="Sprite2D" parent="Environment"]
+visibility_layer = 4
 texture_filter = 1
 position = Vector2(60, -47)
 texture = ExtResource("6_wtsjf")
@@ -47,3 +50,13 @@ texture = ExtResource("6_wtsjf")
 z_index = -1
 texture_filter = 1
 texture = ExtResource("5_qjeyg")
+
+[node name="Sus" parent="Environment" instance=ExtResource("5_rnaij")]
+position = Vector2(103, -3)
+
+[node name="Itemki" parent="." instance=ExtResource("5_wtsjf")]
+anchors_preset = -1
+offset_left = -93.0
+offset_top = 48.0
+offset_right = -93.0
+offset_bottom = 48.0

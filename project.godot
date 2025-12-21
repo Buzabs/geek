@@ -12,8 +12,12 @@ config_version=5
 
 config/name="geek"
 run/main_scene="uid://d1e1o540mwux0"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalEq="*res://itemy/script/global_eq.gd"
 
 [display]
 

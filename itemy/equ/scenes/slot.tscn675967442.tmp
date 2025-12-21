@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://baio7uhdkpsdj"]
+
+[ext_resource type="Texture2D" uid="uid://0u1ahcqq6ok1" path="res://itemy/equ/slot.png" id="1_ic0fu"]
+[ext_resource type="Texture2D" uid="uid://buaveo1j8qyh" path="res://itemy/equ/equ-tlo.png" id="1_vqyee"]
+[ext_resource type="Script" uid="uid://c7uytnycpvl2" path="res://itemy/script/panel_eq.gd" id="2_vqyee"]
+[ext_resource type="Script" uid="uid://riieo6phdi6t" path="res://itemy/script/slot.gd" id="3_vqyee"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5f2j7"]
+texture = ExtResource("1_vqyee")
+
+[node name="Itemki" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="PanelContainer" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 186.0
+offset_bottom = 42.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_5f2j7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+texture_repeat = 2
+custom_minimum_size = Vector2(150, 32)
+layout_mode = 2
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 181.0
+offset_bottom = 37.0
+size_flags_vertical = 8
+script = ExtResource("2_vqyee")
+
+[node name="Button1" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("3_vqyee")
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/HBoxContainer/Button1"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 33.0
+texture = ExtResource("1_ic0fu")
+
+[node name="Button2" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("3_vqyee")
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/HBoxContainer/Button2"]
+layout_mode = 0
+offset_left = -69.0
+offset_top = 23.0
+offset_right = -37.0
+offset_bottom = 55.0
+texture = ExtResource("1_ic0fu")
+
+[node name="Button3" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("3_vqyee")
+
+[node name="TextureRect3" type="TextureRect" parent="PanelContainer/HBoxContainer/Button3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 33.0
+offset_bottom = 33.0
+texture = ExtResource("1_ic0fu")
+
+[node name="Button4" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("3_vqyee")
+
+[node name="TextureRect4" type="TextureRect" parent="PanelContainer/HBoxContainer/Button4"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 32.0
+offset_bottom = 33.0
+texture = ExtResource("1_ic0fu")
+
+[node name="Button5" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+script = ExtResource("3_vqyee")
+
+[node name="TextureRect5" type="TextureRect" parent="PanelContainer/HBoxContainer/Button5"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 31.0
+offset_bottom = 33.0
+texture = ExtResource("1_ic0fu")
