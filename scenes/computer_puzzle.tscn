@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjtl5gx5sj0lb"]
+
+[ext_resource type="Texture2D" uid="uid://b2cq3qat5rvkm" path="res://sprites/Environment/computer_puzzle_placeholder.png" id="1_oqb7w"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ComputerPuzzlePlaceholder" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(318, 181)
+texture = ExtResource("1_oqb7w")
