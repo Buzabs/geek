@@ -24,5 +24,6 @@ func _pressed():
 	for child in get_parent().get_children():
 		if child is SlotButton:
 			child.set_selected(false)
+		child.set_selected(true)
 
-	set_selected(true)
+	
