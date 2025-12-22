@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=14 format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="1_h3xc6"]
 [ext_resource type="PackedScene" uid="uid://b2fsc3yn7gygp" path="res://itemy/scenes/potka.tscn" id="2_wtsjf"]
 [ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="5_3qnke"]
 [ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_qjeyg"]
@@ -11,6 +12,27 @@
 
 [sub_resource type="GDScript" id="GDScript_nd71p"]
 script/source = "extends Node
+
+@export var pause_scene: PackedScene
+var pause_instance: Control
+
+func _process(_delta):
+	if Input.is_action_just_pressed(\"pause\"):
+		toggle_pause()
+
+func toggle_pause():
+	if get_tree().paused:
+		# wznów grę
+		get_tree().paused = false
+		if pause_instance:
+			pause_instance.queue_free()
+	else:
+		# pauza
+		get_tree().paused = true
+		pause_instance = pause_scene.instantiate()
+		add_child(pause_instance)
+	
+	
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
@@ -24,6 +46,7 @@ size = Vector2(16, 16)
 
 [node name="TestScene" type="Node"]
 script = SubResource("GDScript_nd71p")
+pause_scene = ExtResource("1_h3xc6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
