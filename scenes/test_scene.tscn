@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=16 format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="1_h3xc6"]
@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="5_3qnke"]
 [ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_qjeyg"]
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="5_rnaij"]
-[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://itemy/equ/scenes/slot.tscn" id="5_wtsjf"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://itemy/equ/slot.tscn" id="5_wtsjf"]
 [ext_resource type="Script" uid="uid://cpoo38pq8w1y5" path="res://scripts/puzzle_object.gd" id="6_rnaij"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="6_wtsjf"]
+[ext_resource type="Texture2D" uid="uid://c5n2vrggerd1d" path="res://sprites/meble/szafa.png" id="10_6qxox"]
+[ext_resource type="Texture2D" uid="uid://bapih2u5tawh7" path="res://sprites/meble/stol.png" id="10_s36qc"]
 
 [sub_resource type="GDScript" id="GDScript_nd71p"]
 script/source = "extends Node
@@ -79,7 +81,7 @@ texture = ExtResource("5_qjeyg")
 
 [node name="Sus" parent="Environment" instance=ExtResource("5_rnaij")]
 texture_filter = 1
-position = Vector2(126, -47)
+position = Vector2(-130, 51)
 
 [node name="Computer" type="Node2D" parent="Environment"]
 position = Vector2(61, -47)
@@ -101,6 +103,14 @@ shape = SubResource("RectangleShape2D_wtsjf")
 visibility_layer = 4
 texture_filter = 1
 texture = ExtResource("6_wtsjf")
+
+[node name="Stol" type="Sprite2D" parent="Environment"]
+position = Vector2(-129, 68)
+texture = ExtResource("10_s36qc")
+
+[node name="Szafa" type="Sprite2D" parent="Environment"]
+position = Vector2(-23, -51)
+texture = ExtResource("10_6qxox")
 
 [node name="Itemki" parent="." instance=ExtResource("5_wtsjf")]
 texture_filter = 1

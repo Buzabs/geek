@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bkndxcyc7u1pw" path="res://pausa/sprite/pausa_tlo.png" id="1_1vybs"]
 [ext_resource type="Texture2D" uid="uid://c3nk8iq5utjyo" path="res://pausa/sprite/back.png" id="2_8kb6j"]
-[ext_resource type="Script" uid="uid://duis3cinrujia" path="res://pausa/exit.gd" id="3_oifdx"]
+[ext_resource type="Script" uid="uid://duis3cinrujia" path="res://pausa/script/exit.gd" id="3_oifdx"]
 [ext_resource type="Texture2D" uid="uid://ntkiy4idp845" path="res://pausa/sprite/exit.png" id="3_xn2kv"]
 [ext_resource type="Script" uid="uid://cbjndoukiwj5o" path="res://pausa/script/back.gd" id="5_xn2kv"]
 
@@ -24,9 +24,9 @@ texture = ExtResource("1_1vybs")
 [node name="TextureButton" type="Button" parent="TextureRect"]
 layout_mode = 0
 offset_left = 161.0
-offset_top = 54.0
+offset_top = 58.0
 offset_right = 265.0
-offset_bottom = 110.0
+offset_bottom = 114.0
 icon = ExtResource("3_xn2kv")
 script = ExtResource("3_oifdx")
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://baio7uhdkpsdj"]
+[gd_scene load_steps=8 format=3 uid="uid://baio7uhdkpsdj"]
 
 [ext_resource type="Texture2D" uid="uid://buaveo1j8qyh" path="res://itemy/equ/equ-tlo.png" id="1_vqyee"]
 [ext_resource type="Texture2D" uid="uid://0u1ahcqq6ok1" path="res://itemy/equ/slot.png" id="2_b30ko"]
 [ext_resource type="Script" uid="uid://c7uytnycpvl2" path="res://itemy/script/panel_eq.gd" id="2_vqyee"]
-[ext_resource type="Script" uid="uid://6nbovuhk0j4c" path="res://itemy/equ/scenes/slot.gd" id="3_c53vi"]
+[ext_resource type="Script" uid="uid://vrm4vlt887k3" path="res://itemy/script/texture.gd" id="3_1yv67"]
+[ext_resource type="Script" uid="uid://6nbovuhk0j4c" path="res://itemy/script/slot.gd" id="3_c53vi"]
 [ext_resource type="Texture2D" uid="uid://de6npgw123okx" path="res://itemy/equ/click_slot.png" id="4_jrwqy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5f2j7"]
@@ -14,6 +15,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="PanelContainer" type="Panel" parent="."]
+z_index = 7
 layout_mode = 0
 offset_left = 1.0
 offset_right = 187.0
@@ -28,6 +30,7 @@ offset_top = 5.0
 offset_right = 37.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
+script = ExtResource("3_1yv67")
 
 [node name="TextureRect8" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -37,6 +40,7 @@ offset_top = 5.0
 offset_right = 73.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
+script = ExtResource("3_1yv67")
 
 [node name="TextureRect7" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -46,6 +50,7 @@ offset_top = 5.0
 offset_right = 109.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
+script = ExtResource("3_1yv67")
 
 [node name="TextureRect6" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -55,6 +60,7 @@ offset_top = 5.0
 offset_right = 145.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
+script = ExtResource("3_1yv67")
 
 [node name="TextureRect5" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -64,11 +70,12 @@ offset_top = 5.0
 offset_right = 180.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
+script = ExtResource("3_1yv67")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
 texture_repeat = 2
 custom_minimum_size = Vector2(163.335, 32)
-layout_mode = 2
+layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
 offset_right = 181.0
@@ -76,42 +83,47 @@ offset_bottom = 37.0
 size_flags_vertical = 8
 script = ExtResource("2_vqyee")
 
-[node name="Button2" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+[node name="Button2" type="TextureButton" parent="PanelContainer/HBoxContainer" node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4
 script = ExtResource("3_c53vi")
-normal_texture = ExtResource("2_b30ko")
 selected_texture = ExtResource("4_jrwqy")
+target = NodePath("../../TextureRect9")
+default_texture = ExtResource("2_b30ko")
 
-[node name="Button3" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+[node name="Button3" type="TextureButton" parent="PanelContainer/HBoxContainer" node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4
 script = ExtResource("3_c53vi")
-normal_texture = ExtResource("2_b30ko")
 selected_texture = ExtResource("4_jrwqy")
+target = NodePath("../../TextureRect8")
+default_texture = ExtResource("2_b30ko")
 
-[node name="Button4" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+[node name="Button4" type="TextureButton" parent="PanelContainer/HBoxContainer" node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4
 script = ExtResource("3_c53vi")
-normal_texture = ExtResource("2_b30ko")
 selected_texture = ExtResource("4_jrwqy")
+target = NodePath("../../TextureRect7")
+default_texture = ExtResource("2_b30ko")
 
-[node name="Button5" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+[node name="Button5" type="TextureButton" parent="PanelContainer/HBoxContainer" node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4
 script = ExtResource("3_c53vi")
-normal_texture = ExtResource("2_b30ko")
 selected_texture = ExtResource("4_jrwqy")
+target = NodePath("../../TextureRect6")
+default_texture = ExtResource("2_b30ko")
 
-[node name="Button1" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+[node name="Button1" type="TextureButton" parent="PanelContainer/HBoxContainer" node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4
 script = ExtResource("3_c53vi")
-normal_texture = ExtResource("2_b30ko")
 selected_texture = ExtResource("4_jrwqy")
+target = NodePath("../../TextureRect5")
+default_texture = ExtResource("2_b30ko")

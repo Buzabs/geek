@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b2cq3qat5rvkm" path="res://sprites/Environment/computer_puzzle_placeholder.png" id="1_oqb7w"]
 
 [node name="Node2D" type="Node2D"]
+process_mode = 2
 
 [node name="ComputerPuzzlePlaceholder" type="Sprite2D" parent="."]
 texture_filter = 1

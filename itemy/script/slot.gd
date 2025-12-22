@@ -17,7 +17,6 @@ func _ready():
 func _on_pressed():
 	if not target:
 		return
-
 	var parent_container = get_parent()  # reset wszystkich rodzeństwa w tym samym kontenerze
 	for sibling in parent_container.get_children():
 		if sibling is SlotButton:
