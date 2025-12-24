@@ -1,53 +1,35 @@
-[gd_scene load_steps=16 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=20 format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="1_h3xc6"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scenes/test_scene.gd" id="1_ntc4i"]
 [ext_resource type="PackedScene" uid="uid://b2fsc3yn7gygp" path="res://itemy/scenes/potka.tscn" id="2_wtsjf"]
 [ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="5_3qnke"]
+[ext_resource type="Script" uid="uid://d3dnn4w1486vg" path="res://scripts/wlaczenie.gd" id="5_gthg3"]
 [ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_qjeyg"]
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="5_rnaij"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://itemy/equ/slot.tscn" id="5_wtsjf"]
+[ext_resource type="Texture2D" uid="uid://b885olgh8v47c" path="res://sprites/Environment/portalwlaczony.png" id="6_ntc4i"]
 [ext_resource type="Script" uid="uid://cpoo38pq8w1y5" path="res://scripts/puzzle_object.gd" id="6_rnaij"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="6_wtsjf"]
+[ext_resource type="PackedScene" uid="uid://b8qvtri4p8eei" path="res://scenes/computer_puzzle.tscn" id="8_pln1h"]
 [ext_resource type="Texture2D" uid="uid://c5n2vrggerd1d" path="res://sprites/meble/szafa.png" id="10_6qxox"]
 [ext_resource type="Texture2D" uid="uid://bapih2u5tawh7" path="res://sprites/meble/stol.png" id="10_s36qc"]
-
-[sub_resource type="GDScript" id="GDScript_nd71p"]
-script/source = "extends Node
-
-@export var pause_scene: PackedScene
-var pause_instance: Control
-
-func _process(_delta):
-	if Input.is_action_just_pressed(\"pause\"):
-		toggle_pause()
-
-func toggle_pause():
-	if get_tree().paused:
-		# wznów grę
-		get_tree().paused = false
-		if pause_instance:
-			pause_instance.queue_free()
-	else:
-		# pauza
-		get_tree().paused = true
-		pause_instance = pause_scene.instantiate()
-		add_child(pause_instance)
-	
-	
-"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
 size = Vector2(320, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnaij"]
-size = Vector2(28, 38)
+size = Vector2(24, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
 size = Vector2(16, 16)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6qxox"]
+radius = 36.0
+
 [node name="TestScene" type="Node"]
-script = SubResource("GDScript_nd71p")
+script = ExtResource("1_ntc4i")
 pause_scene = ExtResource("1_h3xc6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -68,12 +50,6 @@ shape = SubResource("RectangleShape2D_nd71p")
 texture_filter = 1
 position = Vector2(13.08, 12.775)
 
-[node name="Portalwylaczony" type="Sprite2D" parent="Environment"]
-visibility_layer = 4
-texture_filter = 1
-position = Vector2(92, -49)
-texture = ExtResource("5_3qnke")
-
 [node name="Tlo320x180" type="Sprite2D" parent="Environment"]
 z_index = -1
 texture_filter = 1
@@ -89,14 +65,17 @@ position = Vector2(61, -47)
 [node name="ComputerCheck" type="Area2D" parent="Environment/Computer"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerCheck"]
-position = Vector2(0, 9)
+z_index = 1
+position = Vector2(3, 5)
 shape = SubResource("RectangleShape2D_rnaij")
 
 [node name="ComputerClick" type="Area2D" parent="Environment/Computer"]
 script = ExtResource("6_rnaij")
 target_scene = "res://scenes/computer_puzzle.tscn"
+computer_ui = ExtResource("8_pln1h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerClick"]
+z_index = 2
 shape = SubResource("RectangleShape2D_wtsjf")
 
 [node name="computer" type="Sprite2D" parent="Environment/Computer"]
@@ -112,7 +91,21 @@ texture = ExtResource("10_s36qc")
 position = Vector2(-23, -51)
 texture = ExtResource("10_6qxox")
 
-[node name="Itemki" parent="." instance=ExtResource("5_wtsjf")]
+[node name="Area2D" type="Area2D" parent="Environment"]
+script = ExtResource("5_gthg3")
+wlaczony = ExtResource("6_ntc4i")
+
+[node name="Portalwylaczony" type="Sprite2D" parent="Environment/Area2D"]
+visibility_layer = 4
+texture_filter = 1
+position = Vector2(92, -49)
+texture = ExtResource("5_3qnke")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Area2D"]
+position = Vector2(107, -46)
+shape = SubResource("CircleShape2D_6qxox")
+
+[node name="eq" parent="." instance=ExtResource("5_wtsjf")]
 texture_filter = 1
 anchors_preset = -1
 offset_left = -94.0

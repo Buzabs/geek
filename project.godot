@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalEq="*res://itemy/script/global_eq.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+GlobalC="*res://scripts/global_c.gd"
 
 [dialogue_manager]
 

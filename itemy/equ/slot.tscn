@@ -1,16 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://baio7uhdkpsdj"]
+[gd_scene load_steps=7 format=3 uid="uid://baio7uhdkpsdj"]
 
 [ext_resource type="Texture2D" uid="uid://buaveo1j8qyh" path="res://itemy/equ/equ-tlo.png" id="1_vqyee"]
 [ext_resource type="Texture2D" uid="uid://0u1ahcqq6ok1" path="res://itemy/equ/slot.png" id="2_b30ko"]
 [ext_resource type="Script" uid="uid://c7uytnycpvl2" path="res://itemy/script/panel_eq.gd" id="2_vqyee"]
-[ext_resource type="Script" uid="uid://vrm4vlt887k3" path="res://itemy/script/texture.gd" id="3_1yv67"]
 [ext_resource type="Script" uid="uid://6nbovuhk0j4c" path="res://itemy/script/slot.gd" id="3_c53vi"]
 [ext_resource type="Texture2D" uid="uid://de6npgw123okx" path="res://itemy/equ/click_slot.png" id="4_jrwqy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5f2j7"]
 texture = ExtResource("1_vqyee")
 
-[node name="Itemki" type="Control"]
+[node name="eq" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 
@@ -30,7 +29,6 @@ offset_top = 5.0
 offset_right = 37.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
-script = ExtResource("3_1yv67")
 
 [node name="TextureRect8" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -40,7 +38,6 @@ offset_top = 5.0
 offset_right = 73.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
-script = ExtResource("3_1yv67")
 
 [node name="TextureRect7" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -50,7 +47,6 @@ offset_top = 5.0
 offset_right = 109.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
-script = ExtResource("3_1yv67")
 
 [node name="TextureRect6" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -60,7 +56,6 @@ offset_top = 5.0
 offset_right = 145.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
-script = ExtResource("3_1yv67")
 
 [node name="TextureRect5" type="TextureRect" parent="PanelContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -70,7 +65,6 @@ offset_top = 5.0
 offset_right = 180.0
 offset_bottom = 37.0
 texture = ExtResource("2_b30ko")
-script = ExtResource("3_1yv67")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
 texture_repeat = 2

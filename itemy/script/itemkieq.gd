@@ -25,6 +25,6 @@ func _on_exit(body):
 		print("Gracz wyszedł z itemu")
 
 func _process(_delta):
-	if can_pick and Input.is_action_just_pressed("click"):
+	if can_pick and Input.is_action_just_pressed("items"):
 			if GlobalEq.add_item(item_icon):
 				queue_free()
