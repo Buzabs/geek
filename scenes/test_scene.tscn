@@ -1,32 +1,37 @@
-[gd_scene load_steps=20 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=23 format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="1_h3xc6"]
-[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scenes/test_scene.gd" id="1_ntc4i"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/test_scene.gd" id="1_ntc4i"]
 [ext_resource type="PackedScene" uid="uid://b2fsc3yn7gygp" path="res://itemy/scenes/potka.tscn" id="2_wtsjf"]
 [ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="5_3qnke"]
 [ext_resource type="Script" uid="uid://d3dnn4w1486vg" path="res://scripts/wlaczenie.gd" id="5_gthg3"]
 [ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_qjeyg"]
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="5_rnaij"]
-[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://itemy/equ/slot.tscn" id="5_wtsjf"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://itemy/equ/eq.tscn" id="5_wtsjf"]
 [ext_resource type="Texture2D" uid="uid://b885olgh8v47c" path="res://sprites/Environment/portalwlaczony.png" id="6_ntc4i"]
 [ext_resource type="Script" uid="uid://cpoo38pq8w1y5" path="res://scripts/puzzle_object.gd" id="6_rnaij"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="6_wtsjf"]
 [ext_resource type="PackedScene" uid="uid://b8qvtri4p8eei" path="res://scenes/computer_puzzle.tscn" id="8_pln1h"]
 [ext_resource type="Texture2D" uid="uid://c5n2vrggerd1d" path="res://sprites/meble/szafa.png" id="10_6qxox"]
 [ext_resource type="Texture2D" uid="uid://bapih2u5tawh7" path="res://sprites/meble/stol.png" id="10_s36qc"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/swap_scenes.gd" id="15_hf2sn"]
+[ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/Environment/drzwi.png" id="16_8gixj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
-size = Vector2(320, 25)
+size = Vector2(320, 24.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rnaij"]
-size = Vector2(24, 30)
+size = Vector2(18, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
-size = Vector2(16, 16)
+size = Vector2(16, 12)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6qxox"]
-radius = 36.0
+radius = 28.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gixj"]
+size = Vector2(14, 27)
 
 [node name="TestScene" type="Node"]
 script = ExtResource("1_ntc4i")
@@ -41,23 +46,15 @@ position = Vector2(-17, 5)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -64)
+position = Vector2(0, -64.25)
 shape = SubResource("RectangleShape2D_nd71p")
 
 [node name="Environment" type="Node" parent="."]
-
-[node name="Sus2" parent="Environment" instance=ExtResource("2_wtsjf")]
-texture_filter = 1
-position = Vector2(13.08, 12.775)
 
 [node name="Tlo320x180" type="Sprite2D" parent="Environment"]
 z_index = -1
 texture_filter = 1
 texture = ExtResource("5_qjeyg")
-
-[node name="Sus" parent="Environment" instance=ExtResource("5_rnaij")]
-texture_filter = 1
-position = Vector2(-130, 51)
 
 [node name="Computer" type="Node2D" parent="Environment"]
 position = Vector2(61, -47)
@@ -66,16 +63,16 @@ position = Vector2(61, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerCheck"]
 z_index = 1
-position = Vector2(3, 5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_rnaij")
 
 [node name="ComputerClick" type="Area2D" parent="Environment/Computer"]
 script = ExtResource("6_rnaij")
-target_scene = "res://scenes/computer_puzzle.tscn"
 computer_ui = ExtResource("8_pln1h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerClick"]
 z_index = 2
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_wtsjf")
 
 [node name="computer" type="Sprite2D" parent="Environment/Computer"]
@@ -91,19 +88,41 @@ texture = ExtResource("10_s36qc")
 position = Vector2(-23, -51)
 texture = ExtResource("10_6qxox")
 
-[node name="Area2D" type="Area2D" parent="Environment"]
+[node name="portal_area" type="Area2D" parent="Environment"]
 script = ExtResource("5_gthg3")
 wlaczony = ExtResource("6_ntc4i")
 
-[node name="Portalwylaczony" type="Sprite2D" parent="Environment/Area2D"]
+[node name="Portalwylaczony" type="Sprite2D" parent="Environment/portal_area"]
 visibility_layer = 4
 texture_filter = 1
 position = Vector2(92, -49)
 texture = ExtResource("5_3qnke")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Area2D"]
-position = Vector2(107, -46)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/portal_area"]
+position = Vector2(104, -48)
 shape = SubResource("CircleShape2D_6qxox")
+
+[node name="items" type="Node" parent="."]
+
+[node name="Sus2" parent="items" instance=ExtResource("2_wtsjf")]
+texture_filter = 1
+position = Vector2(13.08, 12.775)
+
+[node name="Sus" parent="items" instance=ExtResource("5_rnaij")]
+texture_filter = 1
+position = Vector2(-130, 51)
+
+[node name="drzwi_area" type="Area2D" parent="."]
+script = ExtResource("15_hf2sn")
+load_scenes = "res://scenes/magazyn.tscn"
+
+[node name="Drzwi" type="Sprite2D" parent="drzwi_area"]
+position = Vector2(-108, -44)
+texture = ExtResource("16_8gixj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_area"]
+position = Vector2(-108, -44.5)
+shape = SubResource("RectangleShape2D_8gixj")
 
 [node name="eq" parent="." instance=ExtResource("5_wtsjf")]
 texture_filter = 1

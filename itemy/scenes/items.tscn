@@ -8,7 +8,7 @@ atlas = ExtResource("2_aal3s")
 region = Rect2(0, 0, 19.4477, 17)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rf3fb"]
-radius = 11.0
+radius = 7.071068
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ko3y"]
 atlas = ExtResource("2_aal3s")
@@ -19,6 +19,7 @@ light_mask = 2
 visibility_layer = 2
 script = ExtResource("1_bvr1l")
 item_icon = SubResource("AtlasTexture_bvr1l")
+item_id = "sus"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)

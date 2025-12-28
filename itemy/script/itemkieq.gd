@@ -2,7 +2,7 @@ extends Area2D
 
 
 @export var item_icon: Texture2D
-@export var item_id: String = "sword"
+@export var item_id: String 
 @export var amount: int = 1
 
 var can_pick := false
@@ -26,5 +26,5 @@ func _on_exit(body):
 
 func _process(_delta):
 	if can_pick and Input.is_action_just_pressed("items"):
-			if GlobalEq.add_item(item_icon):
+			if GlobalEq.add_item(item_icon, item_id):
 				queue_free()

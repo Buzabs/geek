@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://c2w6tc1v57qhg"]
+
+[ext_resource type="Texture2D" uid="uid://cblno7uy5hnyu" path="res://sprites/Environment/magazyn_tlo.png" id="1_necqc"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="2_glxrb"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/swap_scenes.gd" id="3_8najp"]
+[ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="3_ryqy8"]
+[ext_resource type="Texture2D" uid="uid://b3d7sk56uf7o8" path="res://sprites/Environment/szafa.png" id="4_dm26d"]
+[ext_resource type="Texture2D" uid="uid://h654x1mil5mi" path="res://sprites/Environment/pudelko.png" id="5_8najp"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://itemy/equ/eq.tscn" id="7_8najp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b8bv"]
+size = Vector2(251, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7r353"]
+size = Vector2(20, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc1vp"]
+size = Vector2(20, 18)
+
+[node name="Magazyn" type="Node"]
+
+[node name="MagazynTlo" type="Sprite2D" parent="."]
+position = Vector2(6, -1)
+texture = ExtResource("1_necqc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, -64)
+shape = SubResource("RectangleShape2D_0b8bv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(13, 110)
+shape = SubResource("RectangleShape2D_0b8bv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(136, -1)
+shape = SubResource("RectangleShape2D_7r353")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-134, 1)
+shape = SubResource("RectangleShape2D_7r353")
+
+[node name="Player" parent="." instance=ExtResource("2_glxrb")]
+position = Vector2(58, 32)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_8najp")
+load_scenes = "res://scenes/test_scene.tscn"
+
+[node name="Komputer" type="Sprite2D" parent="Area2D"]
+position = Vector2(58, 45)
+texture = ExtResource("3_ryqy8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(59, 44)
+shape = SubResource("RectangleShape2D_cc1vp")
+
+[node name="Szafa" type="Sprite2D" parent="."]
+position = Vector2(97, -4)
+texture = ExtResource("4_dm26d")
+
+[node name="Pudelko" type="Sprite2D" parent="."]
+position = Vector2(13, 5)
+texture = ExtResource("5_8najp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="eq" parent="." instance=ExtResource("7_8najp")]
+offset_left = -96.0
+offset_top = 47.0
+offset_right = -96.0
+offset_bottom = 47.0
