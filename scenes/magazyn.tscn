@@ -20,6 +20,7 @@ size = Vector2(20, 18)
 [node name="Magazyn" type="Node"]
 
 [node name="MagazynTlo" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(6, -1)
 texture = ExtResource("1_necqc")
 
@@ -49,6 +50,7 @@ script = ExtResource("3_8najp")
 load_scenes = "res://scenes/test_scene.tscn"
 
 [node name="Komputer" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
 position = Vector2(58, 45)
 texture = ExtResource("3_ryqy8")
 
@@ -57,10 +59,12 @@ position = Vector2(59, 44)
 shape = SubResource("RectangleShape2D_cc1vp")
 
 [node name="Szafa" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(97, -4)
 texture = ExtResource("4_dm26d")
 
 [node name="Pudelko" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(13, 5)
 texture = ExtResource("5_8najp")
 
