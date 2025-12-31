@@ -5,14 +5,14 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bvr1l"]
 atlas = ExtResource("2_aal3s")
-region = Rect2(0, 0, 19.4477, 17)
+region = Rect2(0, 0, 17.7849, 17)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rf3fb"]
 radius = 7.071068
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ko3y"]
 atlas = ExtResource("2_aal3s")
-region = Rect2(0, 0, 20.0943, 17)
+region = Rect2(0, 0, 20.971994, 17)
 
 [node name="Sus" type="Area2D"]
 light_mask = 2

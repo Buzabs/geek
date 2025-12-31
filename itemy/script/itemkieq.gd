@@ -3,12 +3,15 @@ extends Area2D
 
 @export var item_icon: Texture2D
 @export var item_id: String 
-@export var amount: int = 1
 
 var can_pick := false
 var player_ref: Node = null
 
 func _ready():
+	if GlobalEq.has_item(item_id):
+		queue_free()
+		return
+
 	body_entered.connect(_on_enter)
 	body_exited.connect(_on_exit)
 

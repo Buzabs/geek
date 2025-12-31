@@ -3,7 +3,8 @@ extends Node
 @export var pause_scene: PackedScene
 
 var pause_instance: Control
-
+func _ready():
+	GlobalC.load_to_scene(self)
 func _process(_delta):
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()

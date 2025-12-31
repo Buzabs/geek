@@ -1,6 +1,22 @@
 extends Node
 
-# TU TRZYMASZ STAN
-var selected_texture_index := 0
-var textures := []
-var inventory := []
+
+var player_pos := Vector2.ZERO
+
+
+func _ready():
+	
+	await get_tree().process_frame
+	print(get_tree().current_scene)
+
+func save_from_scene(scene):
+	if scene.has_node("Player"):
+		var player = scene.get_node("Player")
+	
+		player_pos = player.global_position
+	
+
+func load_to_scene(scene):
+	if scene.has_node("Player"):
+		var player = scene.get_node("Player")
+		player.global_position = player_pos

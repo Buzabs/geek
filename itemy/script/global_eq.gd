@@ -2,20 +2,23 @@ extends Node
 
 signal inventory_changed
 
-
-var slot_ids := []
 var max_slots := 5
 var selected_item: Texture2D = null
 var selected_item_id: String = ""
-# slot = { texture, id }
-var slots: Array = []
-
+var slots: Array = [] # slot = { texture, id }
 var selected_index := -1   # który slot jest wybrany
+
+
+func has_item(id: String) -> bool:
+	for slot in slots:
+		if slot["id"] == id:
+			return true
+	return false
 
 func add_item(texture: Texture2D, id: String) -> bool:
 	if slots.size() >= max_slots:
 		return false
-
+	
 	slots.append({
 		"texture": texture,
 		"id": id,

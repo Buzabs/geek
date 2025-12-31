@@ -31,7 +31,7 @@ size = Vector2(16, 12)
 radius = 28.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gixj"]
-size = Vector2(14, 27)
+size = Vector2(26, 34)
 
 [node name="TestScene" type="Node"]
 script = ExtResource("1_ntc4i")
@@ -108,11 +108,11 @@ shape = SubResource("CircleShape2D_6qxox")
 
 [node name="Sus2" parent="items" instance=ExtResource("2_wtsjf")]
 texture_filter = 1
-position = Vector2(13.08, 12.775)
+position = Vector2(24, 13)
 
 [node name="Sus" parent="items" instance=ExtResource("5_rnaij")]
 texture_filter = 1
-position = Vector2(-130, 51)
+position = Vector2(-128, 51)
 
 [node name="drzwi_area" type="Area2D" parent="."]
 script = ExtResource("15_hf2sn")
@@ -124,16 +124,16 @@ position = Vector2(-108, -44)
 texture = ExtResource("16_8gixj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_area"]
-position = Vector2(-108, -44.5)
+position = Vector2(-109, -41)
 shape = SubResource("RectangleShape2D_8gixj")
 
 [node name="eq" parent="." instance=ExtResource("5_wtsjf")]
 texture_filter = 1
 anchors_preset = -1
 offset_left = -94.0
-offset_top = 46.0
+offset_top = 47.0
 offset_right = -94.0
-offset_bottom = 46.0
+offset_bottom = 47.0
 metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Environment/Computer/ComputerCheck" to="Environment/Computer/ComputerClick" method="_on_computer_check_body_entered"]

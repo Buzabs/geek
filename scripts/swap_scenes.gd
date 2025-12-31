@@ -1,11 +1,26 @@
 extends Area2D
 
 @export var load_scenes: String
+var can_open: bool = false
+var player_ref: Node = null
 
 func _ready():
-	await get_tree().process_frame
-	print(get_tree().current_scene.scene_file_path)
+	if get_tree().current_scene:
+		print(get_tree().current_scene.scene_file_path)
+	body_entered.connect(_on_enter)
+
+
+func _on_enter(body):
+	if body.is_in_group("player"):
+		can_open = true
+		player_ref = body
+	else:
+		can_open = false
+		player_ref = null
+		
 
 func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:		
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and can_open:		
+		GlobalC.save_from_scene(get_tree().current_scene)
 		get_tree().change_scene_to_file(load_scenes)
+		
