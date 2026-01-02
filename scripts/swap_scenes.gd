@@ -8,16 +8,19 @@ func _ready():
 	if get_tree().current_scene:
 		print(get_tree().current_scene.scene_file_path)
 	body_entered.connect(_on_enter)
-
+	body_exited.connect(_on_exit)
 
 func _on_enter(body):
 	if body.is_in_group("player"):
 		can_open = true
 		player_ref = body
-	else:
+
+
+func _on_exit(body):
+	if body == player_ref:
 		can_open = false
 		player_ref = null
-		
+	
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and can_open:		

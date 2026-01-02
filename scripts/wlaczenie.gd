@@ -1,5 +1,6 @@
 extends Area2D
 
+signal used
 @export var wlaczony: Texture2D
 @onready var sprite := $Portalwylaczony
 var solution_ok: bool = false
@@ -17,3 +18,4 @@ func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if GlobalEq.selected_item_id == "sus" and solution_ok :
 				sprite.texture = wlaczony
+				GameSignals.item_used.emit(true)

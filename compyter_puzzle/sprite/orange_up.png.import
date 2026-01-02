@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://det0yfenkvy5s"
-path="res://.godot/imported/trzy.png-c661b33d70885c9687df22e225a845d1.ctex"
+uid="uid://lrqrequgxs23"
+path="res://.godot/imported/orange_up.png-fa355ccb4bae9675254742d8c3945210.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/trzy.png"
-dest_files=["res://.godot/imported/trzy.png-c661b33d70885c9687df22e225a845d1.ctex"]
+source_file="res://compyter_puzzle/sprite/orange_up.png"
+dest_files=["res://.godot/imported/orange_up.png-fa355ccb4bae9675254742d8c3945210.ctex"]
 
 [params]
 

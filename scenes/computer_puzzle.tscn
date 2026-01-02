@@ -1,23 +1,184 @@
-[gd_scene load_steps=19 format=3 uid="uid://b8qvtri4p8eei"]
+[gd_scene load_steps=60 format=3 uid="uid://b8qvtri4p8eei"]
 
 [ext_resource type="Texture2D" uid="uid://bkndxcyc7u1pw" path="res://pausa/sprite/pausa_tlo.png" id="1_v1hl6"]
 [ext_resource type="Script" uid="uid://d0kbc3rwwah1i" path="res://compyter_puzzle/script/complete_puzzle.gd" id="1_yuk6o"]
 [ext_resource type="Script" uid="uid://ba61pnp6j5lec" path="res://compyter_puzzle/script/zwieksz.gd" id="3_d7bu3"]
-[ext_resource type="Texture2D" uid="uid://td1lkirj82ei" path="res://compyter_puzzle/sprite/strzalka_gura.png" id="3_np7ld"]
-[ext_resource type="Texture2D" uid="uid://det0yfenkvy5s" path="res://compyter_puzzle/sprite/trzy.png" id="4_k0mjv"]
+[ext_resource type="Texture2D" uid="uid://c18ai5pct3wxx" path="res://compyter_puzzle/sprite/violet_numbers.png" id="4_4iys0"]
 [ext_resource type="Script" uid="uid://3sj0rb862s01" path="res://compyter_puzzle/script/button.gd" id="4_v1hl6"]
-[ext_resource type="Texture2D" uid="uid://dnxmicmo2vqtm" path="res://compyter_puzzle/sprite/jeden.png" id="5_h374b"]
-[ext_resource type="Texture2D" uid="uid://eo8pipgci3u3" path="res://compyter_puzzle/sprite/dwa.png" id="6_3qwlg"]
-[ext_resource type="Texture2D" uid="uid://cxwq2y7gcw0rc" path="res://compyter_puzzle/sprite/cztery.png" id="6_np7ld"]
-[ext_resource type="Texture2D" uid="uid://38gefvjejs1m" path="res://compyter_puzzle/sprite/piec.png" id="9_irhpv"]
-[ext_resource type="Texture2D" uid="uid://0636o5yxj5ef" path="res://compyter_puzzle/sprite/szesc.png" id="10_1m00m"]
-[ext_resource type="Texture2D" uid="uid://b5nds3o1wfgcr" path="res://compyter_puzzle/sprite/siedem.png" id="11_gbgn5"]
-[ext_resource type="Texture2D" uid="uid://lcw2c4v0o265" path="res://compyter_puzzle/sprite/osiem.png" id="12_t2755"]
-[ext_resource type="Texture2D" uid="uid://drs6li8dubmrd" path="res://compyter_puzzle/sprite/dziewiec.png" id="13_anxu0"]
-[ext_resource type="Texture2D" uid="uid://xijdygssqw0o" path="res://compyter_puzzle/sprite/strzalka_dol.png" id="14_anxu0"]
+[ext_resource type="Texture2D" uid="uid://bsdfavrfxsjy7" path="res://compyter_puzzle/sprite/orange_numbers.png" id="9_lt3wm"]
+[ext_resource type="Texture2D" uid="uid://bil0cl667mobo" path="res://compyter_puzzle/sprite/cyan_numbers.png" id="12_qbb0x"]
+[ext_resource type="Texture2D" uid="uid://5p546ecpaooo" path="res://compyter_puzzle/sprite/violet_up.png" id="13_wbvtg"]
+[ext_resource type="Texture2D" uid="uid://sx0ir6ryutje" path="res://compyter_puzzle/sprite/violet_down.png" id="15_n4nou"]
 [ext_resource type="Script" uid="uid://b2yj6yjfbjxwl" path="res://compyter_puzzle/script/zmiejsz.gd" id="15_v1hl6"]
-[ext_resource type="Script" uid="uid://dmg7lqwq0grws" path="res://compyter_puzzle/script/swap_scene.gd" id="16_v1hl6"]
+[ext_resource type="Script" uid="uid://dmg7lqwq0grws" path="res://compyter_puzzle/script/back.gd" id="16_v1hl6"]
+[ext_resource type="Texture2D" uid="uid://lrqrequgxs23" path="res://compyter_puzzle/sprite/orange_up.png" id="17_18dca"]
+[ext_resource type="Texture2D" uid="uid://dot80dex7ed3i" path="res://compyter_puzzle/sprite/orange_down.png" id="18_wx832"]
 [ext_resource type="Script" uid="uid://qmsskh2cppib" path="res://compyter_puzzle/script/submit.gd" id="18_yuk6o"]
+[ext_resource type="Texture2D" uid="uid://cbsoajsxk6frr" path="res://compyter_puzzle/sprite/cyan_down.png" id="19_ywhde"]
+[ext_resource type="Texture2D" uid="uid://mg831srwc5v6" path="res://compyter_puzzle/sprite/cyan_up.png" id="20_765sk"]
+[ext_resource type="Texture2D" uid="uid://q33sjnv3hpsg" path="res://compyter_puzzle/sprite/red_numbers.png" id="21_n4nou"]
+[ext_resource type="Texture2D" uid="uid://c5kurjwyjgxq5" path="res://compyter_puzzle/sprite/red_down.png" id="21_ytpue"]
+[ext_resource type="Texture2D" uid="uid://chrwrhmbwq62j" path="res://compyter_puzzle/sprite/red_up.png" id="22_04ngh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lt3wm"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(6, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50sbh"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(43, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06hj1"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(80, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn8i4"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(117, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wamqq"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(154, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbv8p"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(6, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbvtg"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(43, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q21yr"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(80, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pthwq"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(117, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iys0"]
+atlas = ExtResource("4_4iys0")
+region = Rect2(6, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe5fj"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(6, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooh8t"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(43, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg7br"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(80, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6omdr"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(117, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ownb"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(154, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56j0b"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(6, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi3xe"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(43, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpwns"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(80, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlrrv"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(117, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3egkj"]
+atlas = ExtResource("9_lt3wm")
+region = Rect2(6, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xaqu"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(6, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5io7"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(43, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhd30"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(80, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec8k2"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(117, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5w0p"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(154, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii0bj"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(6, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhs70"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(43, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou7f4"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(80, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cmha"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(117, 58, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m50by"]
+atlas = ExtResource("12_qbb0x")
+region = Rect2(6, 3, 34, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18dca"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(7.7829723, 3.7565951, 32.828545, 48.894344)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx832"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(45, 4, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywhde"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(82, 4, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_765sk"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(119, 4, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytpue"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(156, 4, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04ngh"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(8, 59, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifetn"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(45, 59, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8ios"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(82.04425, 59.088905, 32.24151, 48.10714)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kten7"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(118.81931, 59.06057, 32.343956, 48.48011)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4nou"]
+atlas = ExtResource("21_n4nou")
+region = Rect2(8, 4, 32, 48)
 
 [node name="Computer" type="Control"]
 z_index = 8
@@ -40,192 +201,200 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -144.0
-offset_top = -41.0
-offset_right = 60.0
-offset_bottom = 50.0
+offset_left = -158.0
+offset_top = -101.0
+offset_right = 88.0
+offset_bottom = 101.0
 grow_vertical = 2
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+[node name="Control" type="Control" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+script = ExtResource("4_v1hl6")
+target = NodePath("TextureRect")
+textures = Array[Texture2D]([SubResource("AtlasTexture_lt3wm"), SubResource("AtlasTexture_50sbh"), SubResource("AtlasTexture_06hj1"), SubResource("AtlasTexture_gn8i4"), SubResource("AtlasTexture_wamqq"), SubResource("AtlasTexture_rbv8p"), SubResource("AtlasTexture_wbvtg"), SubResource("AtlasTexture_q21yr"), SubResource("AtlasTexture_pthwq")])
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Control"]
 texture_filter = 1
 custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
+layout_mode = 0
+offset_left = -99.0
+offset_top = 55.0
+offset_right = -54.0
+offset_bottom = 146.0
 mouse_filter = 2
-texture = ExtResource("5_h374b")
+texture = SubResource("AtlasTexture_4iys0")
 
-[node name="Control" type="Control" parent="HBoxContainer/TextureRect"]
-texture_filter = 1
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_v1hl6")
-target = NodePath("..")
-textures = Array[Texture2D]([ExtResource("5_h374b"), ExtResource("6_3qwlg"), ExtResource("4_k0mjv"), ExtResource("6_np7ld"), ExtResource("9_irhpv"), ExtResource("10_1m00m"), ExtResource("11_gbgn5"), ExtResource("12_t2755"), ExtResource("13_anxu0")])
-
-[node name="Button_gora" type="Button" parent="HBoxContainer/TextureRect/Control"]
+[node name="Button_gora" type="Button" parent="HBoxContainer/Control"]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
-offset_left = 4.0
-offset_top = -45.0
-offset_right = 44.0
-offset_bottom = -5.0
-icon = ExtResource("3_np7ld")
+offset_left = -96.0
+offset_top = 9.0
+offset_right = -56.0
+offset_bottom = 49.0
+icon = ExtResource("13_wbvtg")
 icon_alignment = 1
 script = ExtResource("3_d7bu3")
 manager = NodePath("..")
 
-[node name="Button" type="Button" parent="HBoxContainer/TextureRect/Control"]
+[node name="Button" type="Button" parent="HBoxContainer/Control"]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
-offset_left = 4.0
-offset_top = 96.0
-offset_right = 44.0
-offset_bottom = 136.0
-icon = ExtResource("14_anxu0")
+offset_left = -97.0
+offset_top = 155.0
+offset_right = -57.0
+offset_bottom = 195.0
+icon = ExtResource("15_n4nou")
 icon_alignment = 1
 script = ExtResource("15_v1hl6")
 manager = NodePath("..")
 
-[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+[node name="Control2" type="Control" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+script = ExtResource("4_v1hl6")
+target = NodePath("TextureRect2")
+textures = Array[Texture2D]([SubResource("AtlasTexture_qe5fj"), SubResource("AtlasTexture_ooh8t"), SubResource("AtlasTexture_sg7br"), SubResource("AtlasTexture_6omdr"), SubResource("AtlasTexture_2ownb"), SubResource("AtlasTexture_56j0b"), SubResource("AtlasTexture_vi3xe"), SubResource("AtlasTexture_lpwns"), SubResource("AtlasTexture_xlrrv")])
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/Control2"]
 texture_filter = 1
 custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = ExtResource("5_h374b")
+layout_mode = 0
+offset_left = -49.0
+offset_top = 55.0
+offset_right = -4.0
+offset_bottom = 146.0
+texture = SubResource("AtlasTexture_3egkj")
 
-[node name="Control" type="Control" parent="HBoxContainer/TextureRect2"]
-texture_filter = 1
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_v1hl6")
-target = NodePath("..")
-textures = Array[Texture2D]([ExtResource("5_h374b"), ExtResource("6_3qwlg"), ExtResource("4_k0mjv"), ExtResource("6_np7ld"), ExtResource("9_irhpv"), ExtResource("10_1m00m"), ExtResource("11_gbgn5"), ExtResource("12_t2755"), ExtResource("13_anxu0")])
-
-[node name="Button_gora" type="Button" parent="HBoxContainer/TextureRect2/Control"]
+[node name="Button_gora" type="Button" parent="HBoxContainer/Control2"]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
-offset_left = 4.0
-offset_top = -45.0
-offset_right = 44.0
-offset_bottom = -5.0
-icon = ExtResource("3_np7ld")
+offset_left = -45.0
+offset_top = 9.0
+offset_right = -5.0
+offset_bottom = 49.0
+icon = ExtResource("17_18dca")
 icon_alignment = 1
 script = ExtResource("3_d7bu3")
 manager = NodePath("..")
 
-[node name="Button" type="Button" parent="HBoxContainer/TextureRect2/Control"]
+[node name="Button" type="Button" parent="HBoxContainer/Control2"]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
-offset_left = 3.0
-offset_top = 95.0
-offset_right = 43.0
-offset_bottom = 135.0
-icon = ExtResource("14_anxu0")
+offset_left = -46.0
+offset_top = 155.0
+offset_right = -6.0
+offset_bottom = 195.0
+icon = ExtResource("18_wx832")
 icon_alignment = 1
 script = ExtResource("15_v1hl6")
 manager = NodePath("..")
 
-[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+[node name="Control3" type="Control" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+script = ExtResource("4_v1hl6")
+target = NodePath("TextureRect3")
+textures = Array[Texture2D]([SubResource("AtlasTexture_4xaqu"), SubResource("AtlasTexture_o5io7"), SubResource("AtlasTexture_rhd30"), SubResource("AtlasTexture_ec8k2"), SubResource("AtlasTexture_o5w0p"), SubResource("AtlasTexture_ii0bj"), SubResource("AtlasTexture_uhs70"), SubResource("AtlasTexture_ou7f4"), SubResource("AtlasTexture_6cmha")])
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/Control3"]
 texture_filter = 1
 custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = ExtResource("5_h374b")
+layout_mode = 0
+offset_left = 4.0
+offset_top = 55.0
+offset_right = 49.0
+offset_bottom = 146.0
+texture = SubResource("AtlasTexture_m50by")
 
-[node name="Control" type="Control" parent="HBoxContainer/TextureRect3"]
-texture_filter = 1
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_v1hl6")
-target = NodePath("..")
-textures = Array[Texture2D]([ExtResource("5_h374b"), ExtResource("6_3qwlg"), ExtResource("4_k0mjv"), ExtResource("6_np7ld"), ExtResource("9_irhpv"), ExtResource("10_1m00m"), ExtResource("11_gbgn5"), ExtResource("12_t2755"), ExtResource("13_anxu0")])
-
-[node name="Button" type="Button" parent="HBoxContainer/TextureRect3/Control"]
+[node name="Button" type="Button" parent="HBoxContainer/Control3"]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
-offset_left = 4.0
-offset_top = 96.0
-offset_right = 44.0
-offset_bottom = 136.0
-icon = ExtResource("14_anxu0")
+offset_left = 6.0
+offset_top = 154.0
+offset_right = 46.0
+offset_bottom = 194.0
+icon = ExtResource("19_ywhde")
 icon_alignment = 1
 script = ExtResource("15_v1hl6")
 manager = NodePath("..")
 
-[node name="Button_gora" type="Button" parent="HBoxContainer/TextureRect3/Control"]
+[node name="Button_gora" type="Button" parent="HBoxContainer/Control3"]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
-offset_left = 4.0
-offset_top = -44.0
-offset_right = 44.0
-offset_bottom = -4.0
-icon = ExtResource("3_np7ld")
+offset_left = 7.0
+offset_top = 9.0
+offset_right = 47.0
+offset_bottom = 49.0
+icon = ExtResource("20_765sk")
 icon_alignment = 1
 script = ExtResource("3_d7bu3")
 manager = NodePath("..")
 
-[node name="TextureRect4" type="TextureRect" parent="HBoxContainer"]
+[node name="Control4" type="Control" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+script = ExtResource("4_v1hl6")
+target = NodePath("TextureRect4")
+textures = Array[Texture2D]([SubResource("AtlasTexture_18dca"), SubResource("AtlasTexture_wx832"), SubResource("AtlasTexture_ywhde"), SubResource("AtlasTexture_765sk"), SubResource("AtlasTexture_ytpue"), SubResource("AtlasTexture_04ngh"), SubResource("AtlasTexture_ifetn"), SubResource("AtlasTexture_p8ios"), SubResource("AtlasTexture_kten7")])
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/Control4"]
 texture_filter = 1
 custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = ExtResource("5_h374b")
+layout_mode = 0
+offset_left = 56.0
+offset_top = 55.0
+offset_right = 101.0
+offset_bottom = 146.0
+texture = SubResource("AtlasTexture_n4nou")
 
-[node name="Control" type="Control" parent="HBoxContainer/TextureRect4"]
-texture_filter = 1
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_v1hl6")
-target = NodePath("..")
-textures = Array[Texture2D]([ExtResource("5_h374b"), ExtResource("6_3qwlg"), ExtResource("4_k0mjv"), ExtResource("6_np7ld"), ExtResource("9_irhpv"), ExtResource("10_1m00m"), ExtResource("11_gbgn5"), ExtResource("12_t2755"), ExtResource("13_anxu0")])
-
-[node name="Button" type="Button" parent="HBoxContainer/TextureRect4/Control"]
+[node name="Button" type="Button" parent="HBoxContainer/Control4"]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
-offset_left = 4.0
-offset_top = 96.0
-offset_right = 44.0
-offset_bottom = 136.0
-icon = ExtResource("14_anxu0")
+offset_left = 59.0
+offset_top = 154.0
+offset_right = 99.0
+offset_bottom = 194.0
+icon = ExtResource("21_ytpue")
 icon_alignment = 1
 script = ExtResource("15_v1hl6")
-manager = NodePath("..")
+manager = NodePath("../../Control4")
 
-[node name="Button_gora" type="Button" parent="HBoxContainer/TextureRect4/Control"]
+[node name="Button_gora" type="Button" parent="HBoxContainer/Control4"]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
-offset_left = 2.0
-offset_top = -44.0
-offset_right = 42.0
-offset_bottom = -4.0
-icon = ExtResource("3_np7ld")
+offset_left = 57.0
+offset_top = 9.0
+offset_right = 97.0
+offset_bottom = 49.0
+icon = ExtResource("22_04ngh")
 icon_alignment = 1
 script = ExtResource("3_d7bu3")
-manager = NodePath("..")
+manager = NodePath("../../Control4")
 
 [node name="Button" type="Button" parent="." node_paths=PackedStringArray("slots", "ok_button")]
 texture_filter = 1
 layout_mode = 0
-offset_left = 78.0
-offset_top = -12.0
-offset_right = 121.0
-offset_bottom = 19.0
+offset_left = 84.0
+offset_top = -21.0
+offset_right = 141.0
+offset_bottom = 21.0
 text = "OK"
 script = ExtResource("18_yuk6o")
-slots = [NodePath("../HBoxContainer/TextureRect"), NodePath("../HBoxContainer/TextureRect2"), NodePath("../HBoxContainer/TextureRect3"), NodePath("../HBoxContainer/TextureRect4")]
-required_textures = Array[Texture2D]([ExtResource("4_k0mjv"), ExtResource("4_k0mjv"), ExtResource("4_k0mjv"), ExtResource("4_k0mjv")])
+required_id = Array[int]([6, 4, 7, 2])
+slots = [NodePath("../HBoxContainer/Control"), NodePath("../HBoxContainer/Control2"), NodePath("../HBoxContainer/Control3"), NodePath("../HBoxContainer/Control4")]
 ok_button = NodePath(".")
-ok_icon_correct = ExtResource("3_np7ld")
-ok_icon_default = ExtResource("14_anxu0")
+ok_icon_correct = ExtResource("13_wbvtg")
+ok_icon_default = ExtResource("15_n4nou")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

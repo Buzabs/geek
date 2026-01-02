@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5nds3o1wfgcr"
-path="res://.godot/imported/siedem.png-a6586f25c0a67f80c7ba24006e039f0d.ctex"
+uid="uid://bil0cl667mobo"
+path="res://.godot/imported/cyan_numbers.png-8d1b86613eeb2da4f45d51d78a3796af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/siedem.png"
-dest_files=["res://.godot/imported/siedem.png-a6586f25c0a67f80c7ba24006e039f0d.ctex"]
+source_file="res://compyter_puzzle/sprite/cyan_numbers.png"
+dest_files=["res://.godot/imported/cyan_numbers.png-8d1b86613eeb2da4f45d51d78a3796af.ctex"]
 
 [params]
 

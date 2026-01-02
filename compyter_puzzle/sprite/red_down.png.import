@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxwq2y7gcw0rc"
-path="res://.godot/imported/cztery.png-fb0222ecacb52c9a131b9d9d04bbfdf8.ctex"
+uid="uid://c5kurjwyjgxq5"
+path="res://.godot/imported/red_down.png-f35c7177acba823b54ac7c62beababe5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/cztery.png"
-dest_files=["res://.godot/imported/cztery.png-fb0222ecacb52c9a131b9d9d04bbfdf8.ctex"]
+source_file="res://compyter_puzzle/sprite/red_down.png"
+dest_files=["res://.godot/imported/red_down.png-f35c7177acba823b54ac7c62beababe5.ctex"]
 
 [params]
 

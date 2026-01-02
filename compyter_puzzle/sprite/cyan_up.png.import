@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://td1lkirj82ei"
-path="res://.godot/imported/strzalka_gura.png-a60725b660e3edefc4416d68e4d857c2.ctex"
+uid="uid://mg831srwc5v6"
+path="res://.godot/imported/cyan_up.png-6ae3e4deddd97490819b299f2ed05e40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/strzalka_gura.png"
-dest_files=["res://.godot/imported/strzalka_gura.png-a60725b660e3edefc4416d68e4d857c2.ctex"]
+source_file="res://compyter_puzzle/sprite/cyan_up.png"
+dest_files=["res://.godot/imported/cyan_up.png-6ae3e4deddd97490819b299f2ed05e40.ctex"]
 
 [params]
 

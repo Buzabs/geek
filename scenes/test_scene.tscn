@@ -31,7 +31,7 @@ size = Vector2(16, 12)
 radius = 28.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gixj"]
-size = Vector2(26, 34)
+size = Vector2(38, 36)
 
 [node name="TestScene" type="Node"]
 script = ExtResource("1_ntc4i")
@@ -124,7 +124,7 @@ position = Vector2(-108, -44)
 texture = ExtResource("16_8gixj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_area"]
-position = Vector2(-109, -41)
+position = Vector2(-109, -40)
 shape = SubResource("RectangleShape2D_8gixj")
 
 [node name="eq" parent="." instance=ExtResource("5_wtsjf")]

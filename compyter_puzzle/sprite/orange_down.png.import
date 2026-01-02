@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2cq3qat5rvkm"
-path="res://.godot/imported/computer_puzzle_placeholder.png-644e3f51d2be8d1e860ac7f2632cbc0c.ctex"
+uid="uid://dot80dex7ed3i"
+path="res://.godot/imported/orange_down.png-2f2fe4719381bd3e95958359a6f62284.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Environment/computer_puzzle_placeholder.png"
-dest_files=["res://.godot/imported/computer_puzzle_placeholder.png-644e3f51d2be8d1e860ac7f2632cbc0c.ctex"]
+source_file="res://compyter_puzzle/sprite/orange_down.png"
+dest_files=["res://.godot/imported/orange_down.png-2f2fe4719381bd3e95958359a6f62284.ctex"]
 
 [params]
 
