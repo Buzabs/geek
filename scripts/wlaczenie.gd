@@ -15,7 +15,8 @@ func _on_solution_checked(is_correct: bool):
 	solution_ok = is_correct
 
 func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed:
-		if GlobalEq.selected_item_id == "sus" and solution_ok :
+	if event is InputEventMouseButton and event.pressed and solution_ok:
+		if GlobalEq.selected_item_id == "sus":
 				sprite.texture = wlaczony
-				GameSignals.item_used.emit(true)
+				GlobalEq.remove_item("sus")
+				

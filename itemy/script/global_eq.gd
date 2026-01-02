@@ -26,5 +26,11 @@ func add_item(texture: Texture2D, id: String) -> bool:
 	print("Added item:", id, " slots now:", slots.size())
 	inventory_changed.emit()
 	return true
-	
-	
+
+
+func remove_item(id_item: String):
+	for i in range(slots.size()):
+		if slots[i]["id"] == id_item:
+			slots.remove_at(i)    
+			inventory_changed.emit()
+			return

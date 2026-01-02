@@ -9,9 +9,13 @@ class_name SlotButton
 var is_selected := false
 
 func _ready():
+
 	pressed.connect(_on_pressed)
 	if target:
 		target.texture = default_texture
+
+
+	
 
 func _on_pressed():
 	if not target:
@@ -35,3 +39,4 @@ func _on_pressed():
 		target.texture = default_texture
 		GlobalEq.selected_item = null
 		GlobalEq.selected_item_id = ""
+	
