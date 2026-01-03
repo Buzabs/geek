@@ -1,6 +1,6 @@
 extends Node
 
-
+var loaded: int = 0
 
 var collected_items := {}
 

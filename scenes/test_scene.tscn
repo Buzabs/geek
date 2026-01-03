@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=23 format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="1_h3xc6"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bapih2u5tawh7" path="res://sprites/meble/stol.png" id="10_s36qc"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/swap_scenes.gd" id="15_hf2sn"]
 [ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/Environment/drzwi.png" id="16_8gixj"]
+[ext_resource type="Script" uid="uid://diqkru1nsqlvb" path="res://scripts/dialogi_tutorial.gd" id="18_qq5q4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
 size = Vector2(320, 24.5)
@@ -125,3 +126,6 @@ offset_top = 47.0
 offset_right = -94.0
 offset_bottom = 47.0
 metadata/_edit_use_anchors_ = true
+
+[node name="Dialogi_tutorial" type="Node" parent="."]
+script = ExtResource("18_qq5q4")

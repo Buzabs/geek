@@ -1,0 +1,35 @@
+~ chodzenie
+ENZO: Ale wczoraj zachlałem.
+ENZO: Kompletnie nic nie pamiętam, jak sie chodziło?
+ENZO: Może spróbuję lewym przyciskiem myszki.
+=> END
+
+~ podnoszenie
+ENZO: O! Widzę jakąś ciekawą miksturę.
+ENZO: Muszę ją podnieść, spróbuję kliknąć E na klawiaturze.
+=> END
+
+~ podnoszenie2
+ENZO: JEJ!
+ENZO: Udało się, podniosłem miksturę.
+=> END
+
+~ komputer
+ENZO: A to co?
+ENZO: Komputer? Włącze go i zobaczę co w nim jest.
+=> END
+
+~ kod
+ENZO: Potrzebuję jakiegoś kodu...
+ENZO: Chyba kolory odpowiadają książkom na półce. Policze je i sprawdzę co się stanie.
+=> END
+
+~ komputer2
+ENZO: Chyba udało mi się go odpalić, ale co teraz...
+ENZO: Może spróbuję wrzucić jakąś miksturę w ten portal, ciekawe co wtedy się stanie.
+=> END
+
+~ portal
+ENZO: OOOOO!!!
+ENZO: Portal się odpalił, ale co się dzieję aaaaaaaaaaa......!!!
+=> END
