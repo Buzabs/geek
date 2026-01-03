@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3d7sk56uf7o8"
-path="res://.godot/imported/szafa.png-d41f6023c895d360e8f2ac608af00b5e.ctex"
+uid="uid://c2gwtnp7pjfkt"
+path="res://.godot/imported/ciii_icon.png-fc23d3b5792c2099273b40023e2f6b5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Environment/szafa.png"
-dest_files=["res://.godot/imported/szafa.png-d41f6023c895d360e8f2ac608af00b5e.ctex"]
+source_file="res://itemy/sprites/ciii_icon.png"
+dest_files=["res://.godot/imported/ciii_icon.png-fc23d3b5792c2099273b40023e2f6b5e.ctex"]
 
 [params]
 

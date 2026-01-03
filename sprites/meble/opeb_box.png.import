@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3d7sk56uf7o8"
-path="res://.godot/imported/szafa.png-de625358fe9dd5c195293c54132e0e56.ctex"
+uid="uid://buv7eu1j2r1ur"
+path="res://.godot/imported/opeb_box.png-976bbdb90b93d8f23f050aef04810367.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/meble/szafa.png"
-dest_files=["res://.godot/imported/szafa.png-de625358fe9dd5c195293c54132e0e56.ctex"]
+source_file="res://sprites/meble/opeb_box.png"
+dest_files=["res://.godot/imported/opeb_box.png-976bbdb90b93d8f23f050aef04810367.ctex"]
 
 [params]
 

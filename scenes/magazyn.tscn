@@ -6,13 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="2_glxrb"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/swap_scenes.gd" id="3_8najp"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="3_ryqy8"]
-[ext_resource type="Texture2D" uid="uid://b3d7sk56uf7o8" path="res://sprites/Environment/szafa.png" id="4_dm26d"]
+[ext_resource type="Texture2D" uid="uid://b3d7sk56uf7o8" path="res://sprites/meble/szafa.png" id="4_dm26d"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://itemy/equ/eq.tscn" id="7_8najp"]
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="8_cc1vp"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/open.gd" id="8_wy22u"]
-[ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/Environment/open_wardrobe.png" id="9_6ulow"]
-[ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/Environment/opeb_box.png" id="12_guiiq"]
-[ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/Environment/box.png" id="13_2meqn"]
+[ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="9_6ulow"]
+[ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="12_guiiq"]
+[ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="13_2meqn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0b8bv"]
 size = Vector2(251, 33)
@@ -82,10 +82,11 @@ offset_top = 47.0
 offset_right = -86.0
 offset_bottom = 47.0
 
-[node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+[node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("sprite", "item")]
 script = ExtResource("8_wy22u")
 open = ExtResource("9_6ulow")
 sprite = NodePath("Szafa")
+item = NodePath("")
 
 [node name="Szafa" type="Sprite2D" parent="Area2D2"]
 texture_filter = 1
@@ -93,25 +94,25 @@ position = Vector2(98, -13)
 texture = ExtResource("4_dm26d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(97.5, -15.125)
+position = Vector2(98, -19)
 shape = SubResource("RectangleShape2D_6ulow")
 
 [node name="Area2D3" type="Area2D" parent="." node_paths=PackedStringArray("sprite", "item")]
 script = ExtResource("8_wy22u")
 open = ExtResource("12_guiiq")
 sprite = NodePath("Pudelko")
-item = NodePath("Pudelko/Sus")
+item = NodePath("Sus")
 
 [node name="Pudelko" type="Sprite2D" parent="Area2D3"]
 texture_filter = 1
 position = Vector2(13, 5)
 texture = ExtResource("13_2meqn")
 
-[node name="Sus" parent="Area2D3/Pudelko" instance=ExtResource("8_cc1vp")]
+[node name="Sus" parent="Area2D3" instance=ExtResource("8_cc1vp")]
 texture_filter = 1
-position = Vector2(0, -10)
+position = Vector2(13, -5)
 item_id = "suss"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(13, 4)
+position = Vector2(13, 5)
 shape = SubResource("RectangleShape2D_5bx36")
