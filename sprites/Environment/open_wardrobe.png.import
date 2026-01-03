@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h654x1mil5mi"
-path="res://.godot/imported/pudelko.png-a7b286c8f4808a22e2823387233462df.ctex"
+uid="uid://b1w2f5gm4lpx8"
+path="res://.godot/imported/open_wardrobe.png-f5ca26096510195029769e70f96baee7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Environment/pudelko.png"
-dest_files=["res://.godot/imported/pudelko.png-a7b286c8f4808a22e2823387233462df.ctex"]
+source_file="res://sprites/Environment/open_wardrobe.png"
+dest_files=["res://.godot/imported/open_wardrobe.png-f5ca26096510195029769e70f96baee7.ctex"]
 
 [params]
 

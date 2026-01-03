@@ -33,7 +33,8 @@ func _on_pressed():
 		target.texture = selected_texture
 		GlobalEq.selected_item = selected_texture
 		GlobalEq.selected_item_id = item_id
-		print("Wybrano ID:", item_id)
+		if GlobalEq.selected_item_id != "":
+			print("Wybrano:", item_id)
 	else:
 		is_selected = false
 		target.texture = default_texture

@@ -4,7 +4,6 @@ var max_slots := 5
 
 func _ready(): 
 	GlobalEq.inventory_changed.connect(refresh)
-
 	for i in range(max_slots):
 		var btn = SlotButton.new()
 		btn.custom_minimum_size = Vector2(64, 64)
