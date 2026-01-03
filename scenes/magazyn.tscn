@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c2w6tc1v57qhg"]
+[gd_scene load_steps=20 format=3 uid="uid://c2w6tc1v57qhg"]
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/pausa.gd" id="1_0b8bv"]
 [ext_resource type="Texture2D" uid="uid://cblno7uy5hnyu" path="res://sprites/Environment/magazyn_tlo.png" id="1_necqc"]
@@ -15,16 +15,19 @@
 [ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="13_2meqn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0b8bv"]
-size = Vector2(251, 33)
+size = Vector2(251, 32.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r353"]
-size = Vector2(20, 110)
+size = Vector2(25, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guiiq"]
+size = Vector2(255, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cc1vp"]
 size = Vector2(34, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ulow"]
-size = Vector2(45, 48.25)
+size = Vector2(60, 62.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bx36"]
 
@@ -40,20 +43,20 @@ texture = ExtResource("1_necqc")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(7, -40)
-shape = SubResource("RectangleShape2D_0b8bv")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(6, 70)
+position = Vector2(7, -40.25)
 shape = SubResource("RectangleShape2D_0b8bv")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(141, 0)
+position = Vector2(138.5, 0)
 shape = SubResource("RectangleShape2D_7r353")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-129, 2)
 shape = SubResource("RectangleShape2D_7r353")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8.5, 59)
+shape = SubResource("RectangleShape2D_guiiq")
 
 [node name="Player" parent="." instance=ExtResource("2_glxrb")]
 position = Vector2(31, 24)
@@ -94,7 +97,7 @@ position = Vector2(98, -13)
 texture = ExtResource("4_dm26d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(98, -19)
+position = Vector2(94, -12.0625)
 shape = SubResource("RectangleShape2D_6ulow")
 
 [node name="Area2D3" type="Area2D" parent="." node_paths=PackedStringArray("sprite", "item")]

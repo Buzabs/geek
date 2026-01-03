@@ -20,22 +20,12 @@ func _on_exit(body):
 		player_ref = null
 		print("Gracz wyszedł z obiektu")
 
-func _process(_delta):
-	if can_interact and Input.is_action_just_pressed("items"):
-		var ui = computer_ui.instantiate()
-		get_tree().root.add_child(ui)
-		get_tree().paused = true
+
 
 @export var computer_ui: PackedScene
 
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		is_clicked = true
-	
-
-
-func _on_computer_check_body_entered(body: Node2D) -> void:
-	if body is CharacterBody2D and is_clicked:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and can_interact:
 		var ui = computer_ui.instantiate()
 		get_tree().root.add_child(ui)
 		get_tree().paused = true

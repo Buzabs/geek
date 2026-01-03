@@ -18,7 +18,6 @@ func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and solution_ok :
 		if GlobalEq.selected_item_id == "sus":
 				sprite.texture = wlaczony
-			
 				GlobalEq.remove_item("sus")
 				GlobalEq.used_item.emit(true)
 				

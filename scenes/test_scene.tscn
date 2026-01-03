@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=22 format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="1_h3xc6"]
@@ -21,11 +21,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
 size = Vector2(320, 24.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnaij"]
-size = Vector2(18, 18)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
-size = Vector2(16, 12)
+size = Vector2(17, 12.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6qxox"]
 radius = 28.0
@@ -59,26 +56,19 @@ texture = ExtResource("5_qjeyg")
 [node name="Computer" type="Node2D" parent="Environment"]
 position = Vector2(61, -47)
 
-[node name="ComputerCheck" type="Area2D" parent="Environment/Computer"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerCheck"]
-z_index = 1
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_rnaij")
-
 [node name="ComputerClick" type="Area2D" parent="Environment/Computer"]
 script = ExtResource("6_rnaij")
 computer_ui = ExtResource("8_pln1h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerClick"]
-z_index = 2
-position = Vector2(0, -2)
-shape = SubResource("RectangleShape2D_wtsjf")
-
-[node name="computer" type="Sprite2D" parent="Environment/Computer"]
+[node name="computer" type="Sprite2D" parent="Environment/Computer/ComputerClick"]
 visibility_layer = 4
 texture_filter = 1
 texture = ExtResource("6_wtsjf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerClick"]
+z_index = 2
+position = Vector2(-0.5, -2.25)
+shape = SubResource("RectangleShape2D_wtsjf")
 
 [node name="Stol" type="Sprite2D" parent="Environment"]
 texture_filter = 1
@@ -135,5 +125,3 @@ offset_top = 47.0
 offset_right = -94.0
 offset_bottom = 47.0
 metadata/_edit_use_anchors_ = true
-
-[connection signal="body_entered" from="Environment/Computer/ComputerCheck" to="Environment/Computer/ComputerClick" method="_on_computer_check_body_entered"]
