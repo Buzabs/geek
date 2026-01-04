@@ -10,9 +10,9 @@ region = Rect2(0, 0, 17.7849, 17)
 [sub_resource type="CircleShape2D" id="CircleShape2D_rf3fb"]
 radius = 7.071068
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ko3y"]
-atlas = ExtResource("2_aal3s")
-region = Rect2(0, 0, 20.971994, 17)
+[sub_resource type="CanvasTexture" id="CanvasTexture_bvr1l"]
+diffuse_texture = ExtResource("2_aal3s")
+texture_filter = 1
 
 [node name="Sus" type="Area2D"]
 light_mask = 2
@@ -26,5 +26,7 @@ position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_rf3fb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 0)
-texture = SubResource("AtlasTexture_1ko3y")
+position = Vector2(0, 2)
+texture = SubResource("CanvasTexture_bvr1l")
+region_enabled = true
+region_rect = Rect2(4, 5, 11, 11)

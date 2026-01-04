@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="1_h3xc6"]
-[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/pausa.gd" id="1_ntc4i"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/test_scene.gd" id="1_ntc4i"]
 [ext_resource type="PackedScene" uid="uid://b2fsc3yn7gygp" path="res://itemy/scenes/potka.tscn" id="2_wtsjf"]
 [ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="5_3qnke"]
 [ext_resource type="Script" uid="uid://d3dnn4w1486vg" path="res://scripts/wlaczenie.gd" id="5_gthg3"]
@@ -20,13 +20,13 @@
 [ext_resource type="Script" uid="uid://diqkru1nsqlvb" path="res://scripts/dialogi_tutorial.gd" id="18_qq5q4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
-size = Vector2(320, 24.5)
+size = Vector2(320, 22.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
 size = Vector2(17, 12.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6qxox"]
-radius = 28.0
+radius = 36.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gixj"]
 size = Vector2(38, 36)
@@ -44,7 +44,7 @@ position = Vector2(-17, 5)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -64.25)
+position = Vector2(0, -65.25)
 shape = SubResource("RectangleShape2D_nd71p")
 
 [node name="Environment" type="Node" parent="."]
@@ -83,6 +83,7 @@ texture = ExtResource("10_6qxox")
 
 [node name="portal_area" type="Area2D" parent="Environment"]
 script = ExtResource("5_gthg3")
+load_scenes = "res://scenes/level_1/anglia.tscn"
 wlaczony = ExtResource("6_ntc4i")
 
 [node name="Portalwylaczony" type="Sprite2D" parent="Environment/portal_area"]

@@ -27,9 +27,25 @@ ENZO: Chyba kolory odpowiadają książkom na półce. Policze je i sprawdzę co
 ~ komputer2
 ENZO: Chyba udało mi się go odpalić, ale co teraz...
 ENZO: Może spróbuję wrzucić jakąś miksturę w ten portal, ciekawe co wtedy się stanie.
+ENZO: Wydaje mi sie że miałęm jedną w magazynie...
+ENZO: Pójde tam i zobaczę !!!
 => END
+
+~ sus
+ENZO: Okej jestem w magazynie, tylko gdzie był ten przedniot...
+ENZO: meble otwierało sie chyba podchodząc i klikając w nie. Spróbujmy! 
+=> END
+
+~ find
+ENZO: Jeej udało mi sie to znależć
+ENZO: teraz tylko dać to do portalu bo co może pójść nie tak
+=> END
+
 
 ~ portal
 ENZO: OOOOO!!!
-ENZO: Portal się odpalił, ale co się dzieję aaaaaaaaaaa......!!!
+ENZO: Portal się odpalił, ale co się dzie... 
+=> END
+~ portal2
+ENZO: aaaaaaaaaaa......!!!
 => END

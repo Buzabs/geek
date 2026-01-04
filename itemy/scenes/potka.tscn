@@ -10,9 +10,9 @@ region = Rect2(30.9856, 0, 19.0144, 17)
 [sub_resource type="CircleShape2D" id="CircleShape2D_rf3fb"]
 radius = 6.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ko3y"]
-atlas = ExtResource("2_led46")
-region = Rect2(31.8371, -0.344488, 18.5805, 17.6886)
+[sub_resource type="CanvasTexture" id="CanvasTexture_15f3v"]
+diffuse_texture = ExtResource("2_led46")
+texture_filter = 1
 
 [node name="potka" type="Area2D"]
 script = ExtResource("1_15f3v")
@@ -24,5 +24,8 @@ position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_rf3fb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -2)
-texture = SubResource("AtlasTexture_1ko3y")
+position = Vector2(0, 2.0000002)
+scale = Vector2(1.0600648, 1.0344968)
+texture = SubResource("CanvasTexture_15f3v")
+region_enabled = true
+region_rect = Rect2(37, 9, 7, 7)

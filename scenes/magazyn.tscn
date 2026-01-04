@@ -1,6 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://c2w6tc1v57qhg"]
+[gd_scene load_steps=21 format=3 uid="uid://c2w6tc1v57qhg"]
 
-[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/pausa.gd" id="1_0b8bv"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/test_scene.gd" id="1_0b8bv"]
 [ext_resource type="Texture2D" uid="uid://cblno7uy5hnyu" path="res://sprites/Environment/magazyn_tlo.png" id="1_necqc"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="2_7r353"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="2_glxrb"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="8_cc1vp"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/open.gd" id="8_wy22u"]
 [ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="9_6ulow"]
+[ext_resource type="PackedScene" uid="uid://dk4dlw3uofp37" path="res://itemy/scenes/ciii.tscn" id="11_2meqn"]
 [ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="12_guiiq"]
 [ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="13_2meqn"]
 
@@ -80,21 +81,24 @@ zoom = Vector2(2, 2)
 [node name="eq" parent="." instance=ExtResource("7_8najp")]
 texture_filter = 1
 anchors_preset = -1
-offset_left = -86.0
-offset_top = 47.0
-offset_right = -86.0
-offset_bottom = 47.0
+offset_left = -90.0
+offset_top = 46.0
+offset_right = -90.0
+offset_bottom = 46.0
 
 [node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("sprite", "item")]
 script = ExtResource("8_wy22u")
 open = ExtResource("9_6ulow")
 sprite = NodePath("Szafa")
-item = NodePath("")
+item = NodePath("Ciii")
 
 [node name="Szafa" type="Sprite2D" parent="Area2D2"]
 texture_filter = 1
 position = Vector2(98, -13)
 texture = ExtResource("4_dm26d")
+
+[node name="Ciii" parent="Area2D2" instance=ExtResource("11_2meqn")]
+position = Vector2(105, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(94, -12.0625)

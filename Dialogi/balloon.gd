@@ -69,6 +69,7 @@ var mutation_cooldown: Timer = Timer.new()
 
 
 func _ready() -> void:
+	
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
@@ -80,19 +81,19 @@ func _ready() -> void:
 	add_child(mutation_cooldown)
 
 	if auto_start:
+	
 		if not is_instance_valid(dialogue_resource):
 			assert(false, DMConstants.get_error_message(DMConstants.ERR_MISSING_RESOURCE_FOR_AUTOSTART))
 		start()
 
 
 func _process(delta: float) -> void:
+	
 	if is_instance_valid(dialogue_line):
 		progress.visible = not dialogue_label.is_typing and dialogue_line.responses.size() == 0 and not dialogue_line.has_tag("voice")
 
 
-func _unhandled_input(_event: InputEvent) -> void:
-	# Only the balloon is allowed to handle input while it's showing
-	get_viewport().set_input_as_handled()
+
 
 
 func _notification(what: int) -> void:
@@ -184,13 +185,10 @@ func _on_mutated(_mutation: Dictionary) -> void:
 		mutation_cooldown.start(0.1)
 
 
-func _on_balloon_gui_input(event: InputEvent) -> void:
+func _on_balloon_gui_input() -> void:
 	# See if we need to skip typing of the dialogue
 	if dialogue_label.is_typing:
-		var mouse_was_clicked: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed()
-		var skip_button_was_pressed: bool = event.is_action_pressed(skip_action)
-		if mouse_was_clicked or skip_button_was_pressed:
-			get_viewport().set_input_as_handled()
+		if  Input.is_action_just_pressed("dialogue") :
 			dialogue_label.skip_typing()
 			return
 
@@ -198,11 +196,11 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 	if dialogue_line.responses.size() > 0: return
 
 	# When there are no response options the balloon itself is the clickable thing
-	get_viewport().set_input_as_handled()
+	
 
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+	if Input.is_action_just_pressed("dialogue") :
 		next(dialogue_line.next_id)
-	elif event.is_action_pressed(next_action) and get_viewport().gui_get_focus_owner() == balloon:
+	elif  Input.is_action_just_pressed("dialogue")  :
 		next(dialogue_line.next_id)
 
 

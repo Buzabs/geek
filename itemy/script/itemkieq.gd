@@ -3,6 +3,8 @@ extends Area2D
 @export var item_icon: Texture2D
 @export var item_id: String 
 
+
+
 var used :=  false
 var can_pick := false
 var player_ref: Node = null
@@ -17,7 +19,16 @@ func _ready():
 
 func collect():
 	GlobalC.collected_items[item_id] = true
-	queue_free()	
+	if not GlobalC.first_item_dialog_shown:
+		GlobalC.first_item_dialog_shown = true
+		GlobalC.next()
+		
+	if item_id == "suss":
+		DialogueManager.show_example_dialogue_balloon(preload("res://Dialogi/tutorial.dialogue"),
+            "find"
+		)
+
+	queue_free()
 		
 func _on_enter(body):
 	if body.is_in_group("player"):

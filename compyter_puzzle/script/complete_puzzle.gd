@@ -10,10 +10,12 @@ func _ready():
 func _on_solution_checked(correct: bool):
 	if correct:
 		GameSignals.puzzle_solved = true
+		await get_tree().create_timer(0.5).timeout
+		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "komputer2")
 		_lock_scene()
 
 func _lock_scene():
 	finish.visible = true
 	finish.modulate = Color(0.102, 0.937, 0.0, 0.29)  
 
-var puzzle_states : Dictionary = {}
+		
