@@ -1,7 +1,7 @@
 extends Node
 
 
-var dialogue_resource = preload("res://Dialogi/tutorial.dialogue")
+var dialogue_resource = preload("res://Dialogi/Tutorial.dialogue")
 var clicks_enabled := false
 var pick_enable := false		
 

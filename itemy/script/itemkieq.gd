@@ -4,7 +4,6 @@ extends Area2D
 @export var item_id: String 
 
 
-
 var used :=  false
 var can_pick := false
 var player_ref: Node = null
@@ -24,9 +23,7 @@ func collect():
 		GlobalC.next()
 		
 	if item_id == "suss":
-		DialogueManager.show_example_dialogue_balloon(preload("res://Dialogi/tutorial.dialogue"),
-            "find"
-		)
+		DialogueManager.show_example_dialogue_balloon(preload("res://Dialogi/Tutorial.dialogue"), "find")
 
 	queue_free()
 		

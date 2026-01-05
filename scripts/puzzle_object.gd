@@ -30,4 +30,4 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 		if not GlobalC.first_puzzle_open:
 			GlobalC.first_puzzle_open = true
 			await get_tree().create_timer(0.5).timeout
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "kod")
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "kod")

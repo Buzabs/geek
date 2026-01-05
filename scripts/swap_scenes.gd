@@ -28,4 +28,4 @@ func _input_event(viewport, event, shape_idx):
 		GlobalC.loaded+=1
 		if GlobalC.loaded == 2:
 			
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "sus")		
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "sus")		
