@@ -1,8 +1,11 @@
 extends Area2D
 
 @export var load_scenes: String
+
 var can_open: bool = false
 var player_ref: Node = null
+
+var prev_position: Vector2 
 
 func _ready():
 	if get_tree().current_scene:
@@ -27,5 +30,4 @@ func _input_event(viewport, event, shape_idx):
 		get_tree().change_scene_to_file(load_scenes)
 		GlobalC.loaded+=1
 		if GlobalC.loaded == 2:
-			
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "sus")		

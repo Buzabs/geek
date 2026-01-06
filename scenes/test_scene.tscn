@@ -35,11 +35,14 @@ size = Vector2(38, 36)
 script = ExtResource("1_ntc4i")
 pause_scene = ExtResource("1_h3xc6")
 
+[node name="Dialogi_tutorial" type="Node" parent="."]
+script = ExtResource("18_qq5q4")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("1_g7g4h")]
-position = Vector2(-17, 5)
+position = Vector2(-78, -32)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -127,6 +130,3 @@ offset_top = 47.0
 offset_right = -94.0
 offset_bottom = 47.0
 metadata/_edit_use_anchors_ = true
-
-[node name="Dialogi_tutorial" type="Node" parent="."]
-script = ExtResource("18_qq5q4")

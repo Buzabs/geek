@@ -1,6 +1,7 @@
 extends Node
 
 
+
 #dialogue
 var loaded: int = 0
 var click_count := 0
