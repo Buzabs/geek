@@ -1,7 +1,7 @@
 [gd_scene load_steps=60 format=3 uid="uid://b8qvtri4p8eei"]
 
-[ext_resource type="Texture2D" uid="uid://bkndxcyc7u1pw" path="res://pausa/sprite/pausa_tlo.png" id="1_v1hl6"]
 [ext_resource type="Script" uid="uid://d0kbc3rwwah1i" path="res://compyter_puzzle/script/complete_puzzle.gd" id="1_yuk6o"]
+[ext_resource type="Texture2D" uid="uid://nfehnq2y15um" path="res://compyter_puzzle/sprite/monitor.png" id="2_lt3wm"]
 [ext_resource type="Script" uid="uid://ba61pnp6j5lec" path="res://compyter_puzzle/script/zwieksz.gd" id="3_d7bu3"]
 [ext_resource type="Texture2D" uid="uid://c18ai5pct3wxx" path="res://compyter_puzzle/sprite/violet_numbers.png" id="4_4iys0"]
 [ext_resource type="Script" uid="uid://3sj0rb862s01" path="res://compyter_puzzle/script/button.gd" id="4_v1hl6"]
@@ -194,7 +194,7 @@ finish = NodePath("ColorRect")
 texture_filter = 1
 position = Vector2(1.2755394e-05, 2.861023e-06)
 scale = Vector2(1.0666668, 1.1500001)
-texture = ExtResource("1_v1hl6")
+texture = ExtResource("2_lt3wm")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 texture_filter = 1
