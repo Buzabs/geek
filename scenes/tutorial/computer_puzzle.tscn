@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://b8qvtri4p8eei"]
+[gd_scene load_steps=67 format=3 uid="uid://b8qvtri4p8eei"]
 
 [ext_resource type="Script" uid="uid://d0kbc3rwwah1i" path="res://compyter_puzzle/script/complete_puzzle.gd" id="1_yuk6o"]
 [ext_resource type="Texture2D" uid="uid://nfehnq2y15um" path="res://compyter_puzzle/sprite/monitor.png" id="2_lt3wm"]
@@ -197,6 +197,8 @@ region = Rect2(118.81931, 59.06057, 32.343956, 48.48011)
 [sub_resource type="AtlasTexture" id="AtlasTexture_n4nou"]
 atlas = ExtResource("21_n4nou")
 region = Rect2(8, 4, 32, 48)
+
+[sub_resource type="Theme" id="Theme_lt3wm"]
 
 [node name="Computer" type="Control" node_paths=PackedStringArray("finish")]
 z_index = 8
@@ -411,10 +413,11 @@ manager = NodePath("../../Control4")
 [node name="Button" type="Button" parent="." node_paths=PackedStringArray("slots", "ok_button")]
 texture_filter = 1
 layout_mode = 0
-offset_left = 84.0
-offset_top = -21.0
-offset_right = 141.0
-offset_bottom = 21.0
+offset_left = 75.0
+offset_top = -22.0
+offset_right = 132.0
+offset_bottom = 20.0
+theme = SubResource("Theme_lt3wm")
 text = "OK"
 script = ExtResource("18_yuk6o")
 required_id = Array[int]([6, 4, 7, 2])
@@ -438,9 +441,9 @@ color = Color(0.17254902, 0.99607843, 0.28235295, 0.72156864)
 [node name="back" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 101.0
-offset_top = 61.0
-offset_right = 153.0
-offset_bottom = 92.0
+offset_left = 78.0
+offset_top = 31.0
+offset_right = 130.0
+offset_bottom = 62.0
 text = "BACK"
 script = ExtResource("16_v1hl6")

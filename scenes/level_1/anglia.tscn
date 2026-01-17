@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://bh73r6qfk3avy"]
+[gd_scene load_steps=3 format=3 uid="uid://bh73r6qfk3avy"]
+
+[ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/Environment/londynver1.png" id="1_6pgey"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="2_r8t5m"]
 
 [node name="Anglia" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(161, 90)
+zoom = Vector2(2, 2)
+
+[node name="Player" parent="." instance=ExtResource("2_r8t5m")]
+position = Vector2(122, 132)
+
+[node name="Londynver1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(180, 90)
+texture = ExtResource("1_6pgey")

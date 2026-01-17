@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b885olgh8v47c" path="res://sprites/Environment/portalwlaczony.png" id="6_ntc4i"]
 [ext_resource type="Script" uid="uid://cpoo38pq8w1y5" path="res://scripts/puzzle_object.gd" id="6_rnaij"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="6_wtsjf"]
-[ext_resource type="PackedScene" uid="uid://b8qvtri4p8eei" path="res://scenes/computer_puzzle.tscn" id="8_pln1h"]
+[ext_resource type="PackedScene" uid="uid://b8qvtri4p8eei" path="res://scenes/tutorial/computer_puzzle.tscn" id="8_pln1h"]
 [ext_resource type="Texture2D" uid="uid://c5n2vrggerd1d" path="res://sprites/meble/polka.png" id="10_6qxox"]
 [ext_resource type="Texture2D" uid="uid://bapih2u5tawh7" path="res://sprites/meble/stol.png" id="10_s36qc"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/swap_scenes.gd" id="15_hf2sn"]
