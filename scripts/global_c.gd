@@ -8,12 +8,15 @@ var click_count := 0
 var first_puzzle_open := false
 var pick_up_suus := 0
 var first_item_dialog_shown := false
+var dialog := false
+var open:= false
 
 func next():
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "podnoszenie2")
 	await DialogueManager.dialogue_ended
 	await get_tree().create_timer(0.5).timeout
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "komputer")
+	dialog= true
 
 
 

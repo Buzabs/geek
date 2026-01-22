@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c2w6tc1v57qhg"]
+[gd_scene load_steps=23 format=3 uid="uid://wv87cy2nlac8"]
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/test_scene.gd" id="1_0b8bv"]
 [ext_resource type="Texture2D" uid="uid://cblno7uy5hnyu" path="res://sprites/Environment/magazyn_tlo.png" id="1_necqc"]
@@ -36,6 +36,7 @@ texture_filter = 1
 size = Vector2(60, 62.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bx36"]
+size = Vector2(32, 33)
 
 [node name="Magazyn" type="Node"]
 script = ExtResource("1_0b8bv")
@@ -128,5 +129,5 @@ texture = ExtResource("13_2meqn")
 position = Vector2(13, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(14, 4)
+position = Vector2(13, 3.5)
 shape = SubResource("RectangleShape2D_5bx36")

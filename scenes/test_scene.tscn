@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene load_steps=24 format=3 uid="uid://coj73841tr4we"]
 
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://pausa/pausa.tscn" id="1_h3xc6"]
@@ -12,15 +12,18 @@
 [ext_resource type="Texture2D" uid="uid://b885olgh8v47c" path="res://sprites/Environment/portalwlaczony.png" id="6_ntc4i"]
 [ext_resource type="Script" uid="uid://cpoo38pq8w1y5" path="res://scripts/puzzle_object.gd" id="6_rnaij"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="6_wtsjf"]
-[ext_resource type="PackedScene" uid="uid://b8qvtri4p8eei" path="res://scenes/tutorial/computer_puzzle.tscn" id="8_pln1h"]
 [ext_resource type="Texture2D" uid="uid://c5n2vrggerd1d" path="res://sprites/meble/polka.png" id="10_6qxox"]
 [ext_resource type="Texture2D" uid="uid://bapih2u5tawh7" path="res://sprites/meble/stol.png" id="10_s36qc"]
+[ext_resource type="PackedScene" uid="uid://d2vtfhg5wnt78" path="res://itemy/scenes/portal_items.tscn" id="13_qq5q4"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/swap_scenes.gd" id="15_hf2sn"]
 [ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/Environment/drzwi.png" id="16_8gixj"]
 [ext_resource type="Script" uid="uid://diqkru1nsqlvb" path="res://scripts/dialogi_tutorial.gd" id="18_qq5q4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
 size = Vector2(320, 22.5)
+
+[sub_resource type="Resource" id="Resource_hf2sn"]
+metadata/__load_path__ = "res://scenes/computer_puzzle.tscn"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
 size = Vector2(17, 12.5)
@@ -62,7 +65,7 @@ position = Vector2(61, -47)
 
 [node name="ComputerClick" type="Area2D" parent="Environment/Computer"]
 script = ExtResource("6_rnaij")
-computer_ui = ExtResource("8_pln1h")
+computer_ui = SubResource("Resource_hf2sn")
 
 [node name="computer" type="Sprite2D" parent="Environment/Computer/ComputerClick"]
 visibility_layer = 4
@@ -86,7 +89,6 @@ texture = ExtResource("10_6qxox")
 
 [node name="portal_area" type="Area2D" parent="Environment"]
 script = ExtResource("5_gthg3")
-load_scenes = "res://scenes/level_1/anglia.tscn"
 wlaczony = ExtResource("6_ntc4i")
 
 [node name="Portalwylaczony" type="Sprite2D" parent="Environment/portal_area"]
@@ -98,6 +100,9 @@ texture = ExtResource("5_3qnke")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/portal_area"]
 position = Vector2(104, -48)
 shape = SubResource("CircleShape2D_6qxox")
+
+[node name="PortalItems" parent="Environment" instance=ExtResource("13_qq5q4")]
+position = Vector2(93, 8)
 
 [node name="items" type="Node" parent="."]
 

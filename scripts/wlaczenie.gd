@@ -1,9 +1,9 @@
 extends Area2D
 
-
-@export var load_scenes: String
+var load_scenes = "res://scenes/level_1/anglia.tscn"
 @export var wlaczony: Texture2D
 @onready var sprite := $Portalwylaczony
+
 
 var solution_ok: bool = false
 var items: bool = false
@@ -34,10 +34,10 @@ func _on_solution_checked(is_correct: bool):
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and solution_ok and can_interact :
-		if GlobalEq.selected_item_id == "suss":
+		if GlobalEq.selected_item_id == "portal_open":
 				sprite.texture = wlaczony
-				GlobalEq.remove_item("suss")
+				GlobalEq.remove_item("portal_open")
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "portal")	
-				await get_tree().create_timer(2).timeout
-				get_tree().change_scene_to_file(load_scenes)
+				await DialogueManager.dialogue_ended
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "portal2")	
+				get_tree().change_scene_to_file(load_scenes)

@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dk4dlw3uofp37"]
+[gd_scene load_steps=7 format=3 uid="uid://dk4dlw3uofp37"]
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_o3yxx"]
 [ext_resource type="Texture2D" uid="uid://bcg4mqsjn0n46" path="res://itemy/sprites/ciiiii.png" id="2_5bex4"]
-[ext_resource type="Texture2D" uid="uid://c2gwtnp7pjfkt" path="res://itemy/sprites/ciii_icon.png" id="2_l0axh"]
+[ext_resource type="Texture2D" uid="uid://b1sgdgy3ggi5i" path="res://itemy/sprites/interact_items.png" id="2_l0axh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bex4"]
+atlas = ExtResource("2_l0axh")
+region = Rect2(32, 2, 20, 17)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0axh"]
 radius = 8.0
-height = 20.0
+height = 22.0
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_5bex4"]
 diffuse_texture = ExtResource("2_5bex4")
@@ -14,7 +18,7 @@ texture_filter = 1
 
 [node name="Ciii" type="Area2D"]
 script = ExtResource("1_o3yxx")
-item_icon = ExtResource("2_l0axh")
+item_icon = SubResource("AtlasTexture_5bex4")
 item_id = "ciii"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

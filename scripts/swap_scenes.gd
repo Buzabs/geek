@@ -26,8 +26,9 @@ func _on_exit(body):
 	
 
 func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and can_open:		
-		get_tree().change_scene_to_file(load_scenes)
-		GlobalC.loaded+=1
-		if GlobalC.loaded == 2:
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "sus")		
+	if GlobalC.open:
+		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and can_open :		
+			get_tree().change_scene_to_file(load_scenes)
+			GlobalC.loaded+=1
+			if GlobalC.loaded == 2:
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "sus")		

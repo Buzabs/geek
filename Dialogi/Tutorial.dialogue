@@ -5,7 +5,7 @@ ENZO: Może spróbuję lewym przyciskiem myszki.
 => END
 
 ~ podnoszenie
-ENZO: O! Widzę jakąś ciekawą miksturę.
+ENZO: DObra umiem już chodzić. O! Widzę jakąś ciekawą miksturę.
 ENZO: Muszę ją podnieść, spróbuję kliknąć E na klawiaturze.
 => END
 
@@ -26,8 +26,7 @@ ENZO: Chyba kolory odpowiadają książkom na półce. Policze je i sprawdzę co
 
 ~ komputer2
 ENZO: Chyba udało mi się go odpalić, ale co teraz...
-ENZO: Może spróbuję wrzucić jakąś miksturę w ten portal, ciekawe co wtedy się stanie.
-ENZO: Wydaje mi sie że miałęm jedną w magazynie...
+ENZO: Może spróbuję wrzucić jakąś miksturę w ten portal, ciekawe co wtedy się stanie. Wydaje mi sie że miałęm jedną w magazynie...
 ENZO: Pójde tam i zobaczę !!!
 => END
 

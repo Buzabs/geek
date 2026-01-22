@@ -11,8 +11,9 @@ func _on_solution_checked(correct: bool):
 	if correct:
 		GameSignals.puzzle_solved = true
 		await get_tree().create_timer(0.5).timeout
-		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "komputer2")
 		_lock_scene()
+		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "komputer2")
+		GlobalC.open = true
 
 func _lock_scene():
 	finish.visible = true
