@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3a3u5t6a7m25"
-path="res://.godot/imported/scientist_idle.png-4c752e181f41c778013fc9c02566f8ee.ctex"
+uid="uid://mg831srwc5v6"
+path="res://.godot/imported/cyan_up.png-3c822812bf1ee3ec8280f695692c10d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Player/scientist_idle.png"
-dest_files=["res://.godot/imported/scientist_idle.png-4c752e181f41c778013fc9c02566f8ee.ctex"]
+source_file="res://computer_puzzle/sprite/cyan_up.png"
+dest_files=["res://.godot/imported/cyan_up.png-3c822812bf1ee3ec8280f695692c10d5.ctex"]
 
 [params]
 

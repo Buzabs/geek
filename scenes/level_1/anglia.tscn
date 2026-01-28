@@ -1,17 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://bh73r6qfk3avy"]
+[gd_scene load_steps=5 format=3 uid="uid://bh73r6qfk3avy"]
 
 [ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/Environment/londynver1.png" id="1_6pgey"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="2_r8t5m"]
+[ext_resource type="PackedScene" uid="uid://dwhlllwpogact" path="res://scenes/postacie/grandma.tscn" id="3_ffkpb"]
 
-[node name="Anglia" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffkpb"]
+size = Vector2(318.5, 52)
+
+[node name="Anglia" type="Node"]
 
 [node name="Londynver1" type="Sprite2D" parent="."]
 position = Vector2(-2.3841858e-06, 0)
 scale = Vector2(0.89444447, 1)
 texture = ExtResource("1_6pgey")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.25, -2)
+shape = SubResource("RectangleShape2D_ffkpb")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
+[node name="Grandma" parent="." instance=ExtResource("3_ffkpb")]
+position = Vector2(127, 48)
+
 [node name="Player" parent="." instance=ExtResource("2_r8t5m")]
-position = Vector2(0, 62)
+position = Vector2(-15, 62)

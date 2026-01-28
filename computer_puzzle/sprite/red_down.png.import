@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q33sjnv3hpsg"
-path="res://.godot/imported/red_numbers.png-1eb172b45d9370413151e4b5c47601d9.ctex"
+uid="uid://c5kurjwyjgxq5"
+path="res://.godot/imported/red_down.png-deb22189fbf41d80da22639d2c6d2cc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/red_numbers.png"
-dest_files=["res://.godot/imported/red_numbers.png-1eb172b45d9370413151e4b5c47601d9.ctex"]
+source_file="res://computer_puzzle/sprite/red_down.png"
+dest_files=["res://.godot/imported/red_down.png-deb22189fbf41d80da22639d2c6d2cc8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbsoajsxk6frr"
-path="res://.godot/imported/cyan_down.png-03b2a37a660d6c6411a6f72c9a3acd1d.ctex"
+uid="uid://sx0ir6ryutje"
+path="res://.godot/imported/violet_down.png-2a50dc8a6836692f81b20031e37ff811.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/cyan_down.png"
-dest_files=["res://.godot/imported/cyan_down.png-03b2a37a660d6c6411a6f72c9a3acd1d.ctex"]
+source_file="res://computer_puzzle/sprite/violet_down.png"
+dest_files=["res://.godot/imported/violet_down.png-2a50dc8a6836692f81b20031e37ff811.ctex"]
 
 [params]
 

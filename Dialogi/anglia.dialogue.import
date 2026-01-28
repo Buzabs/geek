@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b3w35v8qqd2yo"
+path="res://.godot/imported/anglia.dialogue-1812bd7221091f7a4ec21b0f63460946.tres"
+
+[deps]
+
+source_file="res://Dialogi/anglia.dialogue"
+dest_files=["res://.godot/imported/anglia.dialogue-1812bd7221091f7a4ec21b0f63460946.tres"]
+
+[params]
+
+defaults=true

@@ -6,10 +6,9 @@ extends Node
 var loaded: int = 0
 var click_count := 0
 var first_puzzle_open := false
-var pick_up_suus := 0
-var first_item_dialog_shown := false
 var dialog := false
 var open:= false
+var first_play := true
 
 func next():
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "podnoszenie2")

@@ -17,12 +17,9 @@ func _ready():
 		
 
 func collect():
-	GlobalC.collected_items[item_id] = true
-	if not GlobalC.first_item_dialog_shown:
-		GlobalC.first_item_dialog_shown = true
-		GlobalC.next()
+	GlobalC.collected_items[item_id] = true	
 	if item_id == "potka":
-		DialogueManager.show_example_dialogue_balloon(preload("res://Dialogi/Tutorial.dialogue"), "find")
+		GlobalC.next()
 	if item_id == "portal_open":
 		DialogueManager.show_example_dialogue_balloon(preload("res://Dialogi/Tutorial.dialogue"), "find")
 
@@ -41,6 +38,7 @@ func _on_exit(body):
 		print("Gracz wyszedł z itemu")
 
 func _process(_delta):		
+	
 	if can_pick and Input.is_action_just_pressed("items") and visible :
 			if GlobalEq.add_item(item_icon, item_id):
 				collect()

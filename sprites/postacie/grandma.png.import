@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsdfavrfxsjy7"
-path="res://.godot/imported/orange_numbers.png-6d4af3e79934e47bbf5758d4e264b61b.ctex"
+uid="uid://blryy86le3cmj"
+path="res://.godot/imported/grandma.png-85a97cf14a551096fe4b27c4805b27f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/orange_numbers.png"
-dest_files=["res://.godot/imported/orange_numbers.png-6d4af3e79934e47bbf5758d4e264b61b.ctex"]
+source_file="res://sprites/postacie/grandma.png"
+dest_files=["res://.godot/imported/grandma.png-85a97cf14a551096fe4b27c4805b27f5.ctex"]
 
 [params]
 

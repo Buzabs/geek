@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="geek"
-run/main_scene="uid://d1e1o540mwux0"
+run/main_scene="uid://bh73r6qfk3avy"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,9 +19,9 @@ config/icon="res://icon.svg"
 
 GlobalEq="*res://itemy/script/global_eq.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-GlobalC="*res://scripts/global_c.gd"
-GameSignals="*res://scripts/game_signals.gd"
-Pausa="*res://scripts/pause.gd"
+GlobalC="*res://scripts/globalne/global_c.gd"
+GameSignals="*res://scripts/globalne/game_signals.gd"
+Pausa="*res://scripts/globalne/pause.gd"
 
 [dialogue_manager]
 
@@ -63,4 +63,4 @@ dialogue={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogi/test.dialogue", "res://Dialogi/sam.dialogue", "res://Dialogi/newton.dialogue", "res://Dialogi/sklodowska.dialogue", "res://Dialogi/kopernik.dialogue", "res://Dialogi/Tutorial.dialogue", "res://london.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogi/test.dialogue", "res://Dialogi/sam.dialogue", "res://Dialogi/newton.dialogue", "res://Dialogi/sklodowska.dialogue", "res://Dialogi/kopernik.dialogue", "res://Dialogi/Tutorial.dialogue", "res://london.dialogue", "res://Dialogi/anglia.dialogue")

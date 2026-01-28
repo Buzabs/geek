@@ -1,14 +1,14 @@
 extends Area2D
 
 var load_scenes = "res://scenes/level_1/anglia.tscn"
-@export var wlaczony: Texture2D
-@onready var sprite := $Portalwylaczony
 
 
 var solution_ok: bool = false
 var items: bool = false
 var can_interact = false
 var player_ref: Node = null
+
+
 
 func _ready():
 	solution_ok = GameSignals.solution_ok
@@ -32,12 +32,16 @@ func _on_solution_checked(is_correct: bool):
 	solution_ok = is_correct
 
 
+
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and solution_ok and can_interact :
 		if GlobalEq.selected_item_id == "portal_open":
-				sprite.texture = wlaczony
 				GlobalEq.remove_item("portal_open")
+				
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "portal")	
+				$portal.play("open_portal")
 				await DialogueManager.dialogue_ended
+				$portal.play("teleportation")
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "portal2")	
+				await DialogueManager.dialogue_ended
 				get_tree().change_scene_to_file(load_scenes)

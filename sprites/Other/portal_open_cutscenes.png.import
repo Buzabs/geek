@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c18ai5pct3wxx"
-path="res://.godot/imported/violet_numbers.png-b1bd8c13206fe6c6b982ad5bc112ba13.ctex"
+uid="uid://7f7we5y1shjv"
+path="res://.godot/imported/portal_open_cutscenes.png-c513688c84dc5b6e2d3800ecc2ce6155.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/violet_numbers.png"
-dest_files=["res://.godot/imported/violet_numbers.png-b1bd8c13206fe6c6b982ad5bc112ba13.ctex"]
+source_file="res://sprites/Other/portal_open_cutscenes.png"
+dest_files=["res://.godot/imported/portal_open_cutscenes.png-c513688c84dc5b6e2d3800ecc2ce6155.ctex"]
 
 [params]
 

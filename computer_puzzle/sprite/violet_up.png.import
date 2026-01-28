@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chrwrhmbwq62j"
-path="res://.godot/imported/red_up.png-9e7cc770a876783f1f001c10df398709.ctex"
+uid="uid://5p546ecpaooo"
+path="res://.godot/imported/violet_up.png-f4a14f196196e42294b7302b6724851d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://compyter_puzzle/sprite/red_up.png"
-dest_files=["res://.godot/imported/red_up.png-9e7cc770a876783f1f001c10df398709.ctex"]
+source_file="res://computer_puzzle/sprite/violet_up.png"
+dest_files=["res://.godot/imported/violet_up.png-f4a14f196196e42294b7302b6724851d.ctex"]
 
 [params]
 
