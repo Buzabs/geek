@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk4dlw3uofp37"]
+[gd_scene load_steps=6 format=3 uid="uid://dk4dlw3uofp37"]
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_o3yxx"]
-[ext_resource type="Texture2D" uid="uid://bcg4mqsjn0n46" path="res://itemy/sprites/ciiiii.png" id="2_5bex4"]
 [ext_resource type="Texture2D" uid="uid://b1sgdgy3ggi5i" path="res://itemy/sprites/interact_items.png" id="2_l0axh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5bex4"]
@@ -12,9 +11,9 @@ region = Rect2(32, 2, 20, 17)
 radius = 8.0
 height = 22.0
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_5bex4"]
-diffuse_texture = ExtResource("2_5bex4")
-texture_filter = 1
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3yxx"]
+atlas = ExtResource("2_l0axh")
+region = Rect2(35, 4, 14, 15)
 
 [node name="Ciii" type="Area2D"]
 script = ExtResource("1_o3yxx")
@@ -25,4 +24,4 @@ item_id = "ciii"
 shape = SubResource("CapsuleShape2D_l0axh")
 
 [node name="Ciiiii" type="Sprite2D" parent="."]
-texture = SubResource("CanvasTexture_5bex4")
+texture = SubResource("AtlasTexture_o3yxx")

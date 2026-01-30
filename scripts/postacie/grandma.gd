@@ -23,5 +23,7 @@ func _input_event(viewport, event, shape_idx):
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia1")
 			await DialogueManager.dialogue_ended
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia2")
+			return
 		else: 
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia2")
+			return

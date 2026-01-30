@@ -18,11 +18,11 @@ func _on_enter(body):
 		can_open = true
 		player_ref = body
 
-
 func _on_exit(body):
 	if body == player_ref:
 		can_open = false
 		player_ref = null
+	
 	
 
 func _input_event(viewport, event, shape_idx):

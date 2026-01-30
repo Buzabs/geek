@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcg4mqsjn0n46"
-path="res://.godot/imported/ciiiii.png-8a57f5d25e732bfad8c341977391bba3.ctex"
+uid="uid://61wd8f8406g4"
+path="res://.godot/imported/proca.png-585ee088c02b35ecbc33daac8560d25a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://itemy/sprites/ciiiii.png"
-dest_files=["res://.godot/imported/ciiiii.png-8a57f5d25e732bfad8c341977391bba3.ctex"]
+source_file="res://sprites/Environment/proca.png"
+dest_files=["res://.godot/imported/proca.png-585ee088c02b35ecbc33daac8560d25a.ctex"]
 
 [params]
 

@@ -88,4 +88,4 @@ shape = SubResource("RectangleShape2D_qnrn6")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2ldpv")
 frame_progress = 0.04579695
-speed_scale = 0.6
+speed_scale = 0.9

@@ -106,6 +106,16 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"open_portal",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"teleportation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qfm1y")
@@ -152,7 +162,9 @@ shape = SubResource("RectangleShape2D_g2els")
 z_index = 6
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_3vyb7")
+animation = &"teleportation"
 autoplay = "default"
+speed_scale = 0.9
 
 [node name="state_machine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
 script = ExtResource("3_dqkch")

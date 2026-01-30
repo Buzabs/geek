@@ -1,13 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh73r6qfk3avy"]
+[gd_scene load_steps=14 format=3 uid="uid://bh73r6qfk3avy"]
 
 [ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/Environment/londynver1.png" id="1_6pgey"]
-[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/player.tscn" id="2_r8t5m"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_in5km"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_pcj7e"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_r8t5m"]
 [ext_resource type="PackedScene" uid="uid://dwhlllwpogact" path="res://scenes/postacie/grandma.tscn" id="3_ffkpb"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_x0t1q"]
+[ext_resource type="PackedScene" uid="uid://c1ldpo3kp7jfs" path="res://scenes/postacie/zielarka.tscn" id="7_esgw5"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_pv7x5"]
+[ext_resource type="PackedScene" uid="uid://c4r8w3nf26ban" path="res://itemy/scenes/kamyczek.tscn" id="9_ieef7"]
+[ext_resource type="PackedScene" uid="uid://coqggg67kt3ri" path="res://itemy/scenes/nitka.tscn" id="10_n6dcb"]
+[ext_resource type="PackedScene" uid="uid://k55dfxplyg6x" path="res://itemy/scenes/galazka.tscn" id="11_5anef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffkpb"]
 size = Vector2(318.5, 52)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in5km"]
+size = Vector2(41, 40)
+
 [node name="Anglia" type="Node"]
+script = ExtResource("1_in5km")
+pause_scene = ExtResource("2_pcj7e")
 
 [node name="Londynver1" type="Sprite2D" parent="."]
 position = Vector2(-2.3841858e-06, 0)
@@ -26,5 +39,31 @@ zoom = Vector2(2, 2)
 [node name="Grandma" parent="." instance=ExtResource("3_ffkpb")]
 position = Vector2(127, 48)
 
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_x0t1q")
+load_scenes = "res://scenes/level_1/zielarka.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(15.5, 44)
+shape = SubResource("RectangleShape2D_in5km")
+
 [node name="Player" parent="." instance=ExtResource("2_r8t5m")]
 position = Vector2(-15, 62)
+
+[node name="Zielarka" parent="." instance=ExtResource("7_esgw5")]
+position = Vector2(-73, 51)
+
+[node name="eq" parent="." instance=ExtResource("8_pv7x5")]
+offset_left = -96.0
+offset_top = -91.0
+offset_right = -96.0
+offset_bottom = -91.0
+
+[node name="kamyczek" parent="." instance=ExtResource("9_ieef7")]
+position = Vector2(51, 78)
+
+[node name="nitka" parent="." instance=ExtResource("10_n6dcb")]
+position = Vector2(73, 80)
+
+[node name="galazka" parent="." instance=ExtResource("11_5anef")]
+position = Vector2(92, 78)

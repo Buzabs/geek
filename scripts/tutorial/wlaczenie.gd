@@ -11,8 +11,8 @@ var player_ref: Node = null
 
 
 func _ready():
-	solution_ok = GameSignals.solution_ok
-	GameSignals.solution_checked.connect(_on_solution_checked)
+
+	
 	body_entered.connect(_on_enter)
 	body_exited.connect(_on_exit)	
 	
@@ -20,28 +20,33 @@ func _on_enter(body):
 	if body.is_in_group("player"):
 		can_interact = true
 		player_ref = body
-		print("Gracz wszedł w obiekto")
+
 
 func _on_exit(body):
 	if body == player_ref: 
 		can_interact = false
 		player_ref = null
-		print("Gracz wyszedł z obiektu")
+
 		
-func _on_solution_checked(is_correct: bool):
-	solution_ok = is_correct
 
 
-
+	
 func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed and solution_ok and can_interact :
+	if not GameSignals.solution_ok:
+		return
+	if event is InputEventMouseButton and event.pressed  and can_interact :
 		if GlobalEq.selected_item_id == "portal_open":
-				GlobalEq.remove_item("portal_open")
 				
+				player_ref.visible = false
+				$portal.play("open")
+				GlobalEq.remove_item("portal_open")
+				await $portal.animation_finished
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "portal")	
 				$portal.play("open_portal")
-				await DialogueManager.dialogue_ended
-				$portal.play("teleportation")
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "portal2")	
-				await DialogueManager.dialogue_ended
+				await $portal.animation_finished
+				$portal.play("teleportation")		
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "wessanie")	
+				await get_tree().create_timer(2.5).timeout
+				GlobalEq.remove_item("potka")
+				GlobalEq.remove_item("sus")
 				get_tree().change_scene_to_file(load_scenes)

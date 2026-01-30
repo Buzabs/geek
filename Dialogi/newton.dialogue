@@ -1,17 +1,5 @@
-~ staruszka
-ENZO: Przepraszam, gdzie mógłbym znaleźć pana Newtona?
-Staruszka: Ach, tego młodego uczonego?
-Staruszka: Ostatnio widziałam go u miejscowego zielarza. Spróbuj go tam znaleźć. Niełatwo go dorwać.
-=> END
 
-~ zielarz
-ENZO: Przepraszam…
-ENZO: Szuka…
-ENZO: PRZEPRASZAM SZUKAM ISSACA NEWTONA!
-Zielarz: A co to za maniery żeby krzyczeć. Nie widzisz że jestem zajęty?!
-- Szukam Issaca Newtona, może wie Pan gdzie go znajdę?
-	Zielarz: Jeśli szukasz rozmowy, przygotuj się na wykład. Ten chłopak potrafi opowiadać godzinami… Widziałem go, jak wędrował w stronę sadów za miastem. Często tam przesiaduje.
-=> END
+
 
 ~ newton_spotkanie
 ENZO: Pan Newton? 

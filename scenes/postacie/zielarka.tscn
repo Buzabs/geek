@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://c1ldpo3kp7jfs"]
+
+[ext_resource type="Script" uid="uid://bb4wg8jo7ls2a" path="res://scripts/postacie/zielarka.gd" id="1_6onok"]
+[ext_resource type="Texture2D" uid="uid://dn6a8wnw401mh" path="res://sprites/postacie/zielarka.png" id="1_gm6wt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6onok"]
+size = Vector2(24, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es2xr"]
+atlas = ExtResource("1_gm6wt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwwxu"]
+atlas = ExtResource("1_gm6wt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyrmr"]
+atlas = ExtResource("1_gm6wt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1vxc"]
+atlas = ExtResource("1_gm6wt")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vutwq"]
+atlas = ExtResource("1_gm6wt")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6u2re"]
+atlas = ExtResource("1_gm6wt")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l80nf"]
+atlas = ExtResource("1_gm6wt")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dd56"]
+atlas = ExtResource("1_gm6wt")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bctwr"]
+animations = [{
+"frames": [{
+"duration": 1.21,
+"texture": SubResource("AtlasTexture_es2xr")
+}, {
+"duration": 1.21,
+"texture": SubResource("AtlasTexture_bwwxu")
+}, {
+"duration": 1.21,
+"texture": SubResource("AtlasTexture_hyrmr")
+}, {
+"duration": 1.21,
+"texture": SubResource("AtlasTexture_t1vxc")
+}, {
+"duration": 1.21,
+"texture": SubResource("AtlasTexture_vutwq")
+}, {
+"duration": 1.21,
+"texture": SubResource("AtlasTexture_6u2re")
+}, {
+"duration": 1.21,
+"texture": SubResource("AtlasTexture_l80nf")
+}, {
+"duration": 1.21,
+"texture": SubResource("AtlasTexture_0dd56")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Zielarka" type="Area2D"]
+script = ExtResource("1_6onok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_6onok")
+
+[node name="animacja" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_bctwr")
+frame_progress = 0.9352849
+speed_scale = 0.8

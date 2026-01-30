@@ -72,6 +72,7 @@ var _is_awaiting_mutation: bool = false
 
 
 func _process(delta: float) -> void:
+
 	if _is_typing:
 		# Type out text
 		if visible_ratio < 1:
