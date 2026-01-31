@@ -119,7 +119,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -219.0
+offset_left = 110.0
+offset_top = -162.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -147,6 +148,7 @@ bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
+tab_size = 3
 
 [node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
@@ -177,8 +179,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -290.0
-offset_top = 97.0
+offset_left = -177.0
+offset_top = 131.0
 offset_right = 291.0
 offset_bottom = 167.0
 grow_horizontal = 2
@@ -191,6 +193,7 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 14
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://btjc0ut0fkxnw"]
+
+[ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/anglia/londynver1.png" id="1_o6xwh"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_j2uuv"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_j2uuv"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="4_iudcw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xwh"]
+size = Vector2(36, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2uuv"]
+size = Vector2(43.5, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iudcw"]
+size = Vector2(335, 20)
+
+[node name="London2" type="Node2D"]
+
+[node name="Londynver1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.124993324, 0)
+scale = Vector2(0.8964789, 1)
+texture = ExtResource("1_o6xwh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_j2uuv")
+load_scenes = "res://scenes/level_1/anglia.tscn"
+target_spawn_id = "right"
+
+[node name="spawn_right" type="Marker2D" parent="Area2D"]
+position = Vector2(133, 61)
+
+[node name="colision" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(142, 57)
+shape = SubResource("RectangleShape2D_o6xwh")
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource("2_j2uuv")
+load_scenes = "res://scenes/level_1/sad.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-137.75, 55)
+shape = SubResource("RectangleShape2D_j2uuv")
+
+[node name="spawn_left" type="Marker2D" parent="Area2D2"]
+position = Vector2(-129, 59)
+
+[node name="Player" parent="." instance=ExtResource("3_j2uuv")]
+position = Vector2(1, 62)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3, 11)
+shape = SubResource("RectangleShape2D_iudcw")
+
+[node name="eq" parent="StaticBody2D" instance=ExtResource("4_iudcw")]
+offset_left = -94.0
+offset_top = -91.0
+offset_right = -94.0
+offset_bottom = -91.0

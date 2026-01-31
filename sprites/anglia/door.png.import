@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duxxsnomga4by"
-path="res://.godot/imported/londynver1.png-26c7b81893dd2462c2d42ea972915973.ctex"
+uid="uid://bmgc4y2unafij"
+path="res://.godot/imported/door.png-48c001c546527c0385f0e0f4f255d3ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Environment/londynver1.png"
-dest_files=["res://.godot/imported/londynver1.png-26c7b81893dd2462c2d42ea972915973.ctex"]
+source_file="res://sprites/anglia/door.png"
+dest_files=["res://.godot/imported/door.png-48c001c546527c0385f0e0f4f255d3ee.ctex"]
 
 [params]
 

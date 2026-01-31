@@ -16,7 +16,7 @@ func _input(event):
 		GlobalC.click_count += 1
 		if GlobalC.click_count == 2:
 			DialogueManager.show_example_dialogue_balloon(dialogue_resource, "podnoszenie")
-			
+	
 		
 		
 		

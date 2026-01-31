@@ -18,6 +18,7 @@ func _on_exit(body):
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and can_interact :
+		GlobalC.open = true
 		if GlobalC.first_play:
 			GlobalC.first_play= false
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia1")

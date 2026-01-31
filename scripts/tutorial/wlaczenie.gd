@@ -3,6 +3,7 @@ extends Area2D
 var load_scenes = "res://scenes/level_1/anglia.tscn"
 
 
+
 var solution_ok: bool = false
 var items: bool = false
 var can_interact = false
@@ -36,7 +37,8 @@ func _input_event(viewport, event, shape_idx):
 		return
 	if event is InputEventMouseButton and event.pressed  and can_interact :
 		if GlobalEq.selected_item_id == "portal_open":
-				
+				GlobalEq.remove_item("potka")
+				GlobalEq.remove_item("sus")
 				player_ref.visible = false
 				$portal.play("open")
 				GlobalEq.remove_item("portal_open")
@@ -44,9 +46,8 @@ func _input_event(viewport, event, shape_idx):
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "portal")	
 				$portal.play("open_portal")
 				await $portal.animation_finished
-				$portal.play("teleportation")		
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "wessanie")	
-				await get_tree().create_timer(2.5).timeout
-				GlobalEq.remove_item("potka")
-				GlobalEq.remove_item("sus")
+				$portal.play("teleportation")		
+				#await get_tree().create_timer(2.5).timeout
+				await $portal.animation_finished
 				get_tree().change_scene_to_file(load_scenes)

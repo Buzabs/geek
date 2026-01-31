@@ -31,3 +31,10 @@ ZIELARKA: Jeśli szukasz rozmowy, przygotuj się na wykład. Ten chłopak potraf
 ZIELARKA: Widziałam go, jak wędrował w stronę sadów za miastem. Często tam przesiaduje.
 
 => END!
+
+
+~ newton_spotkanie
+ENZO: Pan Newton? 
+Newton: O, gość. Jeśli chcesz rozmawiać o nauce… 
+Newton: Potrzebuję najpierw pomocy przy pewnym drobiazgu.
+=> END

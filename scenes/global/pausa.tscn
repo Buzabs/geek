@@ -9,6 +9,7 @@
 [node name="Pausa" type="Control"]
 process_mode = 2
 process_priority = 8
+z_index = 13
 layout_mode = 3
 anchors_preset = 0
 

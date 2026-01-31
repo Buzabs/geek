@@ -24,6 +24,9 @@ func next():
 var puzzle_states : Dictionary = {}
 var collected_items := {}
 
+var spawn_id: String = ""
+
+
 
 func _ready():
 	await get_tree().process_frame

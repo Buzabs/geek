@@ -1,3 +1,46 @@
-[gd_scene format=3 uid="uid://cw8jcmper42en"]
+[gd_scene load_steps=8 format=3 uid="uid://cw8jcmper42en"]
+
+[ext_resource type="Texture2D" uid="uid://bwgm574fq2611" path="res://sprites/anglia/zielarnia2.png" id="1_d1ee0"]
+[ext_resource type="Texture2D" uid="uid://568jrd26vha0" path="res://sprites/anglia/table_zielarnia.png" id="2_frige"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_uj2r0"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="4_le3at"]
+[ext_resource type="PackedScene" uid="uid://c1ldpo3kp7jfs" path="res://scenes/postacie/zielarka.tscn" id="4_uj2r0"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="6_le3at"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t4mf"]
+size = Vector2(36, 20)
 
 [node name="Zielarka" type="Node2D"]
+
+[node name="Zielarnia2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.5000012, 1.9999998)
+scale = Vector2(1.053125, 0.9833333)
+texture = ExtResource("1_d1ee0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_uj2r0")
+load_scenes = "res://scenes/level_1/anglia.tscn"
+
+[node name="DrzwiGora" type="Sprite2D" parent="Area2D"]
+texture_filter = 1
+position = Vector2(-60, 59)
+texture = ExtResource("4_le3at")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-60, 52)
+shape = SubResource("RectangleShape2D_5t4mf")
+
+[node name="Zielarka" parent="." instance=ExtResource("4_uj2r0")]
+position = Vector2(-8, -2)
+
+[node name="TableZielarnia" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48, 1)
+texture = ExtResource("2_frige")
+
+[node name="Player" parent="." instance=ExtResource("6_le3at")]
+position = Vector2(-60, 33)
