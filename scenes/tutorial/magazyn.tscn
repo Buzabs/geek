@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c2w6tc1v57qhg"]
+[gd_scene format=3 uid="uid://c2w6tc1v57qhg"]
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_5bx36"]
 [ext_resource type="Texture2D" uid="uid://cblno7uy5hnyu" path="res://sprites/Environment/magazyn_tlo.png" id="1_necqc"]
@@ -41,57 +41,57 @@ size = Vector2(60, 62.125)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bx36"]
 size = Vector2(32, 33)
 
-[node name="Magazyn" type="Node"]
+[node name="Magazyn" type="Node" unique_id=454308473]
 script = ExtResource("1_5bx36")
 pause_scene = ExtResource("2_i2gnm")
 
-[node name="MagazynTlo" type="Sprite2D" parent="."]
+[node name="MagazynTlo" type="Sprite2D" parent="." unique_id=2105255790]
 texture_filter = 1
 position = Vector2(6, -1)
 texture = ExtResource("1_necqc")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2026089647]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=198987661]
 position = Vector2(142, -2)
 shape = SubResource("RectangleShape2D_7r353")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=222184587]
 position = Vector2(-129, 2)
 shape = SubResource("RectangleShape2D_7r353")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=14139387]
 position = Vector2(8.5, 63.5)
 shape = SubResource("RectangleShape2D_guiiq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=215892043]
 position = Vector2(6.5, -34.5)
 shape = SubResource("RectangleShape2D_i2gnm")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=420619811]
 position = Vector2(-43, -19)
 shape = SubResource("RectangleShape2D_cpmci")
 
-[node name="Player" parent="." instance=ExtResource("2_glxrb")]
+[node name="Player" parent="." unique_id=1794524727 instance=ExtResource("2_glxrb")]
 position = Vector2(114, 30)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="DrzwiMag" type="Area2D" parent="." unique_id=568557238]
 script = ExtResource("5_tv5rq")
 load_scenes = "res://scenes/tutorial/test_scene.tscn"
 target_spawn_id = "up"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DrzwiMag" unique_id=1882813476]
 position = Vector2(112.5, 42.75)
 shape = SubResource("RectangleShape2D_cc1vp")
 
-[node name="DrzwiGora" type="Sprite2D" parent="Area2D"]
+[node name="DrzwiGora" type="Sprite2D" parent="DrzwiMag" unique_id=2013035269]
 position = Vector2(114, 50)
 texture = SubResource("CanvasTexture_tv5rq")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=257440682]
 zoom = Vector2(2, 2)
 
-[node name="eq" parent="." instance=ExtResource("7_8najp")]
+[node name="eq" parent="." unique_id=1740335375 instance=ExtResource("7_8najp")]
 texture_filter = 1
 anchors_preset = -1
 offset_left = -90.0
@@ -99,43 +99,50 @@ offset_top = 46.0
 offset_right = -90.0
 offset_bottom = 46.0
 
-[node name="Sus" parent="." instance=ExtResource("8_cc1vp")]
+[node name="Sus" parent="." unique_id=1121879314 instance=ExtResource("8_cc1vp")]
 texture_filter = 1
 position = Vector2(-39, -37)
 item_id = "suss"
 
-[node name="Area2D2" type="Area2D" parent="." node_paths=PackedStringArray("sprite", "item")]
+[node name="Area2D2" type="Area2D" parent="." unique_id=1302444623 node_paths=PackedStringArray("sprite", "item")]
 script = ExtResource("9_6d5j4")
 open = ExtResource("9_6ulow")
 sprite = NodePath("Szafa")
 item = NodePath("Ciii")
 
-[node name="Szafa" type="Sprite2D" parent="Area2D2"]
+[node name="Szafa" type="Sprite2D" parent="Area2D2" unique_id=1456317259]
 texture_filter = 1
 position = Vector2(98, -13)
 texture = ExtResource("4_dm26d")
 
-[node name="Ciii" parent="Area2D2" instance=ExtResource("11_2meqn")]
+[node name="Ciii" parent="Area2D2" unique_id=863797992 instance=ExtResource("11_2meqn")]
 position = Vector2(105, -4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=3944443]
 position = Vector2(94, -12.0625)
 shape = SubResource("RectangleShape2D_6ulow")
 
-[node name="Area2D3" type="Area2D" parent="." node_paths=PackedStringArray("sprite", "item")]
+[node name="Area2D3" type="Area2D" parent="." unique_id=1051617436 node_paths=PackedStringArray("sprite", "item")]
 script = ExtResource("9_6d5j4")
 open = ExtResource("12_guiiq")
 sprite = NodePath("Pudelko")
 item = NodePath("PortalItems")
 
-[node name="Pudelko" type="Sprite2D" parent="Area2D3"]
+[node name="Pudelko" type="Sprite2D" parent="Area2D3" unique_id=816579997]
 texture_filter = 1
 position = Vector2(13, 5)
 texture = ExtResource("13_2meqn")
 
-[node name="PortalItems" parent="Area2D3" instance=ExtResource("15_5bx36")]
+[node name="PortalItems" parent="Area2D3" unique_id=1073041118 instance=ExtResource("15_5bx36")]
 position = Vector2(13, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=798130764]
 position = Vector2(13, 7)
 shape = SubResource("RectangleShape2D_5bx36")
+
+[connection signal="mouse_entered" from="DrzwiMag" to="." method="_on_drzwi_mag_mouse_entered"]
+[connection signal="mouse_exited" from="DrzwiMag" to="." method="_on_drzwi_mag_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D2" to="." method="_on_area_2d_2_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D3" to="." method="_on_area_2d_3_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D3" to="." method="_on_area_2d_3_mouse_exited"]

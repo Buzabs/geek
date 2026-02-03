@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://d1e1o540mwux0"]
+[gd_scene format=3 uid="uid://d1e1o540mwux0"]
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_bc4q0"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_s8qbx"]
@@ -361,71 +361,71 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="TestScene" type="Node"]
+[node name="TestScene" type="Node" unique_id=701386128]
 script = ExtResource("1_bc4q0")
 pause_scene = ExtResource("2_s8qbx")
 
-[node name="Dialogi_tutorial" type="Node" parent="."]
+[node name="Dialogi_tutorial" type="Node" parent="." unique_id=1020881150]
 script = ExtResource("3_iw68y")
 
-[node name="Tlo320x180" type="Sprite2D" parent="."]
+[node name="Tlo320x180" type="Sprite2D" parent="." unique_id=1836850381]
 z_index = -1
 texture_filter = 1
 texture = ExtResource("5_330oy")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2144072193]
 zoom = Vector2(2, 2)
 
-[node name="spawn_up" type="Marker2D" parent="."]
+[node name="spawn_up" type="Marker2D" parent="." unique_id=126392184]
 position = Vector2(-107.255, -39.905)
 
-[node name="Player" parent="." instance=ExtResource("4_shpus")]
+[node name="Player" parent="." unique_id=611735744 instance=ExtResource("4_shpus")]
 position = Vector2(-7, 7)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2007621895]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1455287239]
 position = Vector2(-1, -68)
 shape = SubResource("RectangleShape2D_nd71p")
 
-[node name="Environment" type="Node" parent="."]
+[node name="Environment" type="Node" parent="." unique_id=1405605651]
 
-[node name="Computer" type="Node2D" parent="Environment"]
+[node name="Computer" type="Node2D" parent="Environment" unique_id=1759841701]
 position = Vector2(61, -47)
 
-[node name="ComputerClick" type="Area2D" parent="Environment/Computer"]
+[node name="ComputerClick" type="Area2D" parent="Environment/Computer" unique_id=99664819]
 script = ExtResource("6_5xvl5")
 computer_ui = ExtResource("7_s8qbx")
 
-[node name="computer" type="Sprite2D" parent="Environment/Computer/ComputerClick"]
+[node name="computer" type="Sprite2D" parent="Environment/Computer/ComputerClick" unique_id=1357547065]
 visibility_layer = 4
 z_index = 1
 texture_filter = 1
 texture = ExtResource("7_45dmw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerClick"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Computer/ComputerClick" unique_id=724107215]
 z_index = 2
 position = Vector2(-0.5, -2.25)
 shape = SubResource("RectangleShape2D_wtsjf")
 
-[node name="Stol" type="Sprite2D" parent="Environment"]
+[node name="Stol" type="Sprite2D" parent="Environment" unique_id=2119605737]
 texture_filter = 1
 position = Vector2(-129, 68)
 texture = ExtResource("8_wi1hv")
 
-[node name="Szafa" type="Sprite2D" parent="Environment"]
+[node name="Szafa" type="Sprite2D" parent="Environment" unique_id=1200297408]
 texture_filter = 1
 position = Vector2(-23, -51)
 texture = ExtResource("9_wyjub")
 
-[node name="portal_area" type="Area2D" parent="Environment"]
+[node name="portal_area" type="Area2D" parent="Environment" unique_id=918158719]
 script = ExtResource("10_uk77x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/portal_area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/portal_area" unique_id=2016725646]
 position = Vector2(83, -40)
 shape = SubResource("CircleShape2D_6qxox")
 
-[node name="portal" type="AnimatedSprite2D" parent="Environment/portal_area"]
+[node name="portal" type="AnimatedSprite2D" parent="Environment/portal_area" unique_id=210519002]
 texture_filter = 1
 position = Vector2(93, -43)
 sprite_frames = SubResource("SpriteFrames_muxsv")
@@ -433,30 +433,30 @@ animation = &"teleportation"
 autoplay = "default"
 speed_scale = 0.7
 
-[node name="items" type="Node" parent="."]
+[node name="items" type="Node" parent="." unique_id=1789534054]
 
-[node name="Sus2" parent="items" instance=ExtResource("13_c27oj")]
+[node name="Sus2" parent="items" unique_id=1768127490 instance=ExtResource("13_c27oj")]
 texture_filter = 1
 position = Vector2(42, 11)
 
-[node name="Sus" parent="items" instance=ExtResource("14_r66l1")]
+[node name="Sus" parent="items" unique_id=2110382611 instance=ExtResource("14_r66l1")]
 texture_filter = 1
 position = Vector2(-128, 51)
 
-[node name="drzwi_area" type="Area2D" parent="."]
+[node name="drzwi_area" type="Area2D" parent="." unique_id=1568346961]
 script = ExtResource("15_uonvo")
 load_scenes = "res://scenes/tutorial/magazyn.tscn"
 
-[node name="Drzwi" type="Sprite2D" parent="drzwi_area"]
+[node name="Drzwi" type="Sprite2D" parent="drzwi_area" unique_id=327989133]
 texture_filter = 1
 position = Vector2(-108, -44)
 texture = ExtResource("16_lsfxo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_area" unique_id=33224028]
 position = Vector2(-109, -40)
 shape = SubResource("RectangleShape2D_8gixj")
 
-[node name="eq" parent="." instance=ExtResource("17_kb8xq")]
+[node name="eq" parent="." unique_id=1387199501 instance=ExtResource("17_kb8xq")]
 texture_filter = 1
 anchors_preset = -1
 offset_left = -94.0
@@ -465,7 +465,7 @@ offset_right = -94.0
 offset_bottom = 47.0
 metadata/_edit_use_anchors_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=301782060]
 visible = false
 z_index = -1
 texture_filter = 1
@@ -473,3 +473,8 @@ position = Vector2(92, -49)
 sprite_frames = SubResource("SpriteFrames_tutpt")
 autoplay = "default"
 speed_scale = 0.8
+
+[connection signal="mouse_entered" from="Environment/Computer/ComputerClick" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="Environment/Computer/ComputerClick" to="." method="_on_computer_click_mouse_exited"]
+[connection signal="mouse_entered" from="drzwi_area" to="." method="_on_drzwi_area_mouse_entered"]
+[connection signal="mouse_exited" from="drzwi_area" to="." method="_on_drzwi_area_mouse_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cw8jcmper42en"]
+[gd_scene format=3 uid="uid://cw8jcmper42en"]
 
 [ext_resource type="Texture2D" uid="uid://bwgm574fq2611" path="res://sprites/anglia/zielarnia2.png" id="1_d1ee0"]
 [ext_resource type="Texture2D" uid="uid://568jrd26vha0" path="res://sprites/anglia/table_zielarnia.png" id="2_frige"]
@@ -25,65 +25,65 @@ size = Vector2(16, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t4mf"]
 size = Vector2(36, 20)
 
-[node name="Zielarka" type="Node2D"]
+[node name="Zielarka" type="Node2D" unique_id=1725537558]
 
-[node name="Zielarnia2" type="Sprite2D" parent="."]
+[node name="Zielarnia2" type="Sprite2D" parent="." unique_id=927821348]
 texture_filter = 1
 position = Vector2(0.5000012, 1.9999998)
 scale = Vector2(1.053125, 0.9833333)
 texture = ExtResource("1_d1ee0")
 
-[node name="Zielarnia3" type="Sprite2D" parent="."]
+[node name="Zielarnia3" type="Sprite2D" parent="." unique_id=297413610]
 texture_filter = 1
 position = Vector2(0.5000012, 1.9999998)
 scale = Vector2(1.053125, 0.9833333)
 texture = ExtResource("1_d1ee0")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=816612525]
 zoom = Vector2(2, 2)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1448366429]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1322206201]
 position = Vector2(3, -35)
 shape = SubResource("RectangleShape2D_le3at")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=816538611]
 position = Vector2(2.5, 71)
 shape = SubResource("RectangleShape2D_o8vkl")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=851319216]
 position = Vector2(105, 13)
 shape = SubResource("RectangleShape2D_tump7")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1773145061]
 position = Vector2(-98, 16.5)
 shape = SubResource("RectangleShape2D_x3j47")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1817403054]
 position = Vector2(-8, -14)
 shape = SubResource("RectangleShape2D_7yurd")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1652477711]
 script = ExtResource("3_uj2r0")
 load_scenes = "res://scenes/level_1/anglia.tscn"
 
-[node name="DrzwiGora" type="Sprite2D" parent="Area2D"]
+[node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=956670106]
 texture_filter = 1
 position = Vector2(-60, 59)
 texture = ExtResource("4_le3at")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=184408801]
 position = Vector2(-60, 52)
 shape = SubResource("RectangleShape2D_5t4mf")
 
-[node name="Zielarka" parent="." instance=ExtResource("4_uj2r0")]
+[node name="Zielarka" parent="." unique_id=1886428194 instance=ExtResource("4_uj2r0")]
 position = Vector2(-8, -2)
 
-[node name="TableZielarnia" type="Sprite2D" parent="."]
+[node name="TableZielarnia" type="Sprite2D" parent="." unique_id=1351789128]
 texture_filter = 1
 position = Vector2(48, 1)
 texture = ExtResource("2_frige")
 
-[node name="Player" parent="." instance=ExtResource("6_le3at")]
+[node name="Player" parent="." unique_id=1014715733 instance=ExtResource("6_le3at")]
 position = Vector2(-60, 33)

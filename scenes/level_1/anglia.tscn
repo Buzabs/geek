@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bh73r6qfk3avy"]
+[gd_scene format=3 uid="uid://bh73r6qfk3avy"]
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_in5km"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_pcj7e"]
@@ -22,82 +22,82 @@ size = Vector2(27, 90)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in5km"]
 size = Vector2(51, 42)
 
-[node name="Anglia" type="Node"]
+[node name="Anglia" type="Node" unique_id=412591710]
 script = ExtResource("1_in5km")
 pause_scene = ExtResource("2_pcj7e")
 
-[node name="Londyn" type="Sprite2D" parent="."]
+[node name="Londyn" type="Sprite2D" parent="." unique_id=118060673]
 texture_filter = 1
 position = Vector2(-2.3841858e-06, 0)
 scale = Vector2(0.89444447, 1)
 texture = ExtResource("3_5anef")
 
-[node name="Player" parent="." instance=ExtResource("2_r8t5m")]
+[node name="Player" parent="." unique_id=483308100 instance=ExtResource("2_r8t5m")]
 position = Vector2(-22, 65)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=916299911]
 zoom = Vector2(2, 2)
 
-[node name="spawn_left" type="Marker2D" parent="."]
+[node name="spawn_left" type="Marker2D" parent="." unique_id=1276567267]
 position = Vector2(-145, 59)
 
-[node name="spawn_right" type="Marker2D" parent="."]
+[node name="spawn_right" type="Marker2D" parent="." unique_id=2047359790]
 position = Vector2(147, 59)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=935661228]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1651770893]
 position = Vector2(-0.25, -2)
 shape = SubResource("RectangleShape2D_ffkpb")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=425613355]
 position = Vector2(111, 39)
 shape = SubResource("RectangleShape2D_2ve40")
 
-[node name="enviroment" type="Node" parent="."]
+[node name="enviroment" type="Node" parent="." unique_id=1224761142]
 
-[node name="kamyczek" parent="enviroment" instance=ExtResource("9_ieef7")]
+[node name="kamyczek" parent="enviroment" unique_id=1707232894 instance=ExtResource("9_ieef7")]
 position = Vector2(48, 78)
 
-[node name="galazka" parent="enviroment" instance=ExtResource("11_5anef")]
+[node name="galazka" parent="enviroment" unique_id=1255618666 instance=ExtResource("11_5anef")]
 position = Vector2(92, 78)
 
-[node name="nitka" parent="enviroment" instance=ExtResource("10_n6dcb")]
+[node name="nitka" parent="enviroment" unique_id=696509639 instance=ExtResource("10_n6dcb")]
 position = Vector2(73, 80)
 
-[node name="Grandma" parent="enviroment" instance=ExtResource("3_ffkpb")]
+[node name="Grandma" parent="enviroment" unique_id=1800999074 instance=ExtResource("3_ffkpb")]
 position = Vector2(111, 49)
 
-[node name="eq" parent="." instance=ExtResource("8_pv7x5")]
+[node name="eq" parent="." unique_id=121755443 instance=ExtResource("8_pv7x5")]
 offset_left = -96.0
 offset_top = -91.0
 offset_right = -96.0
 offset_bottom = -91.0
 
-[node name="enters" type="Node" parent="."]
+[node name="enters" type="Node" parent="." unique_id=152219885]
 
-[node name="Area2D2" type="Area2D" parent="enters"]
+[node name="Area2D2" type="Area2D" parent="enters" unique_id=1398205073]
 script = ExtResource("4_x0t1q")
 load_scenes = "res://scenes/level_1/london1.tscn"
 target_spawn_id = "left"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D2" unique_id=15720479]
 position = Vector2(147, 46)
 shape = SubResource("RectangleShape2D_5anef")
 
-[node name="Area2D3" type="Area2D" parent="enters"]
+[node name="Area2D3" type="Area2D" parent="enters" unique_id=1188628185]
 script = ExtResource("4_x0t1q")
 load_scenes = "res://scenes/level_1/london2.tscn"
 target_spawn_id = "right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D3" unique_id=1008537836]
 position = Vector2(-147, 45)
 shape = SubResource("RectangleShape2D_5anef")
 
-[node name="Area2D" type="Area2D" parent="enters"]
+[node name="Area2D" type="Area2D" parent="enters" unique_id=344793469]
 script = ExtResource("4_x0t1q")
 load_scenes = "res://scenes/level_1/zielarka.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D" unique_id=774322857]
 position = Vector2(15.5, 45)
 shape = SubResource("RectangleShape2D_in5km")
