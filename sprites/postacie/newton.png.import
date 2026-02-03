@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsy0qr5ciwl5"
-path="res://.godot/imported/kopernik.png-2588b6d2d3bd6f528a16bd841556954f.ctex"
+uid="uid://ctwqqhyuoc2x0"
+path="res://.godot/imported/newton.png-3ce22233e966a9050a15e7e2dc638700.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/postacie/kopernik.png"
-dest_files=["res://.godot/imported/kopernik.png-2588b6d2d3bd6f528a16bd841556954f.ctex"]
+source_file="res://sprites/postacie/newton.png"
+dest_files=["res://.godot/imported/newton.png-3ce22233e966a9050a15e7e2dc638700.ctex"]
 
 [params]
 

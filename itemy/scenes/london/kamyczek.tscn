@@ -5,7 +5,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5a3w1"]
 atlas = ExtResource("2_efqi0")
-region = Rect2(9, 1, 16, 16)
+region = Rect2(36, 4, 16, 16)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0axh"]
 radius = 11.0
@@ -13,7 +13,7 @@ height = 22.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gjk4f"]
 atlas = ExtResource("2_efqi0")
-region = Rect2(14, 8, 7, 4)
+region = Rect2(35, 1, 18, 18)
 
 [node name="kamyczek" type="Area2D"]
 texture_filter = 1

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtuhsuaw1u437"]
+
+[ext_resource type="Texture2D" uid="uid://bftd2c30lpbl5" path="res://sprites/anglia/sad.png" id="1_3urhl"]
+[ext_resource type="Texture2D" uid="uid://crhhuj850qysa" path="res://sprites/anglia/pryzmat.png" id="2_8oje4"]
+
+[node name="PryzmatGra" type="Node2D"]
+
+[node name="Sad" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(34, -114)
+scale = Vector2(1.544922, 1.8604168)
+texture = ExtResource("1_3urhl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="Pryzmat" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-24, 5)
+texture = ExtResource("2_8oje4")

@@ -7,11 +7,14 @@ extends CharacterBody2D
 var direction: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
-	var spawn_name := "Spawn_" + GlobalC.spawn_id.capitalize()
-	var spawn := get_tree().current_scene.get_node_or_null(spawn_name)
-
+	var spawn = get_tree().current_scene.get_node_or_null(
+		"spawn_" + GlobalC.spawn_id
+	)
+	print("Spawn node:", spawn)
 	if spawn:
-		global_position = spawn.global_position
+		var player = get_tree().current_scene.get_node("Player")
+		player.global_position = spawn.global_position
+
 	add_to_group("player")
 	state_machine.init(self)
 	

@@ -5,7 +5,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3cul"]
 atlas = ExtResource("2_8n63q")
-region = Rect2(24, 1, 16, 16)
+region = Rect2(48, 0, 23, 22)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0axh"]
 radius = 8.0
@@ -13,7 +13,7 @@ height = 22.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwobr"]
 atlas = ExtResource("2_8n63q")
-region = Rect2(27, 3, 9, 10)
+region = Rect2(53, 4, 14, 15)
 
 [node name="galazka" type="Area2D"]
 texture_filter = 1

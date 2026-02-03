@@ -53,6 +53,8 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
 default_font_size = 20
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_hover_color = Color(0.6282537, 0.9674514, 0.9093387, 1)
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
 Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
@@ -109,24 +111,24 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 58.0
-offset_top = 107.0
-offset_right = 7.0
-offset_bottom = 11.0
+offset_left = 51.0
+offset_top = 111.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -38.0
-offset_top = -113.0
-offset_right = 4.0
-offset_bottom = -3.0
+offset_left = -40.0
+offset_top = -111.0
+offset_right = -49.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -191,14 +193,14 @@ autoplay = "progress"
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.425
-anchor_top = 0.5
-anchor_right = 0.425
-anchor_bottom = 0.5
-offset_left = -255.32501
-offset_top = -8.5
-offset_right = 312.675
-offset_bottom = 55.0
+anchor_left = 0.43
+anchor_top = 0.536
+anchor_right = 0.43
+anchor_bottom = 0.536
+offset_left = -261.27002
+offset_top = 26.496002
+offset_right = 253.73
+offset_bottom = 108.496
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
@@ -207,9 +209,19 @@ alignment = 1
 script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
+[node name="ResponseExample3" type="Button" parent="Balloon/ResponsesMenu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Response example"
+
+[node name="ResponseExample2" type="Button" parent="Balloon/ResponsesMenu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Response example"
+
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 10
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

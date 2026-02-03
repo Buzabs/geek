@@ -11,16 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="8_cc1vp"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="9_6d5j4"]
 [ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="9_6ulow"]
-[ext_resource type="PackedScene" uid="uid://dk4dlw3uofp37" path="res://itemy/scenes/ciii.tscn" id="11_2meqn"]
+[ext_resource type="PackedScene" uid="uid://dk4dlw3uofp37" path="res://itemy/scenes/tutorial/ciii.tscn" id="11_2meqn"]
 [ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="12_guiiq"]
 [ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="13_2meqn"]
-[ext_resource type="PackedScene" uid="uid://d2vtfhg5wnt78" path="res://itemy/scenes/portal_items.tscn" id="15_5bx36"]
+[ext_resource type="PackedScene" uid="uid://d2vtfhg5wnt78" path="res://itemy/scenes/tutorial/portal_items.tscn" id="15_5bx36"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r353"]
 size = Vector2(25, 110)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_guiiq"]
-size = Vector2(255, 23)
+size = Vector2(255, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2gnm"]
 size = Vector2(247, 27)
@@ -61,7 +61,7 @@ position = Vector2(-129, 2)
 shape = SubResource("RectangleShape2D_7r353")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(8.5, 61.5)
+position = Vector2(8.5, 63.5)
 shape = SubResource("RectangleShape2D_guiiq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -73,11 +73,12 @@ position = Vector2(-43, -19)
 shape = SubResource("RectangleShape2D_cpmci")
 
 [node name="Player" parent="." instance=ExtResource("2_glxrb")]
-position = Vector2(87, 29)
+position = Vector2(114, 30)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_tv5rq")
 load_scenes = "res://scenes/tutorial/test_scene.tscn"
+target_spawn_id = "up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(112.5, 42.75)

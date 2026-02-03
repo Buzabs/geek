@@ -20,18 +20,21 @@ func _on_exit(body):
 		player_ref = null
 		print("wyszedl")
 
+
+	
+
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and can_interact and event.pressed  :
-		
-		if GlobalC.first_play_zielarka:
+		GlobalC.dialog= true
+		if GlobalC.first_play and GlobalC.next_dialog:
 			$animation.play("wake_up")	
-			await $animation.animation_finished
-			$animation.play("asleep")	
-			GlobalC.first_play_zielarka= false
+			await $animation.animation_finished	
+			GlobalC.first_play = false
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_spotkanie")
 			await DialogueManager.dialogue_ended
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka2")
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
+			GlobalC.first_play_zielarka = true
 			return
-		else: 
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka2")
+		if GlobalC.next_dialog: 
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
 			return

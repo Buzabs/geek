@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmgc4y2unafij"
-path="res://.godot/imported/door.png-48c001c546527c0385f0e0f4f255d3ee.ctex"
+uid="uid://crhhuj850qysa"
+path="res://.godot/imported/pryzmat.png-06aa7cec91364470c198e6d1531e5461.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/anglia/door.png"
-dest_files=["res://.godot/imported/door.png-48c001c546527c0385f0e0f4f255d3ee.ctex"]
+source_file="res://sprites/anglia/pryzmat.png"
+dest_files=["res://.godot/imported/pryzmat.png-06aa7cec91364470c198e6d1531e5461.ctex"]
 
 [params]
 

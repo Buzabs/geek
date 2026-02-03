@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cw8jcmper42en"]
+[gd_scene load_steps=13 format=3 uid="uid://cw8jcmper42en"]
 
 [ext_resource type="Texture2D" uid="uid://bwgm574fq2611" path="res://sprites/anglia/zielarnia2.png" id="1_d1ee0"]
 [ext_resource type="Texture2D" uid="uid://568jrd26vha0" path="res://sprites/anglia/table_zielarnia.png" id="2_frige"]
@@ -6,6 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="4_le3at"]
 [ext_resource type="PackedScene" uid="uid://c1ldpo3kp7jfs" path="res://scenes/postacie/zielarka.tscn" id="4_uj2r0"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="6_le3at"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_le3at"]
+size = Vector2(194, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o8vkl"]
+size = Vector2(189, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tump7"]
+size = Vector2(20, 108)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3j47"]
+size = Vector2(20, 109)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yurd"]
+size = Vector2(16, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t4mf"]
 size = Vector2(36, 20)
@@ -18,8 +33,36 @@ position = Vector2(0.5000012, 1.9999998)
 scale = Vector2(1.053125, 0.9833333)
 texture = ExtResource("1_d1ee0")
 
+[node name="Zielarnia3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.5000012, 1.9999998)
+scale = Vector2(1.053125, 0.9833333)
+texture = ExtResource("1_d1ee0")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3, -35)
+shape = SubResource("RectangleShape2D_le3at")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2.5, 71)
+shape = SubResource("RectangleShape2D_o8vkl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(105, 13)
+shape = SubResource("RectangleShape2D_tump7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-98, 16.5)
+shape = SubResource("RectangleShape2D_x3j47")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-8, -14)
+shape = SubResource("RectangleShape2D_7yurd")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("3_uj2r0")

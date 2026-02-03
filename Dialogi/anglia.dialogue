@@ -35,6 +35,29 @@ ZIELARKA: Widziałam go, jak wędrował w stronę sadów za miastem. Często tam
 
 ~ newton_spotkanie
 ENZO: Pan Newton? 
-Newton: O, gość. Jeśli chcesz rozmawiać o nauce… 
-Newton: Potrzebuję najpierw pomocy przy pewnym drobiazgu.
+NEWTON: O, gość. Jeśli chcesz rozmawiać o nauce… 
+NEWTON: Potrzebuję najpierw pomocy przy pewnym drobiazgu.
+=> END
+
+~ newton_lisc
+NEWTON: Próbuję zrozumieć, jak światło zmienia kolory przechodząc przez pryzmat
+NEWTON: wszystcy mówią, że barwi on światło, ale mam inną teorie
+NEWTON: żeby ją udowodnić potrzebuje byś ustawił pryzmat w odpowiedni sposób. Dasz radę?
+- pewnie
+	ENZO: Pewnie
+	=> END
+	
+- nie teraz
+	ENZO: Nie teraz
+	=> END
+=> END	
+	
+	
+~ proca
+ENZO: Witaj młody umiesz może zrobić proce i chciałbyś mi zrobić?
+DZIECKO: Jasne, ale musisz mi przynieść potrzebne materiały
+ENZO: Co dokładnie potrzebujesz?
+=> END
+~ proca2
+DZIECKO: Przynieś mi NITKE oraz jakąś GAŁĄZKE przypominającą kształt procy
 => END

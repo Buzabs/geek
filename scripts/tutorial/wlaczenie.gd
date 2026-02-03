@@ -39,6 +39,7 @@ func _input_event(viewport, event, shape_idx):
 		if GlobalEq.selected_item_id == "portal_open":
 				GlobalEq.remove_item("potka")
 				GlobalEq.remove_item("sus")
+				GlobalEq.remove_item("ciii")
 				player_ref.visible = false
 				$portal.play("open")
 				GlobalEq.remove_item("portal_open")

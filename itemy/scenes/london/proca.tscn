@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcmwue6tu75im"]
+
+[ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_m4bcu"]
+[ext_resource type="Texture2D" uid="uid://c7cx5l0nyqslb" path="res://itemy/sprites/proca.png" id="2_mxdoj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3cul"]
+atlas = ExtResource("2_mxdoj")
+region = Rect2(1, 0, 22, 22)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0axh"]
+radius = 8.0
+height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwobr"]
+atlas = ExtResource("2_mxdoj")
+region = Rect2(0, 0, 24, 22)
+
+[node name="galazka" type="Area2D"]
+texture_filter = 1
+script = ExtResource("1_m4bcu")
+item_icon = SubResource("AtlasTexture_y3cul")
+item_id = "galazka"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_l0axh")
+
+[node name="galazka" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("AtlasTexture_gwobr")

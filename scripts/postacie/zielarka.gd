@@ -22,11 +22,15 @@ func _on_exit(body):
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and can_interact and event.pressed  :
+		if GlobalC.dialog:
+			return
 		if GlobalC.first_play_zielarka:
 			GlobalC.first_play_zielarka= false
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka1")
 			await DialogueManager.dialogue_ended
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka2")
+			GlobalC.next_dialog= true
+			GlobalC.first_play=true
 			return
 		else: 
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka2")

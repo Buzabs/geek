@@ -10,6 +10,8 @@ var dialog := false
 var open:= false
 var first_play := true
 var first_play_zielarka := true
+var next_dialog := false
+
 
 func next():
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "podnoszenie2")

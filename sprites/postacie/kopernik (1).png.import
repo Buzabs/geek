@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i3idi3dvj6d"
-path="res://.godot/imported/londynver3.png-e963148380386e9755c4fb86dc324c74.ctex"
+uid="uid://ccbxn8bmnjohm"
+path="res://.godot/imported/kopernik (1).png-50185eacd192f94064ee9c648be5a99b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Environment/londynver3.png"
-dest_files=["res://.godot/imported/londynver3.png-e963148380386e9755c4fb86dc324c74.ctex"]
+source_file="res://sprites/postacie/kopernik (1).png"
+dest_files=["res://.godot/imported/kopernik (1).png-50185eacd192f94064ee9c648be5a99b.ctex"]
 
 [params]
 

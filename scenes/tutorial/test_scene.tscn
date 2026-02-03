@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://d3dnn4w1486vg" path="res://scripts/tutorial/wlaczenie.gd" id="10_uk77x"]
 [ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="11_4rh0u"]
 [ext_resource type="Texture2D" uid="uid://7f7we5y1shjv" path="res://sprites/Other/portal_open_cutscenes.png" id="12_spuqw"]
-[ext_resource type="PackedScene" uid="uid://b2fsc3yn7gygp" path="res://itemy/scenes/potka.tscn" id="13_c27oj"]
+[ext_resource type="PackedScene" uid="uid://b2fsc3yn7gygp" path="res://itemy/scenes/tutorial/potka.tscn" id="13_c27oj"]
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="14_r66l1"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="15_uonvo"]
 [ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/Environment/drzwi.png" id="16_lsfxo"]
@@ -368,24 +368,27 @@ pause_scene = ExtResource("2_s8qbx")
 [node name="Dialogi_tutorial" type="Node" parent="."]
 script = ExtResource("3_iw68y")
 
+[node name="Tlo320x180" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+texture = ExtResource("5_330oy")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
+[node name="spawn_up" type="Marker2D" parent="."]
+position = Vector2(-107.255, -39.905)
+
 [node name="Player" parent="." instance=ExtResource("4_shpus")]
-position = Vector2(-78, -32)
+position = Vector2(-7, 7)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -65.25)
+position = Vector2(-1, -68)
 shape = SubResource("RectangleShape2D_nd71p")
 
 [node name="Environment" type="Node" parent="."]
-
-[node name="Tlo320x180" type="Sprite2D" parent="Environment"]
-z_index = -1
-texture_filter = 1
-texture = ExtResource("5_330oy")
 
 [node name="Computer" type="Node2D" parent="Environment"]
 position = Vector2(61, -47)

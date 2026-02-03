@@ -17,7 +17,10 @@ func _on_exit(body):
 		can_interact = false
 
 func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed and can_interact :
+	if GlobalC.next_dialog:
+		
+		return
+	if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :
 		GlobalC.open = true
 		if GlobalC.first_play:
 			GlobalC.first_play= false
@@ -25,6 +28,6 @@ func _input_event(viewport, event, shape_idx):
 			await DialogueManager.dialogue_ended
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia2")
 			return
-		else: 
+		if not GlobalC.next_dialog : 
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia2")
 			return

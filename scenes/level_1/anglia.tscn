@@ -6,28 +6,27 @@
 [ext_resource type="Texture2D" uid="uid://drapg3effttrg" path="res://sprites/anglia/londyn1.png" id="3_5anef"]
 [ext_resource type="PackedScene" uid="uid://dwhlllwpogact" path="res://scenes/postacie/grandma.tscn" id="3_ffkpb"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_x0t1q"]
-[ext_resource type="Texture2D" uid="uid://bmgc4y2unafij" path="res://sprites/anglia/door.png" id="7_5anef"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_pv7x5"]
-[ext_resource type="PackedScene" uid="uid://c4r8w3nf26ban" path="res://itemy/scenes/kamyczek.tscn" id="9_ieef7"]
-[ext_resource type="PackedScene" uid="uid://coqggg67kt3ri" path="res://itemy/scenes/nitka.tscn" id="10_n6dcb"]
-[ext_resource type="PackedScene" uid="uid://k55dfxplyg6x" path="res://itemy/scenes/galazka.tscn" id="11_5anef"]
+[ext_resource type="PackedScene" uid="uid://c4r8w3nf26ban" path="res://itemy/scenes/london/kamyczek.tscn" id="9_ieef7"]
+[ext_resource type="PackedScene" uid="uid://coqggg67kt3ri" path="res://itemy/scenes/london/nitka.tscn" id="10_n6dcb"]
+[ext_resource type="PackedScene" uid="uid://k55dfxplyg6x" path="res://itemy/scenes/london/galazka.tscn" id="11_5anef"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffkpb"]
 size = Vector2(318.5, 52)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_in5km"]
-size = Vector2(51, 42)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ve40"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5anef"]
 size = Vector2(27, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in5km"]
+size = Vector2(51, 42)
 
 [node name="Anglia" type="Node"]
 script = ExtResource("1_in5km")
 pause_scene = ExtResource("2_pcj7e")
 
-[node name="enviroment" type="Node" parent="."]
-
-[node name="Londyn" type="Sprite2D" parent="enviroment"]
+[node name="Londyn" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-2.3841858e-06, 0)
 scale = Vector2(0.89444447, 1)
@@ -36,46 +35,37 @@ texture = ExtResource("3_5anef")
 [node name="Player" parent="." instance=ExtResource("2_r8t5m")]
 position = Vector2(-22, 65)
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="spawn_left" type="Marker2D" parent="."]
+position = Vector2(-145, 59)
+
+[node name="spawn_right" type="Marker2D" parent="."]
+position = Vector2(147, 59)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-0.25, -2)
 shape = SubResource("RectangleShape2D_ffkpb")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(111, 39)
+shape = SubResource("RectangleShape2D_2ve40")
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("4_x0t1q")
-load_scenes = "res://scenes/level_1/zielarka.tscn"
+[node name="enviroment" type="Node" parent="."]
 
-[node name="Door" type="Sprite2D" parent="Area2D"]
-texture_filter = 1
-position = Vector2(15, 37)
-texture = ExtResource("7_5anef")
+[node name="kamyczek" parent="enviroment" instance=ExtResource("9_ieef7")]
+position = Vector2(48, 78)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(15.5, 45)
-shape = SubResource("RectangleShape2D_in5km")
+[node name="galazka" parent="enviroment" instance=ExtResource("11_5anef")]
+position = Vector2(92, 78)
 
-[node name="Area2D2" type="Area2D" parent="."]
-script = ExtResource("4_x0t1q")
-load_scenes = "res://scenes/level_1/london1.tscn"
+[node name="nitka" parent="enviroment" instance=ExtResource("10_n6dcb")]
+position = Vector2(73, 80)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(147, 46)
-shape = SubResource("RectangleShape2D_5anef")
-
-[node name="Area2D3" type="Area2D" parent="."]
-script = ExtResource("4_x0t1q")
-load_scenes = "res://scenes/level_1/london2.tscn"
-target_spawn_id = "right"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(-147, 45)
-shape = SubResource("RectangleShape2D_5anef")
-
-[node name="Grandma" parent="." instance=ExtResource("3_ffkpb")]
+[node name="Grandma" parent="enviroment" instance=ExtResource("3_ffkpb")]
 position = Vector2(111, 49)
 
 [node name="eq" parent="." instance=ExtResource("8_pv7x5")]
@@ -84,11 +74,30 @@ offset_top = -91.0
 offset_right = -96.0
 offset_bottom = -91.0
 
-[node name="kamyczek" parent="." instance=ExtResource("9_ieef7")]
-position = Vector2(50, 79)
+[node name="enters" type="Node" parent="."]
 
-[node name="nitka" parent="." instance=ExtResource("10_n6dcb")]
-position = Vector2(73, 80)
+[node name="Area2D2" type="Area2D" parent="enters"]
+script = ExtResource("4_x0t1q")
+load_scenes = "res://scenes/level_1/london1.tscn"
+target_spawn_id = "left"
 
-[node name="galazka" parent="." instance=ExtResource("11_5anef")]
-position = Vector2(92, 78)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D2"]
+position = Vector2(147, 46)
+shape = SubResource("RectangleShape2D_5anef")
+
+[node name="Area2D3" type="Area2D" parent="enters"]
+script = ExtResource("4_x0t1q")
+load_scenes = "res://scenes/level_1/london2.tscn"
+target_spawn_id = "right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D3"]
+position = Vector2(-147, 45)
+shape = SubResource("RectangleShape2D_5anef")
+
+[node name="Area2D" type="Area2D" parent="enters"]
+script = ExtResource("4_x0t1q")
+load_scenes = "res://scenes/level_1/zielarka.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D"]
+position = Vector2(15.5, 45)
+shape = SubResource("RectangleShape2D_in5km")

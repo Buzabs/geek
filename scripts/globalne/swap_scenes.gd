@@ -10,6 +10,8 @@ var player_ref: Node = null
 var player_positions := {} # scene_path : Vector2
 
 func _ready():
+	print("Spawn ID:", GlobalC.spawn_id)
+
 	if get_tree().current_scene:
 		print(get_tree().current_scene.scene_file_path)
 	body_entered.connect(_on_enter)
@@ -33,5 +35,5 @@ func _input_event(viewport, event, shape_idx):
 			GlobalC.spawn_id = target_spawn_id
 			get_tree().change_scene_to_file(load_scenes)
 			GlobalC.loaded+=1
-			if GlobalC.loaded == 2:
+			if load_scenes == "res://scenes/tutorial/magazyn.tscn" and GlobalC.loaded== 2:
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "sus")			

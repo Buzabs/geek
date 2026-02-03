@@ -12,7 +12,7 @@ size = Vector2(36, 63)
 size = Vector2(43.5, 70)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iudcw"]
-size = Vector2(335, 20)
+size = Vector2(335, 24)
 
 [node name="London2" type="Node2D"]
 
@@ -25,13 +25,16 @@ texture = ExtResource("1_o6xwh")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
+[node name="spawn_right" type="Marker2D" parent="."]
+position = Vector2(133, 61)
+
+[node name="spawn_left" type="Marker2D" parent="."]
+position = Vector2(-140, 61)
+
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("2_j2uuv")
 load_scenes = "res://scenes/level_1/anglia.tscn"
-target_spawn_id = "right"
-
-[node name="spawn_right" type="Marker2D" parent="Area2D"]
-position = Vector2(133, 61)
+target_spawn_id = "left"
 
 [node name="colision" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(142, 57)
@@ -42,11 +45,8 @@ script = ExtResource("2_j2uuv")
 load_scenes = "res://scenes/level_1/sad.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-137.75, 55)
+position = Vector2(-138, 52)
 shape = SubResource("RectangleShape2D_j2uuv")
-
-[node name="spawn_left" type="Marker2D" parent="Area2D2"]
-position = Vector2(-129, 59)
 
 [node name="Player" parent="." instance=ExtResource("3_j2uuv")]
 position = Vector2(1, 62)
@@ -54,7 +54,7 @@ position = Vector2(1, 62)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(3, 11)
+position = Vector2(3, 13)
 shape = SubResource("RectangleShape2D_iudcw")
 
 [node name="eq" parent="StaticBody2D" instance=ExtResource("4_iudcw")]

@@ -1,19 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://boy8m5bbvtp5g"]
+[gd_scene load_steps=11 format=3 uid="uid://boy8m5bbvtp5g"]
 
+[ext_resource type="Script" uid="uid://cd7xn1o4yh3yc" path="res://scripts/globalne/pause.gd" id="1_f3ngc"]
 [ext_resource type="Texture2D" uid="uid://bftd2c30lpbl5" path="res://sprites/anglia/sad.png" id="1_or2ee"]
-[ext_resource type="Texture2D" uid="uid://dchmuntrq2wli" path="res://sprites/anglia/obraz_2026-01-31_134608104.png" id="2_i5ov3"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_nouha"]
-[ext_resource type="Texture2D" uid="uid://dcgp8hm0re2xf" path="res://sprites/anglia/newton1.png" id="3_nouha"]
+[ext_resource type="PackedScene" uid="uid://cavxvca8q55m8" path="res://scenes/postacie/newton.tscn" id="5_f3ngc"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="5_nouha"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_f3ngc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3ngc"]
 size = Vector2(323, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogcwb"]
+size = Vector2(14, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oy0c3"]
 size = Vector2(31, 53)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m3fc"]
+size = Vector2(126, 70)
+
 [node name="Sad" type="Node"]
+script = ExtResource("1_f3ngc")
 
 [node name="Sad" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -28,22 +35,17 @@ zoom = Vector2(2, 2)
 position = Vector2(0.5, 26)
 shape = SubResource("RectangleShape2D_f3ngc")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-64, 51)
+shape = SubResource("RectangleShape2D_ogcwb")
+
 [node name="Player" parent="." instance=ExtResource("2_nouha")]
-position = Vector2(128, 73)
-
-[node name="Obraz20260131134608104" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(41, 64)
-texture = ExtResource("2_i5ov3")
-
-[node name="Newton1" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(93, 61)
-texture = ExtResource("3_nouha")
+position = Vector2(142, 69)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("5_nouha")
 load_scenes = "res://scenes/level_1/london2.tscn"
+target_spawn_id = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(142.5, 62.5)
@@ -54,3 +56,12 @@ offset_left = -101.0
 offset_top = -89.0
 offset_right = -101.0
 offset_bottom = -89.0
+
+[node name="Newton" parent="." instance=ExtResource("5_f3ngc")]
+position = Vector2(-63, 63)
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-26, 54)
+shape = SubResource("RectangleShape2D_5m3fc")
