@@ -1,50 +1,55 @@
 ~ chodzenie
-ENZO: Ale wczoraj zachlałem.
-ENZO: Kompletnie nic nie pamiętam, jak sie chodziło?
+ENZO: Uff… ale mam zamroczenie. Co tu się właściwie wydarzyło?
+ENZO: Dobra, muszę się ruszyć i rozejrzeć.
 ENZO: Może spróbuję lewym przyciskiem myszki.
 => END
 
 ~ podnoszenie
-ENZO: DObra umiem już chodzić. O! Widzę jakąś ciekawą miksturę.
-ENZO: Muszę ją podnieść, spróbuję kliknąć E na klawiaturze.
+ENZO: Dobra, chodzenie ogarnięte.
+ENZO: O, jakaś dziwna mikstura leży na ziemi.
+ENZO: Podniosę ją klawiszem E.
 => END
 
 ~ podnoszenie2
-ENZO: JEJ!
-ENZO: Udało się, podniosłem miksturę.
+ENZO: Jej! Udało się.
+ENZO: Mikstura jest teraz w moim ekwipunku.
 => END
 
 ~ komputer
-ENZO: A to co?
-ENZO: Komputer? Włącze go i zobaczę co w nim jest.
+ENZO: Hmm… co to za urządzenie?
+ENZO: Wygląda jak komputer. Uruchomię go i sprawdzę zawartość.
 => END
 
 ~ kod
 ENZO: Potrzebuję jakiegoś kodu...
-ENZO: Chyba kolory odpowiadają książkom na półce. Policze je i sprawdzę co się stanie.
+ENZO: Kolory chyba pasują do książek na półce.
+ENZO: Policze je i sprawdzę kombinację.
 => END
 
 ~ komputer2
-ENZO: Chyba udało mi się go odpalić, ale co teraz...
-ENZO: Może spróbuję wrzucić jakąś miksturę w ten portal, ciekawe co wtedy się stanie. Wydaje mi sie że miałęm jedną w magazynie...
-ENZO: Pójde tam i zobaczę !!!
+ENZO: Dobra, działa!
+ENZO: Widzę tu jakiś portal energetyczny…
+ENZO: Może reaguje na mikstury?
+ENZO: Chyba jedną mam w magazynie. Lepiej to sprawdzić.
 => END
 
 ~ sus
-ENZO: Okej jestem w magazynie, tylko gdzie był ten przedniot...
-ENZO: meble otwierało sie chyba podchodząc i klikając w nie. Spróbujmy! 
+ENZO: Jestem w magazynie. Tylko gdzie był ten przedmiot...
+ENZO: Szafki i skrzynie powinny się otwierać po kliknięciu. Sprawdźmy.
 => END
 
 ~ find
-ENZO: Jeej udało mi sie to znależć
-ENZO: teraz tylko dać to do portalu bo co może pójść nie tak
+ENZO: Mam to!
+ENZO: Idealnie, dokładnie tego szukałem.
+ENZO: Wracam do portalu. Co może pójść nie tak?
 => END
-
 
 ~ portal
-
-ENZO: OOOOO!!! Portal się odpalił, ale co się dzie... 
+ENZO: Okej… wrzucam miksturę.
+ENZO: Ooo! Portal się aktywuje, zaraz, co się dzieje?!
 => END
+
 ~ wessanie
-ENZO: aaaaaaaaaaa......!!!
+ENZO: Chwila, chyba mnie wciąga!
+ENZO: AAAAAAAAAA...!
 => END

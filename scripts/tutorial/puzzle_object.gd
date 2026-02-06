@@ -1,5 +1,7 @@
 extends Area2D
 
+@onready var komputerSFX = $"../computerSFX"
+
 var is_clicked: bool = false
 var can_interact := false
 var player_ref: Node = null
@@ -26,7 +28,7 @@ func _on_exit(body):
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if GlobalC.dialog:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and can_interact:
-			
+			komputerSFX.play()
 			var ui = computer_ui.instantiate()
 			get_tree().root.add_child(ui)
 			if not GlobalC.first_puzzle_open and GlobalC.dialog :

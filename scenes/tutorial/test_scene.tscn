@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="7_45dmw"]
 [ext_resource type="PackedScene" uid="uid://b8qvtri4p8eei" path="res://scenes/tutorial/computer_puzzle.tscn" id="7_s8qbx"]
 [ext_resource type="Texture2D" uid="uid://bapih2u5tawh7" path="res://sprites/meble/stol.png" id="8_wi1hv"]
+[ext_resource type="AudioStream" uid="uid://8ufw1cbyydp4" path="res://sounds/elevatording.ogg" id="9_shpus"]
 [ext_resource type="Texture2D" uid="uid://c5n2vrggerd1d" path="res://sprites/meble/polka.png" id="9_wyjub"]
 [ext_resource type="Script" uid="uid://d3dnn4w1486vg" path="res://scripts/tutorial/wlaczenie.gd" id="10_uk77x"]
 [ext_resource type="Texture2D" uid="uid://cgpub5sx2df8d" path="res://sprites/Environment/portalwylaczony.png" id="11_4rh0u"]
@@ -18,6 +19,7 @@
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="15_uonvo"]
 [ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/Environment/drzwi.png" id="16_lsfxo"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="17_kb8xq"]
+[ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="18_iw68y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
 size = Vector2(320, 22.5)
@@ -408,6 +410,9 @@ z_index = 2
 position = Vector2(-0.5, -2.25)
 shape = SubResource("RectangleShape2D_wtsjf")
 
+[node name="computerSFX" type="AudioStreamPlayer2D" parent="Environment/Computer" unique_id=670990271]
+stream = ExtResource("9_shpus")
+
 [node name="Stol" type="Sprite2D" parent="Environment" unique_id=2119605737]
 texture_filter = 1
 position = Vector2(-129, 68)
@@ -455,6 +460,10 @@ texture = ExtResource("16_lsfxo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_area" unique_id=33224028]
 position = Vector2(-109, -40)
 shape = SubResource("RectangleShape2D_8gixj")
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="drzwi_area" unique_id=761115434]
+stream = ExtResource("18_iw68y")
+volume_db = 9.545
 
 [node name="eq" parent="." unique_id=1387199501 instance=ExtResource("17_kb8xq")]
 texture_filter = 1
