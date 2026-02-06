@@ -1,20 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://dtuhsuaw1u437"]
+[gd_scene format=3 uid="uid://dtuhsuaw1u437"]
 
 [ext_resource type="Texture2D" uid="uid://bftd2c30lpbl5" path="res://sprites/anglia/sad.png" id="1_3urhl"]
 [ext_resource type="Texture2D" uid="uid://crhhuj850qysa" path="res://sprites/anglia/pryzmat.png" id="2_8oje4"]
+[ext_resource type="PackedScene" uid="uid://cavxvca8q55m8" path="res://scenes/postacie/newton.tscn" id="3_8oje4"]
 
-[node name="PryzmatGra" type="Node2D"]
+[node name="PryzmatGra" type="Node2D" unique_id=779693977]
 
-[node name="Sad" type="Sprite2D" parent="."]
+[node name="Sad" type="Sprite2D" parent="." unique_id=1929540158]
 texture_filter = 1
-position = Vector2(34, -114)
-scale = Vector2(1.544922, 1.8604168)
+position = Vector2(-12, -45)
 texture = ExtResource("1_3urhl")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1993280001]
 zoom = Vector2(4, 4)
 
-[node name="Pryzmat" type="Sprite2D" parent="."]
+[node name="Pryzmat" type="Sprite2D" parent="." unique_id=1845123965]
 texture_filter = 1
-position = Vector2(-24, 5)
+position = Vector2(-40, 22)
 texture = ExtResource("2_8oje4")
+
+[node name="Pryzmat2" type="Sprite2D" parent="." unique_id=1216076792]
+texture_filter = 1
+position = Vector2(-2, 22)
+texture = ExtResource("2_8oje4")
+
+[node name="Newton" parent="." unique_id=542090749 instance=ExtResource("3_8oje4")]
+position = Vector2(-70, 20)

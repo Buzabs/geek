@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bv2np0mgrhbpf"]
+[gd_scene format=3 uid="uid://bv2np0mgrhbpf"]
 
 [ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/anglia/londynver1.png" id="1_yuhbf"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_62pi3"]
@@ -15,44 +15,42 @@ size = Vector2(320, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnjqo"]
 size = Vector2(18, 20)
 
-[node name="LondynNext" type="Node2D"]
+[node name="LondynNext" type="Node2D" unique_id=1871711059]
 
-[node name="LondynNext" type="Sprite2D" parent="."]
+[node name="LondynNext" type="Sprite2D" parent="." unique_id=1004480549]
 texture_filter = 1
-position = Vector2(0.25, 1)
-scale = Vector2(0.9028169, 1)
 texture = ExtResource("1_yuhbf")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=223444429]
 zoom = Vector2(2, 2)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=808622807]
 script = ExtResource("2_62pi3")
 load_scenes = "res://scenes/level_1/anglia.tscn"
 target_spawn_id = "right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=151123992]
 position = Vector2(-143, 55)
 shape = SubResource("RectangleShape2D_1g7vt")
 
-[node name="Player" parent="." instance=ExtResource("3_fnjqo")]
+[node name="Player" parent="." unique_id=1004749767 instance=ExtResource("3_fnjqo")]
 position = Vector2(-139, 67)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1860114069]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=863626018]
 position = Vector2(-1, 10)
 shape = SubResource("RectangleShape2D_yuhbf")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1906209978]
 position = Vector2(106, 45)
 shape = SubResource("RectangleShape2D_fnjqo")
 
-[node name="eq" parent="." instance=ExtResource("4_62pi3")]
+[node name="eq" parent="." unique_id=1410954144 instance=ExtResource("4_62pi3")]
 offset_left = -94.0
 offset_top = -90.0
 offset_right = -94.0
 offset_bottom = -90.0
 
-[node name="Dziecko" parent="." instance=ExtResource("5_fnjqo")]
+[node name="Dziecko" parent="." unique_id=399655976 instance=ExtResource("5_fnjqo")]
 position = Vector2(106, 57)

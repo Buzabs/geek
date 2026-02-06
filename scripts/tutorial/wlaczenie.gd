@@ -2,18 +2,13 @@ extends Area2D
 
 var load_scenes = "res://scenes/level_1/anglia.tscn"
 
-
-
 var solution_ok: bool = false
-var items: bool = false
 var can_interact = false
 var player_ref: Node = null
 
 
 
 func _ready():
-
-	
 	body_entered.connect(_on_enter)
 	body_exited.connect(_on_exit)	
 	

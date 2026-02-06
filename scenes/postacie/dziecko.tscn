@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://duwou0o5aeiy8"]
+[gd_scene format=3 uid="uid://duwou0o5aeiy8"]
 
 [ext_resource type="Script" uid="uid://b43wygr457r0g" path="res://scripts/postacie/dziecko.gd" id="1_7ieo1"]
 [ext_resource type="Texture2D" uid="uid://c4byuvjvjgrgx" path="res://sprites/postacie/dziecko.png" id="1_jfcfm"]
@@ -39,10 +39,6 @@ region = Rect2(64, 32, 32, 32)
 atlas = ExtResource("1_jfcfm")
 region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_amg5j"]
-atlas = ExtResource("1_jfcfm")
-region = Rect2(32, 64, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_os3vn"]
 animations = [{
 "frames": [{
@@ -66,24 +62,21 @@ animations = [{
 }, {
 "duration": 1.51,
 "texture": SubResource("AtlasTexture_kc8rw")
-}, {
-"duration": 1.21,
-"texture": SubResource("AtlasTexture_amg5j")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="Dziecko" type="Area2D"]
+[node name="Dziecko" type="Area2D" unique_id=2091717382]
 script = ExtResource("1_7ieo1")
 item_icon = SubResource("AtlasTexture_e71rc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1361163277]
 position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_q10t8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2001596259]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_os3vn")
 autoplay = "default"

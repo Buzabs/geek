@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://coqggg67kt3ri"]
+[gd_scene format=3 uid="uid://coqggg67kt3ri"]
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_wbadi"]
 [ext_resource type="Texture2D" uid="uid://c7cx5l0nyqslb" path="res://itemy/sprites/proca.png" id="2_wbadi"]
@@ -9,21 +9,21 @@ region = Rect2(19, 0, 19, 22)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0axh"]
 radius = 8.0
-height = 16.0
+height = 32.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5iv7"]
 atlas = ExtResource("2_wbadi")
 region = Rect2(19, 3, 19, 17)
 
-[node name="nitka" type="Area2D"]
+[node name="nitka" type="Area2D" unique_id=583557069]
 script = ExtResource("1_wbadi")
 item_icon = SubResource("AtlasTexture_w4j5g")
 item_id = "nitka"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1390543906]
 texture_filter = 1
 shape = SubResource("CapsuleShape2D_l0axh")
 
-[node name="nitka" type="Sprite2D" parent="."]
+[node name="nitka" type="Sprite2D" parent="." unique_id=212022791]
 texture_filter = 1
 texture = SubResource("AtlasTexture_b5iv7")

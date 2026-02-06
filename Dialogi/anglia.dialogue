@@ -1,3 +1,7 @@
+
+
+
+
 ~ teleportacja
 ENZO: Gdzie ja jestem!!!!!!
 EMZO: wygląda to na średniowieczną Anglię..
@@ -11,13 +15,12 @@ ENZO: Dziekuje pani bardzo
 MYSLI ENZO: "(W takim razie gdzieś tutaj powinien być NEWTON )"
 ENZO: Przepraszam, gdzie mógłbym znaleźć pana Newtona?
 BABCIA: Ach, tego młodego uczonego?
-
 => END
 
 
 ~ babcia2
 BABCIA: Ostatnio widziałam go u miejscowego zielarza. Spróbuj go tam znaleźć. Niełatwo go dorwać.
-=> END!
+=> END
 
 ~ zielarka1
 ENZO: Przepraszam…
@@ -25,19 +28,19 @@ ENZO: Szuka…
 ENZO: PRZEPRASZAM SZUKAM ISSACA NEWTONA!
 ZIELARKA: A co to za maniery żeby krzyczeć. Nie widzisz że jestem zajęty?!
 - Szukam Issaca Newtona, może wie Pan gdzie go znajdę?
-=> END!
+=> END
 ~ zielarka2
 ZIELARKA: Jeśli szukasz rozmowy, przygotuj się na wykład. Ten chłopak potrafi opowiadać godzinami… 
 ZIELARKA: Widziałam go, jak wędrował w stronę sadów za miastem. Często tam przesiaduje.
 
-=> END!
+=> END
 
 
 ~ newton_spotkanie
 ENZO: Pan Newton? 
 NEWTON: O, gość. Jeśli chcesz rozmawiać o nauce… 
 NEWTON: Potrzebuję najpierw pomocy przy pewnym drobiazgu.
-=> END
+=> END!
 
 ~ newton_lisc
 NEWTON: Próbuję zrozumieć, jak światło zmienia kolory przechodząc przez pryzmat
@@ -45,11 +48,11 @@ NEWTON: wszystcy mówią, że barwi on światło, ale mam inną teorie
 NEWTON: żeby ją udowodnić potrzebuje byś ustawił pryzmat w odpowiedni sposób. Dasz radę?
 - pewnie
 	ENZO: Pewnie
-	=> END
-	
+	do._pryzmat()
+	=> END!
 - nie teraz
 	ENZO: Nie teraz
-	=> END
+	=> END!
 => END	
 	
 	
@@ -57,7 +60,14 @@ NEWTON: żeby ją udowodnić potrzebuje byś ustawił pryzmat w odpowiedni spos�
 ENZO: Witaj młody umiesz może zrobić proce i chciałbyś mi zrobić?
 DZIECKO: Jasne, ale musisz mi przynieść potrzebne materiały
 ENZO: Co dokładnie potrzebujesz?
-=> END
+=> END!
 ~ proca2
 DZIECKO: Przynieś mi NITKE oraz jakąś GAŁĄZKE przypominającą kształt procy
-=> END
+=> END!
+
+~ newton_jablko
+NEWTON: AŁA!!! jabłko spadło mi na głowe
+NEWTON: zaraz, skoro spadło mi na głowe czy to nie znaczy, że coś je musiało przyciągnąc do ziemi
+NEWTON: czyli na tym świecie istnieje niewidzialna siła przyciągania
+NEWTON: może nazwe ją GRAWITACJA 
+NEWTON: ide ją opisać

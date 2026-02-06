@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cjrxotfrwbieg"]
+
+[ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_oyhtb"]
+[ext_resource type="Texture2D" uid="uid://c7cx5l0nyqslb" path="res://itemy/sprites/proca.png" id="2_tjseo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a3w1"]
+atlas = ExtResource("2_tjseo")
+region = Rect2(69, 4, 15, 15)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0axh"]
+radius = 11.0
+height = 22.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjk4f"]
+atlas = ExtResource("2_tjseo")
+region = Rect2(74, 10, 5, 4)
+
+[node name="kamyczek" type="Area2D" unique_id=1137858492]
+texture_filter = 1
+script = ExtResource("1_oyhtb")
+item_icon = SubResource("AtlasTexture_5a3w1")
+item_id = "kamyk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=820605536]
+shape = SubResource("CapsuleShape2D_l0axh")
+
+[node name="kamyczek" type="Sprite2D" parent="." unique_id=1128306846]
+texture_filter = 1
+texture = SubResource("AtlasTexture_gjk4f")

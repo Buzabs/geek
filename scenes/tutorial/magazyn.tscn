@@ -36,10 +36,10 @@ diffuse_texture = ExtResource("6_5bx36")
 texture_filter = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ulow"]
-size = Vector2(60, 62.125)
+size = Vector2(59, 58.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bx36"]
-size = Vector2(32, 33)
+size = Vector2(34, 28.5)
 
 [node name="Magazyn" type="Node" unique_id=454308473]
 script = ExtResource("1_5bx36")
@@ -85,7 +85,7 @@ position = Vector2(112.5, 42.75)
 shape = SubResource("RectangleShape2D_cc1vp")
 
 [node name="DrzwiGora" type="Sprite2D" parent="DrzwiMag" unique_id=2013035269]
-position = Vector2(114, 50)
+position = Vector2(114, 51)
 texture = SubResource("CanvasTexture_tv5rq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=257440682]
@@ -104,45 +104,46 @@ texture_filter = 1
 position = Vector2(-39, -37)
 item_id = "suss"
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=1302444623 node_paths=PackedStringArray("sprite", "item")]
+[node name="szafa" type="Area2D" parent="." unique_id=1302444623 node_paths=PackedStringArray("sprite", "item")]
 script = ExtResource("9_6d5j4")
 open = ExtResource("9_6ulow")
 sprite = NodePath("Szafa")
 item = NodePath("Ciii")
 
-[node name="Szafa" type="Sprite2D" parent="Area2D2" unique_id=1456317259]
+[node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1456317259]
 texture_filter = 1
 position = Vector2(98, -13)
 texture = ExtResource("4_dm26d")
 
-[node name="Ciii" parent="Area2D2" unique_id=863797992 instance=ExtResource("11_2meqn")]
+[node name="Ciii" parent="szafa" unique_id=863797992 instance=ExtResource("11_2meqn")]
+texture_filter = 1
 position = Vector2(105, -4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=3944443]
-position = Vector2(94, -12.0625)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=3944443]
+position = Vector2(94.5, -14.0625)
 shape = SubResource("RectangleShape2D_6ulow")
 
-[node name="Area2D3" type="Area2D" parent="." unique_id=1051617436 node_paths=PackedStringArray("sprite", "item")]
+[node name="pudelko" type="Area2D" parent="." unique_id=1051617436 node_paths=PackedStringArray("sprite", "item")]
 script = ExtResource("9_6d5j4")
 open = ExtResource("12_guiiq")
 sprite = NodePath("Pudelko")
 item = NodePath("PortalItems")
 
-[node name="Pudelko" type="Sprite2D" parent="Area2D3" unique_id=816579997]
+[node name="Pudelko" type="Sprite2D" parent="pudelko" unique_id=816579997]
 texture_filter = 1
 position = Vector2(13, 5)
 texture = ExtResource("13_2meqn")
 
-[node name="PortalItems" parent="Area2D3" unique_id=1073041118 instance=ExtResource("15_5bx36")]
+[node name="PortalItems" parent="pudelko" unique_id=1073041118 instance=ExtResource("15_5bx36")]
 position = Vector2(13, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=798130764]
-position = Vector2(13, 7)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=798130764]
+position = Vector2(14, 4.75)
 shape = SubResource("RectangleShape2D_5bx36")
 
 [connection signal="mouse_entered" from="DrzwiMag" to="." method="_on_drzwi_mag_mouse_entered"]
 [connection signal="mouse_exited" from="DrzwiMag" to="." method="_on_drzwi_mag_mouse_exited"]
-[connection signal="mouse_entered" from="Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D2" to="." method="_on_area_2d_2_mouse_exited"]
-[connection signal="mouse_entered" from="Area2D3" to="." method="_on_area_2d_3_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D3" to="." method="_on_area_2d_3_mouse_exited"]
+[connection signal="mouse_entered" from="szafa" to="." method="_on_area_2d_2_mouse_entered"]
+[connection signal="mouse_exited" from="szafa" to="." method="_on_area_2d_2_mouse_exited"]
+[connection signal="mouse_entered" from="pudelko" to="." method="_on_area_2d_3_mouse_entered"]
+[connection signal="mouse_exited" from="pudelko" to="." method="_on_area_2d_3_mouse_exited"]

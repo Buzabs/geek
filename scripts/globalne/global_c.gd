@@ -11,6 +11,7 @@ var open:= false
 var first_play := true
 var first_play_zielarka := true
 var next_dialog := false
+var rzut=true
 
 
 func next():

@@ -29,5 +29,6 @@ func _input_event(viewport, event, shape_idx):
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia2")
 			return
 		if not GlobalC.next_dialog : 
+			GlobalC.open = true
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia2")
 			return
