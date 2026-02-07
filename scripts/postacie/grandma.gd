@@ -22,6 +22,7 @@ func _input_event(viewport, event, shape_idx):
 		return
 	if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :
 		GlobalC.open = true
+		GlobalEq.pick = true
 		if GlobalC.first_play:
 			GlobalC.first_play= false
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia1")

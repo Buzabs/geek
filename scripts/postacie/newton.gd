@@ -28,7 +28,7 @@ func _input_event(viewport, event, shape_idx):
 	if  GlobalC.next_dialog:
 		visible = true
 		if event is InputEventMouseButton and can_interact and event.pressed  :
-			GlobalC.dialog= true
+			
 			if GlobalC.first_play :
 				$animation.play("wake_up")	
 

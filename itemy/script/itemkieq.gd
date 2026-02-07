@@ -26,7 +26,7 @@ func collect():
 	queue_free()
 		
 func _on_enter(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and GlobalEq.pick:
 		can_pick = true
 		player_ref = body
 		print("Gracz wszedł w item")

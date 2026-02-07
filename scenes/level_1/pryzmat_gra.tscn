@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://crhhuj850qysa" path="res://sprites/anglia/pryzmat.png" id="2_8oje4"]
 [ext_resource type="Script" uid="uid://bjdb44rau53p1" path="res://scripts/anglia/pryzmat_gra.gd" id="3_2ybuf"]
 [ext_resource type="PackedScene" uid="uid://cavxvca8q55m8" path="res://scenes/postacie/newton.tscn" id="3_8oje4"]
-[ext_resource type="Script" uid="uid://beox1xaj5haq0" path="res://scenes/level_1/ok_pryzmat.gd" id="5_guqlp"]
+[ext_resource type="Script" uid="uid://beox1xaj5haq0" path="res://scripts/anglia/ok_pryzmat.gd" id="5_guqlp"]
 [ext_resource type="Texture2D" uid="uid://dd0ce8dhh12p0" path="res://sprites/anglia/ok.png" id="6_phiks"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vq85"]

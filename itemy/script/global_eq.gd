@@ -3,7 +3,7 @@ extends Node
 signal inventory_changed
 signal used_item(bool)
 var used := false
-
+var pick:= false
 
 var max_slots := 5
 var selected_item: Texture2D = null
