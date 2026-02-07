@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://568jrd26vha0" path="res://sprites/anglia/table_zielarnia.png" id="2_frige"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_uj2r0"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="4_le3at"]
+[ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="4_o8vkl"]
 [ext_resource type="PackedScene" uid="uid://c1ldpo3kp7jfs" path="res://scenes/postacie/zielarka.tscn" id="4_uj2r0"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="6_le3at"]
 [ext_resource type="PackedScene" uid="uid://coqggg67kt3ri" path="res://itemy/scenes/london/nitka.tscn" id="7_5t4mf"]
@@ -64,7 +65,7 @@ shape = SubResource("RectangleShape2D_7yurd")
 position = Vector2(49, -19)
 shape = SubResource("RectangleShape2D_j4bnx")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1652477711]
+[node name="Area2D" type="Area2D" parent="." unique_id=1652477711 groups=["doors"]]
 script = ExtResource("3_uj2r0")
 load_scenes = "res://scenes/level_1/anglia.tscn"
 
@@ -76,6 +77,10 @@ texture = ExtResource("4_le3at")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=184408801]
 position = Vector2(-59, 48)
 shape = SubResource("RectangleShape2D_5t4mf")
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="Area2D" unique_id=1056080019]
+stream = ExtResource("4_o8vkl")
+volume_db = 9.545
 
 [node name="Zielarka" parent="." unique_id=1886428194 instance=ExtResource("4_uj2r0")]
 position = Vector2(-23, 1)

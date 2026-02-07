@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="5_tv5rq"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="6_5bx36"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="7_8najp"]
+[ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="7_cpmci"]
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="8_cc1vp"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="9_6d5j4"]
 [ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="9_6ulow"]
@@ -87,6 +88,10 @@ shape = SubResource("RectangleShape2D_cc1vp")
 [node name="DrzwiGora" type="Sprite2D" parent="DrzwiMag" unique_id=2013035269]
 position = Vector2(114, 51)
 texture = SubResource("CanvasTexture_tv5rq")
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="DrzwiMag" unique_id=104385984]
+stream = ExtResource("7_cpmci")
+volume_db = 9.545
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=257440682]
 zoom = Vector2(2, 2)

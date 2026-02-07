@@ -56,3 +56,13 @@ func _on_drzwi_mag_mouse_entered() -> void:
 
 func _on_drzwi_mag_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(movement_cursor)
+	
+
+
+
+func _on_drzwi_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(door_cursor)
+
+
+func _on_drzwi_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(movement_cursor)

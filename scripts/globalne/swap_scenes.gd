@@ -31,13 +31,14 @@ func _on_exit(body):
 	
 	
 
-func _input_event(viewport, event, shape_idx):
+func _input_event(_viewport, event, _shape_idx):
 	if GlobalC.open:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and can_open:
-			drzwiSFX.play()
-			await drzwiSFX.finished
+			if self.is_in_group("doors"):
+				drzwiSFX.play()
+				await drzwiSFX.finished
 			GlobalC.spawn_id = target_spawn_id
 			get_tree().change_scene_to_file(load_scenes)
 			GlobalC.loaded+=1
-			if load_scenes == "res://scenes/tutorial/magazyn.tscn" and GlobalC.loaded== 2:
+			if load_scenes == "res://scenes/tutorial/magazyn.tscn" and GlobalC.loaded == 2:
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "sus")			

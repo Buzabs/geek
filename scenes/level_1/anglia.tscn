@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://drapg3effttrg" path="res://sprites/anglia/londyn1.png" id="3_5anef"]
 [ext_resource type="PackedScene" uid="uid://dwhlllwpogact" path="res://scenes/postacie/grandma.tscn" id="3_ffkpb"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_x0t1q"]
+[ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="8_ieef7"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_pv7x5"]
 [ext_resource type="PackedScene" uid="uid://c4r8w3nf26ban" path="res://itemy/scenes/london/kamyczek.tscn" id="9_ieef7"]
 
@@ -65,31 +66,38 @@ offset_bottom = -91.0
 
 [node name="enters" type="Node" parent="." unique_id=152219885]
 
-[node name="Area2D2" type="Area2D" parent="enters" unique_id=1398205073]
+[node name="MoreLondon" type="Area2D" parent="enters" unique_id=1398205073]
 script = ExtResource("4_x0t1q")
 load_scenes = "res://scenes/level_1/london1.tscn"
 target_spawn_id = "left"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D2" unique_id=15720479]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/MoreLondon" unique_id=15720479]
 position = Vector2(147, 45)
 shape = SubResource("RectangleShape2D_5anef")
 
-[node name="Area2D3" type="Area2D" parent="enters" unique_id=1188628185]
+[node name="OrchardEnterance" type="Area2D" parent="enters" unique_id=1188628185]
 script = ExtResource("4_x0t1q")
 load_scenes = "res://scenes/level_1/london2.tscn"
 target_spawn_id = "right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D3" unique_id=1008537836]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/OrchardEnterance" unique_id=1008537836]
 position = Vector2(-147, 48)
 shape = SubResource("RectangleShape2D_5anef")
 
-[node name="Area2D" type="Area2D" parent="enters" unique_id=344793469]
+[node name="Drzwi" type="Area2D" parent="enters" unique_id=344793469 groups=["doors"]]
 script = ExtResource("4_x0t1q")
 load_scenes = "res://scenes/level_1/zielarka.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Area2D" unique_id=774322857]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Drzwi" unique_id=774322857]
 position = Vector2(15.5, 45)
 shape = SubResource("RectangleShape2D_in5km")
 
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="enters/Drzwi" unique_id=1789258147]
+stream = ExtResource("8_ieef7")
+volume_db = 9.545
+
 [node name="kamyczek" parent="." unique_id=314056935 instance=ExtResource("9_ieef7")]
 position = Vector2(-83, 58)
+
+[connection signal="mouse_entered" from="enters/Drzwi" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="enters/Drzwi" to="." method="_on_drzwi_mouse_exited"]
