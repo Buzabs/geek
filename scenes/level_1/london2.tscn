@@ -43,6 +43,7 @@ shape = SubResource("RectangleShape2D_o6xwh")
 [node name="Area2D2" type="Area2D" parent="." unique_id=1255668589]
 script = ExtResource("2_j2uuv")
 load_scenes = "res://scenes/level_1/sad.tscn"
+target_spawn_id = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1046527349]
 position = Vector2(-138, 52)

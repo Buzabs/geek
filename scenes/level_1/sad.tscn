@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://k55dfxplyg6x" path="res://itemy/scenes/london/galazka.tscn" id="5_ogcwb"]
 [ext_resource type="Texture2D" uid="uid://c537fuox12yfy" path="res://sprites/Other/udany_rzut.png" id="5_otdhu"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_f3ngc"]
-[ext_resource type="Script" uid="uid://rmocs776m8b6" path="res://scenes/level_1/kamyczek_proca.gd" id="7_oy0c3"]
+[ext_resource type="Script" uid="uid://rmocs776m8b6" path="res://scripts/anglia/kamyczek_proca.gd" id="7_oy0c3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5m3fc"]
 atlas = ExtResource("1_or2ee")
@@ -303,7 +303,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5m3fc"]
-size = Vector2(45, 72)
+size = Vector2(77, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3ngc"]
 size = Vector2(323, 20)
@@ -324,6 +324,12 @@ zoom = Vector2(2, 2)
 texture_filter = 1
 texture = ExtResource("1_or2ee")
 
+[node name="spawn_right" type="Marker2D" parent="." unique_id=1237592479]
+position = Vector2(144, 64)
+
+[node name="spawn_left" type="Marker2D" parent="." unique_id=1177560668]
+position = Vector2(-38, 64)
+
 [node name="proca" type="Area2D" parent="." unique_id=1202200406]
 script = ExtResource("7_oy0c3")
 
@@ -336,7 +342,7 @@ frame = 21
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="proca" unique_id=526037]
-position = Vector2(82, 54)
+position = Vector2(86.5, 54)
 shape = SubResource("RectangleShape2D_5m3fc")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1338344445]
@@ -350,7 +356,7 @@ position = Vector2(-64, 47)
 shape = SubResource("RectangleShape2D_ogcwb")
 
 [node name="Player" parent="." unique_id=1446656579 instance=ExtResource("2_nouha")]
-position = Vector2(142, 69)
+position = Vector2(142, 68)
 
 [node name="przejscie" type="Area2D" parent="." unique_id=1906288866]
 script = ExtResource("5_nouha")
@@ -358,7 +364,7 @@ load_scenes = "res://scenes/level_1/london2.tscn"
 target_spawn_id = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="przejscie" unique_id=1190551032]
-position = Vector2(142.5, 62.5)
+position = Vector2(144, 63)
 shape = SubResource("RectangleShape2D_oy0c3")
 
 [node name="eq" parent="." unique_id=2033397746 instance=ExtResource("6_f3ngc")]

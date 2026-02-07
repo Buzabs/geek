@@ -1,15 +1,13 @@
 extends Button
 
 
-
 @export var required_id: Array[int]
-@export var slots: Array[Control]
+@export var slots: Array[Area2D]
 
 @export var ok_button: Button
-@export var ok_icon_correct: Texture2D
+
 @export var ok_icon_default: Texture2D
-
-
+var target_spawn_id: String = "left"
 
 func _ready():
 	ok_button.icon = ok_icon_default
@@ -24,9 +22,6 @@ func _pressed():
 		var selector = slots[i]
 		if selector.index != required_id[i]:
 			return
-
-	
-	ok_button.icon = ok_icon_correct
-	GameSignals.solution_ok = true
-	GameSignals.solution_checked.emit(true)
+	GlobalC.spawn_id = target_spawn_id
+	get_tree().change_scene_to_file("res://scenes/level_1/sad.tscn")
 	

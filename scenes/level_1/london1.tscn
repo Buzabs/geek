@@ -33,6 +33,9 @@ target_spawn_id = "right"
 position = Vector2(-143, 55)
 shape = SubResource("RectangleShape2D_1g7vt")
 
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="Area2D" unique_id=1017329071]
+volume_db = 9.545
+
 [node name="Player" parent="." unique_id=1004749767 instance=ExtResource("3_fnjqo")]
 position = Vector2(-139, 67)
 

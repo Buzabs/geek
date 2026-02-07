@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cblno7uy5hnyu" path="res://sprites/Environment/magazyn_tlo.png" id="1_necqc"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_glxrb"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_i2gnm"]
-[ext_resource type="Texture2D" uid="uid://b3d7sk56uf7o8" path="res://sprites/meble/szafa.png" id="4_dm26d"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="5_tv5rq"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="6_5bx36"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="7_8najp"]
@@ -13,6 +12,7 @@
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="9_6d5j4"]
 [ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="9_6ulow"]
 [ext_resource type="PackedScene" uid="uid://dk4dlw3uofp37" path="res://itemy/scenes/tutorial/ciii.tscn" id="11_2meqn"]
+[ext_resource type="Texture2D" uid="uid://c7yt3gh4h70ww" path="res://sprites/meble/wardrobe.png" id="12_cpmci"]
 [ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="12_guiiq"]
 [ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="13_2meqn"]
 [ext_resource type="PackedScene" uid="uid://d2vtfhg5wnt78" path="res://itemy/scenes/tutorial/portal_items.tscn" id="15_5bx36"]
@@ -119,7 +119,7 @@ item = NodePath("Ciii")
 [node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1456317259]
 texture_filter = 1
 position = Vector2(98, -13)
-texture = ExtResource("4_dm26d")
+texture = ExtResource("12_cpmci")
 
 [node name="Ciii" parent="szafa" unique_id=863797992 instance=ExtResource("11_2meqn")]
 texture_filter = 1

@@ -2,7 +2,56 @@
 
 [ext_resource type="Texture2D" uid="uid://bftd2c30lpbl5" path="res://sprites/anglia/sad.png" id="1_3urhl"]
 [ext_resource type="Texture2D" uid="uid://crhhuj850qysa" path="res://sprites/anglia/pryzmat.png" id="2_8oje4"]
+[ext_resource type="Script" uid="uid://bjdb44rau53p1" path="res://scripts/anglia/pryzmat_gra.gd" id="3_2ybuf"]
 [ext_resource type="PackedScene" uid="uid://cavxvca8q55m8" path="res://scenes/postacie/newton.tscn" id="3_8oje4"]
+[ext_resource type="Script" uid="uid://beox1xaj5haq0" path="res://scenes/level_1/ok_pryzmat.gd" id="5_guqlp"]
+[ext_resource type="Texture2D" uid="uid://dd0ce8dhh12p0" path="res://sprites/anglia/ok.png" id="6_phiks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vq85"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(17, 10, 14, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mymxs"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(2, 10, 11, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r83c4"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(33, 10, 14, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lij4"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(2, 10, 11, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guqlp"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(17, 10, 14, 6)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_phiks"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ybuf"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(17, 10, 14, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phiks"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(2, 10, 11, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha1cg"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(33, 10, 14, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xw8b"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(2, 10, 11, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oje4"]
+atlas = ExtResource("2_8oje4")
+region = Rect2(33, 10, 14, 6)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ybuf"]
+radius = 7.0
 
 [node name="PryzmatGra" type="Node2D" unique_id=779693977]
 
@@ -14,15 +63,44 @@ texture = ExtResource("1_3urhl")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1993280001]
 zoom = Vector2(4, 4)
 
-[node name="Pryzmat" type="Sprite2D" parent="." unique_id=1845123965]
-texture_filter = 1
-position = Vector2(-40, 22)
-texture = ExtResource("2_8oje4")
-
-[node name="Pryzmat2" type="Sprite2D" parent="." unique_id=1216076792]
-texture_filter = 1
-position = Vector2(-2, 22)
-texture = ExtResource("2_8oje4")
-
 [node name="Newton" parent="." unique_id=542090749 instance=ExtResource("3_8oje4")]
 position = Vector2(-70, 20)
+
+[node name="pryzmat" type="Area2D" parent="." unique_id=1458927109]
+script = ExtResource("3_2ybuf")
+textures = Array[Texture2D]([SubResource("AtlasTexture_2vq85"), SubResource("AtlasTexture_mymxs"), SubResource("AtlasTexture_r83c4"), SubResource("AtlasTexture_4lij4")])
+
+[node name="Pryzmat" type="Sprite2D" parent="pryzmat" unique_id=1845123965]
+texture_filter = 1
+position = Vector2(-39, 27)
+texture = SubResource("AtlasTexture_guqlp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pryzmat" unique_id=1327831804]
+position = Vector2(-39, 28)
+shape = SubResource("CircleShape2D_phiks")
+
+[node name="pryzmat2" type="Area2D" parent="." unique_id=163644323]
+script = ExtResource("3_2ybuf")
+textures = Array[Texture2D]([SubResource("AtlasTexture_2ybuf"), SubResource("AtlasTexture_phiks"), SubResource("AtlasTexture_ha1cg"), SubResource("AtlasTexture_8xw8b")])
+
+[node name="Pryzmat" type="Sprite2D" parent="pryzmat2" unique_id=1216076792]
+texture_filter = 1
+position = Vector2(-3, 27)
+texture = SubResource("AtlasTexture_8oje4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pryzmat2" unique_id=838475056]
+position = Vector2(-3, 27)
+shape = SubResource("CircleShape2D_2ybuf")
+
+[node name="Button" type="Button" parent="." unique_id=1715418176 node_paths=PackedStringArray("slots", "ok_button")]
+texture_filter = 1
+offset_left = 31.0
+offset_top = 20.0
+offset_right = 62.0
+offset_bottom = 34.0
+icon = ExtResource("6_phiks")
+script = ExtResource("5_guqlp")
+required_id = Array[int]([0, 2])
+slots = [NodePath("../pryzmat"), NodePath("../pryzmat2")]
+ok_button = NodePath(".")
+ok_icon_default = ExtResource("6_phiks")

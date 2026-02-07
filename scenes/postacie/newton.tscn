@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cavxvca8q55m8"]
+[gd_scene format=3 uid="uid://cavxvca8q55m8"]
 
 [ext_resource type="Script" uid="uid://dulwhm3ss62kf" path="res://scripts/postacie/newton.gd" id="1_rfq8x"]
 [ext_resource type="Texture2D" uid="uid://ctwqqhyuoc2x0" path="res://sprites/postacie/newton.png" id="2_rfq8x"]
@@ -33,13 +33,13 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 2.01,
+"duration": 1.11,
 "texture": SubResource("AtlasTexture_nb40j")
 }, {
-"duration": 3.01,
+"duration": 1.21,
 "texture": SubResource("AtlasTexture_jq4hk")
 }, {
-"duration": 1.61,
+"duration": 0.01,
 "texture": SubResource("AtlasTexture_xh5s8")
 }],
 "loop": false,
@@ -47,14 +47,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Newton" type="Area2D"]
+[node name="Newton" type="Area2D" unique_id=480957095]
 script = ExtResource("1_rfq8x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=950071597]
 position = Vector2(-1, 1.5)
 shape = SubResource("RectangleShape2D_nb40j")
 
-[node name="animation" type="AnimatedSprite2D" parent="."]
+[node name="animation" type="AnimatedSprite2D" parent="." unique_id=1608524451]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_yh0qi")
 animation = &"wake_up"
