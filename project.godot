@@ -26,6 +26,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 GlobalC="*res://scripts/globalne/global_c.gd"
 GameSignals="*res://scripts/globalne/game_signals.gd"
 Pausa="*res://scripts/globalne/pause.gd"
+PrismSwap="*uid://dnjw8abwt8cvu"
 
 [dialogue_manager]
 

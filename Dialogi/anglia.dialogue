@@ -48,7 +48,7 @@ NEWTON: wszystcy mówią, że barwi on światło, ale mam inną teorie
 NEWTON: żeby ją udowodnić potrzebuje byś ustawił pryzmat w odpowiedni sposób. Dasz radę?
 - pewnie
 	ENZO: Pewnie
-	do._pryzmat()
+	do PrismSwap.pryzmat()
 	=> END!
 - nie teraz
 	ENZO: Nie teraz

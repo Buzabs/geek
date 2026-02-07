@@ -24,9 +24,6 @@ func _on_exit(body):
 		print("wyszedl")
 
 
-func pryzmat() -> void:
-	get_tree().change_scene_to_file("res://scenes/level_1/pryzmat_gra.tscn")
-
 func _input_event(viewport, event, shape_idx):
 	if  GlobalC.next_dialog:
 		visible = true

@@ -2,6 +2,7 @@ extends Node
 
 var pause_instance: Control
 
+
 func toggle_pause(pause_scene):
 	if get_tree().paused:
 		# wznów grę
