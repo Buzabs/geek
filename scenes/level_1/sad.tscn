@@ -377,9 +377,10 @@ offset_bottom = -89.0
 [node name="Newton" parent="." unique_id=2061750746 instance=ExtResource("5_f3ngc")]
 position = Vector2(-60, 65)
 
-[node name="galazka" parent="." unique_id=507843911 instance=ExtResource("5_ogcwb")]
+[node name="galazka" parent="." unique_id=507843911 node_paths=PackedStringArray("itemSFX") instance=ExtResource("5_ogcwb")]
 position = Vector2(16, 61)
 rotation = -1.5707964
+itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=586727144]
 stream = ExtResource("11_fww8k")

@@ -451,13 +451,15 @@ stream = ExtResource("15_wi1hv")
 
 [node name="items" type="Node" parent="." unique_id=1789534054]
 
-[node name="Sus2" parent="items" unique_id=1768127490 instance=ExtResource("13_c27oj")]
+[node name="Sus2" parent="items" unique_id=1768127490 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_c27oj")]
 texture_filter = 1
 position = Vector2(42, 11)
+itemSFX = NodePath("../../item_podnoszenieSFX")
 
-[node name="Sus" parent="items" unique_id=2110382611 instance=ExtResource("14_r66l1")]
+[node name="Sus" parent="items" unique_id=2110382611 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_r66l1")]
 texture_filter = 1
 position = Vector2(-128, 51)
+itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="drzwi_area" type="Area2D" parent="." unique_id=1568346961 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
 script = ExtResource("15_uonvo")

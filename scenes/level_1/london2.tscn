@@ -65,8 +65,9 @@ offset_top = -91.0
 offset_right = -94.0
 offset_bottom = -91.0
 
-[node name="kamyczek" parent="." unique_id=1137858492 instance=ExtResource("5_nesmw")]
+[node name="kamyczek" parent="." unique_id=1137858492 node_paths=PackedStringArray("itemSFX") instance=ExtResource("5_nesmw")]
 position = Vector2(-72, 54)
+itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=940553317]
 stream = ExtResource("6_20bjw")

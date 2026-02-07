@@ -6,6 +6,7 @@ var movement_cursor = load("res://sprites/Other/movement_cursor.png")
 var interaction_cursor = load("res://sprites/Other/cog_cursor.png")
 var door_cursor = load("res://sprites/Other/door_curor.png")
 
+
 func _process(_delta):
 	
 	if Input.is_action_just_pressed("pause"):

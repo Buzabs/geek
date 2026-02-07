@@ -3,7 +3,7 @@ extends Area2D
 @export var item_icon: Texture2D
 @export var item_id: String 
 
-@onready var itemSFX = $"../../item_podnoszenieSFX"
+@export var itemSFX: AudioStreamPlayer2D
 
 var used :=  false
 var can_pick := false

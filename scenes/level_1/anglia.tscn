@@ -98,8 +98,9 @@ shape = SubResource("RectangleShape2D_in5km")
 stream = ExtResource("8_ieef7")
 volume_db = 9.545
 
-[node name="kamyczek" parent="." unique_id=314056935 instance=ExtResource("9_ieef7")]
+[node name="kamyczek" parent="." unique_id=314056935 node_paths=PackedStringArray("itemSFX") instance=ExtResource("9_ieef7")]
 position = Vector2(-83, 58)
+itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1138832020]
 stream = ExtResource("10_2ve40")

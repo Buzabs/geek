@@ -122,9 +122,10 @@ texture_filter = 1
 position = Vector2(98, -13)
 texture = ExtResource("12_cpmci")
 
-[node name="Ciii" parent="szafa" unique_id=863797992 instance=ExtResource("11_2meqn")]
+[node name="Ciii" parent="szafa" unique_id=863797992 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_2meqn")]
 texture_filter = 1
 position = Vector2(105, -4)
+itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=3944443]
 position = Vector2(94.5, -14.0625)
@@ -141,8 +142,9 @@ texture_filter = 1
 position = Vector2(13, 5)
 texture = ExtResource("13_2meqn")
 
-[node name="PortalItems" parent="pudelko" unique_id=1073041118 instance=ExtResource("15_5bx36")]
+[node name="PortalItems" parent="pudelko" unique_id=1073041118 node_paths=PackedStringArray("itemSFX") instance=ExtResource("15_5bx36")]
 position = Vector2(13, 1)
+itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=798130764]
 position = Vector2(14, 4.75)
