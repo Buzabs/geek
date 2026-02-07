@@ -1,82 +1,85 @@
-
-
-
-
 ~ teleportacja
-ENZO: Gdzie ja jestem!!!!!!
-EMZO: wygląda to na średniowieczną Anglię..
-ENZO: Tam stoi jakaś babcia, może pójde sie jej zapytać w jakim roku dokładnie jestem
-=> END!
+ENZO: Gdzie ja jestem?!
+ENZO: Wygląda to na średniowieczną Anglię...
+ENZO: Tam stoi starsza pani, wygląda jak ktoś, kto wie wszystko o wszystkich. Może pójdę się jej zapytać, w jakim roku dokładnie jestem.
+=> END
 
 ~ babcia1
-ENZO: Przepraszam wie pani może jaki mamy rok?
-BABCIA: Pan sobie żartuje!? oczywiście że mamy 1670..
-ENZO: Dziekuje pani bardzo 
-MYSLI ENZO: "(W takim razie gdzieś tutaj powinien być NEWTON )"
+ENZO: Przepraszam, wie pani może, jaki mamy rok?
+BABCIA: Pan sobie żartuje!? Oczywiście, że mamy 1670...
+ENZO: Dziękuję pani bardzo.
+MYŚLI ENZO: Jeśli to 1670... Newton MUSI tu gdzieś być.
 ENZO: Przepraszam, gdzie mógłbym znaleźć pana Newtona?
 BABCIA: Ach, tego młodego uczonego?
 => END
-
 
 ~ babcia2
 BABCIA: Ostatnio widziałam go u miejscowego zielarza. Spróbuj go tam znaleźć. Niełatwo go dorwać.
 => END
 
 ~ zielarka1
-ENZO: Przepraszam…
-ENZO: Szuka…
-ENZO: PRZEPRASZAM SZUKAM ISSACA NEWTONA!
-ZIELARKA: A co to za maniery żeby krzyczeć. Nie widzisz że jestem zajęty?!
-- Szukam Issaca Newtona, może wie Pan gdzie go znajdę?
+ENZO: Przepraszam...
+ENZO: Szukam...
+ENZO: PRZEPRASZAM, SZUKAM ISAACA NEWTONA!
+ZIELARKA: A co to za maniery, żeby krzyczeć? Nie widzisz, że jestem zajęta?!
+- Szukam Isaaca Newtona, może wie pani, gdzie go znajdę?
 => END
+
 ~ zielarka2
-ZIELARKA: Jeśli szukasz rozmowy, przygotuj się na wykład. Ten chłopak potrafi opowiadać godzinami… 
+ZIELARKA: Jeśli szukasz rozmowy, przygotuj się na wykład. Ten chłopak potrafi opowiadać godzinami...
 ZIELARKA: Widziałam go, jak wędrował w stronę sadów za miastem. Często tam przesiaduje.
-
 => END
-
 
 ~ newton_spotkanie
 ENZO: Pan Newton? 
-NEWTON: O, gość. Jeśli chcesz rozmawiać o nauce… 
+NEWTON: O, gość. Jeśli chcesz rozmawiać o nauce...
 NEWTON: Potrzebuję najpierw pomocy przy pewnym drobiazgu.
-=> END!
+=> END
 
 ~ newton_lisc
-NEWTON: Próbuję zrozumieć, jak światło zmienia kolory przechodząc przez pryzmat
-NEWTON: wszystcy mówią, że barwi on światło, ale mam inną teorie
-NEWTON: żeby ją udowodnić potrzebuje byś ustawił pryzmat w odpowiedni sposób. Dasz radę?
-- pewnie
-	ENZO: Pewnie
+NEWTON: Próbuję zrozumieć, jak światło zmienia kolory, przechodząc przez pryzmat.
+NEWTON: Wszyscy mówią, że barwi on światło, ale mam inną teorię.
+NEWTON: Żeby ją udowodnić, potrzebuję, byś ustawił pryzmat w odpowiedni sposób. Dasz radę?
+- Pewnie
+	ENZO: Pewnie.
 	do PrismSwap.pryzmat()
-	=> END!
-- nie teraz
-	ENZO: Nie teraz
-	=> END!
-=> END	
+	=> END
+- Nie teraz
+	ENZO: Nie teraz.
+	=> END
+=> END
+
 ~ newton_zagadka
-NEWTON: Dzięki wielkie!!! jak widzisz ustawiając odpowiednio dwa pryzmaty światło wraca do swojej formyy
-NEWTON: prowadzi mnie to do wniosku, że pryzmat nie maluje światły tylko dzieli je na inne barwy
-NEWTON: a kiedy przechodzi prze drugi światło schodzi sie znowu w jeden kolor
-NEWTON: A teraz wybacz ide dalej rozmyślać
-	
+NEWTON: Dziękuję! Jak widzisz, ustawiając odpowiednio dwa pryzmaty, światło wraca do swojej pierwotnej formy.
+NEWTON: To prowadzi mnie do wniosku, że pryzmat nie barwi światła, tylko rozdziela je na różne barwy.
+NEWTON: A kiedy przechodzi przez drugi pryzmat, światło łączy się z powrotem w jeden kolor.
+NEWTON: Wybacz teraz, muszę dalej to przemyśleć.
+=> END
+
 ~ poczatek_proca
-ENZO: dobra, co teraz...
-ENZO: mówi sie że Newton wymyślił grawitacje, jak mu jablko na głowe spadło
-ENZO: spróbuje znaleść coś co mogłoby mi w tym pomóc
+ENZO: Dobra... co teraz?
+ENZO: Mówi się, że Newton odkrył grawitację, gdy jabłko spadło mu na głowę.
+ENZO: Spróbuję znaleźć coś, co mogłoby mi w tym pomóc.
+=> END
 
 ~ proca
-ENZO: Witaj młody umiesz może zrobić proce i chciałbyś mi zrobić?
-DZIECKO: Jasne, ale musisz mi przynieść potrzebne materiały
+ENZO: Witaj. Umiesz może zrobić procę i chciałbyś mi ją zrobić?
+DZIECKO: Jasne, ale musisz mi przynieść potrzebne materiały.
 ENZO: Co dokładnie potrzebujesz?
-=> END!
+=> END
+
 ~ proca2
-DZIECKO: Przynieś mi NITKE oraz jakąś GAŁĄZKE przypominającą kształt procy
-=> END!
+DZIECKO: Przynieś mi NITKĘ oraz jakąś GAŁĄZKĘ przypominającą kształt procy.
+=> END
 
 ~ newton_jablko
-NEWTON: AŁA!!! jabłko spadło mi na głowe
-NEWTON: zaraz, skoro spadło mi na głowe czy to nie znaczy, że coś je musiało przyciągnąc do ziemi
-NEWTON: czyli na tym świecie istnieje niewidzialna siła przyciągania
-NEWTON: może nazwe ją GRAWITACJA 
-NEWTON: ide ją opisać
+NEWTON: Ała! Idealnie w głowę...
+NEWTON: Spokojnie... pomyślmy.
+NEWTON: Jabłko nie poleciało w bok.
+NEWTON: Nie zawisło w powietrzu.
+NEWTON: Spadło w dół.
+NEWTON: To nie może być przypadek.
+NEWTON: Czyli działa tu jakaś siła przyciągania.
+NEWTON: Nazwę ją grawitacją!
+NEWTON: Muszę to zapisać, zanim spadnie kolejne.
+=> END
