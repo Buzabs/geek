@@ -84,9 +84,10 @@ target_spawn_id = "right"
 position = Vector2(-147, 48)
 shape = SubResource("RectangleShape2D_5anef")
 
-[node name="Drzwi" type="Area2D" parent="enters" unique_id=344793469 groups=["doors"]]
+[node name="Drzwi" type="Area2D" parent="enters" unique_id=344793469 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
 script = ExtResource("4_x0t1q")
 load_scenes = "res://scenes/level_1/zielarka.tscn"
+drzwiSFX = NodePath("drzwiSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enters/Drzwi" unique_id=774322857]
 position = Vector2(15.5, 45)

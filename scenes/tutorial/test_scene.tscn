@@ -448,9 +448,10 @@ position = Vector2(42, 11)
 texture_filter = 1
 position = Vector2(-128, 51)
 
-[node name="drzwi_area" type="Area2D" parent="." unique_id=1568346961 groups=["doors"]]
+[node name="drzwi_area" type="Area2D" parent="." unique_id=1568346961 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
 script = ExtResource("15_uonvo")
 load_scenes = "res://scenes/tutorial/magazyn.tscn"
+drzwiSFX = NodePath("drzwiSFX")
 
 [node name="Drzwi" type="Sprite2D" parent="drzwi_area" unique_id=327989133]
 texture_filter = 1

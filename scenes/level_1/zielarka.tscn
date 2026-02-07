@@ -65,9 +65,10 @@ shape = SubResource("RectangleShape2D_7yurd")
 position = Vector2(49, -19)
 shape = SubResource("RectangleShape2D_j4bnx")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1652477711 groups=["doors"]]
+[node name="Area2D" type="Area2D" parent="." unique_id=1652477711 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
 script = ExtResource("3_uj2r0")
 load_scenes = "res://scenes/level_1/anglia.tscn"
+drzwiSFX = NodePath("drzwiSFX")
 
 [node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=956670106]
 texture_filter = 1

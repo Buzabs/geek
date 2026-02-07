@@ -1,8 +1,7 @@
 extends Area2D
 
 @export var load_scenes: String
-
-@onready var drzwiSFX = $drzwiSFX
+@export var drzwiSFX: AudioStreamPlayer2D
 
 var can_open: bool = false
 var player_ref: Node = null
@@ -34,6 +33,7 @@ func _on_exit(body):
 func _input_event(_viewport, event, _shape_idx):
 	if GlobalC.open:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and can_open:
+			can_open = false
 			if self.is_in_group("doors"):
 				drzwiSFX.play()
 				await drzwiSFX.finished

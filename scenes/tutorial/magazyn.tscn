@@ -76,9 +76,10 @@ shape = SubResource("RectangleShape2D_cpmci")
 [node name="Player" parent="." unique_id=1794524727 instance=ExtResource("2_glxrb")]
 position = Vector2(114, 30)
 
-[node name="DrzwiMag" type="Area2D" parent="." unique_id=568557238]
+[node name="DrzwiMag" type="Area2D" parent="." unique_id=568557238 node_paths=PackedStringArray("drzwiSFX")]
 script = ExtResource("5_tv5rq")
 load_scenes = "res://scenes/tutorial/test_scene.tscn"
+drzwiSFX = NodePath("drzwiSFX")
 target_spawn_id = "up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DrzwiMag" unique_id=1882813476]
