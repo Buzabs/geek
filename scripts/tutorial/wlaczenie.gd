@@ -39,10 +39,10 @@ func _input_event(viewport, event, shape_idx):
 				$portal.play("open")
 				GlobalEq.remove_item("portal_open")
 				await $portal.animation_finished
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "portal")	
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "portal")	
 				$portal.play("open_portal")
 				await $portal.animation_finished
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/tutorial.dialogue"), "wessanie")	
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "wessanie")	
 				$portal.play("teleportation")		
 				#await get_tree().create_timer(2.5).timeout
 				await $portal.animation_finished

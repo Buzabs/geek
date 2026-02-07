@@ -1,41 +1,66 @@
-[gd_scene load_steps=6 format=3 uid="uid://cla3577hp8lop"]
+[gd_scene format=3 uid="uid://cla3577hp8lop"]
 
-[ext_resource type="Texture2D" uid="uid://bkndxcyc7u1pw" path="res://pausa/sprite/pausa_tlo.png" id="1_1vybs"]
-[ext_resource type="Texture2D" uid="uid://c3nk8iq5utjyo" path="res://pausa/sprite/back.png" id="2_8kb6j"]
+[ext_resource type="Texture2D" uid="uid://bw26wly8043o3" path="res://sprites/UI/pause.png" id="1_kokf4"]
+[ext_resource type="Texture2D" uid="uid://b1ypufr2psx0g" path="res://sprites/UI/exit.png" id="2_kokf4"]
 [ext_resource type="Script" uid="uid://duis3cinrujia" path="res://pausa/script/exit.gd" id="3_oifdx"]
-[ext_resource type="Texture2D" uid="uid://ntkiy4idp845" path="res://pausa/sprite/exit.png" id="3_xn2kv"]
+[ext_resource type="Texture2D" uid="uid://c77ipj5u2xx0m" path="res://sprites/UI/back.png" id="4_dxsr0"]
 [ext_resource type="Script" uid="uid://cbjndoukiwj5o" path="res://pausa/script/back.gd" id="5_xn2kv"]
 
-[node name="Pausa" type="Control"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kokf4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k70mm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dxsr0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v35qo"]
+
+[node name="Pausa" type="Control" unique_id=1729639939]
 process_mode = 2
 process_priority = 8
 z_index = 13
 layout_mode = 3
 anchors_preset = 0
 
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = 8
-layout_mode = 0
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1243873432]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = -83.0
+offset_top = -80.0
 offset_right = 150.0
-offset_bottom = 77.0
-texture = ExtResource("1_1vybs")
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TextureButton" type="Button" parent="TextureRect"]
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=1524710382]
+z_index = 8
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_kokf4")
+
+[node name="Exit" type="Button" parent="CenterContainer/TextureRect" unique_id=652080081]
+texture_filter = 1
 layout_mode = 0
-offset_left = 161.0
-offset_top = 58.0
-offset_right = 265.0
-offset_bottom = 114.0
-icon = ExtResource("3_xn2kv")
+offset_left = 103.0
+offset_top = 82.0
+offset_right = 197.0
+offset_bottom = 110.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kokf4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_k70mm")
+icon = ExtResource("2_kokf4")
 script = ExtResource("3_oifdx")
 
-[node name="TextureButton2" type="Button" parent="TextureRect"]
+[node name="Back" type="Button" parent="CenterContainer/TextureRect" unique_id=506378953]
+texture_filter = 1
 layout_mode = 0
-offset_left = 30.0
-offset_top = 57.0
-offset_right = 134.0
-offset_bottom = 113.0
-icon = ExtResource("2_8kb6j")
+offset_left = 102.0
+offset_top = 49.0
+offset_right = 196.0
+offset_bottom = 77.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dxsr0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_v35qo")
+icon = ExtResource("4_dxsr0")
 script = ExtResource("5_xn2kv")
