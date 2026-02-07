@@ -7,8 +7,7 @@ func _ready():
 	if GameSignals.puzzle_solved:
 		_lock_scene()
 
-func _on_solution_checked(correct: bool):
-	if correct:
+func _on_solution_checked():
 		GameSignals.puzzle_solved = true
 		await get_tree().create_timer(0.2).timeout
 		_lock_scene()

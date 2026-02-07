@@ -28,5 +28,5 @@ func _pressed():
 	
 	ok_button.icon = ok_icon_correct
 	GameSignals.solution_ok = true
-	GameSignals.solution_checked.emit(true)
+	GameSignals.solution_checked.emit()
 	

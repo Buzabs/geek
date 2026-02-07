@@ -1,8 +1,6 @@
 extends Area2D
 
 var load_scenes = "res://scenes/level_1/anglia.tscn"
-
-var solution_ok: bool = false
 var can_interact = false
 var player_ref: Node = null
 
@@ -22,9 +20,6 @@ func _on_exit(body):
 	if body == player_ref: 
 		can_interact = false
 		player_ref = null
-
-		
-
 
 	
 func _input_event(viewport, event, shape_idx):

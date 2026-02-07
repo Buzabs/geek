@@ -16,8 +16,9 @@
 
 [node name="Pausa" type="Control" unique_id=1729639939]
 process_mode = 2
-process_priority = 8
-z_index = 13
+process_priority = 67
+process_physics_priority = 7
+z_index = 19
 layout_mode = 3
 anchors_preset = 0
 
