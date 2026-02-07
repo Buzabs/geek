@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="12_guiiq"]
 [ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="13_2meqn"]
 [ext_resource type="PackedScene" uid="uid://d2vtfhg5wnt78" path="res://itemy/scenes/tutorial/portal_items.tscn" id="15_5bx36"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="17_aqp31"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r353"]
 size = Vector2(25, 110)
@@ -146,6 +147,9 @@ position = Vector2(13, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=798130764]
 position = Vector2(14, 4.75)
 shape = SubResource("RectangleShape2D_5bx36")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=844727560]
+stream = ExtResource("17_aqp31")
 
 [connection signal="mouse_entered" from="DrzwiMag" to="." method="_on_drzwi_mag_mouse_entered"]
 [connection signal="mouse_exited" from="DrzwiMag" to="." method="_on_drzwi_mag_mouse_exited"]

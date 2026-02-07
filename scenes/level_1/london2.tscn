@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_j2uuv"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="4_iudcw"]
 [ext_resource type="PackedScene" uid="uid://cjrxotfrwbieg" path="res://itemy/scenes/london/kamyk.tscn" id="5_nesmw"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="6_20bjw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xwh"]
 size = Vector2(36, 63)
@@ -66,3 +67,6 @@ offset_bottom = -91.0
 
 [node name="kamyczek" parent="." unique_id=1137858492 instance=ExtResource("5_nesmw")]
 position = Vector2(-72, 54)
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=940553317]
+stream = ExtResource("6_20bjw")

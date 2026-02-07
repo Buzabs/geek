@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c537fuox12yfy" path="res://sprites/Other/udany_rzut.png" id="5_otdhu"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_f3ngc"]
 [ext_resource type="Script" uid="uid://rmocs776m8b6" path="res://scripts/anglia/kamyczek_proca.gd" id="7_oy0c3"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="11_fww8k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5m3fc"]
 atlas = ExtResource("1_or2ee")
@@ -379,3 +380,6 @@ position = Vector2(-60, 65)
 [node name="galazka" parent="." unique_id=507843911 instance=ExtResource("5_ogcwb")]
 position = Vector2(16, 61)
 rotation = -1.5707964
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=586727144]
+stream = ExtResource("11_fww8k")

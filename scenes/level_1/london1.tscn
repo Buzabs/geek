@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_fnjqo"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="4_62pi3"]
 [ext_resource type="PackedScene" uid="uid://duwou0o5aeiy8" path="res://scenes/postacie/dziecko.tscn" id="5_fnjqo"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="6_vuifx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1g7vt"]
 size = Vector2(32.75, 72.5)
@@ -57,3 +58,6 @@ offset_bottom = -90.0
 
 [node name="Dziecko" parent="." unique_id=399655976 instance=ExtResource("5_fnjqo")]
 position = Vector2(106, 57)
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=810111862]
+stream = ExtResource("6_vuifx")

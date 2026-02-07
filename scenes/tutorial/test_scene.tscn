@@ -17,11 +17,13 @@
 [ext_resource type="PackedScene" uid="uid://b2fsc3yn7gygp" path="res://itemy/scenes/tutorial/potka.tscn" id="13_c27oj"]
 [ext_resource type="PackedScene" uid="uid://lceuq6u6ewdw" path="res://itemy/scenes/items.tscn" id="14_r66l1"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="15_uonvo"]
+[ext_resource type="AudioStream" uid="uid://hdsbkq24ujj5" path="res://sounds/teleport.mp3" id="15_wi1hv"]
 [ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/Environment/drzwi.png" id="16_lsfxo"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="17_kb8xq"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="18_iw68y"]
 [ext_resource type="Texture2D" uid="uid://c0ft723emky4" path="res://sprites/Environment/klodka.png" id="21_5xvl5"]
 [ext_resource type="Script" uid="uid://kv6488sfg843" path="res://scenes/tutorial/klodka.gd" id="22_45dmw"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="24_wyjub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
 size = Vector2(320, 22.5)
@@ -444,6 +446,9 @@ animation = &"teleportation"
 autoplay = "default"
 speed_scale = 0.7
 
+[node name="portalSFX" type="AudioStreamPlayer2D" parent="Environment/portal_area" unique_id=2127469039]
+stream = ExtResource("15_wi1hv")
+
 [node name="items" type="Node" parent="." unique_id=1789534054]
 
 [node name="Sus2" parent="items" unique_id=1768127490 instance=ExtResource("13_c27oj")]
@@ -496,6 +501,9 @@ position = Vector2(-103, -40)
 texture = SubResource("AtlasTexture_wyjub")
 script = ExtResource("22_45dmw")
 klodka = NodePath(".")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1650443309]
+stream = ExtResource("24_wyjub")
 
 [connection signal="mouse_entered" from="Environment/Computer/ComputerClick" to="." method="_on_computer_click_mouse_entered"]
 [connection signal="mouse_exited" from="Environment/Computer/ComputerClick" to="." method="_on_computer_click_mouse_exited"]

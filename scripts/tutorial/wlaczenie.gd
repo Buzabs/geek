@@ -4,7 +4,7 @@ var load_scenes = "res://scenes/level_1/anglia.tscn"
 var can_interact = false
 var player_ref: Node = null
 
-
+@onready var portalSFX = $portalSFX
 
 func _ready():
 	body_entered.connect(_on_enter)
@@ -34,6 +34,7 @@ func _input_event(viewport, event, shape_idx):
 				$portal.play("open")
 				GlobalEq.remove_item("portal_open")
 				await $portal.animation_finished
+				portalSFX.play()
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "portal")	
 				$portal.play("open_portal")
 				await $portal.animation_finished

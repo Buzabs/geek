@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cb1ohcs4gcqp5" path="res://sprites/kopernik/obserwatorium.png" id="1_2m4uv"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_px8ry"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_66txr"]
 
 [node name="Obserwatorium" type="Node" unique_id=276483008]
 
@@ -15,3 +16,6 @@ zoom = Vector2(2, 2)
 
 [node name="Player" parent="." unique_id=1292153575 instance=ExtResource("2_px8ry")]
 position = Vector2(-4, 73)
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1063551428]
+stream = ExtResource("3_66txr")

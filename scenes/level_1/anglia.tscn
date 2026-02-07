@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="8_ieef7"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_pv7x5"]
 [ext_resource type="PackedScene" uid="uid://c4r8w3nf26ban" path="res://itemy/scenes/london/kamyczek.tscn" id="9_ieef7"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="10_2ve40"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffkpb"]
 size = Vector2(318.5, 52)
@@ -99,6 +100,9 @@ volume_db = 9.545
 
 [node name="kamyczek" parent="." unique_id=314056935 instance=ExtResource("9_ieef7")]
 position = Vector2(-83, 58)
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1138832020]
+stream = ExtResource("10_2ve40")
 
 [connection signal="mouse_entered" from="enters/Drzwi" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="enters/Drzwi" to="." method="_on_drzwi_mouse_exited"]

@@ -3,6 +3,7 @@ extends Area2D
 @export var item_icon: Texture2D
 @export var item_id: String 
 
+@onready var itemSFX = $"../../item_podnoszenieSFX"
 
 var used :=  false
 var can_pick := false
@@ -41,5 +42,6 @@ func _process(_delta):
 	
 	if can_pick and Input.is_action_just_pressed("items") and visible :
 			if GlobalEq.add_item(item_icon, item_id):
+				itemSFX.play()
 				collect()
 				queue_free()
