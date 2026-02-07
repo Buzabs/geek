@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://tu5x0umdlatj"]
+
+[ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_k4ny8"]
+[ext_resource type="Texture2D" uid="uid://dng05tj840hco" path="res://itemy/sprites/items_kopernik.png" id="2_how7d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmltd"]
+atlas = ExtResource("2_how7d")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qbv6a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7hoy"]
+atlas = ExtResource("2_how7d")
+region = Rect2(34, 3, 10, 11)
+
+[node name="Ziemia" type="Area2D" unique_id=404466428]
+script = ExtResource("1_k4ny8")
+item_icon = SubResource("AtlasTexture_lmltd")
+item_id = "notka2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=989928964]
+texture_filter = 1
+shape = SubResource("CircleShape2D_qbv6a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1856871428]
+texture_filter = 1
+texture = SubResource("AtlasTexture_h7hoy")

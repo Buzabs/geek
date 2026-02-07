@@ -25,7 +25,7 @@ func _pressed():
 	GlobalC.spawn_id = target_spawn_id
 	get_tree().change_scene_to_file("res://scenes/level_1/sad.tscn")
 	
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/newton_zagadka.dialogue"), "sus")			
+	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_zagadka")			
 	await DialogueManager.dialogue_ended
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/poczatek_proca.dialogue"), "sus")			
+	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "poczatek_proca")			
 	GlobalC.next_dialog = false
