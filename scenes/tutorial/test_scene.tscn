@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/Environment/drzwi.png" id="16_lsfxo"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="17_kb8xq"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="18_iw68y"]
+[ext_resource type="Texture2D" uid="uid://c0ft723emky4" path="res://sprites/Environment/klodka.png" id="21_5xvl5"]
+[ext_resource type="Script" uid="uid://kv6488sfg843" path="res://scenes/tutorial/klodka.gd" id="22_45dmw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
 size = Vector2(320, 22.5)
@@ -363,6 +365,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyjub"]
+atlas = ExtResource("21_5xvl5")
+region = Rect2(4, 6, 4, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5xvl5"]
+load_path = "res://.godot/imported/klodka.png-91e6bfb7c967a6a06bfb8edc5bbff74e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk77x"]
+atlas = SubResource("CompressedTexture2D_5xvl5")
+region = Rect2(15, 5, 4, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rh0u"]
+atlas = SubResource("CompressedTexture2D_5xvl5")
+
 [node name="TestScene" type="Node" unique_id=701386128]
 script = ExtResource("1_bc4q0")
 pause_scene = ExtResource("2_s8qbx")
@@ -483,6 +499,15 @@ position = Vector2(92, -49)
 sprite_frames = SubResource("SpriteFrames_tutpt")
 autoplay = "default"
 speed_scale = 0.8
+
+[node name="klodka" type="Sprite2D" parent="." unique_id=599398141 node_paths=PackedStringArray("klodka")]
+texture_filter = 1
+position = Vector2(-103, -40)
+texture = SubResource("AtlasTexture_wyjub")
+script = ExtResource("22_45dmw")
+open_lock = SubResource("AtlasTexture_uk77x")
+klodka = NodePath(".")
+icon_default = SubResource("AtlasTexture_4rh0u")
 
 [connection signal="mouse_entered" from="Environment/Computer/ComputerClick" to="." method="_on_computer_click_mouse_entered"]
 [connection signal="mouse_exited" from="Environment/Computer/ComputerClick" to="." method="_on_computer_click_mouse_exited"]

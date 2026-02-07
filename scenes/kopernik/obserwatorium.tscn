@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://8cwtvqklqtf4"]
+
+[ext_resource type="Texture2D" uid="uid://cb1ohcs4gcqp5" path="res://sprites/kopernik/obserwatorium.png" id="1_2m4uv"]
+
+[node name="Obserwatorium" type="Node2D" unique_id=1742922584]
+
+[node name="Obserwatorium" type="Sprite2D" parent="." unique_id=2043192508]
+texture_filter = 1
+position = Vector2(-1, -1)
+texture = ExtResource("1_2m4uv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=72469827]
+zoom = Vector2(2, 2)
