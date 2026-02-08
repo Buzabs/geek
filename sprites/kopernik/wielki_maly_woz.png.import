@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bksgjkchvrbh2"
-path="res://.godot/imported/obserwatorium.png-bdb80874182f3c556ca5e042452b2d98.ctex"
+uid="uid://c4whoibaj4vpy"
+path="res://.godot/imported/wielki_maly_woz.png-c4ad971e7202d1fd0968e40d6cadc06a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/kopernik/obserwatorium.png"
-dest_files=["res://.godot/imported/obserwatorium.png-bdb80874182f3c556ca5e042452b2d98.ctex"]
+source_file="res://sprites/kopernik/wielki_maly_woz.png"
+dest_files=["res://.godot/imported/wielki_maly_woz.png-c4ad971e7202d1fd0968e40d6cadc06a.ctex"]
 
 [params]
 

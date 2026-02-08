@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bv2np0mgrhbpf"]
 
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_0npvi"]
 [ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/anglia/londynver1.png" id="1_yuhbf"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_62pi3"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_fnjqo"]
@@ -17,6 +18,7 @@ size = Vector2(320, 32)
 size = Vector2(18, 20)
 
 [node name="LondynNext" type="Node2D" unique_id=1871711059]
+script = ExtResource("1_0npvi")
 
 [node name="LondynNext" type="Sprite2D" parent="." unique_id=1004480549]
 texture_filter = 1
@@ -61,3 +63,6 @@ position = Vector2(106, 57)
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=810111862]
 stream = ExtResource("6_vuifx")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_4k0k4"]
 [ext_resource type="Texture2D" uid="uid://dng05tj840hco" path="res://itemy/sprites/items_kopernik.png" id="2_vg15t"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_vg15t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmltd"]
 atlas = ExtResource("2_vg15t")
@@ -13,10 +14,11 @@ region = Rect2(31, 0, 16, 16)
 atlas = ExtResource("2_vg15t")
 region = Rect2(51, 3, 10, 11)
 
-[node name="Ziemia" type="Area2D" unique_id=404466428]
+[node name="notka3" type="Area2D" unique_id=404466428 node_paths=PackedStringArray("itemSFX")]
 script = ExtResource("1_4k0k4")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "notka3"
+itemSFX = NodePath("item_podnoszenieSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=989928964]
 texture_filter = 1
@@ -25,3 +27,6 @@ shape = SubResource("CircleShape2D_qbv6a")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1856871428]
 texture_filter = 1
 texture = SubResource("AtlasTexture_h7hoy")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1067272461]
+stream = ExtResource("3_vg15t")

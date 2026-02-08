@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://c3jdl8rbvh6em"]
+
+[ext_resource type="Texture2D" uid="uid://ccbxn8bmnjohm" path="res://sprites/postacie/kopernik (1).png" id="1_itt2y"]
+[ext_resource type="Script" uid="uid://bgcdbdt8sqcr0" path="res://scripts/postacie/kopernik.gd" id="1_vercr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itt2y"]
+size = Vector2(28, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vercr"]
+atlas = ExtResource("1_itt2y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wns4n"]
+atlas = ExtResource("1_itt2y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10j1e"]
+atlas = ExtResource("1_itt2y")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ovyw"]
+atlas = ExtResource("1_itt2y")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_socp2"]
+atlas = ExtResource("1_itt2y")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4i5p"]
+atlas = ExtResource("1_itt2y")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dhyq"]
+atlas = ExtResource("1_itt2y")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tcvd"]
+atlas = ExtResource("1_itt2y")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1aj6a"]
+animations = [{
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_vercr")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_wns4n")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_10j1e")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_6ovyw")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_socp2")
+}, {
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_l4i5p")
+}, {
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_0dhyq")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_6tcvd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Kopernik" type="Area2D" unique_id=1061417716]
+script = ExtResource("1_vercr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1785037865]
+shape = SubResource("RectangleShape2D_itt2y")
+
+[node name="animation" type="AnimatedSprite2D" parent="." unique_id=503070875]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1aj6a")
+frame_progress = 0.23112191
+speed_scale = 0.7

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dwhlllwpogact"]
+[gd_scene format=3 uid="uid://dwhlllwpogact"]
 
 [ext_resource type="Texture2D" uid="uid://blryy86le3cmj" path="res://sprites/postacie/grandma.png" id="1_qnrn6"]
 [ext_resource type="Script" uid="uid://b84sd8srs22yk" path="res://scripts/postacie/grandma.gd" id="1_ty54f"]
@@ -77,14 +77,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Grandma" type="Area2D"]
+[node name="Grandma" type="Area2D" unique_id=1499971596]
 script = ExtResource("1_ty54f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1099573022]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_qnrn6")
 
-[node name="animacja" type="AnimatedSprite2D" parent="."]
+[node name="animacja" type="AnimatedSprite2D" parent="." unique_id=1115069622]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2ldpv")
 frame_progress = 0.04579695

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2vtfhg5wnt78"]
+[gd_scene format=3 uid="uid://d2vtfhg5wnt78"]
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_4kc6a"]
 [ext_resource type="Texture2D" uid="uid://b1sgdgy3ggi5i" path="res://itemy/sprites/interact_items.png" id="2_7a1qc"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_mnykr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kc6a"]
 atlas = ExtResource("2_7a1qc")
@@ -14,18 +15,21 @@ radius = 7.5166483
 diffuse_texture = ExtResource("2_7a1qc")
 texture_filter = 1
 
-[node name="PortalItems" type="Area2D"]
+[node name="PortalItems" type="Area2D" unique_id=1235802025]
 script = ExtResource("1_4kc6a")
 item_icon = SubResource("AtlasTexture_4kc6a")
 item_id = "portal_open"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735175163]
 position = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_7a1qc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1920149088]
 position = Vector2(-1.1920929e-07, 0)
 scale = Vector2(0.8333333, 0.9444444)
 texture = SubResource("CanvasTexture_v1e0b")
 region_enabled = true
 region_rect = Rect2(18, 9, 14, 6)
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=989076841]
+stream = ExtResource("3_mnykr")

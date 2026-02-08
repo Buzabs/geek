@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_2d04p"]
 [ext_resource type="Texture2D" uid="uid://dng05tj840hco" path="res://itemy/sprites/items_kopernik.png" id="2_goiev"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_goiev"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmltd"]
 atlas = ExtResource("2_goiev")
@@ -11,9 +12,9 @@ region = Rect2(65, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7hoy"]
 atlas = ExtResource("2_goiev")
-region = Rect2(81, 19, 16, 10)
+region = Rect2(68, 19, 10, 10)
 
-[node name="Ziemia" type="Area2D" unique_id=404466428]
+[node name="venus" type="Area2D" unique_id=404466428]
 script = ExtResource("1_2d04p")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "jowisz"
@@ -25,3 +26,6 @@ shape = SubResource("CircleShape2D_qbv6a")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1856871428]
 texture_filter = 1
 texture = SubResource("AtlasTexture_h7hoy")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1038100114]
+stream = ExtResource("3_goiev")

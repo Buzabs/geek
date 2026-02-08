@@ -40,7 +40,8 @@ func _input_event(_viewport, event, _shape_idx):
 			GlobalC.spawn_id = target_spawn_id
 			get_tree().change_scene_to_file(load_scenes)
 			GlobalC.loaded+=1
+
 			if load_scenes == "res://scenes/tutorial/magazyn.tscn" and GlobalC.loaded == 2:
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "sus")			
-			if load_scenes == "res://scenes/tutorial/tesc_scene.tscn" and GlobalC.loaded == 3:
+			if load_scenes == "res://scenes/tutorial/test_scene.tscn" and GlobalEq.dialogue:
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "uzycie")			

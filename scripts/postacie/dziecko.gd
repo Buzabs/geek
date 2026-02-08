@@ -1,6 +1,7 @@
 extends Area2D
 var can_interact = false
 var player_ref: Node = null
+var can_craft := false
 @export var item_icon: Texture2D
 
 var movement_cursor = load("res://sprites/Other/movement_cursor.png")
@@ -21,22 +22,23 @@ func _on_exit(body):
 
 func _proca():
 		GlobalEq.remove_item("nitka")
-	
 		GlobalEq.remove_item("galazka")
 		GlobalEq.add_item(item_icon, "proca")
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed and can_interact :
 		if GlobalC.dialog:
-			if GlobalEq.selected_item_id == "nitka" or GlobalEq.selected_item_id == "kamyczek" or GlobalEq.selected_item_id == "galazka":
-				_proca()
-				GlobalC.dialog = false
-				return
-			if GlobalC.first_play_zielarka:
-				GlobalC.first_play_zielarka= false
+			if can_craft and  GlobalEq.has_item("nitka") and  GlobalEq.has_item("galazka") :
+				if GlobalEq.selected_item_id == "galazka" or GlobalEq.selected_item_id == "nitka":
+					_proca()
+					GlobalC.dialog = false
+					return
+			if GlobalC.first_play_next :
+				GlobalC.first_play_next = false
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "proca")
 				await DialogueManager.dialogue_ended
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "proca2")
+				can_craft= true
 				return
 			else: 
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "proca2")

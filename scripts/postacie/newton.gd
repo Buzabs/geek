@@ -28,11 +28,12 @@ func _on_exit(body):
 
 
 func _input_event(viewport, event, shape_idx):
-	if  GlobalC.next_dialog:
+	if  GlobalC.next_dialog  :
 		visible = true
-		if event is InputEventMouseButton and can_interact and event.pressed  :
+		if event is InputEventMouseButton and can_interact and event.pressed  and GlobalC.wake_up:
 			
 			if GlobalC.first_play :
+				GlobalC.wake_up = false
 				$animation.play("wake_up")	
 
 				GlobalC.first_play = false
@@ -40,7 +41,7 @@ func _input_event(viewport, event, shape_idx):
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_spotkanie")
 				await DialogueManager.dialogue_ended
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
-				GlobalC.first_play_zielarka = true
+				GlobalC.first_play_next  = true
 			
 				return
 			else:

@@ -43,3 +43,4 @@ func _input_event(viewport, event, shape_idx):
 				#await get_tree().create_timer(2.5).timeout
 				await $portal.animation_finished
 				get_tree().change_scene_to_file(load_scenes)
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "teleportacja")	

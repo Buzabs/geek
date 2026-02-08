@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://btjc0ut0fkxnw"]
 
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_edjt4"]
 [ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/anglia/londynver1.png" id="1_o6xwh"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_j2uuv"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_j2uuv"]
@@ -17,6 +18,7 @@ size = Vector2(43.5, 70)
 size = Vector2(335, 24)
 
 [node name="London2" type="Node2D" unique_id=1898180347]
+script = ExtResource("1_edjt4")
 
 [node name="Londynver1" type="Sprite2D" parent="." unique_id=1399471928]
 texture_filter = 1
@@ -71,3 +73,8 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=940553317]
 stream = ExtResource("6_20bjw")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D2" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D2" to="." method="_on_drzwi_mouse_exited"]

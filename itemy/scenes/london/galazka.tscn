@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://k55dfxplyg6x"]
+[gd_scene format=3 uid="uid://k55dfxplyg6x"]
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_8n63q"]
 [ext_resource type="Texture2D" uid="uid://c7cx5l0nyqslb" path="res://itemy/sprites/proca.png" id="2_8n63q"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_mtina"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3cul"]
 atlas = ExtResource("2_8n63q")
@@ -15,15 +16,18 @@ height = 22.0
 atlas = ExtResource("2_8n63q")
 region = Rect2(53, 4, 14, 15)
 
-[node name="galazka" type="Area2D"]
+[node name="galazka" type="Area2D" unique_id=988354948]
 texture_filter = 1
 script = ExtResource("1_8n63q")
 item_icon = SubResource("AtlasTexture_y3cul")
 item_id = "galazka"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1056391808]
 shape = SubResource("CapsuleShape2D_l0axh")
 
-[node name="galazka" type="Sprite2D" parent="."]
+[node name="galazka" type="Sprite2D" parent="." unique_id=1731301359]
 texture_filter = 1
 texture = SubResource("AtlasTexture_gwobr")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1989899834]
+stream = ExtResource("3_mtina")

@@ -4,7 +4,7 @@ var pause_instance: CanvasLayer
 
 func toggle_pause(pause_scene):
 	if get_tree().paused:
-		# wznów grę
+		
 		get_tree().paused = false
 		if pause_instance:
 			pause_instance.queue_free()

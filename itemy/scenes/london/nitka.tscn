@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_wbadi"]
 [ext_resource type="Texture2D" uid="uid://c7cx5l0nyqslb" path="res://itemy/sprites/proca.png" id="2_wbadi"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_6sffr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4j5g"]
 atlas = ExtResource("2_wbadi")
@@ -27,3 +28,6 @@ shape = SubResource("CapsuleShape2D_l0axh")
 [node name="nitka" type="Sprite2D" parent="." unique_id=212022791]
 texture_filter = 1
 texture = SubResource("AtlasTexture_b5iv7")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=402858312]
+stream = ExtResource("3_6sffr")

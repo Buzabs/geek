@@ -24,6 +24,8 @@ func rzucanie(rzut):
 	player_ref.visible = false
 	$animation.play(rzut)		
 	await $animation.animation_finished	
+	if rzut == "udany_rzut":
+		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_jablko")
 	player_ref.visible = true
 	if GlobalEq.selected_item_id == "kamyk" :
 			GlobalEq.remove_item("kamyk")
@@ -36,7 +38,13 @@ func _input_event(viewport, event, shape_idx):
 		if GlobalEq.selected_item_id == "proca":
 				rzucanie("udany_rzut")
 				GlobalEq.remove_item("proca")
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_jabłko")
+				GlobalC.first_puzzle_open = false
+				GlobalC.dialog = false
+				GlobalC.open= false
+				GlobalC.first_play = true
+				GlobalC.first_play_next = true
+				GlobalC.next_dialog = false
+				GlobalC.rzut=true
 				return
 		if GlobalC.dialog and  GlobalC.rzut :
 			if  GlobalEq.selected_item_id == "kamyk" or GlobalEq.selected_item_id == "kamyczek"  :		

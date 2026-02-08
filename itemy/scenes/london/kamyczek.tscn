@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4r8w3nf26ban"]
+[gd_scene format=3 uid="uid://c4r8w3nf26ban"]
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_efqi0"]
 [ext_resource type="Texture2D" uid="uid://c7cx5l0nyqslb" path="res://itemy/sprites/proca.png" id="2_efqi0"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_xxdqt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5a3w1"]
 atlas = ExtResource("2_efqi0")
@@ -15,15 +16,19 @@ height = 22.0
 atlas = ExtResource("2_efqi0")
 region = Rect2(35, 1, 18, 18)
 
-[node name="kamyczek" type="Area2D"]
+[node name="kamyczek" type="Area2D" unique_id=390580240 node_paths=PackedStringArray("itemSFX")]
 texture_filter = 1
 script = ExtResource("1_efqi0")
 item_icon = SubResource("AtlasTexture_5a3w1")
 item_id = "kamyczek"
+itemSFX = NodePath("item_podnoszenieSFX")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=145066846]
 shape = SubResource("CapsuleShape2D_l0axh")
 
-[node name="kamyczek" type="Sprite2D" parent="."]
+[node name="kamyczek" type="Sprite2D" parent="." unique_id=134347296]
 texture_filter = 1
 texture = SubResource("AtlasTexture_gjk4f")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=512070386]
+stream = ExtResource("3_xxdqt")

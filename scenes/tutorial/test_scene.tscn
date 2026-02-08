@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="17_kb8xq"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="18_iw68y"]
 [ext_resource type="Texture2D" uid="uid://c0ft723emky4" path="res://sprites/Environment/klodka.png" id="21_5xvl5"]
-[ext_resource type="Script" uid="uid://kv6488sfg843" path="res://scenes/tutorial/klodka.gd" id="22_45dmw"]
+[ext_resource type="Script" uid="uid://kv6488sfg843" path="res://scripts/tutorial/klodka.gd" id="22_45dmw"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="24_wyjub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]

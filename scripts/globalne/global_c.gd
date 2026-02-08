@@ -9,20 +9,23 @@ var first_puzzle_open := false
 var dialog := false
 var open:= false
 var first_play := true
-var first_play_zielarka := true
+var first_play_next  := true
 var next_dialog := false
 var rzut=true
-
+var wake_up := true
 
 func next():
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "podnoszenie2")
 	await DialogueManager.dialogue_ended
 	await get_tree().create_timer(0.5).timeout
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "komputer")
-	dialog= true
+	dialog= true    
 
-
-
+func cos():
+	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_zagadka")
+	await DialogueManager.dialogue_ended
+	await get_tree().create_timer(2).timeout
+	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "poczatek_proca")
 #game stats
 var puzzle_states : Dictionary = {}
 var collected_items := {}

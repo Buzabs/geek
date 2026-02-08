@@ -1,13 +1,23 @@
 ~ start
-Mikołaj: Szukasz mnie?
-Mikołaj: Chodź. Zanim porozmawiamy o wszechświecie, mam dla ciebie zadanie.
-Mikołaj: Widzisz te wszystkie gwiazdy na niebie, obserwuje je od lat. Doszedłem do wniosku, że Ziemia nie może być w centrum wszechświata, dlatego stworzyłem obraz. Ale zgubiłem słońce, pomóż mi znaleźć słońce w moim pokoju, a potem włóż je do odpowiedniego obrazu.
+MIKOŁAJ: Szukasz mnie?
+MIKOŁAJ: Chodź. Zanim porozmawiamy o wszechświecie, mam dla ciebie zadanie.
+MIKOŁAJ: Widzisz, od lat obserwuje wszsechświat jednakże zgubiłem pare moich notatek ...
+=> END
+~ start2
+MIKOŁAJ: mógłbyś pomóc mi je odnaleść i przynieś do mnie?
 => END
 
 ~ k_misja
-Mikołaj: Pamiętaj: 
-Mikołaj: Czasem najtrudniej jest przesunąć jedną myśl. Ale gdy ją przesuniesz… 
-Mikołaj: Cały wszechświat ustawia się inaczej.
-=> END
+Mikołaj: Dziękuje ci! szukałem ich całę wieki. A teraz czas pogadać o kosmosie
+Mikołaj:  Najpierw chciałbym ci zadać pare pytać odnośnie konstelacji na niebie Gotowy?
+
+~ konstelacje
+- TAK
+	ENZO: Pewnie.
+	do PrismSwap.konstelacje()
+	
+	=> END
+- NIE
+	=> END
 
 
