@@ -5,20 +5,26 @@
 [ext_resource type="Texture2D" uid="uid://b1ypufr2psx0g" path="res://sprites/UI/exit.png" id="2_kokf4"]
 [ext_resource type="Script" uid="uid://duis3cinrujia" path="res://pausa/script/exit.gd" id="3_oifdx"]
 [ext_resource type="Texture2D" uid="uid://c77ipj5u2xx0m" path="res://sprites/UI/back.png" id="4_dxsr0"]
+[ext_resource type="Texture2D" uid="uid://d1r8hmmvcvgqw" path="res://sprites/UI/back_pressed.png" id="4_jxpaa"]
 [ext_resource type="Texture2D" uid="uid://46hqivawti33" path="res://sprites/UI/back_hover.png" id="4_v35qo"]
 [ext_resource type="Script" uid="uid://cbjndoukiwj5o" path="res://pausa/script/back.gd" id="5_xn2kv"]
 [ext_resource type="Texture2D" uid="uid://ceu3a3c2oam6h" path="res://sprites/UI/exit_hover.png" id="7_jxpaa"]
+[ext_resource type="Texture2D" uid="uid://qubhxbjjvypp" path="res://sprites/UI/exit_pressed.png" id="8_yyxxn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mp8tq"]
 texture = ExtResource("4_dxsr0")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yyxxn"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yyxxn"]
+texture = ExtResource("4_jxpaa")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dmklv"]
 texture = ExtResource("4_v35qo")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j0qtg"]
 texture = ExtResource("2_kokf4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmpgo"]
+texture = ExtResource("8_yyxxn")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jnw0x"]
 texture = ExtResource("7_jxpaa")
@@ -53,7 +59,7 @@ offset_top = 47.5
 offset_right = 200.0
 offset_bottom = 75.5
 theme_override_styles/normal = SubResource("StyleBoxTexture_mp8tq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_yyxxn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yyxxn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_dmklv")
 script = ExtResource("5_xn2kv")
 
@@ -66,7 +72,7 @@ offset_top = 77.5
 offset_right = 200.0
 offset_bottom = 105.5
 theme_override_styles/normal = SubResource("StyleBoxTexture_j0qtg")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_yyxxn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cmpgo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_jnw0x")
 script = ExtResource("3_oifdx")
 

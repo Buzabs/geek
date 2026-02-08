@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cw8jcmper42en"]
 
 [ext_resource type="Texture2D" uid="uid://bwgm574fq2611" path="res://sprites/anglia/zielarnia2.png" id="1_d1ee0"]
+[ext_resource type="Script" uid="uid://dgu43e0jrr8k2" path="res://scripts/anglia/zielarka_cursors.gd" id="1_x3j47"]
 [ext_resource type="Texture2D" uid="uid://568jrd26vha0" path="res://sprites/anglia/table_zielarnia.png" id="2_frige"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_uj2r0"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="4_le3at"]
@@ -32,6 +33,7 @@ size = Vector2(74, 20)
 size = Vector2(36, 20)
 
 [node name="Zielarka" type="Node2D" unique_id=1725537558]
+script = ExtResource("1_x3j47")
 
 [node name="Zielarnia2" type="Sprite2D" parent="." unique_id=927821348]
 texture_filter = 1
@@ -101,3 +103,8 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1828058774]
 stream = ExtResource("9_tump7")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Zielarka" to="." method="_on_zielarka_mouse_entered"]
+[connection signal="mouse_exited" from="Zielarka" to="." method="_on_zielarka_mouse_exited"]

@@ -3,6 +3,9 @@ var can_interact = false
 var player_ref: Node = null
 @export var item_icon: Texture2D
 
+var movement_cursor = load("res://sprites/Other/movement_cursor.png")
+var dialogue_cursor = load("res://sprites/Other/dialogue_cursor.png")
+
 func _ready():
 	
 	body_entered.connect(_on_enter)

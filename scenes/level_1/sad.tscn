@@ -384,3 +384,6 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=586727144]
 stream = ExtResource("11_fww8k")
+
+[connection signal="mouse_entered" from="Newton" to="Newton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Newton" to="Newton" method="_on_mouse_exited"]
