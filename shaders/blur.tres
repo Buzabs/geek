@@ -4,3 +4,4 @@
 
 [resource]
 shader = ExtResource("1_bin4n")
+shader_parameter/amount = 0.4850000230375

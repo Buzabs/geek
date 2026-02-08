@@ -310,6 +310,17 @@ animations = [{
 script = ExtResource("1_bc4q0")
 pause_scene = ExtResource("2_s8qbx")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1677385019]
+
+[node name="Control" parent="CanvasLayer" unique_id=1232363862 instance=ExtResource("2_s8qbx")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Dialogi_tutorial" type="Node" parent="." unique_id=1020881150]
 script = ExtResource("3_iw68y")
 

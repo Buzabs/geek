@@ -1,26 +1,29 @@
-extends CanvasLayer
+extends Control
 
-@onready var back := $Control/Back
-@onready var exit := $Control/Exit
-@onready var volume := $Control/Volume2
+@onready var buttons: VBoxContainer = $Buttons
 
-@onready var volume_menu:= $Control/Volume
-
+var is_paused: bool
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS
+	is_paused = false
+	hide()
 
+func toggle_pause():
+	is_paused = !is_paused
+	get_tree().paused = is_paused
 	
-	volume_menu.visible = false
-	back.visible = true
-	exit.visible = true
-	volume.visible = true
+	if is_paused:
+		show()
+	else:
+		hide()
+
+func _on_back_pressed() -> void:
+	toggle_pause()
 
 
+func _on_exit_pressed() -> void:
+	get_tree().quit()
 
-func _on_volume_pressed() -> void:
-	back.visible = false
-	exit.visible = false
-	volume.visible = false
-	
-	volume_menu.visible = true
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		toggle_pause()

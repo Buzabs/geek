@@ -1,53 +1,29 @@
 [gd_scene format=3 uid="uid://cla3577hp8lop"]
 
+[ext_resource type="Material" uid="uid://d3y7tleb6ykfw" path="res://shaders/blur.tres" id="1_dmklv"]
 [ext_resource type="Script" uid="uid://qvpyi6amn5rl" path="res://scripts/globalne/pause_ui.gd" id="1_dxsr0"]
 [ext_resource type="Texture2D" uid="uid://bw26wly8043o3" path="res://sprites/UI/pause.png" id="1_kokf4"]
 [ext_resource type="Texture2D" uid="uid://b1ypufr2psx0g" path="res://sprites/UI/exit.png" id="2_kokf4"]
-[ext_resource type="Script" uid="uid://duis3cinrujia" path="res://pausa/script/exit.gd" id="3_oifdx"]
 [ext_resource type="Texture2D" uid="uid://c77ipj5u2xx0m" path="res://sprites/UI/back.png" id="4_dxsr0"]
 [ext_resource type="Texture2D" uid="uid://d1r8hmmvcvgqw" path="res://sprites/UI/back_pressed.png" id="4_jxpaa"]
 [ext_resource type="Texture2D" uid="uid://46hqivawti33" path="res://sprites/UI/back_hover.png" id="4_v35qo"]
-[ext_resource type="Script" uid="uid://cbjndoukiwj5o" path="res://pausa/script/back.gd" id="5_xn2kv"]
 [ext_resource type="Texture2D" uid="uid://ceu3a3c2oam6h" path="res://sprites/UI/exit_hover.png" id="7_jxpaa"]
 [ext_resource type="Texture2D" uid="uid://qubhxbjjvypp" path="res://sprites/UI/exit_pressed.png" id="8_yyxxn"]
 [ext_resource type="Texture2D" uid="uid://ps2gmdjgkd4q" path="res://sprites/UI/volume.png" id="12_cd01g"]
 [ext_resource type="Texture2D" uid="uid://b2262pcje7yur" path="res://sprites/UI/volume_pressed.png" id="13_7inj0"]
 [ext_resource type="Texture2D" uid="uid://c4om6ubet3ymc" path="res://sprites/UI/volume_hover.png" id="14_m1u3w"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mp8tq"]
-texture = ExtResource("4_dxsr0")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yyxxn"]
-texture = ExtResource("4_jxpaa")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dmklv"]
-texture = ExtResource("4_v35qo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j0qtg"]
-texture = ExtResource("2_kokf4")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cmpgo"]
-texture = ExtResource("8_yyxxn")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jnw0x"]
-texture = ExtResource("7_jxpaa")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gxo4q"]
-texture = ExtResource("12_cd01g")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvs5u"]
-texture = ExtResource("13_7inj0")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kynu0"]
-texture = ExtResource("14_m1u3w")
-
-[node name="Pause" type="CanvasLayer" unique_id=1141717420]
+[node name="Control" type="Control" unique_id=1232363862]
 process_mode = 3
-layer = 100
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_dxsr0")
 
-[node name="Control" type="Control" parent="." unique_id=1500957988]
-layout_mode = 3
+[node name="ColorRect" type="ColorRect" parent="." unique_id=732957484]
+material = ExtResource("1_dmklv")
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -55,45 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Back" type="Button" parent="Control" unique_id=923277972]
-z_index = 1
-texture_filter = 1
-layout_mode = 0
-offset_left = 209.0
-offset_top = 69.0
-offset_right = 397.0
-offset_bottom = 125.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_mp8tq")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_yyxxn")
-theme_override_styles/hover = SubResource("StyleBoxTexture_dmklv")
-script = ExtResource("5_xn2kv")
-
-[node name="Exit" type="Button" parent="Control" unique_id=1367651865]
-z_index = 1
-texture_filter = 1
-layout_mode = 0
-offset_left = 209.0
-offset_top = 197.0
-offset_right = 397.0
-offset_bottom = 253.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_j0qtg")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_cmpgo")
-theme_override_styles/hover = SubResource("StyleBoxTexture_jnw0x")
-script = ExtResource("3_oifdx")
-
-[node name="Volume2" type="Button" parent="Control" unique_id=1133443659]
-z_index = 1
-texture_filter = 1
-layout_mode = 0
-offset_left = 209.0
-offset_top = 134.0
-offset_right = 397.0
-offset_bottom = 190.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_gxo4q")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_hvs5u")
-theme_override_styles/hover = SubResource("StyleBoxTexture_kynu0")
-
-[node name="Background" type="TextureRect" parent="Control" unique_id=276581809]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1989679329]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -101,45 +39,49 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -320.0
-offset_top = -180.0
-offset_right = -20.0
-offset_bottom = -20.0
+offset_left = -300.0
+offset_top = -160.0
+offset_right = 300.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("1_kokf4")
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=385230430]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -89.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("1_kokf4")
+mouse_filter = 0
 
-[node name="Volume" type="Panel" parent="Control" unique_id=1885062552]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.47900003
-anchor_top = 0.45400003
-anchor_right = 0.47900003
-anchor_bottom = 0.45400003
-offset_left = -97.56003
-offset_top = -94.44
-offset_right = 97.43997
-offset_bottom = 94.56
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Back" type="TextureButton" parent="Buttons" unique_id=2120945793]
+layout_mode = 2
+texture_normal = ExtResource("4_dxsr0")
+texture_pressed = ExtResource("4_jxpaa")
+texture_hover = ExtResource("4_v35qo")
 
-[node name="HSlider" type="HSlider" parent="Control/Volume" unique_id=247195135]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 56.0
-offset_right = 163.0
-offset_bottom = 72.0
+[node name="Volume" type="TextureButton" parent="Buttons" unique_id=1910805462]
+layout_mode = 2
+texture_normal = ExtResource("12_cd01g")
+texture_pressed = ExtResource("13_7inj0")
+texture_hover = ExtResource("14_m1u3w")
 
-[node name="Label" type="Label" parent="Control/Volume" unique_id=679381090]
-layout_mode = 0
-offset_right = 195.0
-offset_bottom = 35.0
-text = "VOLUME"
-horizontal_alignment = 1
+[node name="Exit" type="TextureButton" parent="Buttons" unique_id=870145182]
+layout_mode = 2
+texture_normal = ExtResource("2_kokf4")
+texture_pressed = ExtResource("8_yyxxn")
+texture_hover = ExtResource("7_jxpaa")
 
-[connection signal="pressed" from="Control/Back" to="Control/Back" method="_on_pressed"]
-[connection signal="pressed" from="Control/Exit" to="Control/Exit" method="_on_pressed"]
-[connection signal="pressed" from="Control/Volume2" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="Buttons/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
