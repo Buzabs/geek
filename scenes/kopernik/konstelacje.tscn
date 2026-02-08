@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://dqrwvjpgskiq2"]
+[gd_scene format=3 uid="uid://dhlmjfwepx4m3"]
 
-[ext_resource type="Texture2D" uid="uid://c4whoibaj4vpy" path="res://sprites/kopernik/wielki_maly_woz.png" id="1_re1f5"]
+[ext_resource type="Texture2D" uid="uid://clrwtyvreilvw" path="res://sprites/kopernik/konstelacje.png" id="1_re1f5"]
 
-[node name="Konstelacje" type="Node2D" unique_id=228921636]
+[node name="Konstelacje" type="Node2D" unique_id=365056715]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=112216559]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1102060167]
 zoom = Vector2(2, 2)
 
-[node name="WielkiMalyWoz" type="Sprite2D" parent="." unique_id=161946028]
+[node name="Konstelacje" type="Sprite2D" parent="." unique_id=158595573]
 texture_filter = 1
 texture = ExtResource("1_re1f5")

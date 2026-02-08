@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_fww8k"]
 [ext_resource type="Texture2D" uid="uid://bftd2c30lpbl5" path="res://sprites/anglia/sad.png" id="1_or2ee"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_nouha"]
-[ext_resource type="Texture2D" uid="uid://brl6blqa66c3h" path="res://sprites/Other/sad_cutsscene_nieudany.png" id="3_5m3fc"]
+[ext_resource type="Texture2D" uid="uid://coxi7awaydv3x" path="res://sprites/anglia/sad_cutsscene_nieudany.png" id="4_fww8k"]
 [ext_resource type="PackedScene" uid="uid://cavxvca8q55m8" path="res://scenes/postacie/newton.tscn" id="5_f3ngc"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="5_nouha"]
 [ext_resource type="PackedScene" uid="uid://k55dfxplyg6x" path="res://itemy/scenes/london/galazka.tscn" id="5_ogcwb"]
@@ -16,67 +16,67 @@
 atlas = ExtResource("1_or2ee")
 region = Rect2(0, 0, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ogcwb"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf5o7"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(0, 0, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_otdhu"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtf3f"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(320, 0, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fww8k"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_csn26"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(640, 0, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pf5o7"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_753nf"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(0, 180, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jtf3f"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bfw1"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(320, 180, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_csn26"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ympx"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(640, 180, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_753nf"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5ck7"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(0, 360, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2bfw1"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_pocf7"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(320, 360, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ympx"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_oydgj"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(640, 360, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a5ck7"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_42m0t"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(0, 540, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pocf7"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbnfp"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(320, 540, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oydgj"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_di2sr"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(640, 540, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_42m0t"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_udbkv"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(0, 720, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lbnfp"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_v81qu"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(320, 720, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_di2sr"]
-atlas = ExtResource("3_5m3fc")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fveim"]
+atlas = ExtResource("4_fww8k")
 region = Rect2(640, 720, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_udbkv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb3kl"]
 atlas = ExtResource("1_or2ee")
 region = Rect2(0, 0, 320, 180)
 
@@ -180,15 +180,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ogcwb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_otdhu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fww8k")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_pf5o7")
 }, {
 "duration": 1.0,
@@ -226,6 +217,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_udbkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v81qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fveim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb3kl")
 }],
 "loop": false,
 "name": &"nieudany_rzut",
@@ -331,19 +331,20 @@ position = Vector2(144, 64)
 [node name="spawn_left" type="Marker2D" parent="." unique_id=1177560668]
 position = Vector2(-38, 64)
 
-[node name="proca" type="Area2D" parent="." unique_id=1202200406]
+[node name="proca" type="Area2D" parent="." unique_id=1202200406 node_paths=PackedStringArray("player")]
 script = ExtResource("7_oy0c3")
+player = NodePath("../Player")
 
 [node name="animation" type="AnimatedSprite2D" parent="proca" unique_id=2050276184]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_udbkv")
-animation = &"udany_rzut"
+animation = &"nieudany_rzut"
 autoplay = "default"
-frame = 21
+frame = 15
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="proca" unique_id=526037]
-position = Vector2(86.5, 54)
+position = Vector2(-50, 53)
 shape = SubResource("RectangleShape2D_5m3fc")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1338344445]
@@ -384,6 +385,9 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=586727144]
 stream = ExtResource("11_fww8k")
+
+[node name="middle" type="Marker2D" parent="." unique_id=1962208956]
+position = Vector2(45, 67)
 
 [connection signal="mouse_entered" from="przejscie" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="przejscie" to="." method="_on_drzwi_mouse_exited"]

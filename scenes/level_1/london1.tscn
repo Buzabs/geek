@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_0npvi"]
 [ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/anglia/londynver1.png" id="1_yuhbf"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_43yya"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_62pi3"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_fnjqo"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="4_62pi3"]
@@ -19,6 +20,7 @@ size = Vector2(18, 20)
 
 [node name="LondynNext" type="Node2D" unique_id=1871711059]
 script = ExtResource("1_0npvi")
+pause_scene = ExtResource("2_43yya")
 
 [node name="LondynNext" type="Sprite2D" parent="." unique_id=1004480549]
 texture_filter = 1

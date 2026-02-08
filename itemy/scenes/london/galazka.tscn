@@ -16,11 +16,12 @@ height = 22.0
 atlas = ExtResource("2_8n63q")
 region = Rect2(53, 4, 14, 15)
 
-[node name="galazka" type="Area2D" unique_id=988354948]
+[node name="galazka" type="Area2D" unique_id=988354948 node_paths=PackedStringArray("itemSFX")]
 texture_filter = 1
 script = ExtResource("1_8n63q")
 item_icon = SubResource("AtlasTexture_y3cul")
 item_id = "galazka"
+itemSFX = NodePath("item_podnoszenieSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1056391808]
 shape = SubResource("CapsuleShape2D_l0axh")

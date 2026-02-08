@@ -46,9 +46,9 @@ region = Rect2(33, 10, 14, 6)
 atlas = ExtResource("2_8oje4")
 region = Rect2(2, 10, 11, 6)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8oje4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hb5k"]
 atlas = ExtResource("2_8oje4")
-region = Rect2(33, 10, 14, 6)
+region = Rect2(17, 10, 14, 6)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ybuf"]
 radius = 7.0
@@ -86,7 +86,7 @@ textures = Array[Texture2D]([SubResource("AtlasTexture_2ybuf"), SubResource("Atl
 [node name="Pryzmat" type="Sprite2D" parent="pryzmat2" unique_id=1216076792]
 texture_filter = 1
 position = Vector2(-3, 27)
-texture = SubResource("AtlasTexture_8oje4")
+texture = SubResource("AtlasTexture_7hb5k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pryzmat2" unique_id=838475056]
 position = Vector2(-3, 27)

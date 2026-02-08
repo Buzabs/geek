@@ -1,4 +1,5 @@
 extends Node
+var ciiii := false
 
 func pryzmat() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_1/pryzmat_gra.tscn")
@@ -6,4 +7,7 @@ func pryzmat() -> void:
 
 
 func konstelacje() -> void:
-	get_tree().change_scene_to_file("res://scenes/kopernik/konstelacje.tscn")
+	get_tree().change_scene_to_file("res://scenes/kopernik/konstelacje_gra.tscn")
+
+func ciii() -> void:
+	ciiii = true

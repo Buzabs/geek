@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://btcfgoqxs5oku"]
+
+[ext_resource type="Texture2D" uid="uid://1pjdv40acals" path="res://sprites/kopernik/obraz_wielki_woz.png" id="1_rsenf"]
+
+[node name="WielkiMalyWoz" type="Node2D" unique_id=1486504075]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=787411478]
+zoom = Vector2(4, 4)
+
+[node name="ObrazWielkiWoz" type="Sprite2D" parent="." unique_id=2137814537]
+texture_filter = 1
+texture = ExtResource("1_rsenf")

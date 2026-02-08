@@ -11,6 +11,8 @@ var dialogue_cursor = load("res://sprites/Other/dialogue_cursor.png")
 func _ready():
 	if not GlobalC.next_dialog:
 			visible = false
+	if not GlobalC.wake_up :
+		$animation.play("open_eyes")	
 	body_entered.connect(_on_enter)
 	body_exited.connect(_on_exit)
 
@@ -33,9 +35,10 @@ func _input_event(viewport, event, shape_idx):
 		if event is InputEventMouseButton and can_interact and event.pressed  and GlobalC.wake_up:
 			
 			if GlobalC.first_play :
-				GlobalC.wake_up = false
 				$animation.play("wake_up")	
-
+				GlobalC.wake_up = false
+				
+				
 				GlobalC.first_play = false
 				
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_spotkanie")

@@ -54,3 +54,11 @@ ENZO: Okej… wkładam tą część. Ooo! Portal się aktywuje, zaraz, co się d
 ~ wessanie
 ENZO: Chwila, chyba mnie wciąga! AAAAAAAAAA...!
 => END
+
+~ ciii
+Świat: CZY JESTEŚ PEWNY ŻE CHCESZ ZAŁOŻY JET_PACK?
+- NIE wracamy
+	=> END
+- TAAAAAAAAAk
+	do  PrismSwap.ciii()
+	=> END

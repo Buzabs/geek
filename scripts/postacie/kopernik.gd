@@ -22,11 +22,12 @@ func _input_event(viewport, event, shape_idx):
 	if not GlobalC.next_dialog:
 		if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :	
 			if GlobalEq.has_item("notka1") and  GlobalEq.has_item("notka2") and  GlobalEq.has_item("notka2") and  GlobalEq.has_item("notka2"):
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "k_misja")
-				await DialogueManager.dialogue_ended
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje")
-				GlobalC.next_dialog = true
-				return
+				if GlobalEq.selected_item_id == "notka1" or GlobalEq.selected_item_id == "notka2" or  GlobalEq.selected_item_id == "notka3" or GlobalEq.selected_item_id == "notka4" : 
+					DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "k_misja")
+					await DialogueManager.dialogue_ended
+					DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje")
+					GlobalC.next_dialog = true
+					return
 			if GlobalC.first_play:
 				GlobalC.open = true
 				GlobalEq.pick = true
@@ -35,7 +36,7 @@ func _input_event(viewport, event, shape_idx):
 				await DialogueManager.dialogue_ended
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "start2")
 				return
-			if not GlobalC.first_play:
+			else:
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "start2")
 				return
 		return

@@ -18,9 +18,8 @@ func _input(event):
 			DialogueManager.show_example_dialogue_balloon(dialogue_resource, "podnoszenie")
 			await DialogueManager.dialogue_ended
 			GlobalEq.pick = true
-	
 		
-		
+			
 		
 func _init() -> void:
 	GlobalC.loaded+=1

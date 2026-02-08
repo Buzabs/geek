@@ -1,15 +1,20 @@
 [gd_scene format=3 uid="uid://8cwtvqklqtf4"]
 
 [ext_resource type="Texture2D" uid="uid://cb1ohcs4gcqp5" path="res://sprites/kopernik/obserwatorium.png" id="1_2m4uv"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_kas2q"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_7ms7e"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_px8ry"]
-[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_66txr"]
 [ext_resource type="PackedScene" uid="uid://c3jdl8rbvh6em" path="res://scenes/postacie/kopernik.tscn" id="4_fjwj2"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_6sug6"]
 [ext_resource type="PackedScene" uid="uid://cgdf54xxybek7" path="res://itemy/scenes/komernik/notka_1.tscn" id="8_pgjta"]
 [ext_resource type="PackedScene" uid="uid://tu5x0umdlatj" path="res://itemy/scenes/komernik/notka_2.tscn" id="9_48t55"]
 [ext_resource type="PackedScene" uid="uid://cl2k87xogb0l0" path="res://itemy/scenes/komernik/notka_3.tscn" id="10_7xbt8"]
 [ext_resource type="PackedScene" uid="uid://wi24xc5qeodp" path="res://itemy/scenes/komernik/notka_4.tscn" id="11_7pgjf"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="11_b4l48"]
 
 [node name="Obserwatorium" type="Node" unique_id=276483008]
+script = ExtResource("1_kas2q")
+pause_scene = ExtResource("2_7ms7e")
 
 [node name="Obserwatorium" type="Sprite2D" parent="." unique_id=2043192508]
 texture_filter = 1
@@ -22,20 +27,36 @@ zoom = Vector2(2, 2)
 [node name="Player" parent="." unique_id=1292153575 instance=ExtResource("2_px8ry")]
 position = Vector2(-4, 73)
 
-[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1063551428]
-stream = ExtResource("3_66txr")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1896239454]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1760653050]
+position = Vector2(-5, -27)
+polygon = PackedVector2Array(-155, 122, -148, 45, -105, -7, -62, -20, -17, -22, 26, -22, 65, -18, 96, -14, 158, 11, 164, 64, 165, 93, 163, 122, 163, 67, 137, 28, 109, 9, 72, -8, 58, -16, 23, -17, -22, -16, -55, -9, -86, 0, -105, 11, -145, 48, -154, 78)
 
 [node name="Kopernik" parent="." unique_id=1061417716 instance=ExtResource("4_fjwj2")]
-position = Vector2(42, -11)
+position = Vector2(49, -10)
 
-[node name="notka1" parent="." unique_id=404466428 instance=ExtResource("8_pgjta")]
+[node name="notka1" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("8_pgjta")]
 position = Vector2(-52, 15)
+itemSFX = NodePath("../item_podnoszenieSFX")
 
-[node name="notka2" parent="." unique_id=534595720 instance=ExtResource("9_48t55")]
+[node name="notka2" parent="." unique_id=534595720 node_paths=PackedStringArray("itemSFX") instance=ExtResource("9_48t55")]
 position = Vector2(-19, 13)
+itemSFX = NodePath("../item_podnoszenieSFX")
 
-[node name="notka3" parent="." unique_id=565048749 instance=ExtResource("10_7xbt8")]
-position = Vector2(-56, 50)
+[node name="notka3" parent="." unique_id=565048749 node_paths=PackedStringArray("itemSFX") instance=ExtResource("10_7xbt8")]
+position = Vector2(-69, 37)
+itemSFX = NodePath("../item_podnoszenieSFX")
 
-[node name="notka4" parent="." unique_id=1598336557 instance=ExtResource("11_7pgjf")]
-position = Vector2(-31, 49)
+[node name="notka4" parent="." unique_id=1598336557 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_7pgjf")]
+position = Vector2(-28, 32)
+itemSFX = NodePath("../item_podnoszenieSFX")
+
+[node name="eq" parent="." unique_id=964447168 instance=ExtResource("8_6sug6")]
+offset_left = -94.0
+offset_top = 48.0
+offset_right = -94.0
+offset_bottom = 48.0
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=479112284]
+stream = ExtResource("11_b4l48")

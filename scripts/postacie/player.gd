@@ -17,6 +17,7 @@ func _ready() -> void:
 
 	add_to_group("player")
 	state_machine.init(self)
+
 	
 func _unhandled_input(event: InputEvent) -> void:
 	state_machine.process_input(event)

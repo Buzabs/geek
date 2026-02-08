@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bgcdbdt8sqcr0" path="res://scripts/postacie/kopernik.gd" id="1_vercr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itt2y"]
-size = Vector2(28, 32)
+size = Vector2(22, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vercr"]
 atlas = ExtResource("1_itt2y")
@@ -74,6 +74,7 @@ animations = [{
 script = ExtResource("1_vercr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1785037865]
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_itt2y")
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=503070875]

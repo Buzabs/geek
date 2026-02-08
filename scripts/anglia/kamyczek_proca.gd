@@ -1,32 +1,19 @@
 extends Area2D
 
-var player_ref: Node = null
+@export var target_spawn_id= Vector2(45.0, 67.0)
+@export var player : Player 
 var can_interact = false
 var rzut : String
 
 
-func _ready():
-	body_entered.connect(_on_enter)
-	body_exited.connect(_on_exit)	
-	
-func _on_enter(body):
-	if body.is_in_group("player"):	
-		can_interact = true
-		player_ref = body
-
-
-func _on_exit(body):
-	if body == player_ref: 
-		can_interact = false
-		player_ref = null
-
 func rzucanie(rzut):
-	player_ref.visible = false
+	player.visible = false
 	$animation.play(rzut)		
 	await $animation.animation_finished	
+	player.position = target_spawn_id	
 	if rzut == "udany_rzut":
 		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_jablko")
-	player_ref.visible = true
+	player.visible = true
 	if GlobalEq.selected_item_id == "kamyk" :
 			GlobalEq.remove_item("kamyk")
 	if GlobalEq.selected_item_id == "kamyczek" :
@@ -34,7 +21,7 @@ func rzucanie(rzut):
 
 
 func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton and event.pressed  and can_interact :
+	if event is InputEventMouseButton and event.pressed   :
 		if GlobalEq.selected_item_id == "proca":
 				rzucanie("udany_rzut")
 				GlobalEq.remove_item("proca")
@@ -47,7 +34,8 @@ func _input_event(viewport, event, shape_idx):
 				GlobalC.rzut=true
 				return
 		if GlobalC.dialog and  GlobalC.rzut :
-			if  GlobalEq.selected_item_id == "kamyk" or GlobalEq.selected_item_id == "kamyczek"  :		
+			if  GlobalEq.selected_item_id == "kamyk" or GlobalEq.selected_item_id == "kamyczek"  :	
+				
 				rzucanie("nieudany_rzut")
 				GlobalC.rzut = false
 			

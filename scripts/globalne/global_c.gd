@@ -26,6 +26,8 @@ func cos():
 	await DialogueManager.dialogue_ended
 	await get_tree().create_timer(2).timeout
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "poczatek_proca")
+	
+	
 #game stats
 var puzzle_states : Dictionary = {}
 var collected_items := {}
