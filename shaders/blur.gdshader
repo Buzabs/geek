@@ -1,8 +1,9 @@
 shader_type canvas_item;
+uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
 
-void fragment() {
-    // Set color to black (r, g, b)
-    COLOR.rgb = vec3(0.0, 0.0, 0.0);
-    // Set transparency (a) to 50%
-    COLOR.a = 0.5;
+uniform float amount: hint_range(0.0, 5);
+
+void fragment(){
+	vec4 color = texture(SCREEN_TEXTURE, SCREEN_UV, amount);
+	COLOR = color;
 }

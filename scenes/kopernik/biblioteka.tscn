@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://edd8qfvtk5tq"]
+
+[ext_resource type="Texture2D" uid="uid://nl7sm00wtgdj" path="res://sprites/kopernik/library_placeholder.png" id="1_06mjb"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_dwyeu"]
+
+[node name="Biblioteka" type="Node" unique_id=831778411]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1301625387]
+position = Vector2(160, 90)
+zoom = Vector2(2, 2)
+
+[node name="background" type="Sprite2D" parent="." unique_id=533293542]
+texture_filter = 1
+position = Vector2(160, 90)
+texture = ExtResource("1_06mjb")
+
+[node name="Player" parent="." unique_id=1751877694 instance=ExtResource("2_dwyeu")]
+position = Vector2(310, 115)
