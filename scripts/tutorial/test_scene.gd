@@ -7,7 +7,6 @@ var interaction_cursor = load("res://sprites/Other/cog_cursor.png")
 var door_cursor = load("res://sprites/Other/door_curor.png")
 var dialogue_cursor = load("res://sprites/Other/dialogue_cursor.png")
 
-
 #func _process(_delta):
 	
 #	if Input.is_action_just_pressed("pause"):
@@ -17,7 +16,6 @@ var dialogue_cursor = load("res://sprites/Other/dialogue_cursor.png")
 #			return
 #		Pausa.toggle_pause(pause_scene)
 
-	
 
 func _on_computer_click_mouse_entered() -> void:
 	Input.set_custom_mouse_cursor(interaction_cursor)

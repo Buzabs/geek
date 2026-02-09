@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_s8qbx"]
 [ext_resource type="Script" uid="uid://diqkru1nsqlvb" path="res://scripts/tutorial/dialogi_tutorial.gd" id="3_iw68y"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="4_shpus"]
+[ext_resource type="Script" uid="uid://dybgqhonalipu" path="res://scenes/tutorial/tlo_320x_180.gd" id="5_4rh0u"]
 [ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_330oy"]
 [ext_resource type="Script" uid="uid://cpoo38pq8w1y5" path="res://scripts/tutorial/puzzle_object.gd" id="6_5xvl5"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="7_45dmw"]
@@ -328,6 +329,7 @@ script = ExtResource("3_iw68y")
 z_index = -1
 texture_filter = 1
 texture = ExtResource("5_330oy")
+script = ExtResource("5_4rh0u")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2144072193]
 zoom = Vector2(2, 2)

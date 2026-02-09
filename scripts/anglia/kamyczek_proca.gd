@@ -24,6 +24,8 @@ func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed   :
 		if GlobalEq.selected_item_id == "proca":
 				rzucanie("udany_rzut")
+				MusicManager.play_music("res://soundtracki/the_chamber_of_celestial_peace_loop.wav")
+				MusicManager.set_volume(-10)
 				GlobalEq.remove_item("proca")
 				GlobalC.first_puzzle_open = false
 				GlobalC.dialog = false
