@@ -6,13 +6,13 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmltd"]
 atlas = ExtResource("2_cv2to")
-region = Rect2(33, 16, 16, 16)
+region = Rect2(36, 17, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbv6a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7hoy"]
 atlas = ExtResource("2_cv2to")
-region = Rect2(36, 19, 10, 10)
+region = Rect2(39, 20, 10, 10)
 
 [node name="Ziemia" type="Area2D" unique_id=404466428]
 script = ExtResource("1_jhxo3")

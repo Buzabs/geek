@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_f3ngc"]
 [ext_resource type="Script" uid="uid://rmocs776m8b6" path="res://scripts/anglia/kamyczek_proca.gd" id="7_oy0c3"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="11_fww8k"]
+[ext_resource type="Texture2D" uid="uid://cx43eoee0k1q2" path="res://sprites/Environment/glaz.png" id="12_pf5o7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5m3fc"]
 atlas = ExtResource("1_or2ee")
@@ -388,6 +389,11 @@ stream = ExtResource("11_fww8k")
 
 [node name="middle" type="Marker2D" parent="." unique_id=1962208956]
 position = Vector2(45, 67)
+
+[node name="Glaz" type="Sprite2D" parent="." unique_id=1366946180]
+texture_filter = 1
+position = Vector2(112, 64)
+texture = ExtResource("12_pf5o7")
 
 [connection signal="mouse_entered" from="przejscie" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="przejscie" to="." method="_on_drzwi_mouse_exited"]

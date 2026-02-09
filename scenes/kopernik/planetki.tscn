@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://u4q8raqxrjsv"]
+
+[ext_resource type="Texture2D" uid="uid://sr00rau6ug2o" path="res://sprites/kopernik/planetki_pokój.png" id="1_leqlv"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="2_qu6ie"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_cnh84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0odi"]
+size = Vector2(41, 55)
+
+[node name="Planetki" type="Node2D" unique_id=1592809711]
+
+[node name="PlanetkiPokój" type="Sprite2D" parent="." unique_id=76779341]
+texture_filter = 1
+texture = ExtResource("1_leqlv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1104355638]
+zoom = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1313578213]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1456771980]
+position = Vector2(-140.5, 25.5)
+shape = SubResource("RectangleShape2D_c0odi")
+
+[node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=1406535128]
+texture_filter = 1
+position = Vector2(-157.2804, 24)
+rotation = 1.5707964
+scale = Vector2(1, 1.1121582)
+texture = ExtResource("2_qu6ie")
+
+[node name="Player" parent="." unique_id=1882407171 instance=ExtResource("3_cnh84")]
+position = Vector2(-136, 29)

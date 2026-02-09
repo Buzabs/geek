@@ -8,10 +8,10 @@ var player_ref: Node = null
 @export var target_spawn_id: String 
 
 
-var player_positions := {} # scene_path : Vector2
+ # scene_path : Vector2
 
 func _ready():
-	print("Spawn ID:", GlobalC.spawn_id)
+	
 
 	if get_tree().current_scene:
 		print(get_tree().current_scene.scene_file_path)
@@ -28,6 +28,10 @@ func _on_exit(body):
 		can_open = false
 		player_ref = null
 	
+
+
+	
+
 	
 
 func _input_event(_viewport, event, _shape_idx):

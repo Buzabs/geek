@@ -1,12 +1,114 @@
 [gd_scene format=3 uid="uid://dhlmjfwepx4m3"]
 
 [ext_resource type="Texture2D" uid="uid://clrwtyvreilvw" path="res://sprites/kopernik/konstelacje.png" id="1_re1f5"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_sasli"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="3_n05yb"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="4_haphb"]
+[ext_resource type="PackedScene" uid="uid://bu12f8knmw3jr" path="res://itemy/scenes/komernik/merkury.tscn" id="5_uigpl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uigpl"]
+size = Vector2(330, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xf542"]
+size = Vector2(20, 144.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_re1f5"]
+size = Vector2(75, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sasli"]
+size = Vector2(70, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n05yb"]
+size = Vector2(69, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_haphb"]
+size = Vector2(68, 70)
 
 [node name="Konstelacje" type="Node2D" unique_id=365056715]
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1102060167]
-zoom = Vector2(2, 2)
 
 [node name="Konstelacje" type="Sprite2D" parent="." unique_id=158595573]
 texture_filter = 1
 texture = ExtResource("1_re1f5")
+
+[node name="eq" parent="." unique_id=446596139 instance=ExtResource("3_n05yb")]
+offset_left = -99.0
+offset_top = 47.0
+offset_right = -99.0
+offset_bottom = 47.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1102060167]
+zoom = Vector2(2, 2)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=737071481]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=474410203]
+position = Vector2(1, -58)
+shape = SubResource("RectangleShape2D_uigpl")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CharacterBody2D" unique_id=70405364]
+position = Vector2(-4, 99)
+shape = SubResource("RectangleShape2D_uigpl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=939208053]
+position = Vector2(170, 18.75)
+shape = SubResource("RectangleShape2D_xf542")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1683186576]
+position = Vector2(-171, 19)
+shape = SubResource("RectangleShape2D_xf542")
+
+[node name="Player" parent="." unique_id=1882407171 instance=ExtResource("4_haphb")]
+position = Vector2(126, 67)
+
+[node name="spawn_wielki" type="Marker2D" parent="." unique_id=2063855784]
+position = Vector2(-123, -26)
+
+[node name="spawn_maly" type="Marker2D" parent="." unique_id=13638258]
+position = Vector2(-49, -24)
+
+[node name="spawn_skorpion" type="Marker2D" parent="." unique_id=880953366]
+position = Vector2(46, -29)
+
+[node name="spawn_orzel" type="Marker2D" parent="." unique_id=1884169099]
+position = Vector2(120, -29)
+
+[node name="obrazy" type="Node" parent="." unique_id=1629270962]
+
+[node name="wielki_woz" type="Area2D" parent="obrazy" unique_id=553644362]
+script = ExtResource("2_sasli")
+load_scenes = "res://scenes/kopernik/wielki_woz.tscn"
+target_spawn_id = "left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obrazy/wielki_woz" unique_id=203278683]
+position = Vector2(-120.5, -51)
+shape = SubResource("RectangleShape2D_re1f5")
+
+[node name="maly_woz" type="Area2D" parent="obrazy" unique_id=1119362659]
+script = ExtResource("2_sasli")
+load_scenes = "res://scenes/kopernik/maly_woz.tscn"
+target_spawn_id = " maly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obrazy/maly_woz" unique_id=1281681790]
+position = Vector2(-45, -52)
+shape = SubResource("RectangleShape2D_sasli")
+
+[node name="skorpion" type="Area2D" parent="obrazy" unique_id=1217320697]
+script = ExtResource("2_sasli")
+load_scenes = "res://scenes/kopernik/skorpion.tscn"
+target_spawn_id = "skorpion"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obrazy/skorpion" unique_id=831470112]
+position = Vector2(48.5, -52)
+shape = SubResource("RectangleShape2D_n05yb")
+
+[node name="orzel" type="Area2D" parent="obrazy" unique_id=1742459246]
+script = ExtResource("2_sasli")
+load_scenes = "res://scenes/kopernik/orzel.tscn"
+target_spawn_id = "orzel"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obrazy/orzel" unique_id=1967978144]
+position = Vector2(122, -51)
+shape = SubResource("RectangleShape2D_haphb")
+
+[node name="merkury" parent="." unique_id=404466428 instance=ExtResource("5_uigpl")]
+position = Vector2(143, 28)

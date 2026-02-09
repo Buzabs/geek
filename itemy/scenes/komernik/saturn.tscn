@@ -6,13 +6,13 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmltd"]
 atlas = ExtResource("2_xofrc")
-region = Rect2(81, 16, 16, 16)
+region = Rect2(84, 16, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbv6a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7hoy"]
 atlas = ExtResource("2_xofrc")
-region = Rect2(81, 19, 16, 10)
+region = Rect2(84, 20, 16, 10)
 
 [node name="saturn" type="Area2D" unique_id=404466428]
 script = ExtResource("1_qpkq4")

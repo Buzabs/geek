@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dfvchrlja1cun"]
+
+[ext_resource type="Texture2D" uid="uid://cw0em6mmlggry" path="res://sprites/kopernik/obraz_skorpion.png" id="1_d2q2b"]
+[ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="2_7c5rh"]
+[ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="3_7c5rh"]
+
+[node name="Skorpion" type="Node2D" unique_id=1039992684]
+
+[node name="ObrazSkorpion" type="Sprite2D" parent="." unique_id=1632984045]
+texture_filter = 1
+texture = ExtResource("1_d2q2b")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=906177572]
+zoom = Vector2(4, 4)
+
+[node name="Button" type="Button" parent="." unique_id=390696361]
+texture_filter = 1
+offset_left = 37.0
+offset_top = 21.0
+offset_right = 76.0
+offset_bottom = 43.0
+icon = ExtResource("2_7c5rh")
+script = ExtResource("3_7c5rh")
+load_scenes = "res://scenes/kopernik/konstelacje.tscn"
+target_spawn = "skorpion"

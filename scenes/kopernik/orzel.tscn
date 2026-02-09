@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dmw2u7q5gypba"]
+
+[ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="1_dx45f"]
+[ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="2_dx45f"]
+[ext_resource type="Texture2D" uid="uid://vnic7cylw3mj" path="res://sprites/kopernik/obraz_orzel.png" id="3_abbcf"]
+
+[node name="Orzel" type="Node2D" unique_id=1847467165]
+
+[node name="ObrazOrzel" type="Sprite2D" parent="." unique_id=1908546700]
+texture_filter = 1
+position = Vector2(62, 36)
+texture = ExtResource("3_abbcf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=577004105]
+position = Vector2(62, 36)
+zoom = Vector2(4, 4)
+
+[node name="Button" type="Button" parent="." unique_id=1246622172]
+texture_filter = 1
+offset_left = 100.0
+offset_top = 57.0
+offset_right = 139.0
+offset_bottom = 79.0
+icon = ExtResource("1_dx45f")
+script = ExtResource("2_dx45f")
+load_scenes = "res://scenes/kopernik/konstelacje.tscn"
+target_spawn = "orzel"

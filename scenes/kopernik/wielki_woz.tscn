@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://btcfgoqxs5oku"]
+
+[ext_resource type="Texture2D" uid="uid://1pjdv40acals" path="res://sprites/kopernik/obraz_wielki_woz.png" id="1_rsenf"]
+[ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="2_tk0qw"]
+[ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="3_eae12"]
+
+[node name="WielkiWoz" type="Node2D" unique_id=1486504075]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=787411478]
+zoom = Vector2(4, 4)
+
+[node name="ObrazWielkiWoz" type="Sprite2D" parent="." unique_id=2137814537]
+texture_filter = 1
+texture = ExtResource("1_rsenf")
+
+[node name="Button" type="Button" parent="." unique_id=1856677067]
+texture_filter = 1
+offset_left = 37.0
+offset_top = 21.0
+offset_right = 76.0
+offset_bottom = 43.0
+icon = ExtResource("2_tk0qw")
+script = ExtResource("3_eae12")
+load_scenes = "res://scenes/kopernik/konstelacje.tscn"
+target_spawn = "wielki"

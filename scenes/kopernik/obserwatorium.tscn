@@ -11,6 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://cl2k87xogb0l0" path="res://itemy/scenes/komernik/notka_3.tscn" id="10_7xbt8"]
 [ext_resource type="PackedScene" uid="uid://wi24xc5qeodp" path="res://itemy/scenes/komernik/notka_4.tscn" id="11_7pgjf"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="11_b4l48"]
+[ext_resource type="PackedScene" uid="uid://bu12f8knmw3jr" path="res://itemy/scenes/komernik/merkury.tscn" id="12_l06o1"]
+[ext_resource type="PackedScene" uid="uid://b1fmrji86f5fy" path="res://itemy/scenes/komernik/mars.tscn" id="13_ope37"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="14_1pvga"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="14_f4e8l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pvga"]
+size = Vector2(56, 33)
 
 [node name="Obserwatorium" type="Node" unique_id=276483008]
 script = ExtResource("1_kas2q")
@@ -18,7 +25,6 @@ pause_scene = ExtResource("2_7ms7e")
 
 [node name="Obserwatorium" type="Sprite2D" parent="." unique_id=2043192508]
 texture_filter = 1
-position = Vector2(-1, -1)
 texture = ExtResource("1_2m4uv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=72469827]
@@ -60,3 +66,23 @@ offset_bottom = 48.0
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=479112284]
 stream = ExtResource("11_b4l48")
+
+[node name="merkury" parent="." unique_id=250744909 node_paths=PackedStringArray("itemSFX") instance=ExtResource("12_l06o1")]
+position = Vector2(102, 34)
+itemSFX = NodePath("../item_podnoszenieSFX")
+
+[node name="mars" parent="." unique_id=577410552 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_ope37")]
+position = Vector2(118, 47)
+itemSFX = NodePath("../item_podnoszenieSFX")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=488538800]
+script = ExtResource("14_1pvga")
+
+[node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=835638664]
+texture_filter = 1
+position = Vector2(129, 87)
+texture = ExtResource("14_f4e8l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1400150445]
+position = Vector2(127, 74.5)
+shape = SubResource("RectangleShape2D_1pvga")

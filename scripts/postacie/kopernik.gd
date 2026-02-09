@@ -19,14 +19,14 @@ func _on_exit(body):
 
 
 func _input_event(viewport, event, shape_idx):
-	if not GlobalC.next_dialog:
-		if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :	
+	if not GlobalC.dialog:
+		if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.dialog :	
 			if GlobalEq.has_item("notka1") and  GlobalEq.has_item("notka2") and  GlobalEq.has_item("notka2") and  GlobalEq.has_item("notka2"):
 				if GlobalEq.selected_item_id == "notka1" or GlobalEq.selected_item_id == "notka2" or  GlobalEq.selected_item_id == "notka3" or GlobalEq.selected_item_id == "notka4" : 
 					DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "k_misja")
 					await DialogueManager.dialogue_ended
 					DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje")
-					GlobalC.next_dialog = true
+					GlobalC.dialog = true
 					return
 			if GlobalC.first_play:
 				GlobalC.open = true
@@ -40,6 +40,16 @@ func _input_event(viewport, event, shape_idx):
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "start2")
 				return
 		return
+	if GlobalC.dialog and not GlobalC.next_dialog:
+		if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje")
+			return
 	if GlobalC.next_dialog:
-		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje")
-		return
+		if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :
+			if GlobalEq.has_item("ziemia") and  GlobalEq.has_item("slonce") and  GlobalEq.has_item("mars") and  GlobalEq.has_item("jowisz") and  GlobalEq.has_item("saturn") and  GlobalEq.has_item("merkury") and  GlobalEq.has_item("venus"):
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety2")
+			if GlobalC.first_play_next:
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety")
+				return
+			else:
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety_next")

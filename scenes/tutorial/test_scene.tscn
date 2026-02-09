@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_s8qbx"]
 [ext_resource type="Script" uid="uid://diqkru1nsqlvb" path="res://scripts/tutorial/dialogi_tutorial.gd" id="3_iw68y"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="4_shpus"]
-[ext_resource type="Script" uid="uid://dybgqhonalipu" path="res://scenes/tutorial/tlo_320x_180.gd" id="5_4rh0u"]
+[ext_resource type="Script" path="res://scenes/tutorial/tlo_320x_180.gd" id="5_4rh0u"]
 [ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_330oy"]
 [ext_resource type="Script" uid="uid://cpoo38pq8w1y5" path="res://scripts/tutorial/puzzle_object.gd" id="6_5xvl5"]
 [ext_resource type="Texture2D" uid="uid://8uruxfpj7ilq" path="res://sprites/Environment/komputer.png" id="7_45dmw"]
@@ -397,6 +397,24 @@ speed_scale = 0.7
 [node name="portalSFX" type="AudioStreamPlayer2D" parent="Environment/portal_area" unique_id=2127469039]
 stream = ExtResource("15_wi1hv")
 
+[node name="drzwi_area" type="Area2D" parent="Environment" unique_id=1568346961 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
+script = ExtResource("15_uonvo")
+load_scenes = "res://scenes/tutorial/magazyn.tscn"
+drzwiSFX = NodePath("drzwiSFX")
+
+[node name="Drzwi" type="Sprite2D" parent="Environment/drzwi_area" unique_id=327989133]
+texture_filter = 1
+position = Vector2(-108, -44)
+texture = ExtResource("16_lsfxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/drzwi_area" unique_id=33224028]
+position = Vector2(-109, -40)
+shape = SubResource("RectangleShape2D_8gixj")
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="Environment/drzwi_area" unique_id=761115434]
+stream = ExtResource("18_iw68y")
+volume_db = 9.545
+
 [node name="items" type="Node" parent="." unique_id=1789534054]
 
 [node name="Sus2" parent="items" unique_id=1768127490 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_c27oj")]
@@ -408,24 +426,6 @@ itemSFX = NodePath("../../item_podnoszenieSFX")
 texture_filter = 1
 position = Vector2(-128, 51)
 itemSFX = NodePath("../../item_podnoszenieSFX")
-
-[node name="drzwi_area" type="Area2D" parent="." unique_id=1568346961 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
-script = ExtResource("15_uonvo")
-load_scenes = "res://scenes/tutorial/magazyn.tscn"
-drzwiSFX = NodePath("drzwiSFX")
-
-[node name="Drzwi" type="Sprite2D" parent="drzwi_area" unique_id=327989133]
-texture_filter = 1
-position = Vector2(-108, -44)
-texture = ExtResource("16_lsfxo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_area" unique_id=33224028]
-position = Vector2(-109, -40)
-shape = SubResource("RectangleShape2D_8gixj")
-
-[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="drzwi_area" unique_id=761115434]
-stream = ExtResource("18_iw68y")
-volume_db = 9.545
 
 [node name="eq" parent="." unique_id=1387199501 instance=ExtResource("17_kb8xq")]
 texture_filter = 1
@@ -465,5 +465,5 @@ script = ExtResource("26_uk77x")
 
 [connection signal="mouse_entered" from="Environment/Computer/ComputerClick" to="." method="_on_computer_click_mouse_entered"]
 [connection signal="mouse_exited" from="Environment/Computer/ComputerClick" to="." method="_on_computer_click_mouse_exited"]
-[connection signal="mouse_entered" from="drzwi_area" to="." method="_on_drzwi_area_mouse_entered"]
-[connection signal="mouse_exited" from="drzwi_area" to="." method="_on_drzwi_area_mouse_exited"]
+[connection signal="mouse_entered" from="Environment/drzwi_area" to="." method="_on_drzwi_area_mouse_entered"]
+[connection signal="mouse_exited" from="Environment/drzwi_area" to="." method="_on_drzwi_area_mouse_exited"]
