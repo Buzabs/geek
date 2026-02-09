@@ -1,15 +1,16 @@
 ~ start
 MIKOŁAJ: Szukasz mnie?
 MIKOŁAJ: Chodź. Zanim porozmawiamy o wszechświecie, mam dla ciebie zadanie.
-MIKOŁAJ: Widzisz, od lat obserwuje wszsechświat jednakże zgubiłem pare moich notatek ...
+MIKOŁAJ: Widzisz, od lat obserwuję wszechświat, jednak zgubiłem kilka moich notatek...
 => END
+
 ~ start2
-MIKOŁAJ: mógłbyś pomóc mi je odnaleść i przynieś do mnie?
+MIKOŁAJ: Mógłbyś pomóc mi je odnaleźć i przynieść do mnie?
 => END
 
 ~ k_misja
-Mikołaj: Dziękuje ci! szukałem ich całę wieki. A teraz czas pogadać o kosmosie
-Mikołaj:  Najpierw chciałbym ci zadać pare pytać odnośnie konstelacji na niebie Gotowy?
+MIKOŁAJ: Dziękuję ci! Szukałem ich całe wieki. A teraz czas pogadać o kosmosie.
+MIKOŁAJ: Najpierw chciałbym ci zadać kilka pytań odnośnie konstelacji na niebie. Gotowy?
 
 ~ konstelacje
 - TAK
@@ -19,5 +20,31 @@ Mikołaj:  Najpierw chciałbym ci zadać pare pytać odnośnie konstelacji na ni
 	=> END
 - NIE
 	=> END
+	
+~ planety
+MIKOŁAJ: Świetnie, że sobie poradziłeś z konstelacjami!
+MIKOŁAJ: Teraz mam dla ciebie kolejne zadanie, tym razem związane z planetami.
+MIKOŁAJ: Musisz odnaleźć planety. Gdy je znajdziesz, wróć do mnie, powiem ci co dalej.
+ENZO: Jasne, zbieram się do roboty!
+=> END
 
+~ planety2
+MIKOŁAJ: O! Udało Ci się.
+MIKOŁAJ: Teraz twoim zdaniem jest poukładać je w odpowiedniej kolejności.
+ENZO: Rozumiem, zaczynam więc od razu!
+=> END
 
+~ k_planety
+MIKOŁAJ: Niesamowite! Udało ci się je ułożyć!
+MIKOŁAJ: Ale... chwila...
+MIKOŁAJ: Na pewno ułożyłeś je poprawnie?
+MIKOŁAJ: Hmm...
+MIKOŁAJ: A może jednak masz rację.
+MIKOŁAJ: Muszę to szybko zapisać w moich notatkach...
+ENZO: Chyba dzięki mnie Kopernik odkrył, że tak naprawdę żyjemy w układzie heliocentrycznym.
+=> END
+
+~ teleportacja
+ENZO: Ej, co się dziję?!
+ENZO: Chyba mnie przenosi... AAAAAAA!
+=> END

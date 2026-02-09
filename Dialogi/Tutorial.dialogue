@@ -1,5 +1,5 @@
 ~ chodzenie
-ENZO: Uff… ale mam zamroczenie. Co tu się właściwie wydarzyło?
+ENZO: Uff... ale mam zamroczenie. Co tu się właściwie wydarzyło?
 ENZO: Dobra, muszę się ruszyć i rozejrzeć.
 ENZO: Może spróbuję lewym przyciskiem myszki.
 => END
@@ -16,26 +16,26 @@ ENZO: Mikstura jest teraz w moim ekwipunku.
 => END
 
 ~ komputer
-ENZO: Hmm… co to za urządzenie?
+ENZO: Hmm... co to za urządzenie?
 ENZO: Wygląda jak komputer. Uruchomię go i sprawdzę zawartość.
 => END
 
 ~ kod
 ENZO: Potrzebuję jakiegoś kodu...
 ENZO: Kolory chyba pasują do książek na półce.
-ENZO: Policze je i sprawdzę kombinację.
+ENZO: Policzę je i sprawdzę kombinację.
 => END
 
 ~ komputer2
 ENZO: Dobra, działa!
-ENZO: Widzę tu jakiś portal energetyczny…
-ENZO: Może reaguje na mikstury?
-ENZO: Chyba jedną mam w magazynie. Lepiej to sprawdzić.
+ENZO: Widzę tu jakiś portal...
+ENZO: Może mam potrzebny sprzęt do niego?
+ENZO: Chyba mam go w magazynie. Lepiej to sprawdzić.
 => END
 
 ~ sus
 ENZO: Jestem w magazynie. Tylko gdzie był ten przedmiot...
-ENZO: Szafki i skrzynie powinny się otwierać po kliknięciu. Sprawdźmy.
+ENZO: Szafki i skrzynie powinny otwierać się po kliknięciu. Sprawdźmy.
 => END
 
 ~ find
@@ -45,10 +45,12 @@ ENZO: Wracam do portalu. Co może pójść nie tak?
 => END
 
 ~ uzycie
-ENZO: żeby użyć itemu trzeba było wybrać go w eqipunku i kliknąć w miejsce gdzie chce go użyćć
+ENZO: Żeby użyć przedmiotu, trzeba go najpierw wybrać w ekwipunku,
+ENZO: a następnie kliknąć w miejscu, gdzie chcemy go zastosować.
 => END
+
 ~ portal
-ENZO: Okej… wkładam tą część. Ooo! Portal się aktywuje, zaraz, co się dzieje?!
+ENZO: Okej... wkładam tą część. Ooo! Portal się aktywuje, zaraz, co się dzieje?!
 => END
 
 ~ wessanie
@@ -56,9 +58,9 @@ ENZO: Chwila, chyba mnie wciąga! AAAAAAAAAA...!
 => END
 
 ~ ciii
-Świat: CZY JESTEŚ PEWNY ŻE CHCESZ ZAŁOŻY JET_PACK?
-- NIE wracamy
+Świat: Czy na pewno chcesz założyć JETPACKA?
+- NIE
 	=> END
-- TAAAAAAAAAk
+- TAK
 	do  PrismSwap.ciii()
 	=> END
