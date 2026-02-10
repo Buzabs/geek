@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://edd8qfvtk5tq"]
 
-[ext_resource type="Texture2D" uid="uid://nl7sm00wtgdj" path="res://sprites/kopernik/library_placeholder.png" id="1_06mjb"]
+[ext_resource type="Texture2D" uid="uid://cfx1701oj0rrm" path="res://sprites/kopernik/biblioteka.png" id="1_8lx6i"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_dwyeu"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="3_4k0lh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5n41"]
+size = Vector2(32, 36)
 
 [node name="Biblioteka" type="Node" unique_id=831778411]
 
@@ -9,10 +13,22 @@
 position = Vector2(160, 90)
 zoom = Vector2(2, 2)
 
-[node name="background" type="Sprite2D" parent="." unique_id=533293542]
+[node name="Biblioteka" type="Sprite2D" parent="." unique_id=1140119676]
 texture_filter = 1
-position = Vector2(160, 90)
-texture = ExtResource("1_06mjb")
+position = Vector2(180, 91)
+texture = ExtResource("1_8lx6i")
 
 [node name="Player" parent="." unique_id=1751877694 instance=ExtResource("2_dwyeu")]
-position = Vector2(310, 115)
+position = Vector2(338, 156)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1738928262]
+
+[node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=735442142]
+texture_filter = 1
+position = Vector2(358, 158)
+rotation = -1.5707964
+texture = ExtResource("3_4k0lh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1773571574]
+position = Vector2(344, 160)
+shape = SubResource("RectangleShape2D_p5n41")

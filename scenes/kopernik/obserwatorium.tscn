@@ -30,6 +30,9 @@ texture = ExtResource("1_2m4uv")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=72469827]
 zoom = Vector2(2, 2)
 
+[node name="spawn_kopernik" type="Marker2D" parent="." unique_id=174816210]
+position = Vector2(63, -3)
+
 [node name="Player" parent="." unique_id=1292153575 instance=ExtResource("2_px8ry")]
 position = Vector2(-4, 73)
 

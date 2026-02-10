@@ -111,4 +111,4 @@ position = Vector2(122, -51)
 shape = SubResource("RectangleShape2D_haphb")
 
 [node name="merkury" parent="." unique_id=404466428 instance=ExtResource("5_uigpl")]
-position = Vector2(143, 28)
+position = Vector2(-116, 13)
