@@ -63,9 +63,11 @@ ENZO: Spróbuję znaleźć coś, co mogłoby mi w tym pomóc.
 => END
 
 ~ proca
-ENZO: Witaj. Umiesz może zrobić procę i chciałbyś mi ją zrobić?
-DZIECKO: Jasne, ale musisz mi przynieść potrzebne materiały.
-ENZO: Co dokładnie potrzebujesz?
+ENZO: Hej! Umiesz zrobić procę?
+DZIECKO: Pewnie!
+ENZO: To świetnie, potrzebuję jednej. Pomożesz mi?
+DZIECKO: Oczywiście, ale potrzebuję odpowiednich materiałów.
+ENZO: Co dokładnie mam przynieść?
 => END
 
 ~ proca2
