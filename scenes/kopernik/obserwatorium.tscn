@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://8cwtvqklqtf4"]
 
-[ext_resource type="Texture2D" uid="uid://cb1ohcs4gcqp5" path="res://sprites/kopernik/obserwatorium.png" id="1_2m4uv"]
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_kas2q"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_7ms7e"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_px8ry"]
+[ext_resource type="Texture2D" uid="uid://djq6f0gqs6wo" path="res://sprites/kopernik/taras.png" id="3_1pvga"]
 [ext_resource type="PackedScene" uid="uid://c3jdl8rbvh6em" path="res://scenes/postacie/kopernik.tscn" id="4_fjwj2"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_6sug6"]
 [ext_resource type="PackedScene" uid="uid://cgdf54xxybek7" path="res://itemy/scenes/komernik/notka_1.tscn" id="8_pgjta"]
@@ -25,7 +25,7 @@ pause_scene = ExtResource("2_7ms7e")
 
 [node name="Obserwatorium" type="Sprite2D" parent="." unique_id=2043192508]
 texture_filter = 1
-texture = ExtResource("1_2m4uv")
+texture = ExtResource("3_1pvga")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=72469827]
 zoom = Vector2(2, 2)
@@ -39,11 +39,11 @@ position = Vector2(-4, 73)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1896239454]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1760653050]
-position = Vector2(-5, -27)
-polygon = PackedVector2Array(-155, 122, -148, 45, -105, -7, -62, -20, -17, -22, 26, -22, 65, -18, 96, -14, 158, 11, 164, 64, 165, 93, 163, 122, 163, 67, 137, 28, 109, 9, 72, -8, 58, -16, 23, -17, -22, -16, -55, -9, -86, 0, -105, 11, -145, 48, -154, 78)
+position = Vector2(2, -27)
+polygon = PackedVector2Array(-155, 122, -148, 45, -105, -7, -62, -20, -17, -22, 26, -22, 65, -18, 96, -14, 158, 11, 164, 64, 165, 93, 163, 122, 158, 116, 160, 68, 137, 28, 109, 9, 72, -8, 58, -16, 23, -17, -22, -16, -55, -9, -86, 0, -105, 11, -145, 48, -154, 78)
 
 [node name="Kopernik" parent="." unique_id=1061417716 instance=ExtResource("4_fjwj2")]
-position = Vector2(49, -10)
+position = Vector2(54, -19)
 
 [node name="notka1" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("8_pgjta")]
 position = Vector2(-52, 15)
@@ -75,7 +75,7 @@ position = Vector2(102, 34)
 itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="mars" parent="." unique_id=577410552 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_ope37")]
-position = Vector2(118, 47)
+position = Vector2(135, 41)
 itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=488538800]

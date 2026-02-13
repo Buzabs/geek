@@ -7,7 +7,7 @@ func pryzmat() -> void:
 
 
 func konstelacje() -> void:
-	get_tree().change_scene_to_file("res://scenes/kopernik/konstelacje_gra.tscn")
+	get_tree().change_scene_to_file("res://scenes/kopernik/gra_wielki_maly_woz.tscn")
 
 func ciii() -> void:
 	ciiii = true

@@ -34,7 +34,7 @@ var collected_items := {}
 
 var spawn_id: String = ""
 
-
+var textura_planetki := {}
 
 func _ready():
 	await get_tree().process_frame

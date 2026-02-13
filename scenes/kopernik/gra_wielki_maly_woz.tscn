@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqrwvjpgskiq2"]
 
-[ext_resource type="Texture2D" uid="uid://c4whoibaj4vpy" path="res://sprites/kopernik/wielki_maly_woz.png" id="1_1mktt"]
-[ext_resource type="Script" uid="uid://banypwwtpa7ek" path="res://scenes/kopernik/wybor_konstelacji.gd" id="2_20ocb"]
+[ext_resource type="Texture2D" uid="uid://c4whoibaj4vpy" path="res://sprites/kopernik/wielki_maly_woz.png" id="1_0ohoi"]
+[ext_resource type="Script" uid="uid://banypwwtpa7ek" path="res://scenes/kopernik/wybor_konstelacji.gd" id="2_lkuhs"]
 
 [node name="Konstelacje" type="Node2D" unique_id=228921636]
 
@@ -10,35 +10,34 @@ zoom = Vector2(2, 2)
 
 [node name="WielkiMalyWoz" type="Sprite2D" parent="." unique_id=161946028]
 texture_filter = 1
-texture = ExtResource("1_1mktt")
+texture = ExtResource("1_0ohoi")
 
 [node name="Button" type="Button" parent="." unique_id=1053143375]
 texture_filter = 1
 offset_left = 82.0
-offset_top = -13.0
+offset_top = -20.0
 offset_right = 155.0
-offset_bottom = 7.0
 theme_override_font_sizes/font_size = 8
 text = "wielki i mały wóz"
-script = ExtResource("2_20ocb")
+script = ExtResource("2_lkuhs")
 id_wyboru = "wielki_woz"
 
 [node name="Button2" type="Button" parent="." unique_id=773923122]
 texture_filter = 1
-offset_left = 104.0
-offset_top = 8.0
-offset_right = 153.0
-offset_bottom = 28.0
+offset_left = 82.0
+offset_top = 3.0
+offset_right = 154.0
+offset_bottom = 23.0
 theme_override_font_sizes/font_size = 8
 text = "wielki pies"
-script = ExtResource("2_20ocb")
+script = ExtResource("2_lkuhs")
 
 [node name="Button3" type="Button" parent="." unique_id=3164047]
 texture_filter = 1
-offset_left = 95.0
-offset_top = 32.0
-offset_right = 152.0
-offset_bottom = 52.0
+offset_left = 82.0
+offset_top = 26.0
+offset_right = 154.0
+offset_bottom = 46.0
 theme_override_font_sizes/font_size = 8
 text = "byk i wodnik"
-script = ExtResource("2_20ocb")
+script = ExtResource("2_lkuhs")

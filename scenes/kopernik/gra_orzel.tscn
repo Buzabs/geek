@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dk6gmulfh7xdx"]
 
-[ext_resource type="Texture2D" uid="uid://c4whoibaj4vpy" path="res://sprites/kopernik/wielki_maly_woz.png" id="1_85i1v"]
+[ext_resource type="Texture2D" uid="uid://bxlqod711i6pt" path="res://sprites/kopernik/orzel.png" id="1_85i1v"]
 [ext_resource type="Script" uid="uid://banypwwtpa7ek" path="res://scenes/kopernik/wybor_konstelacji.gd" id="2_dli5b"]
 
 [node name="Konstelacje" type="Node2D" unique_id=228921636]
@@ -14,10 +14,10 @@ texture = ExtResource("1_85i1v")
 
 [node name="Button" type="Button" parent="." unique_id=1053143375]
 texture_filter = 1
-offset_left = 82.0
-offset_top = -13.0
-offset_right = 155.0
-offset_bottom = 7.0
+offset_left = 103.0
+offset_top = -14.0
+offset_right = 153.0
+offset_bottom = 6.0
 theme_override_font_sizes/font_size = 8
 text = "orzel"
 script = ExtResource("2_dli5b")
@@ -30,16 +30,16 @@ offset_top = 8.0
 offset_right = 153.0
 offset_bottom = 28.0
 theme_override_font_sizes/font_size = 8
-text = "skorpion"
+text = "wielki pies"
 script = ExtResource("2_dli5b")
 id_wyboru = "skorpion"
 
 [node name="Button3" type="Button" parent="." unique_id=3164047]
 texture_filter = 1
-offset_left = 95.0
-offset_top = 32.0
+offset_left = 105.0
+offset_top = 30.0
 offset_right = 152.0
-offset_bottom = 52.0
+offset_bottom = 50.0
 theme_override_font_sizes/font_size = 8
-text = "byk i wodnik"
+text = "panna "
 script = ExtResource("2_dli5b")

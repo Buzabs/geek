@@ -23,6 +23,10 @@ func dialogue_one():
 						await DialogueManager.dialogue_ended
 						DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje")
 						GlobalC.dialog = true
+						GlobalEq.remove_item("notka1")
+						GlobalEq.remove_item("notka2")
+						GlobalEq.remove_item("notka3")
+						GlobalEq.remove_item("notka4")
 						return
 			if GlobalC.first_play:
 				GlobalC.open = true
@@ -35,6 +39,7 @@ func dialogue_one():
 			else:
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "start2")
 				return
+
 	
 
 func _input_event(viewport, event, shape_idx):

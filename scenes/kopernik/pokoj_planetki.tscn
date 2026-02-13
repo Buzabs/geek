@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://u4q8raqxrjsv"]
+
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="1_naj2l"]
+[ext_resource type="Texture2D" uid="uid://sr00rau6ug2o" path="res://sprites/kopernik/planetki_pokój.png" id="1_rqh14"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="2_pppx8"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_5lbyh"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
+[ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
+[ext_resource type="PackedScene" uid="uid://bu12f8knmw3jr" path="res://itemy/scenes/komernik/merkury.tscn" id="6_rudhe"]
+[ext_resource type="PackedScene" uid="uid://b1fmrji86f5fy" path="res://itemy/scenes/komernik/mars.tscn" id="7_nlq5b"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
+[ext_resource type="PackedScene" uid="uid://wnie3cn1cc4l" path="res://itemy/scenes/komernik/jowisz.tscn" id="10_pbkw3"]
+[ext_resource type="PackedScene" uid="uid://cd680feg5aewv" path="res://itemy/scenes/komernik/saturn.tscn" id="11_rp3hp"]
+[ext_resource type="PackedScene" uid="uid://dsd31cpvipt46" path="res://itemy/scenes/komernik/slonce.tscn" id="12_dmai6"]
+[ext_resource type="PackedScene" uid="uid://c5ps7wj11hyu6" path="res://itemy/scenes/komernik/venus.tscn" id="13_vic2t"]
+[ext_resource type="PackedScene" uid="uid://ciboft5cx38ud" path="res://itemy/scenes/komernik/ziemia.tscn" id="14_quwyi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbkw3"]
+size = Vector2(36, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rp3hp"]
+size = Vector2(321, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0odi"]
+size = Vector2(41, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlq5b"]
+size = Vector2(75, 56)
+
+[node name="Planetki" type="Node2D" unique_id=1592809711]
+
+[node name="item_podnoszenieSFX2" type="AudioStreamPlayer2D" parent="." unique_id=1460675440]
+position = Vector2(27, 56)
+stream = ExtResource("1_naj2l")
+
+[node name="PlanetkiPokój" type="Sprite2D" parent="." unique_id=76779341]
+texture_filter = 1
+texture = ExtResource("1_rqh14")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1104355638]
+zoom = Vector2(2, 2)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=653834661]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1499348516]
+position = Vector2(112, 13.5)
+shape = SubResource("RectangleShape2D_pbkw3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1093830753]
+position = Vector2(-1, -61)
+shape = SubResource("RectangleShape2D_rp3hp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1313578213]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1456771980]
+position = Vector2(-140.5, 25.5)
+shape = SubResource("RectangleShape2D_c0odi")
+
+[node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=1406535128]
+texture_filter = 1
+position = Vector2(-157.2804, 24)
+rotation = 1.5707964
+scale = Vector2(1, 1.1121582)
+texture = ExtResource("2_pppx8")
+
+[node name="planetki" type="Area2D" parent="." unique_id=58538378]
+position = Vector2(2, 2)
+script = ExtResource("4_pppx8")
+load_scenes = "res://scenes/kopernik/planetki_gra.tscn"
+
+[node name="StolPlan" type="Sprite2D" parent="planetki" unique_id=478400091]
+texture_filter = 1
+position = Vector2(110, 10)
+texture = ExtResource("4_rudhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planetki" unique_id=1950444010]
+position = Vector2(111, 13)
+shape = SubResource("RectangleShape2D_nlq5b")
+
+[node name="Player" parent="." unique_id=1882407171 instance=ExtResource("3_5lbyh")]
+position = Vector2(-138, 23)
+
+[node name="merkury" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("6_rudhe")]
+position = Vector2(-6, 33)
+itemSFX = NodePath("../item_podnoszenieSFX2")
+
+[node name="mars" parent="." unique_id=102661422 node_paths=PackedStringArray("itemSFX") instance=ExtResource("7_nlq5b")]
+position = Vector2(26, 3)
+itemSFX = NodePath("../item_podnoszenieSFX2")
+
+[node name="eq" parent="." unique_id=1901876111 instance=ExtResource("9_am3dt")]
+offset_left = -97.0
+offset_top = 47.0
+offset_right = -97.0
+offset_bottom = 47.0
+
+[node name="venus" parent="." unique_id=1295667288 node_paths=PackedStringArray("itemSFX") instance=ExtResource("10_pbkw3")]
+position = Vector2(-74, -7)
+itemSFX = NodePath("../item_podnoszenieSFX2")
+
+[node name="saturn" parent="." unique_id=1346213407 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_rp3hp")]
+position = Vector2(-47, 13)
+itemSFX = NodePath("../item_podnoszenieSFX2")
+
+[node name="slonce" parent="." unique_id=238272847 node_paths=PackedStringArray("itemSFX") instance=ExtResource("12_dmai6")]
+position = Vector2(-75, 32)
+itemSFX = NodePath("../item_podnoszenieSFX2")
+
+[node name="venus2" parent="." unique_id=1879281993 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_vic2t")]
+position = Vector2(34, 23)
+itemSFX = NodePath("../item_podnoszenieSFX2")
+
+[node name="Ziemia" parent="." unique_id=1910266069 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_quwyi")]
+position = Vector2(-36, -10)
+itemSFX = NodePath("../item_podnoszenieSFX2")
+
+[node name="spawn_planetki" type="Marker2D" parent="." unique_id=1747291054]
+position = Vector2(79, -1)
