@@ -2,33 +2,89 @@
 
 [ext_resource type="Texture2D" uid="uid://cfx1701oj0rrm" path="res://sprites/kopernik/biblioteka.png" id="1_8lx6i"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_dwyeu"]
-[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="3_4k0lh"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="3_4k0lh"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_p5n41"]
+[ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="5_p5n41"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_2x5lk"]
+[ext_resource type="Texture2D" uid="uid://c1rwbh12b5lp8" path="res://sprites/meble/polowa_stolu.png" id="7_c2yfa"]
+[ext_resource type="Texture2D" uid="uid://6o3rbw3h7mu5" path="res://sprites/meble/polowa_stolu_dol.png" id="8_0wjok"]
+[ext_resource type="Texture2D" uid="uid://wdb7mkjvbyy3" path="res://sprites/meble/drabina.png" id="9_0wjok"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5n41"]
 size = Vector2(32, 36)
 
-[node name="Biblioteka" type="Node" unique_id=831778411]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x5lk"]
+size = Vector2(357.5, 20)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1301625387]
-position = Vector2(160, 90)
-zoom = Vector2(2, 2)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amkl2"]
+size = Vector2(95, 1)
+
+[node name="Biblioteka" type="Node" unique_id=831778411]
 
 [node name="Biblioteka" type="Sprite2D" parent="." unique_id=1140119676]
 texture_filter = 1
 position = Vector2(180, 91)
 texture = ExtResource("1_8lx6i")
 
-[node name="Player" parent="." unique_id=1751877694 instance=ExtResource("2_dwyeu")]
-position = Vector2(338, 156)
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1738928262]
+[node name="Area2D" type="Area2D" parent="." unique_id=1738928262 node_paths=PackedStringArray("drzwiSFX")]
+script = ExtResource("3_p5n41")
+load_scenes = "res://scenes/kopernik/lacznik.tscn"
+drzwiSFX = NodePath("../drzwiSFX")
 
 [node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=735442142]
 texture_filter = 1
-position = Vector2(358, 158)
+position = Vector2(316, 157)
 rotation = -1.5707964
 texture = ExtResource("3_4k0lh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1773571574]
-position = Vector2(344, 160)
+position = Vector2(301, 158)
 shape = SubResource("RectangleShape2D_p5n41")
+
+[node name="Player" parent="." unique_id=1751877694 instance=ExtResource("2_dwyeu")]
+position = Vector2(294, 157)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1301625387]
+position = Vector2(160, 90)
+zoom = Vector2(2, 2)
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=376536983]
+stream = ExtResource("5_p5n41")
+volume_db = 9.545
+
+[node name="PolowaStolu" type="Sprite2D" parent="." unique_id=1973807459]
+z_index = 6
+texture_filter = 1
+position = Vector2(211, 136)
+texture = ExtResource("7_c2yfa")
+
+[node name="PolowaStoluDol" type="Sprite2D" parent="." unique_id=24607710]
+texture_filter = 1
+position = Vector2(211, 154)
+texture = ExtResource("8_0wjok")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1091464061]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=739659698]
+position = Vector2(179.25, 96)
+shape = SubResource("RectangleShape2D_2x5lk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1333973185]
+position = Vector2(211.5, 143.5)
+shape = SubResource("RectangleShape2D_amkl2")
+
+[node name="eq" parent="." unique_id=634493244 instance=ExtResource("6_2x5lk")]
+anchors_preset = -1
+anchor_left = 0.316
+anchor_top = 0.058000002
+anchor_right = 0.316
+anchor_bottom = 0.058000002
+offset_left = -109.240005
+offset_top = -18.880001
+offset_right = -109.240005
+offset_bottom = -18.880001
+
+[node name="Drabina" type="Sprite2D" parent="." unique_id=245161722]
+texture_filter = 1
+position = Vector2(280, 101)
+texture = ExtResource("9_0wjok")

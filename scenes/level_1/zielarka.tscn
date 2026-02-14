@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dgu43e0jrr8k2" path="res://scripts/anglia/zielarka_cursors.gd" id="1_x3j47"]
 [ext_resource type="Texture2D" uid="uid://568jrd26vha0" path="res://sprites/anglia/table_zielarnia.png" id="2_frige"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_uj2r0"]
-[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="4_le3at"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="4_le3at"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="4_o8vkl"]
 [ext_resource type="PackedScene" uid="uid://c1ldpo3kp7jfs" path="res://scenes/postacie/zielarka.tscn" id="4_uj2r0"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="6_le3at"]

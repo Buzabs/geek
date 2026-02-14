@@ -1,9 +1,8 @@
 extends Button
 
-
-
 @export var required_id: Array[int]
-@export var slots: Array[Control]
+@export var slots: Array[Node]
+
 
 @export var ok_button: Button
 @export var ok_icon_correct: Texture2D
@@ -17,16 +16,16 @@ func _ready():
 	
 	
 func _pressed():
-	if slots.size() != required_id.size():
-		return
-
-	for i in range(slots.size()):
-		var selector = slots[i]
-		if selector.index != required_id[i]:
+		if slots.size() != required_id.size():
 			return
-
-	
-	ok_button.icon = ok_icon_correct
-	GameSignals.solution_ok = true
-	GameSignals.solution_checked.emit()
-	
+		for i in range(slots.size()):
+			var selector = slots[i]
+			if selector.index != required_id[i]:
+				return
+		
+		ok_button.icon = ok_icon_correct
+		GameSignals.solution_ok = true
+		GameSignals.solution_checked.emit()
+					
+					
+					

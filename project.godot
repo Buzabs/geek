@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="geek"
-run/main_scene="uid://bh73r6qfk3avy"
+run/main_scene="uid://d1e1o540mwux0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://4w5ml8j3qtls"
 

@@ -36,7 +36,10 @@ func add_item(texture: Texture2D, id: String) -> bool:
 func remove_item(id_item: String):
 	for i in range(slots.size()):
 		if slots[i]["id"] == id_item:
-			slots.remove_at(i)    
-			used_item.emit(id_item)
+			slots.remove_at(i) 
 			inventory_changed.emit()
-			return
+	
+		
+	inventory_changed.emit()
+			
+	return

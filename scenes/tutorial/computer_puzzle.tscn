@@ -230,14 +230,14 @@ offset_bottom = 101.0
 grow_vertical = 2
 alignment = 1
 
-[node name="Control" type="Control" parent="HBoxContainer" unique_id=800110643]
+[node name="control1" type="Control" parent="HBoxContainer" unique_id=800110643]
 texture_filter = 1
 layout_mode = 2
 script = ExtResource("4_v1hl6")
 target = NodePath("TextureRect")
 textures = Array[Texture2D]([SubResource("AtlasTexture_lt3wm"), SubResource("AtlasTexture_50sbh"), SubResource("AtlasTexture_06hj1"), SubResource("AtlasTexture_gn8i4"), SubResource("AtlasTexture_wamqq"), SubResource("AtlasTexture_rbv8p"), SubResource("AtlasTexture_wbvtg"), SubResource("AtlasTexture_q21yr"), SubResource("AtlasTexture_pthwq")])
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Control" unique_id=1968538481]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/control1" unique_id=1968538481]
 texture_filter = 1
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 0
@@ -248,7 +248,7 @@ offset_bottom = 146.0
 mouse_filter = 2
 texture = SubResource("AtlasTexture_4iys0")
 
-[node name="Button_gora" type="Button" parent="HBoxContainer/Control" unique_id=303037994]
+[node name="Button_gora" type="Button" parent="HBoxContainer/control1" unique_id=303037994]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
@@ -262,7 +262,7 @@ icon_alignment = 1
 script = ExtResource("3_d7bu3")
 manager = NodePath("..")
 
-[node name="Button" type="Button" parent="HBoxContainer/Control" unique_id=1405012]
+[node name="Button" type="Button" parent="HBoxContainer/control1" unique_id=1405012]
 texture_filter = 1
 custom_minimum_size = Vector2(36, 36)
 layout_mode = 0
@@ -411,7 +411,7 @@ icon_alignment = 1
 script = ExtResource("3_d7bu3")
 manager = NodePath("../../Control4")
 
-[node name="Button" type="Button" parent="." unique_id=977082619 node_paths=PackedStringArray("slots", "ok_button")]
+[node name="submit" type="Button" parent="." unique_id=977082619 node_paths=PackedStringArray("slots", "ok_button")]
 texture_filter = 1
 layout_mode = 0
 offset_left = 75.0
@@ -422,7 +422,7 @@ theme = SubResource("Theme_lt3wm")
 text = "OK"
 script = ExtResource("18_yuk6o")
 required_id = Array[int]([6, 4, 7, 2])
-slots = [NodePath("../HBoxContainer/Control"), NodePath("../HBoxContainer/Control2"), NodePath("../HBoxContainer/Control3"), NodePath("../HBoxContainer/Control4")]
+slots = [NodePath("../HBoxContainer/control1"), NodePath("../HBoxContainer/Control2"), NodePath("../HBoxContainer/Control3"), NodePath("../HBoxContainer/Control4")]
 ok_button = NodePath(".")
 ok_icon_correct = ExtResource("13_wbvtg")
 ok_icon_default = ExtResource("15_n4nou")

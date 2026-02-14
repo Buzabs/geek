@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_px8ry"]
 [ext_resource type="Texture2D" uid="uid://djq6f0gqs6wo" path="res://sprites/kopernik/taras.png" id="3_1pvga"]
 [ext_resource type="PackedScene" uid="uid://c3jdl8rbvh6em" path="res://scenes/postacie/kopernik.tscn" id="4_fjwj2"]
+[ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="7_focr7"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_6sug6"]
 [ext_resource type="PackedScene" uid="uid://cgdf54xxybek7" path="res://itemy/scenes/komernik/notka_1.tscn" id="8_pgjta"]
 [ext_resource type="PackedScene" uid="uid://tu5x0umdlatj" path="res://itemy/scenes/komernik/notka_2.tscn" id="9_48t55"]
@@ -14,10 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://bu12f8knmw3jr" path="res://itemy/scenes/komernik/merkury.tscn" id="12_l06o1"]
 [ext_resource type="PackedScene" uid="uid://b1fmrji86f5fy" path="res://itemy/scenes/komernik/mars.tscn" id="13_ope37"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="14_1pvga"]
-[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="14_f4e8l"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="14_f4e8l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pvga"]
-size = Vector2(56, 33)
+size = Vector2(51.5, 44)
 
 [node name="Obserwatorium" type="Node" unique_id=276483008]
 script = ExtResource("1_kas2q")
@@ -31,19 +32,37 @@ texture = ExtResource("3_1pvga")
 zoom = Vector2(2, 2)
 
 [node name="spawn_kopernik" type="Marker2D" parent="." unique_id=174816210]
-position = Vector2(63, -3)
+position = Vector2(53, -26)
 
 [node name="Player" parent="." unique_id=1292153575 instance=ExtResource("2_px8ry")]
-position = Vector2(-4, 73)
+position = Vector2(4, 24)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1896239454]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1760653050]
 position = Vector2(2, -27)
-polygon = PackedVector2Array(-155, 122, -148, 45, -105, -7, -62, -20, -17, -22, 26, -22, 65, -18, 96, -14, 158, 11, 164, 64, 165, 93, 163, 122, 158, 116, 160, 68, 137, 28, 109, 9, 72, -8, 58, -16, 23, -17, -22, -16, -55, -9, -86, 0, -105, 11, -145, 48, -154, 78)
+polygon = PackedVector2Array(-155, 122, -152, 76, -148, 45, -105, -7, -62, -20, -19, -34, 27, -32, 68, -23, 96, -14, 158, 11, 164, 64, 165, 93, 163, 122, 153, 116, 149, 69, 137, 28, 109, 9, 78, -11, 60, -20, 31, -20, 0, -31, -55, -16, -86, 0, -105, 11, -133, 47, -140, 78, -142, 118)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=488538800 node_paths=PackedStringArray("drzwiSFX")]
+script = ExtResource("14_1pvga")
+load_scenes = "res://scenes/kopernik/lacznik.tscn"
+drzwiSFX = NodePath("drzwiSFX")
+
+[node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=835638664]
+texture_filter = 1
+position = Vector2(-107, 86)
+texture = ExtResource("14_f4e8l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1400150445]
+position = Vector2(-103.75, 68)
+shape = SubResource("RectangleShape2D_1pvga")
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="Area2D" unique_id=2135635913]
+stream = ExtResource("7_focr7")
+volume_db = 9.545
 
 [node name="Kopernik" parent="." unique_id=1061417716 instance=ExtResource("4_fjwj2")]
-position = Vector2(54, -19)
+position = Vector2(33, -41)
 
 [node name="notka1" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("8_pgjta")]
 position = Vector2(-52, 15)
@@ -62,9 +81,9 @@ position = Vector2(-28, 32)
 itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="eq" parent="." unique_id=964447168 instance=ExtResource("8_6sug6")]
-offset_left = -94.0
+offset_left = -76.0
 offset_top = 48.0
-offset_right = -94.0
+offset_right = -76.0
 offset_bottom = 48.0
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=479112284]
@@ -75,17 +94,5 @@ position = Vector2(102, 34)
 itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="mars" parent="." unique_id=577410552 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_ope37")]
-position = Vector2(135, 41)
+position = Vector2(51, 1)
 itemSFX = NodePath("../item_podnoszenieSFX")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=488538800]
-script = ExtResource("14_1pvga")
-
-[node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=835638664]
-texture_filter = 1
-position = Vector2(129, 87)
-texture = ExtResource("14_f4e8l")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1400150445]
-position = Vector2(127, 74.5)
-shape = SubResource("RectangleShape2D_1pvga")

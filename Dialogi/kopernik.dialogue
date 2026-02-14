@@ -11,16 +11,26 @@ MIKOŁAJ: Mógłbyś pomóc mi je odnaleźć i przynieść do mnie?
 ~ k_misja
 MIKOŁAJ: Dziękuję ci! Szukałem ich całe wieki. A teraz czas pogadać o kosmosie.
 MIKOŁAJ: Najpierw chciałbym ci zadać kilka pytań odnośnie konstelacji na niebie. Gotowy?
-
-~ konstelacje
 - TAK
 	ENZO: Pewnie.
 	do PrismSwap.konstelacje()
-	
 	=> END
 - NIE
 	=> END
-	
+=> END
+
+~ konstelacje
+MIKOŁAJ: Najpierw chciałbym ci zadać kilka pytań odnośnie konstelacji na niebie. Gotowy?
+- TAK
+	ENZO: Pewnie.
+	do PrismSwap.konstelacje()
+	=> END
+- NIE
+	=> END
+~ konstelacje_nieudany
+MIKOŁAJ: niestety to nie ta konstelacja
+MIKOŁAJ: pamiętam, że mam obrazy konstelacji w jednym z pokoi 
+=> END
 ~ planety
 MIKOŁAJ: Świetnie, że sobie poradziłeś z konstelacjami!
 MIKOŁAJ: Teraz mam dla ciebie kolejne zadanie, tym razem związane z planetami.

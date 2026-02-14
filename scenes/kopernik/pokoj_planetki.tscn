@@ -2,7 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="1_naj2l"]
 [ext_resource type="Texture2D" uid="uid://sr00rau6ug2o" path="res://sprites/kopernik/planetki_pokój.png" id="1_rqh14"]
-[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/Environment/drzwi_gora.png" id="2_pppx8"]
+[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="2_pppx8"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_5lbyh"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dsd31cpvipt46" path="res://itemy/scenes/komernik/slonce.tscn" id="12_dmai6"]
 [ext_resource type="PackedScene" uid="uid://c5ps7wj11hyu6" path="res://itemy/scenes/komernik/venus.tscn" id="13_vic2t"]
 [ext_resource type="PackedScene" uid="uid://ciboft5cx38ud" path="res://itemy/scenes/komernik/ziemia.tscn" id="14_quwyi"]
+[ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="15_rp3hp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbkw3"]
 size = Vector2(36, 37)
@@ -50,7 +51,10 @@ shape = SubResource("RectangleShape2D_pbkw3")
 position = Vector2(-1, -61)
 shape = SubResource("RectangleShape2D_rp3hp")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1313578213]
+[node name="Area2D" type="Area2D" parent="." unique_id=1313578213 node_paths=PackedStringArray("drzwiSFX")]
+script = ExtResource("4_pppx8")
+load_scenes = "res://scenes/kopernik/lacznik.tscn"
+drzwiSFX = NodePath("../drzwiSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1456771980]
 position = Vector2(-140.5, 25.5)
@@ -116,3 +120,7 @@ itemSFX = NodePath("../item_podnoszenieSFX2")
 
 [node name="spawn_planetki" type="Marker2D" parent="." unique_id=1747291054]
 position = Vector2(79, -1)
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=1288695715]
+stream = ExtResource("15_rp3hp")
+volume_db = 9.545
