@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_r8t5m"]
 [ext_resource type="Texture2D" uid="uid://drapg3effttrg" path="res://sprites/anglia/londyn1.png" id="3_5anef"]
 [ext_resource type="PackedScene" uid="uid://dwhlllwpogact" path="res://scenes/postacie/grandma.tscn" id="3_ffkpb"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_n6dcb"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_x0t1q"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="8_ieef7"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_pv7x5"]
@@ -26,6 +27,8 @@ size = Vector2(51, 42)
 [node name="Anglia" type="Node" unique_id=412591710]
 script = ExtResource("1_in5km")
 pause_scene = ExtResource("2_pcj7e")
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("3_n6dcb")]
 
 [node name="Londyn" type="Sprite2D" parent="." unique_id=118060673]
 texture_filter = 1

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_bc4q0"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_s8qbx"]
 [ext_resource type="Script" uid="uid://diqkru1nsqlvb" path="res://scripts/tutorial/dialogi_tutorial.gd" id="3_iw68y"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_spuqw"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="4_shpus"]
 [ext_resource type="Script" uid="uid://dybgqhonalipu" path="res://scripts/tutorial/tlo_320x_180.gd" id="5_4rh0u"]
 [ext_resource type="Texture2D" uid="uid://b8cknov3b81xf" path="res://sprites/Environment/tlo320X180.png" id="5_330oy"]
@@ -311,16 +312,7 @@ animations = [{
 script = ExtResource("1_bc4q0")
 pause_scene = ExtResource("2_s8qbx")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1677385019]
-
-[node name="Control" parent="CanvasLayer" unique_id=1232363862 instance=ExtResource("2_s8qbx")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("3_spuqw")]
 
 [node name="Dialogi_tutorial" type="Node" parent="." unique_id=1020881150]
 script = ExtResource("3_iw68y")

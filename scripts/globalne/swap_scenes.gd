@@ -19,9 +19,15 @@ func _ready():
 	body_exited.connect(_on_exit)
 
 func _on_enter(body):
-	if body.is_in_group("player"):
-		can_open = true
-		player_ref = body
+	if get_tree().current_scene.get_name() == "TestScene":
+		if body.is_in_group("player") && !GlobalC.isLocked:
+			can_open = true
+			player_ref = body
+	else:
+		if body.is_in_group("player"):
+			can_open = true
+			player_ref = body
+		
 
 func _on_exit(body):
 	if body == player_ref:

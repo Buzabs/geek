@@ -14,4 +14,5 @@ func _ready():
 func _odbierz():
 	if GameSignals.solution_ok:
 		klodka.visible= false
+		GlobalC.isLocked = false
 	

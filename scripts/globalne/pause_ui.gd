@@ -1,6 +1,7 @@
 extends Control
 
 @onready var buttons: VBoxContainer = $Buttons
+@export var audio_manager: AudioStreamPlayer2D
 
 var is_paused: bool
 
@@ -18,10 +19,14 @@ func toggle_pause():
 		hide()
 
 func _on_back_pressed() -> void:
+	audio_manager.play()
+	await audio_manager.finished
 	toggle_pause()
 
 
 func _on_exit_pressed() -> void:
+	audio_manager.play()
+	await audio_manager.finished
 	get_tree().quit()
 
 func _input(event: InputEvent) -> void:

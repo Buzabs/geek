@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bwgm574fq2611" path="res://sprites/anglia/zielarnia2.png" id="1_d1ee0"]
 [ext_resource type="Script" uid="uid://dgu43e0jrr8k2" path="res://scripts/anglia/zielarka_cursors.gd" id="1_x3j47"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="2_7yurd"]
 [ext_resource type="Texture2D" uid="uid://568jrd26vha0" path="res://sprites/anglia/table_zielarnia.png" id="2_frige"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_uj2r0"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="4_le3at"]
@@ -34,6 +35,8 @@ size = Vector2(36, 20)
 
 [node name="Zielarka" type="Node2D" unique_id=1725537558]
 script = ExtResource("1_x3j47")
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("2_7yurd")]
 
 [node name="Zielarnia2" type="Sprite2D" parent="." unique_id=927821348]
 texture_filter = 1

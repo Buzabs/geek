@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ci424k2x6oaio"]
+
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="1_fpisk"]
+
+[node name="Pause" type="CanvasLayer" unique_id=1581730630]
+
+[node name="Control" parent="." unique_id=1232363862 instance=ExtResource("1_fpisk")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true

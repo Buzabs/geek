@@ -14,6 +14,9 @@ var next_dialog := false
 var rzut=true
 var wake_up := true
 
+#other
+var isLocked: bool = true
+
 func next():
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "podnoszenie2")
 	await DialogueManager.dialogue_ended

@@ -3,6 +3,7 @@
 [ext_resource type="Material" uid="uid://d3y7tleb6ykfw" path="res://shaders/blur.tres" id="1_dmklv"]
 [ext_resource type="Script" uid="uid://qvpyi6amn5rl" path="res://scripts/globalne/pause_ui.gd" id="1_dxsr0"]
 [ext_resource type="Texture2D" uid="uid://bw26wly8043o3" path="res://sprites/UI/pause.png" id="1_kokf4"]
+[ext_resource type="AudioStream" uid="uid://cmr2yve2xlukn" path="res://sounds/UI/click_001.ogg" id="2_cmpgo"]
 [ext_resource type="Texture2D" uid="uid://b1ypufr2psx0g" path="res://sprites/UI/exit.png" id="2_kokf4"]
 [ext_resource type="Texture2D" uid="uid://c77ipj5u2xx0m" path="res://sprites/UI/back.png" id="4_dxsr0"]
 [ext_resource type="Texture2D" uid="uid://d1r8hmmvcvgqw" path="res://sprites/UI/back_pressed.png" id="4_jxpaa"]
@@ -13,13 +14,17 @@
 [ext_resource type="Texture2D" uid="uid://b2262pcje7yur" path="res://sprites/UI/volume_pressed.png" id="13_7inj0"]
 [ext_resource type="Texture2D" uid="uid://c4om6ubet3ymc" path="res://sprites/UI/volume_hover.png" id="14_m1u3w"]
 
-[node name="Control" type="Control" unique_id=1232363862]
+[node name="Control" type="Control" unique_id=1232363862 node_paths=PackedStringArray("audio_manager")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_dxsr0")
+audio_manager = NodePath("AudioManager")
+
+[node name="AudioManager" type="AudioStreamPlayer2D" parent="." unique_id=1002924303]
+stream = ExtResource("2_cmpgo")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=732957484]
 material = ExtResource("1_dmklv")
