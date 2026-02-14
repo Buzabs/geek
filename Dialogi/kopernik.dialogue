@@ -1,3 +1,8 @@
+~ poczatek
+ENZO: co sie stało! gdzie ja jestem !
+ENZO: czy tam stoi Kopernik?
+ENZO: cóż zobaczmy...
+
 ~ start
 MIKOŁAJ: Szukasz mnie?
 MIKOŁAJ: Chodź. Zanim porozmawiamy o wszechświecie, mam dla ciebie zadanie.
@@ -59,6 +64,5 @@ ENZO: Chyba dzięki mnie Kopernik odkrył, że tak naprawdę żyjemy w układzie
 => END
 
 ~ teleportacja
-ENZO: Ej, co się dziję?!
-ENZO: Chyba mnie przenosi... AAAAAAA!
+ENZO: Ej, co się dziję?! Chyba mnie przenosi... AAAAAAA!
 => END

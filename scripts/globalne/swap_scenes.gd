@@ -11,10 +11,6 @@ var player_ref: Node = null
  # scene_path : Vector2
 
 func _ready():
-	
-
-	if get_tree().current_scene:
-		print(get_tree().current_scene.scene_file_path)
 	body_entered.connect(_on_enter)
 	body_exited.connect(_on_exit)
 
@@ -34,10 +30,6 @@ func _on_exit(body):
 		can_open = false
 		player_ref = null
 	
-
-
-
-
 
 
 

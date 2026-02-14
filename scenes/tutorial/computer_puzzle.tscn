@@ -236,6 +236,7 @@ layout_mode = 2
 script = ExtResource("4_v1hl6")
 target = NodePath("TextureRect")
 textures = Array[Texture2D]([SubResource("AtlasTexture_lt3wm"), SubResource("AtlasTexture_50sbh"), SubResource("AtlasTexture_06hj1"), SubResource("AtlasTexture_gn8i4"), SubResource("AtlasTexture_wamqq"), SubResource("AtlasTexture_rbv8p"), SubResource("AtlasTexture_wbvtg"), SubResource("AtlasTexture_q21yr"), SubResource("AtlasTexture_pthwq")])
+slot_id = "1"
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/control1" unique_id=1968538481]
 texture_filter = 1
@@ -282,6 +283,7 @@ layout_mode = 2
 script = ExtResource("4_v1hl6")
 target = NodePath("TextureRect2")
 textures = Array[Texture2D]([SubResource("AtlasTexture_qe5fj"), SubResource("AtlasTexture_ooh8t"), SubResource("AtlasTexture_sg7br"), SubResource("AtlasTexture_6omdr"), SubResource("AtlasTexture_2ownb"), SubResource("AtlasTexture_56j0b"), SubResource("AtlasTexture_vi3xe"), SubResource("AtlasTexture_lpwns"), SubResource("AtlasTexture_xlrrv")])
+slot_id = "2"
 
 [node name="TextureRect2" type="TextureRect" parent="HBoxContainer/Control2" unique_id=1157077734]
 texture_filter = 1
@@ -327,6 +329,7 @@ layout_mode = 2
 script = ExtResource("4_v1hl6")
 target = NodePath("TextureRect3")
 textures = Array[Texture2D]([SubResource("AtlasTexture_4xaqu"), SubResource("AtlasTexture_o5io7"), SubResource("AtlasTexture_rhd30"), SubResource("AtlasTexture_ec8k2"), SubResource("AtlasTexture_o5w0p"), SubResource("AtlasTexture_ii0bj"), SubResource("AtlasTexture_uhs70"), SubResource("AtlasTexture_ou7f4"), SubResource("AtlasTexture_6cmha")])
+slot_id = "3"
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer/Control3" unique_id=1863884766]
 texture_filter = 1
@@ -372,6 +375,7 @@ layout_mode = 2
 script = ExtResource("4_v1hl6")
 target = NodePath("TextureRect4")
 textures = Array[Texture2D]([SubResource("AtlasTexture_18dca"), SubResource("AtlasTexture_wx832"), SubResource("AtlasTexture_ywhde"), SubResource("AtlasTexture_765sk"), SubResource("AtlasTexture_ytpue"), SubResource("AtlasTexture_04ngh"), SubResource("AtlasTexture_ifetn"), SubResource("AtlasTexture_p8ios"), SubResource("AtlasTexture_kten7")])
+slot_id = "4"
 
 [node name="TextureRect4" type="TextureRect" parent="HBoxContainer/Control4" unique_id=1363832172]
 texture_filter = 1

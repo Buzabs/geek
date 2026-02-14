@@ -17,10 +17,14 @@ func _ready():
 	
 func _pressed():
 		if slots.size() != required_id.size():
+		
 			return
 		for i in range(slots.size()):
+			
 			var selector = slots[i]
+		
 			if selector.index != required_id[i]:
+		
 				return
 		
 		ok_button.icon = ok_icon_correct

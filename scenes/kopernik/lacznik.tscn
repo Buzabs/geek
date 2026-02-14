@@ -5,11 +5,29 @@
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_lts0u"]
 [ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/meble/drzwi.png" id="2_t8nar"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="3_lts0u"]
+[ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="3_sncp5"]
+[ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="4_nxcu2"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="5_igf7e"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="6_igf7e"]
+[ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="8_hpb5c"]
+[ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="9_uqisi"]
+[ext_resource type="Texture2D" uid="uid://c7yt3gh4h70ww" path="res://sprites/meble/wardrobe.png" id="10_sncp5"]
+[ext_resource type="PackedScene" uid="uid://wnie3cn1cc4l" path="res://itemy/scenes/komernik/jowisz.tscn" id="11_16sbj"]
+[ext_resource type="PackedScene" uid="uid://cl2k87xogb0l0" path="res://itemy/scenes/komernik/notka_3.tscn" id="12_nxcu2"]
+[ext_resource type="PackedScene" uid="uid://dsd31cpvipt46" path="res://itemy/scenes/komernik/slonce.tscn" id="14_j02d6"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="15_vj344"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j02d6"]
+size = Vector2(34, 28.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igf7e"]
 size = Vector2(36.5, 36.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vj344"]
+size = Vector2(24, 21.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nxcu2"]
+size = Vector2(59, 58.125)
 
 [node name="Lacznik" type="Node2D" unique_id=742187020]
 
@@ -20,6 +38,21 @@ zoom = Vector2(2, 2)
 texture_filter = 1
 position = Vector2(1, 0)
 texture = ExtResource("1_6xukf")
+
+[node name="pudelko" type="Area2D" parent="Camera2D/Lacznik" unique_id=134257978 node_paths=PackedStringArray("sprite")]
+script = ExtResource("8_hpb5c")
+open = ExtResource("3_sncp5")
+sprite = NodePath("Pudelko")
+
+[node name="Pudelko" type="Sprite2D" parent="Camera2D/Lacznik/pudelko" unique_id=1706255766]
+texture_filter = 1
+position = Vector2(121, -39)
+texture = ExtResource("4_nxcu2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Lacznik/pudelko" unique_id=126823107]
+position = Vector2(124, -39)
+rotation = -0.0059906407
+shape = SubResource("RectangleShape2D_j02d6")
 
 [node name="eq" parent="Camera2D" unique_id=1185207575 instance=ExtResource("2_jk7vo")]
 offset_left = -75.0
@@ -102,3 +135,80 @@ position = Vector2(141, -2)
 
 [node name="spawn_down" type="Marker2D" parent="." unique_id=531714842]
 position = Vector2(-132, 73)
+
+[node name="pudelko3" type="Area2D" parent="." unique_id=1893339792 node_paths=PackedStringArray("sprite", "item")]
+position = Vector2(-150, -42)
+script = ExtResource("8_hpb5c")
+open = ExtResource("3_sncp5")
+sprite = NodePath("Pudelko")
+item = NodePath("venus")
+
+[node name="Pudelko" type="Sprite2D" parent="pudelko3" unique_id=225658607]
+texture_filter = 1
+position = Vector2(14, 8)
+texture = ExtResource("4_nxcu2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko3" unique_id=48628798]
+position = Vector2(20, 5)
+shape = SubResource("RectangleShape2D_vj344")
+
+[node name="venus" parent="pudelko3" unique_id=404466428 instance=ExtResource("11_16sbj")]
+position = Vector2(15, 1)
+
+[node name="pudelko2" type="Area2D" parent="." unique_id=676121386 node_paths=PackedStringArray("sprite")]
+position = Vector2(-147, -21)
+script = ExtResource("8_hpb5c")
+open = ExtResource("3_sncp5")
+sprite = NodePath("Pudelko")
+
+[node name="Pudelko" type="Sprite2D" parent="pudelko2" unique_id=994914748]
+texture_filter = 1
+position = Vector2(-5, -21)
+texture = ExtResource("4_nxcu2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko2" unique_id=1673973566]
+position = Vector2(-2, -19)
+shape = SubResource("RectangleShape2D_vj344")
+
+[node name="pudelko" type="Area2D" parent="." unique_id=1171455070 node_paths=PackedStringArray("sprite")]
+position = Vector2(79, -52)
+script = ExtResource("8_hpb5c")
+open = ExtResource("3_sncp5")
+sprite = NodePath("Pudelko")
+
+[node name="Pudelko" type="Sprite2D" parent="pudelko" unique_id=1330304683]
+texture_filter = 1
+position = Vector2(-231, 26)
+texture = ExtResource("4_nxcu2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=106163297]
+position = Vector2(-234, 28.375)
+shape = SubResource("RectangleShape2D_vj344")
+
+[node name="szafa" type="Area2D" parent="." unique_id=63380964 node_paths=PackedStringArray("sprite", "item", "item2")]
+script = ExtResource("8_hpb5c")
+open = ExtResource("9_uqisi")
+sprite = NodePath("Szafa")
+item = NodePath("notka3")
+item2 = NodePath("slonce")
+
+[node name="notka3" parent="szafa" unique_id=1965668092 node_paths=PackedStringArray("itemSFX") instance=ExtResource("12_nxcu2")]
+z_index = 1
+position = Vector2(88, -44)
+itemSFX = NodePath("../../item_podnoszenieSFX")
+
+[node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1283074749]
+texture_filter = 1
+position = Vector2(81, -55)
+texture = ExtResource("10_sncp5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=1174028812]
+position = Vector2(76, -52)
+shape = SubResource("RectangleShape2D_nxcu2")
+
+[node name="slonce" parent="szafa" unique_id=187813077 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_j02d6")]
+position = Vector2(72, -44)
+itemSFX = NodePath("../../item_podnoszenieSFX")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1789536442]
+stream = ExtResource("15_vj344")

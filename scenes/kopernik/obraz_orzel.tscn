@@ -23,5 +23,5 @@ offset_right = 139.0
 offset_bottom = 79.0
 icon = ExtResource("1_dx45f")
 script = ExtResource("2_dx45f")
-load_scenes = "res://scenes/kopernik/konstelacje.tscn"
+load_scenes = "res://scenes/kopernik/pokoj_konstelacje.tscn"
 target_spawn = "orzel"

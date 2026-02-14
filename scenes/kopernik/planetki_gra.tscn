@@ -1,16 +1,88 @@
 [gd_scene format=3 uid="uid://sjas75j0gowq"]
 
+[ext_resource type="Script" uid="uid://bi5526jj0et4r" path="res://scenes/kopernik/planetki_complete.gd" id="1_hw6re"]
 [ext_resource type="Texture2D" uid="uid://bk50vbyy0kghq" path="res://sprites/kopernik/planetki_gra.png" id="1_w27te"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="2_jp20w"]
 [ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="3_cmean"]
+[ext_resource type="Texture2D" uid="uid://btt374uwvhw8m" path="res://sprites/kopernik/cutscene_planetkij.png" id="3_og5nf"]
 [ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="4_cmean"]
 [ext_resource type="Script" uid="uid://cvw61ipjg1lpc" path="res://scenes/kopernik/planetki_gra.gd" id="4_jp20w"]
+[ext_resource type="Texture2D" uid="uid://v8d4s5x48hfr" path="res://sprites/kopernik/cutscene_planety.png" id="4_k47jg"]
 [ext_resource type="Texture2D" uid="uid://drp2lsq7751nd" path="res://sprites/kopernik/planety_gra.png" id="6_0sfvt"]
 [ext_resource type="Texture2D" uid="uid://cjfkajh7amdbh" path="res://sprites/kopernik/planetki.png" id="6_yj3vn"]
 [ext_resource type="Texture2D" uid="uid://dng05tj840hco" path="res://itemy/sprites/items_kopernik.png" id="7_eqedd"]
 [ext_resource type="Script" uid="uid://qmsskh2cppib" path="res://computer_puzzle/script/submit.gd" id="9_tyek0"]
 [ext_resource type="Texture2D" uid="uid://sx0ir6ryutje" path="res://computer_puzzle/sprite/violet_down.png" id="10_xksgi"]
 [ext_resource type="Texture2D" uid="uid://5p546ecpaooo" path="res://computer_puzzle/sprite/violet_up.png" id="11_hw6re"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa0gw"]
+atlas = ExtResource("3_og5nf")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amrbc"]
+atlas = ExtResource("4_k47jg")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw4y1"]
+atlas = ExtResource("4_k47jg")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o42v"]
+atlas = ExtResource("4_k47jg")
+region = Rect2(0, 180, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gq0oh"]
+atlas = ExtResource("4_k47jg")
+region = Rect2(320, 180, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvmqk"]
+atlas = ExtResource("4_k47jg")
+region = Rect2(0, 360, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnsgu"]
+atlas = ExtResource("4_k47jg")
+region = Rect2(320, 360, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mihjx"]
+atlas = ExtResource("4_k47jg")
+region = Rect2(0, 540, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0f73g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa0gw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_amrbc")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_iw4y1")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_0o42v")
+}, {
+"duration": 1.4,
+"texture": SubResource("AtlasTexture_gq0oh")
+}, {
+"duration": 1.4,
+"texture": SubResource("AtlasTexture_tvmqk")
+}, {
+"duration": 1.4,
+"texture": SubResource("AtlasTexture_dnsgu")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_mihjx")
+}],
+"loop": false,
+"name": &"koniec",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k47jg"]
 atlas = ExtResource("6_0sfvt")
@@ -66,7 +138,7 @@ region = Rect2(68, 17, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mvbfs"]
 atlas = ExtResource("7_eqedd")
-region = Rect2(84, 17, 16, 16)
+region = Rect2(83, 17, 18, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0sfvt"]
 radius = 16.155495
@@ -78,14 +150,22 @@ radius = 17.464249
 radius = 16.124516
 
 [node name="PlanetkiGra" type="Node2D" unique_id=2012275368]
+script = ExtResource("1_hw6re")
+
+[node name="PlanetkiGra" type="Sprite2D" parent="." unique_id=1820995163]
+texture_filter = 1
+position = Vector2(1, 0)
+texture = ExtResource("1_w27te")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=506936057]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_0f73g")
+animation = &"koniec"
+speed_scale = 0.7
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1909879328]
 zoom = Vector2(2, 2)
-
-[node name="PlanetkiGra" type="Sprite2D" parent="." unique_id=1438479377]
-texture_filter = 1
-rotation = 3.1415927
-texture = ExtResource("1_w27te")
 
 [node name="eq" parent="." unique_id=533106910 instance=ExtResource("2_jp20w")]
 offset_left = -99.0
@@ -112,15 +192,16 @@ id_planety = Array[String](["slonce", "merkury", "venus", "ziemia", "mars", "jow
 planeta = Array[Texture2D]([SubResource("AtlasTexture_k47jg"), SubResource("AtlasTexture_tsr8k"), SubResource("AtlasTexture_rji6n"), SubResource("AtlasTexture_bc8r0"), SubResource("AtlasTexture_og5nf"), SubResource("AtlasTexture_63n3j"), SubResource("AtlasTexture_yqgmp")])
 item_icon = Array[Texture2D]([SubResource("AtlasTexture_xksgi"), SubResource("AtlasTexture_hw6re"), SubResource("AtlasTexture_3qvo3"), SubResource("AtlasTexture_k2vdh"), SubResource("AtlasTexture_7fbl0"), SubResource("AtlasTexture_ccu0l"), SubResource("AtlasTexture_mvbfs")])
 target = NodePath("slonce")
+slot_id = "s"
 default = ExtResource("6_yj3vn")
 
 [node name="slonce" type="Sprite2D" parent="Node/slonce" unique_id=691409243]
 texture_filter = 1
-position = Vector2(-3, 2)
+position = Vector2(3, 0)
 texture = ExtResource("6_yj3vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/slonce" unique_id=2141969551]
-position = Vector2(-2, 0)
+position = Vector2(3, -1)
 shape = SubResource("CircleShape2D_0sfvt")
 
 [node name="merkury" type="Area2D" parent="Node" unique_id=866032173]
@@ -130,15 +211,16 @@ id_planety = Array[String](["slonce", "merkury", "venus", "ziemia", "mars", "jow
 planeta = Array[Texture2D]([SubResource("AtlasTexture_k47jg"), SubResource("AtlasTexture_tsr8k"), SubResource("AtlasTexture_rji6n"), SubResource("AtlasTexture_bc8r0"), SubResource("AtlasTexture_og5nf"), SubResource("AtlasTexture_63n3j"), SubResource("AtlasTexture_yqgmp")])
 item_icon = Array[Texture2D]([SubResource("AtlasTexture_xksgi"), SubResource("AtlasTexture_hw6re"), SubResource("AtlasTexture_3qvo3"), SubResource("AtlasTexture_k2vdh"), SubResource("AtlasTexture_7fbl0"), SubResource("AtlasTexture_ccu0l"), SubResource("AtlasTexture_mvbfs")])
 target = NodePath("merkury")
+slot_id = "mer"
 default = ExtResource("6_yj3vn")
 
 [node name="merkury" type="Sprite2D" parent="Node/merkury" unique_id=1838319814]
 texture_filter = 1
-position = Vector2(5, 7)
+position = Vector2(11, 15)
 texture = ExtResource("6_yj3vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/merkury" unique_id=799738951]
-position = Vector2(4, 8)
+position = Vector2(11, 15)
 shape = SubResource("CircleShape2D_eqedd")
 
 [node name="venus" type="Area2D" parent="Node" unique_id=1636657401]
@@ -148,15 +230,16 @@ id_planety = Array[String](["slonce", "merkury", "venus", "ziemia", "mars", "jow
 planeta = Array[Texture2D]([SubResource("AtlasTexture_k47jg"), SubResource("AtlasTexture_tsr8k"), SubResource("AtlasTexture_rji6n"), SubResource("AtlasTexture_bc8r0"), SubResource("AtlasTexture_og5nf"), SubResource("AtlasTexture_63n3j"), SubResource("AtlasTexture_yqgmp")])
 item_icon = Array[Texture2D]([SubResource("AtlasTexture_xksgi"), SubResource("AtlasTexture_hw6re"), SubResource("AtlasTexture_3qvo3"), SubResource("AtlasTexture_k2vdh"), SubResource("AtlasTexture_7fbl0"), SubResource("AtlasTexture_ccu0l"), SubResource("AtlasTexture_mvbfs")])
 target = NodePath("venus")
+slot_id = "v"
 default = ExtResource("6_yj3vn")
 
 [node name="venus" type="Sprite2D" parent="Node/venus" unique_id=119557445]
 texture_filter = 1
-position = Vector2(4, 14)
+position = Vector2(24, 20)
 texture = ExtResource("6_yj3vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/venus" unique_id=362240079]
-position = Vector2(4, 14)
+position = Vector2(25, 20)
 shape = SubResource("CircleShape2D_w27te")
 
 [node name="ziemia" type="Area2D" parent="Node" unique_id=1184493214]
@@ -166,15 +249,16 @@ id_planety = Array[String](["slonce", "merkury", "venus", "ziemia", "mars", "jow
 planeta = Array[Texture2D]([SubResource("AtlasTexture_k47jg"), SubResource("AtlasTexture_tsr8k"), SubResource("AtlasTexture_rji6n"), SubResource("AtlasTexture_bc8r0"), SubResource("AtlasTexture_og5nf"), SubResource("AtlasTexture_63n3j"), SubResource("AtlasTexture_yqgmp")])
 item_icon = Array[Texture2D]([SubResource("AtlasTexture_xksgi"), SubResource("AtlasTexture_hw6re"), SubResource("AtlasTexture_3qvo3"), SubResource("AtlasTexture_k2vdh"), SubResource("AtlasTexture_7fbl0"), SubResource("AtlasTexture_ccu0l"), SubResource("AtlasTexture_mvbfs")])
 target = NodePath("ziemia")
+slot_id = "z"
 default = ExtResource("6_yj3vn")
 
 [node name="ziemia" type="Sprite2D" parent="Node/ziemia" unique_id=1111742447]
 texture_filter = 1
-position = Vector2(48, -13)
+position = Vector2(66, 4)
 texture = ExtResource("6_yj3vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/ziemia" unique_id=1571095605]
-position = Vector2(48, -13)
+position = Vector2(66, 4)
 shape = SubResource("CircleShape2D_w27te")
 
 [node name="mars" type="Area2D" parent="Node" unique_id=1594234070]
@@ -184,15 +268,16 @@ id_planety = Array[String](["slonce", "merkury", "venus", "ziemia", "mars", "jow
 planeta = Array[Texture2D]([SubResource("AtlasTexture_k47jg"), SubResource("AtlasTexture_tsr8k"), SubResource("AtlasTexture_rji6n"), SubResource("AtlasTexture_bc8r0"), SubResource("AtlasTexture_og5nf"), SubResource("AtlasTexture_63n3j"), SubResource("AtlasTexture_yqgmp")])
 item_icon = Array[Texture2D]([SubResource("AtlasTexture_xksgi"), SubResource("AtlasTexture_hw6re"), SubResource("AtlasTexture_3qvo3"), SubResource("AtlasTexture_k2vdh"), SubResource("AtlasTexture_7fbl0"), SubResource("AtlasTexture_ccu0l"), SubResource("AtlasTexture_mvbfs")])
 target = NodePath("mars")
+slot_id = "m"
 default = ExtResource("6_yj3vn")
 
 [node name="mars" type="Sprite2D" parent="Node/mars" unique_id=1444131678]
 texture_filter = 1
-position = Vector2(112, -13)
+position = Vector2(117, 6)
 texture = ExtResource("6_yj3vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/mars" unique_id=416409413]
-position = Vector2(113, -13)
+position = Vector2(117, 6)
 shape = SubResource("CircleShape2D_w27te")
 
 [node name="jowisz" type="Area2D" parent="Node" unique_id=1368171577]
@@ -202,15 +287,16 @@ id_planety = Array[String](["slonce", "merkury", "venus", "ziemia", "mars", "jow
 planeta = Array[Texture2D]([SubResource("AtlasTexture_k47jg"), SubResource("AtlasTexture_tsr8k"), SubResource("AtlasTexture_rji6n"), SubResource("AtlasTexture_bc8r0"), SubResource("AtlasTexture_og5nf"), SubResource("AtlasTexture_63n3j"), SubResource("AtlasTexture_yqgmp")])
 item_icon = Array[Texture2D]([SubResource("AtlasTexture_xksgi"), SubResource("AtlasTexture_hw6re"), SubResource("AtlasTexture_3qvo3"), SubResource("AtlasTexture_k2vdh"), SubResource("AtlasTexture_7fbl0"), SubResource("AtlasTexture_ccu0l"), SubResource("AtlasTexture_mvbfs")])
 target = NodePath("jowisz")
+slot_id = "j"
 default = ExtResource("6_yj3vn")
 
 [node name="jowisz" type="Sprite2D" parent="Node/jowisz" unique_id=1735165581]
 texture_filter = 1
-position = Vector2(168, 12)
+position = Vector2(157, 29)
 texture = ExtResource("6_yj3vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/jowisz" unique_id=1040199349]
-position = Vector2(167, 12)
+position = Vector2(158, 28)
 shape = SubResource("CircleShape2D_w27te")
 
 [node name="saturn" type="Area2D" parent="Node" unique_id=1078431977]
@@ -220,21 +306,22 @@ id_planety = Array[String](["slonce", "merkury", "venus", "ziemia", "mars", "jow
 planeta = Array[Texture2D]([SubResource("AtlasTexture_k47jg"), SubResource("AtlasTexture_tsr8k"), SubResource("AtlasTexture_rji6n"), SubResource("AtlasTexture_bc8r0"), SubResource("AtlasTexture_og5nf"), SubResource("AtlasTexture_63n3j"), SubResource("AtlasTexture_yqgmp")])
 item_icon = Array[Texture2D]([SubResource("AtlasTexture_xksgi"), SubResource("AtlasTexture_hw6re"), SubResource("AtlasTexture_3qvo3"), SubResource("AtlasTexture_k2vdh"), SubResource("AtlasTexture_7fbl0"), SubResource("AtlasTexture_ccu0l"), SubResource("AtlasTexture_mvbfs")])
 target = NodePath("saturn")
+slot_id = "st"
 default = ExtResource("6_yj3vn")
 
 [node name="saturn" type="Sprite2D" parent="Node/saturn" unique_id=2035151221]
 texture_filter = 1
-position = Vector2(192, 65)
+position = Vector2(190, 66)
 texture = ExtResource("6_yj3vn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/saturn" unique_id=39713870]
-position = Vector2(192, 66)
+position = Vector2(190, 67)
 shape = SubResource("CircleShape2D_w27te")
 
 [node name="ok" type="Button" parent="." unique_id=1582822067 node_paths=PackedStringArray("slots", "ok_button")]
-offset_left = -146.0
-offset_top = 27.0
-offset_right = -106.0
+offset_left = -152.0
+offset_top = 18.0
+offset_right = -98.0
 offset_bottom = 58.0
 text = "d"
 icon = ExtResource("11_hw6re")

@@ -23,7 +23,6 @@ func has_item(id: String) -> bool:
 func add_item(texture: Texture2D, id: String) -> bool:
 	if slots.size() >= max_slots:
 		return false
-	
 	slots.append({
 		"texture": texture,
 		"id": id,
@@ -38,8 +37,5 @@ func remove_item(id_item: String):
 		if slots[i]["id"] == id_item:
 			slots.remove_at(i) 
 			inventory_changed.emit()
-	
-		
-	inventory_changed.emit()
-			
-	return
+			selected_item_id= ""
+			return

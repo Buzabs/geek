@@ -34,6 +34,7 @@ func _input_event(viewport, event, shape_idx):
 				GlobalC.first_play_next = true
 				GlobalC.next_dialog = false
 				GlobalC.rzut=true
+			
 				return
 		if GlobalC.dialog and  GlobalC.rzut :
 			if  GlobalEq.selected_item_id == "kamyk" or GlobalEq.selected_item_id == "kamyczek"  :	

@@ -198,7 +198,6 @@ volume_db = 9.545
 zoom = Vector2(2, 2)
 
 [node name="eq" parent="." unique_id=1740335375 instance=ExtResource("7_8najp")]
-texture_filter = 1
 anchors_preset = -1
 offset_left = -90.0
 offset_top = 46.0
@@ -231,6 +230,7 @@ position = Vector2(94.5, -14.0625)
 shape = SubResource("RectangleShape2D_6ulow")
 
 [node name="pudelko" type="Area2D" parent="." unique_id=1051617436 node_paths=PackedStringArray("sprite", "item")]
+rotation = 0.0041928086
 script = ExtResource("9_6d5j4")
 open = ExtResource("12_guiiq")
 sprite = NodePath("Pudelko")

@@ -59,3 +59,4 @@ func _input_event(viewport, event, shape_idx):
 				return
 			else:
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety_next")
+	

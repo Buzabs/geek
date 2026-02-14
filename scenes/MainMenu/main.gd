@@ -8,6 +8,9 @@ func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/tutorial/test_scene.tscn")
 
 
+
+
+
 func _on_exit_pressed() -> void:
 	audio_manager.play()
 	await audio_manager.finished

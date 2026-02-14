@@ -6,15 +6,29 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_5lbyh"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
-[ext_resource type="PackedScene" uid="uid://bu12f8knmw3jr" path="res://itemy/scenes/komernik/merkury.tscn" id="6_rudhe"]
-[ext_resource type="PackedScene" uid="uid://b1fmrji86f5fy" path="res://itemy/scenes/komernik/mars.tscn" id="7_nlq5b"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
-[ext_resource type="PackedScene" uid="uid://wnie3cn1cc4l" path="res://itemy/scenes/komernik/jowisz.tscn" id="10_pbkw3"]
 [ext_resource type="PackedScene" uid="uid://cd680feg5aewv" path="res://itemy/scenes/komernik/saturn.tscn" id="11_rp3hp"]
-[ext_resource type="PackedScene" uid="uid://dsd31cpvipt46" path="res://itemy/scenes/komernik/slonce.tscn" id="12_dmai6"]
-[ext_resource type="PackedScene" uid="uid://c5ps7wj11hyu6" path="res://itemy/scenes/komernik/venus.tscn" id="13_vic2t"]
-[ext_resource type="PackedScene" uid="uid://ciboft5cx38ud" path="res://itemy/scenes/komernik/ziemia.tscn" id="14_quwyi"]
+[ext_resource type="PackedScene" uid="uid://wi24xc5qeodp" path="res://itemy/scenes/komernik/notka_4.tscn" id="13_bbdla"]
+[ext_resource type="Texture2D" uid="uid://blw8cqfiwignk" path="res://sprites/meble/stol_2.png" id="14_pbkw3"]
+[ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="15_quwyi"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="15_rp3hp"]
+[ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="16_xafkd"]
+[ext_resource type="Texture2D" uid="uid://c7yt3gh4h70ww" path="res://sprites/meble/wardrobe.png" id="17_58y8r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quwyi"]
+atlas = ExtResource("1_rqh14")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58y8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quwyi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbkw3"]
 size = Vector2(36, 37)
@@ -28,15 +42,15 @@ size = Vector2(41, 55)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlq5b"]
 size = Vector2(75, 56)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eunia"]
+size = Vector2(59, 58.125)
+
 [node name="Planetki" type="Node2D" unique_id=1592809711]
 
-[node name="item_podnoszenieSFX2" type="AudioStreamPlayer2D" parent="." unique_id=1460675440]
-position = Vector2(27, 56)
-stream = ExtResource("1_naj2l")
-
-[node name="PlanetkiPokój" type="Sprite2D" parent="." unique_id=76779341]
+[node name="animation" type="AnimatedSprite2D" parent="." unique_id=618990149]
 texture_filter = 1
-texture = ExtResource("1_rqh14")
+sprite_frames = SubResource("SpriteFrames_58y8r")
+autoplay = "default"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1104355638]
 zoom = Vector2(2, 2)
@@ -44,7 +58,7 @@ zoom = Vector2(2, 2)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=653834661]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1499348516]
-position = Vector2(112, 13.5)
+position = Vector2(108, 17)
 shape = SubResource("RectangleShape2D_pbkw3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1093830753]
@@ -55,6 +69,7 @@ shape = SubResource("RectangleShape2D_rp3hp")
 script = ExtResource("4_pppx8")
 load_scenes = "res://scenes/kopernik/lacznik.tscn"
 drzwiSFX = NodePath("../drzwiSFX")
+target_spawn_id = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1456771980]
 position = Vector2(-140.5, 25.5)
@@ -74,23 +89,15 @@ load_scenes = "res://scenes/kopernik/planetki_gra.tscn"
 
 [node name="StolPlan" type="Sprite2D" parent="planetki" unique_id=478400091]
 texture_filter = 1
-position = Vector2(110, 10)
+position = Vector2(104, 15)
 texture = ExtResource("4_rudhe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="planetki" unique_id=1950444010]
-position = Vector2(111, 13)
+position = Vector2(101, 13)
 shape = SubResource("RectangleShape2D_nlq5b")
 
 [node name="Player" parent="." unique_id=1882407171 instance=ExtResource("3_5lbyh")]
 position = Vector2(-138, 23)
-
-[node name="merkury" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("6_rudhe")]
-position = Vector2(-6, 33)
-itemSFX = NodePath("../item_podnoszenieSFX2")
-
-[node name="mars" parent="." unique_id=102661422 node_paths=PackedStringArray("itemSFX") instance=ExtResource("7_nlq5b")]
-position = Vector2(26, 3)
-itemSFX = NodePath("../item_podnoszenieSFX2")
 
 [node name="eq" parent="." unique_id=1901876111 instance=ExtResource("9_am3dt")]
 offset_left = -97.0
@@ -98,29 +105,42 @@ offset_top = 47.0
 offset_right = -97.0
 offset_bottom = 47.0
 
-[node name="venus" parent="." unique_id=1295667288 node_paths=PackedStringArray("itemSFX") instance=ExtResource("10_pbkw3")]
-position = Vector2(-74, -7)
-itemSFX = NodePath("../item_podnoszenieSFX2")
-
-[node name="saturn" parent="." unique_id=1346213407 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_rp3hp")]
-position = Vector2(-47, 13)
-itemSFX = NodePath("../item_podnoszenieSFX2")
-
-[node name="slonce" parent="." unique_id=238272847 node_paths=PackedStringArray("itemSFX") instance=ExtResource("12_dmai6")]
-position = Vector2(-75, 32)
-itemSFX = NodePath("../item_podnoszenieSFX2")
-
-[node name="venus2" parent="." unique_id=1879281993 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_vic2t")]
-position = Vector2(34, 23)
-itemSFX = NodePath("../item_podnoszenieSFX2")
-
-[node name="Ziemia" parent="." unique_id=1910266069 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_quwyi")]
-position = Vector2(-36, -10)
-itemSFX = NodePath("../item_podnoszenieSFX2")
-
 [node name="spawn_planetki" type="Marker2D" parent="." unique_id=1747291054]
 position = Vector2(79, -1)
 
 [node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=1288695715]
 stream = ExtResource("15_rp3hp")
 volume_db = 9.545
+
+[node name="szafa" type="Area2D" parent="." unique_id=1163212566 node_paths=PackedStringArray("sprite", "item")]
+script = ExtResource("15_quwyi")
+open = ExtResource("16_xafkd")
+sprite = NodePath("Szafa")
+item = NodePath("saturn")
+
+[node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1553074306]
+texture_filter = 1
+position = Vector2(-91, -39)
+texture = ExtResource("17_58y8r")
+
+[node name="saturn" parent="szafa" unique_id=1346213407 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_rp3hp")]
+position = Vector2(-93, -28)
+itemSFX = NodePath("../../item_podnoszenieSFX")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=35213589]
+position = Vector2(-93, -40)
+shape = SubResource("RectangleShape2D_eunia")
+
+[node name="notka4" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_bbdla")]
+z_index = 1
+position = Vector2(3, -24)
+rotation = 1.5707964
+itemSFX = NodePath("../item_podnoszenieSFX")
+
+[node name="Stol2" type="Sprite2D" parent="." unique_id=548983024]
+texture_filter = 1
+position = Vector2(2, -14)
+texture = ExtResource("14_pbkw3")
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1465227298]
+stream = ExtResource("1_naj2l")

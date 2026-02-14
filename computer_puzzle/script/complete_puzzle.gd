@@ -9,8 +9,9 @@ func _ready():
 
 func _on_solution_checked():
 		GameSignals.puzzle_solved = true
-		await get_tree().create_timer(0.2).timeout
 		_lock_scene()
+		await get_tree().create_timer(0.2).timeout
+		
 		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "komputer2")
 	
 

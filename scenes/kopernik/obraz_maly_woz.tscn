@@ -21,5 +21,5 @@ offset_right = 76.0
 offset_bottom = 43.0
 icon = ExtResource("2_8e3p4")
 script = ExtResource("3_8e3p4")
-load_scenes = "res://scenes/kopernik/konstelacje.tscn"
+load_scenes = "res://scenes/kopernik/pokoj_konstelacje.tscn"
 target_spawn = "maly"

@@ -1,6 +1,6 @@
 extends Area2D
 
-var load_scenes = "res://scenes/level_1/anglia.tscn"
+
 var can_interact = false
 var player_ref: Node = null
 
@@ -30,6 +30,12 @@ func _input_event(viewport, event, shape_idx):
 				GlobalEq.remove_item("potka")
 				GlobalEq.remove_item("sus")
 				GlobalEq.remove_item("ciii")
+				GlobalC.dialog = false
+				GlobalC.open= false
+				GameSignals.solution_ok = false
+				GlobalC.first_play = true
+				GlobalC.first_play_next = true
+				GlobalC.next_dialog = false
 				player_ref.visible = false
 				$portal.play("open")
 				GlobalEq.remove_item("portal_open")
@@ -45,5 +51,5 @@ func _input_event(viewport, event, shape_idx):
 				MusicManager.play_music("res://soundtracki/magical_theme.wav")
 				MusicManager.set_volume(-10)
 				await get_tree().create_timer(0.1).timeout
-				get_tree().change_scene_to_file(load_scenes)
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "teleportacja")
+				get_tree().change_scene_to_file("res://scenes/kopernik/obserwatorium.tscn")
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "poczatek")
