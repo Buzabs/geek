@@ -30,13 +30,13 @@ func _on_enter(body):
 	if body.is_in_group("player") and GlobalEq.pick :
 		can_pick = true
 		player_ref = body
-		print("Gracz wszedł w item")
+	
 
 func _on_exit(body):
 	if body == player_ref:
 		can_pick = false
 		player_ref = null
-		print("Gracz wyszedł z itemu")
+		
 
 func _process(_delta):		
 	

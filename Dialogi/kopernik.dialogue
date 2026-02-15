@@ -2,7 +2,7 @@
 ENZO: co sie stało! gdzie ja jestem !
 ENZO: czy tam stoi Kopernik?
 ENZO: cóż zobaczmy...
-
+=> END
 ~ start
 MIKOŁAJ: Szukasz mnie?
 MIKOŁAJ: Chodź. Zanim porozmawiamy o wszechświecie, mam dla ciebie zadanie.
@@ -32,6 +32,9 @@ MIKOŁAJ: Najpierw chciałbym ci zadać kilka pytań odnośnie konstelacji na ni
 	=> END
 - NIE
 	=> END
+~ konstelacje_tlumaczenie
+MIKOŁAJ: popatrz sie w gwiazdy i zobacz jakie konstelacje widzisz
+=> END
 ~ konstelacje_nieudany
 MIKOŁAJ: niestety to nie ta konstelacja
 MIKOŁAJ: pamiętam, że mam obrazy konstelacji w jednym z pokoi 
@@ -39,11 +42,11 @@ MIKOŁAJ: pamiętam, że mam obrazy konstelacji w jednym z pokoi
 ~ planety
 MIKOŁAJ: Świetnie, że sobie poradziłeś z konstelacjami!
 MIKOŁAJ: Teraz mam dla ciebie kolejne zadanie, tym razem związane z planetami.
-MIKOŁAJ: Musisz odnaleźć planety. Gdy je znajdziesz, wróć do mnie, powiem ci co dalej.
+MIKOŁAJ: Musisz odnaleźć planety. Są gdzies porozrzucane, nie wiem gdzie bo zawsze je gubię
 ENZO: Jasne, zbieram się do roboty!
 => END
 ~ planety_next
-MIKOŁAJ: Musisz odnaleźć planety. Gdy je znajdziesz, wróć do mnie, powiem ci co dalej.
+MIKOŁAJ: Musisz odnaleźć planety. Są gdzies porozrzucane, nie wiem gdzie bo zawsze je gubię
 ENZO: Jasne, zbieram się do roboty!
 => END
 

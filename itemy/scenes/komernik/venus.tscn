@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_6owf1"]
 [ext_resource type="Texture2D" uid="uid://dng05tj840hco" path="res://itemy/sprites/items_kopernik.png" id="2_1or0s"]
+[ext_resource type="Texture2D" uid="uid://cdgnum3sn8wov" path="res://itemy/sprites/planetki_schowane.png" id="2_g7bmx"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_1or0s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmltd"]
@@ -11,8 +12,8 @@ region = Rect2(19, 18, 16, 16)
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbv6a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7hoy"]
-atlas = ExtResource("2_1or0s")
-region = Rect2(22, 21, 10, 10)
+atlas = ExtResource("2_g7bmx")
+region = Rect2(3, 9, 10, 6)
 
 [node name="venus" type="Area2D" unique_id=404466428]
 script = ExtResource("1_6owf1")

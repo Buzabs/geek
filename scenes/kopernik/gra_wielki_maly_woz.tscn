@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c4whoibaj4vpy" path="res://sprites/kopernik/wielki_maly_woz.png" id="1_0ohoi"]
 [ext_resource type="Script" uid="uid://banypwwtpa7ek" path="res://scenes/kopernik/wybor_konstelacji.gd" id="2_lkuhs"]
+[ext_resource type="Texture2D" uid="uid://bsmvdvonhp6kv" path="res://sprites/kopernik/napisy_konstelacje/napis_woz.png" id="2_pkvgp"]
+[ext_resource type="Texture2D" uid="uid://5mfaottngk8q" path="res://sprites/kopernik/wielki_maly_woz_complete.png" id="3_lkuhs"]
+[ext_resource type="Texture2D" uid="uid://dadc1q5285q7j" path="res://sprites/kopernik/napisy_konstelacje/napis_pies.png" id="4_p2n53"]
+[ext_resource type="Texture2D" uid="uid://cfyf5dd3f3mxd" path="res://sprites/kopernik/napisy_konstelacje/napis_byk.png" id="5_vtnlj"]
 
 [node name="Konstelacje" type="Node2D" unique_id=228921636]
 
@@ -14,30 +18,36 @@ texture = ExtResource("1_0ohoi")
 
 [node name="Button" type="Button" parent="." unique_id=1053143375]
 texture_filter = 1
-offset_left = 82.0
-offset_top = -20.0
-offset_right = 155.0
+offset_left = 79.0
+offset_top = -16.0
+offset_right = 157.0
+offset_bottom = 1.0
 theme_override_font_sizes/font_size = 8
-text = "wielki i mały wóz"
+icon = ExtResource("2_pkvgp")
 script = ExtResource("2_lkuhs")
 id_wyboru = "wielki_woz"
 
 [node name="Button2" type="Button" parent="." unique_id=773923122]
 texture_filter = 1
-offset_left = 82.0
+offset_left = 79.0
 offset_top = 3.0
-offset_right = 154.0
-offset_bottom = 23.0
+offset_right = 153.0
+offset_bottom = 20.0
 theme_override_font_sizes/font_size = 8
-text = "wielki pies"
+icon = ExtResource("4_p2n53")
 script = ExtResource("2_lkuhs")
 
 [node name="Button3" type="Button" parent="." unique_id=3164047]
 texture_filter = 1
-offset_left = 82.0
-offset_top = 26.0
-offset_right = 154.0
-offset_bottom = 46.0
+offset_left = 79.0
+offset_top = 25.0
+offset_right = 151.0
+offset_bottom = 42.0
 theme_override_font_sizes/font_size = 8
-text = "byk i wodnik"
+icon = ExtResource("5_vtnlj")
 script = ExtResource("2_lkuhs")
+
+[node name="WielkiMalyWozComplete" type="Sprite2D" parent="." unique_id=1771228574]
+visible = false
+texture_filter = 1
+texture = ExtResource("3_lkuhs")

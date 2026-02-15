@@ -20,7 +20,7 @@
 size = Vector2(34, 28.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5n41"]
-size = Vector2(32, 36)
+size = Vector2(36, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2x5lk"]
 size = Vector2(357.5, 20)
@@ -42,7 +42,8 @@ sprite = NodePath("Pudelko")
 item = NodePath("Ziemia")
 
 [node name="Ziemia" parent="Biblioteka/pudelko" unique_id=1141234364 node_paths=PackedStringArray("itemSFX") instance=ExtResource("15_ay7dm")]
-position = Vector2(-33, 33)
+z_index = 1
+position = Vector2(-33, 35)
 itemSFX = NodePath("../../../item_podnoszenieSFX")
 
 [node name="Pudelko" type="Sprite2D" parent="Biblioteka/pudelko" unique_id=445170086]
@@ -61,12 +62,12 @@ drzwiSFX = NodePath("../drzwiSFX")
 
 [node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=735442142]
 texture_filter = 1
-position = Vector2(316, 157)
+position = Vector2(318, 157)
 rotation = -1.5707964
 texture = ExtResource("3_4k0lh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1773571574]
-position = Vector2(301, 158)
+position = Vector2(303, 158)
 shape = SubResource("RectangleShape2D_p5n41")
 
 [node name="Player" parent="." unique_id=1751877694 instance=ExtResource("2_dwyeu")]

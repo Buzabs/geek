@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_2d04p"]
 [ext_resource type="Texture2D" uid="uid://dng05tj840hco" path="res://itemy/sprites/items_kopernik.png" id="2_goiev"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_goiev"]
+[ext_resource type="Texture2D" uid="uid://cdgnum3sn8wov" path="res://itemy/sprites/planetki_schowane.png" id="3_w2w74"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmltd"]
 atlas = ExtResource("2_goiev")
@@ -11,8 +12,8 @@ region = Rect2(68, 17, 16, 16)
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbv6a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7hoy"]
-atlas = ExtResource("2_goiev")
-region = Rect2(71, 20, 10, 10)
+atlas = ExtResource("3_w2w74")
+region = Rect2(36, 7, 10, 6)
 
 [node name="jowisz" type="Area2D" unique_id=404466428]
 script = ExtResource("1_2d04p")

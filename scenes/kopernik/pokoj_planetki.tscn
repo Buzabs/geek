@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
 [ext_resource type="PackedScene" uid="uid://cd680feg5aewv" path="res://itemy/scenes/komernik/saturn.tscn" id="11_rp3hp"]
-[ext_resource type="PackedScene" uid="uid://wi24xc5qeodp" path="res://itemy/scenes/komernik/notka_4.tscn" id="13_bbdla"]
 [ext_resource type="Texture2D" uid="uid://blw8cqfiwignk" path="res://sprites/meble/stol_2.png" id="14_pbkw3"]
+[ext_resource type="PackedScene" uid="uid://tu5x0umdlatj" path="res://itemy/scenes/komernik/notka_2.tscn" id="14_rp3hp"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="15_quwyi"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="15_rp3hp"]
 [ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="16_xafkd"]
@@ -113,6 +113,7 @@ stream = ExtResource("15_rp3hp")
 volume_db = 9.545
 
 [node name="szafa" type="Area2D" parent="." unique_id=1163212566 node_paths=PackedStringArray("sprite", "item")]
+z_index = 1
 script = ExtResource("15_quwyi")
 open = ExtResource("16_xafkd")
 sprite = NodePath("Szafa")
@@ -131,12 +132,6 @@ itemSFX = NodePath("../../item_podnoszenieSFX")
 position = Vector2(-93, -40)
 shape = SubResource("RectangleShape2D_eunia")
 
-[node name="notka4" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_bbdla")]
-z_index = 1
-position = Vector2(3, -24)
-rotation = 1.5707964
-itemSFX = NodePath("../item_podnoszenieSFX")
-
 [node name="Stol2" type="Sprite2D" parent="." unique_id=548983024]
 texture_filter = 1
 position = Vector2(2, -14)
@@ -144,3 +139,8 @@ texture = ExtResource("14_pbkw3")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1465227298]
 stream = ExtResource("1_naj2l")
+
+[node name="notka2" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_rp3hp")]
+position = Vector2(3, -24)
+rotation = 1.5707964
+itemSFX = NodePath("../item_podnoszenieSFX")

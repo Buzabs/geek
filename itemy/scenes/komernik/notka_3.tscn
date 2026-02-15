@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq3r7em1ogiyw" path="res://itemy/script/itemkieq.gd" id="1_4k0k4"]
 [ext_resource type="Texture2D" uid="uid://dng05tj840hco" path="res://itemy/sprites/items_kopernik.png" id="2_vg15t"]
+[ext_resource type="Texture2D" uid="uid://cdgnum3sn8wov" path="res://itemy/sprites/planetki_schowane.png" id="3_ddxla"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="3_vg15t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmltd"]
@@ -11,8 +12,8 @@ region = Rect2(34, 1, 16, 16)
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbv6a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7hoy"]
-atlas = ExtResource("2_vg15t")
-region = Rect2(37, 4, 10, 11)
+atlas = ExtResource("3_ddxla")
+region = Rect2(68, 8, 14, 5)
 
 [node name="notka3" type="Area2D" unique_id=404466428 node_paths=PackedStringArray("itemSFX")]
 script = ExtResource("1_4k0k4")

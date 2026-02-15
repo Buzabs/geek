@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="10_mcay7"]
 [ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="11_gh74o"]
 [ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="12_ti13s"]
+[ext_resource type="PackedScene" uid="uid://wi24xc5qeodp" path="res://itemy/scenes/komernik/notka_4.tscn" id="13_0558m"]
 [ext_resource type="PackedScene" uid="uid://c5ps7wj11hyu6" path="res://itemy/scenes/komernik/venus.tscn" id="14_ti13s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uigpl"]
@@ -34,7 +35,7 @@ size = Vector2(69, 70)
 size = Vector2(70, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_re1f5"]
-size = Vector2(75, 70)
+size = Vector2(75, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mcay7"]
 size = Vector2(23.03769, 23.224764)
@@ -85,7 +86,7 @@ position = Vector2(46, -29)
 [node name="spawn_orzel" type="Marker2D" parent="." unique_id=1884169099]
 position = Vector2(120, -29)
 
-[node name="merkury" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("5_uigpl")]
+[node name="merkury" parent="." unique_id=797910469 node_paths=PackedStringArray("itemSFX") instance=ExtResource("5_uigpl")]
 z_index = 1
 position = Vector2(140, -13)
 itemSFX = NodePath("../item_podnoszenieSFX")
@@ -100,7 +101,8 @@ position = Vector2(-128, 66)
 shape = SubResource("RectangleShape2D_78y6g")
 
 [node name="DrzwiGora" type="Sprite2D" parent="." unique_id=1540638120]
-position = Vector2(-133, 84)
+texture_filter = 1
+position = Vector2(-133, 87)
 texture = ExtResource("6_co88u")
 
 [node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=1097123247]
@@ -147,29 +149,35 @@ script = ExtResource("2_sasli")
 load_scenes = "res://scenes/kopernik/obraz_wielki_woz.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wielki_woz" unique_id=203278683]
-position = Vector2(-120.5, -51)
+position = Vector2(-120.5, -55)
 shape = SubResource("RectangleShape2D_re1f5")
-
-[node name="pudelko" type="Area2D" parent="wielki_woz" unique_id=1228723442 node_paths=PackedStringArray("sprite", "item")]
-rotation = 0.0041928086
-script = ExtResource("10_mcay7")
-open = ExtResource("11_gh74o")
-sprite = NodePath("Pudelko")
-item = NodePath("")
-
-[node name="Pudelko" type="Sprite2D" parent="wielki_woz/pudelko" unique_id=1659642328]
-texture_filter = 1
-position = Vector2(-152.03221, -7.362625)
-texture = ExtResource("12_ti13s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wielki_woz/pudelko" unique_id=657152916]
-position = Vector2(-150.0364, -8.371001)
-shape = SubResource("RectangleShape2D_mcay7")
 
 [node name="Stol" type="Sprite2D" parent="." unique_id=1339523902]
 texture_filter = 1
 position = Vector2(140, 0)
 texture = ExtResource("9_1f8s5")
+
+[node name="pudelko2" type="Area2D" parent="." unique_id=1228723442 node_paths=PackedStringArray("sprite", "item")]
+rotation = 0.0041928086
+script = ExtResource("10_mcay7")
+open = ExtResource("11_gh74o")
+sprite = NodePath("Pudelko")
+item = NodePath("notka4")
+
+[node name="notka4" parent="pudelko2" unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("13_0558m")]
+z_index = 1
+position = Vector2(-152.05737, -13.362572)
+rotation = -0.0041928086
+itemSFX = NodePath("../../item_podnoszenieSFX")
+
+[node name="Pudelko" type="Sprite2D" parent="pudelko2" unique_id=1659642328]
+texture_filter = 1
+position = Vector2(-152.03221, -7.362625)
+texture = ExtResource("12_ti13s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko2" unique_id=657152916]
+position = Vector2(-149.03642, -8.375194)
+shape = SubResource("RectangleShape2D_mcay7")
 
 [node name="pudelko" type="Area2D" parent="." unique_id=611971086 node_paths=PackedStringArray("sprite", "item")]
 rotation = 0.0041928086
@@ -180,13 +188,14 @@ item = NodePath("venus")
 
 [node name="Pudelko" type="Sprite2D" parent="pudelko" unique_id=934711628]
 texture_filter = 1
-position = Vector2(-133.08269, -19.44218)
+position = Vector2(-133.0743, -17.4422)
 texture = ExtResource("12_ti13s")
 
-[node name="venus" parent="pudelko" unique_id=1622672239 instance=ExtResource("14_ti13s")]
-position = Vector2(-133.11205, -26.442122)
+[node name="venus" parent="pudelko" unique_id=1622672239 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_ti13s")]
+position = Vector2(-132.09946, -23.44634)
 rotation = -0.0041928086
+itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=224257387]
-position = Vector2(-132.0785, -18.446384)
+position = Vector2(-132.07849, -18.446384)
 shape = SubResource("RectangleShape2D_mcay7")

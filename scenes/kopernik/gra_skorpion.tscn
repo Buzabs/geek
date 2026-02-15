@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://c4w7d75dtr8xt" path="res://sprites/kopernik/skorpion.png" id="1_e378j"]
 [ext_resource type="Script" uid="uid://banypwwtpa7ek" path="res://scenes/kopernik/wybor_konstelacji.gd" id="2_krb6x"]
+[ext_resource type="Texture2D" uid="uid://dl23hwigcfw4f" path="res://sprites/kopernik/napisy_konstelacje/napis_waz.png" id="2_oiibq"]
+[ext_resource type="Texture2D" uid="uid://d0hfmb313wtbb" path="res://sprites/kopernik/napisy_konstelacje/napis_skorpion.png" id="3_go7to"]
+[ext_resource type="Texture2D" uid="uid://buqlrrhuorb70" path="res://sprites/kopernik/skorpion_skorpion.png" id="3_krb6x"]
+[ext_resource type="Texture2D" uid="uid://cad8vaa5543tg" path="res://sprites/kopernik/napisy_konstelacje/napis_orzel.png" id="5_oiibq"]
 
 [node name="Konstelacje" type="Node2D" unique_id=228921636]
 
@@ -15,30 +19,34 @@ texture = ExtResource("1_e378j")
 [node name="Button" type="Button" parent="." unique_id=1053143375]
 texture_filter = 1
 offset_left = 82.0
-offset_top = -15.0
+offset_top = -21.0
 offset_right = 155.0
-offset_bottom = 5.0
+offset_bottom = -4.0
 theme_override_font_sizes/font_size = 8
-text = "wielki i mały wóz"
+icon = ExtResource("2_oiibq")
 script = ExtResource("2_krb6x")
 
 [node name="Button2" type="Button" parent="." unique_id=773923122]
 texture_filter = 1
 offset_left = 83.0
-offset_top = 8.0
-offset_right = 154.0
-offset_bottom = 28.0
+offset_right = 155.0
+offset_bottom = 17.0
 theme_override_font_sizes/font_size = 8
-text = "skorpion"
+icon = ExtResource("3_go7to")
 script = ExtResource("2_krb6x")
 id_wyboru = "skorpion"
 
 [node name="Button3" type="Button" parent="." unique_id=3164047]
 texture_filter = 1
 offset_left = 83.0
-offset_top = 31.0
-offset_right = 154.0
-offset_bottom = 51.0
+offset_top = 23.0
+offset_right = 155.0
+offset_bottom = 40.0
 theme_override_font_sizes/font_size = 8
-text = "byk i wodnik"
+icon = ExtResource("5_oiibq")
 script = ExtResource("2_krb6x")
+
+[node name="SkorpionSkorpion" type="Sprite2D" parent="." unique_id=1834342596]
+visible = false
+texture_filter = 1
+texture = ExtResource("3_krb6x")

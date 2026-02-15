@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bxlqod711i6pt" path="res://sprites/kopernik/orzel.png" id="1_85i1v"]
 [ext_resource type="Script" uid="uid://banypwwtpa7ek" path="res://scenes/kopernik/wybor_konstelacji.gd" id="2_dli5b"]
+[ext_resource type="Texture2D" uid="uid://cad8vaa5543tg" path="res://sprites/kopernik/napisy_konstelacje/napis_orzel.png" id="2_rc4em"]
+[ext_resource type="Texture2D" uid="uid://cp4fv5twec3ht" path="res://sprites/kopernik/orzel_complete.png" id="3_dli5b"]
+[ext_resource type="Texture2D" uid="uid://bumjdl6tmuv4t" path="res://sprites/kopernik/napisy_konstelacje/napis_strzelec.png" id="4_qmcut"]
+[ext_resource type="Texture2D" uid="uid://dkbclnfv0y75t" path="res://sprites/kopernik/napisy_konstelacje/napis_panna.png" id="5_po4rp"]
 
 [node name="Konstelacje" type="Node2D" unique_id=228921636]
 
@@ -14,33 +18,38 @@ texture = ExtResource("1_85i1v")
 
 [node name="Button" type="Button" parent="." unique_id=1053143375]
 texture_filter = 1
-offset_left = 103.0
-offset_top = -14.0
-offset_right = 153.0
-offset_bottom = 6.0
+offset_left = 86.0
+offset_top = -24.0
+offset_right = 158.0
+offset_bottom = -7.0
 theme_override_font_sizes/font_size = 8
-text = "orzel"
+icon = ExtResource("2_rc4em")
 script = ExtResource("2_dli5b")
 id_wyboru = "orzel"
 
 [node name="Button2" type="Button" parent="." unique_id=773923122]
 texture_filter = 1
-offset_left = 104.0
-offset_top = 8.0
-offset_right = 153.0
-offset_bottom = 28.0
+offset_left = 85.0
+offset_top = -3.0
+offset_right = 157.0
+offset_bottom = 14.0
 theme_override_font_sizes/font_size = 8
-text = "wielki pies"
+icon = ExtResource("4_qmcut")
 script = ExtResource("2_dli5b")
 id_wyboru = "wielki"
 
 [node name="Button3" type="Button" parent="." unique_id=3164047]
 texture_filter = 1
-offset_left = 105.0
-offset_top = 30.0
-offset_right = 152.0
-offset_bottom = 50.0
+offset_left = 85.0
+offset_top = 16.0
+offset_right = 157.0
+offset_bottom = 33.0
 theme_override_font_sizes/font_size = 8
-text = "panna "
+icon = ExtResource("5_po4rp")
 script = ExtResource("2_dli5b")
 id_wyboru = "panna"
+
+[node name="OrzelComplete" type="Sprite2D" parent="." unique_id=283411480]
+visible = false
+texture_filter = 1
+texture = ExtResource("3_dli5b")
