@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dhlmjfwepx4m3"]
 
 [ext_resource type="Texture2D" uid="uid://clrwtyvreilvw" path="res://sprites/kopernik/konstelacje.png" id="1_re1f5"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_wdkfl"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_6giiv"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_sasli"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="2_ti13s"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_j8pvy"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="3_n05yb"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="4_haphb"]
 [ext_resource type="PackedScene" uid="uid://bu12f8knmw3jr" path="res://itemy/scenes/komernik/merkury.tscn" id="5_uigpl"]
@@ -41,6 +44,10 @@ size = Vector2(75, 62)
 size = Vector2(23.03769, 23.224764)
 
 [node name="Konstelacje" type="Node2D" unique_id=365056715]
+script = ExtResource("1_wdkfl")
+pause_scene = ExtResource("2_6giiv")
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("3_j8pvy")]
 
 [node name="Konstelacje" type="Sprite2D" parent="." unique_id=158595573]
 texture_filter = 1
@@ -95,6 +102,7 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 script = ExtResource("2_sasli")
 load_scenes = "res://scenes/kopernik/lacznik.tscn"
 drzwiSFX = NodePath("../drzwiSFX")
+target_spawn_id = "up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=255872086]
 position = Vector2(-128, 66)
@@ -199,3 +207,6 @@ itemSFX = NodePath("../../item_podnoszenieSFX")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=224257387]
 position = Vector2(-132.07849, -18.446384)
 shape = SubResource("RectangleShape2D_mcay7")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]

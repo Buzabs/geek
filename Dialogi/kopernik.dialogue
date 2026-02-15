@@ -47,14 +47,11 @@ ENZO: Jasne, zbieram się do roboty!
 => END
 ~ planety_next
 MIKOŁAJ: Musisz odnaleźć planety. Są gdzies porozrzucane, nie wiem gdzie bo zawsze je gubię
+MIKOŁAJ: potem miło byłoby jakbyś złożył z nich układ słoneczny 
+MIKOŁAJ: stół do ich układania znajdziesz w pokoju po prawo taki niebieski
 ENZO: Jasne, zbieram się do roboty!
 => END
 
-~ planety2
-MIKOŁAJ: O! Udało Ci się.
-MIKOŁAJ: Teraz twoim zdaniem jest poukładać je w odpowiedniej kolejności.
-ENZO: Rozumiem, zaczynam więc od razu!
-=> END
 
 ~ k_planety
 MIKOŁAJ: Niesamowite! Udało ci się je ułożyć!
@@ -67,5 +64,5 @@ ENZO: Chyba dzięki mnie Kopernik odkrył, że tak naprawdę żyjemy w układzie
 => END
 
 ~ teleportacja
-ENZO: Ej, co się dziję?! Chyba mnie przenosi... AAAAAAA!
+ENZO: Ej, co się dzieje?! Chyba mnie przenosi... AAAAAAA!
 => END

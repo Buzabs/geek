@@ -17,6 +17,7 @@ func toggle_pause():
 	if is_paused:
 		show()
 	else:
+		$Volume.visible=false
 		hide()
 
 func _on_back_pressed() -> void:

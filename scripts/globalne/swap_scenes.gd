@@ -36,6 +36,7 @@ func _on_exit(body):
 
 
 
+
 func _input_event(_viewport, event, _shape_idx):
 	if GlobalC.open:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and can_open:

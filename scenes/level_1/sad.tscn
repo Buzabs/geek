@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_fww8k"]
 [ext_resource type="Texture2D" uid="uid://bftd2c30lpbl5" path="res://sprites/anglia/sad.png" id="1_or2ee"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_csn26"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="2_jtf3f"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_nouha"]
 [ext_resource type="Texture2D" uid="uid://coxi7awaydv3x" path="res://sprites/anglia/sad_cutsscene_nieudany.png" id="4_fww8k"]
@@ -319,6 +320,7 @@ size = Vector2(31, 53)
 
 [node name="Sad" type="Node" unique_id=1871021329]
 script = ExtResource("1_fww8k")
+pause_scene = ExtResource("2_csn26")
 
 [node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("2_jtf3f")]
 

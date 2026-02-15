@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d31mup17uk705"]
+
+[ext_resource type="Texture2D" uid="uid://bbu5aah5qt6q2" path="res://sprites/kopernik/uklad_sloneczny_duzy.png" id="1_mt1il"]
+[ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="2_0mcuf"]
+[ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="3_7aua6"]
+
+[node name="PlakatUkladSloneczny" type="Node2D" unique_id=2013696773]
+
+[node name="UkladSlonecznyDuzy" type="Sprite2D" parent="." unique_id=328343920]
+texture_filter = 1
+texture = ExtResource("1_mt1il")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1060055700]
+zoom = Vector2(2, 2)
+
+[node name="Button" type="Button" parent="." unique_id=1269513669]
+texture_filter = 1
+offset_left = -148.0
+offset_top = 61.0
+offset_right = -109.0
+offset_bottom = 83.0
+icon = ExtResource("2_0mcuf")
+script = ExtResource("3_7aua6")
+load_scenes = "res://scenes/kopernik/pokoj_planetki.tscn"
+target_spawn = "plakat"

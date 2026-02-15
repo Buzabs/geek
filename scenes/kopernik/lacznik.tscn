@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cexwdm2eemd2b"]
 
 [ext_resource type="Texture2D" uid="uid://cxqce63hf7eru" path="res://sprites/kopernik/lacznik.png" id="1_6xukf"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_bv6ow"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="2_jk7vo"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_lts0u"]
-[ext_resource type="Texture2D" uid="uid://cgqq6lfiaqlq7" path="res://sprites/meble/drzwi.png" id="2_t8nar"]
-[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="3_lts0u"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_tw23o"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_dnj0k"]
 [ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="3_sncp5"]
 [ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="4_nxcu2"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="5_igf7e"]
@@ -17,12 +18,16 @@
 [ext_resource type="PackedScene" uid="uid://cl2k87xogb0l0" path="res://itemy/scenes/komernik/notka_3.tscn" id="12_nxcu2"]
 [ext_resource type="PackedScene" uid="uid://dsd31cpvipt46" path="res://itemy/scenes/komernik/slonce.tscn" id="14_j02d6"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="15_vj344"]
+[ext_resource type="Texture2D" uid="uid://cbpga1v0wl0v" path="res://sprites/meble/drzwi_dwoje.png" id="20_dnj0k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnj0k"]
+size = Vector2(314, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yg566"]
+size = Vector2(41, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j02d6"]
 size = Vector2(34, 28.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_igf7e"]
-size = Vector2(36.5, 36.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vj344"]
 size = Vector2(24, 21.25)
@@ -30,99 +35,83 @@ size = Vector2(24, 21.25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxcu2"]
 size = Vector2(59, 58.125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igf7e"]
+size = Vector2(36.5, 36.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw23o"]
+atlas = ExtResource("20_dnj0k")
+region = Rect2(0, 29, 16, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ukvl"]
+atlas = ExtResource("20_dnj0k")
+region = Rect2(0, 29, 16, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnj0k"]
+atlas = ExtResource("20_dnj0k")
+region = Rect2(0, 29, 16, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg566"]
+atlas = ExtResource("20_dnj0k")
+region = Rect2(1, 1, 14, 27)
+
 [node name="Lacznik" type="Node2D" unique_id=742187020]
+script = ExtResource("1_bv6ow")
+pause_scene = ExtResource("2_tw23o")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=703120697]
-zoom = Vector2(2, 2)
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("3_dnj0k")]
 
-[node name="Lacznik" type="Sprite2D" parent="Camera2D" unique_id=535283230]
-texture_filter = 1
-position = Vector2(1, 0)
-texture = ExtResource("1_6xukf")
-
-[node name="pudelko" type="Area2D" parent="Camera2D/Lacznik" unique_id=134257978 node_paths=PackedStringArray("sprite")]
-script = ExtResource("8_hpb5c")
-open = ExtResource("3_sncp5")
-sprite = NodePath("Pudelko")
-
-[node name="Pudelko" type="Sprite2D" parent="Camera2D/Lacznik/pudelko" unique_id=1706255766]
-texture_filter = 1
-position = Vector2(121, -39)
-texture = ExtResource("4_nxcu2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Lacznik/pudelko" unique_id=126823107]
-position = Vector2(124, -39)
-rotation = -0.0059906407
-shape = SubResource("RectangleShape2D_j02d6")
-
-[node name="eq" parent="Camera2D" unique_id=1185207575 instance=ExtResource("2_jk7vo")]
+[node name="eq" parent="." unique_id=1185207575 instance=ExtResource("2_jk7vo")]
 offset_left = -75.0
 offset_top = 47.0
 offset_right = -75.0
 offset_bottom = 47.0
 
-[node name="SzafkaKopernik" type="Sprite2D" parent="Camera2D" unique_id=479778935]
+[node name="Lacznik" type="Sprite2D" parent="." unique_id=535283230]
+texture_filter = 1
+position = Vector2(1, 0)
+texture = ExtResource("1_6xukf")
+
+[node name="SzafkaKopernik" type="Sprite2D" parent="." unique_id=479778935]
 texture_filter = 1
 position = Vector2(14, -55)
 texture = ExtResource("6_4lill")
 
-[node name="drzwi_gora" type="Area2D" parent="." unique_id=1953536480 node_paths=PackedStringArray("drzwiSFX")]
-script = ExtResource("2_lts0u")
-load_scenes = "res://scenes/kopernik/pokoj_konstelacje.tscn"
-drzwiSFX = NodePath("../drzwiSFX")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1696149681]
 
-[node name="Drzwi_gora" type="Sprite2D" parent="drzwi_gora" unique_id=379449436]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=158523331]
+position = Vector2(2, -77)
+shape = SubResource("RectangleShape2D_dnj0k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1245610345]
+position = Vector2(13.5, -70)
+shape = SubResource("RectangleShape2D_yg566")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=283025464]
+position = Vector2(83, -71)
+shape = SubResource("RectangleShape2D_yg566")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=290124119]
+position = Vector2(-1, -1)
+polygon = PackedVector2Array(-128, -65, -129, -52, -143, -52, -144, -45, -158, -45, -158, -64)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=703120697]
+zoom = Vector2(2, 2)
+
+[node name="pudelko4" type="Area2D" parent="." unique_id=134257978 node_paths=PackedStringArray("sprite")]
+position = Vector2(1, 0)
+script = ExtResource("8_hpb5c")
+open = ExtResource("3_sncp5")
+sprite = NodePath("Pudelko")
+
+[node name="Pudelko" type="Sprite2D" parent="pudelko4" unique_id=1706255766]
 texture_filter = 1
-position = Vector2(-77, -54)
-texture = ExtResource("2_t8nar")
+position = Vector2(121, -39)
+texture = ExtResource("4_nxcu2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_gora" unique_id=1737308784]
-position = Vector2(-77, -51)
-shape = SubResource("RectangleShape2D_igf7e")
-
-[node name="drzwi_lewo" type="Area2D" parent="." unique_id=1203321519 node_paths=PackedStringArray("drzwiSFX")]
-script = ExtResource("2_lts0u")
-load_scenes = "res://scenes/kopernik/biblioteka.tscn"
-drzwiSFX = NodePath("../drzwiSFX")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi_lewo" unique_id=1892779248]
-position = Vector2(-143, -2)
-shape = SubResource("RectangleShape2D_igf7e")
-
-[node name="Drzwilewo" type="Sprite2D" parent="drzwi_lewo" unique_id=976247254]
-texture_filter = 1
-position = Vector2(-157, 1)
-rotation = 1.5707964
-texture = ExtResource("3_lts0u")
-
-[node name="Area2D3" type="Area2D" parent="." unique_id=438979995 node_paths=PackedStringArray("drzwiSFX")]
-script = ExtResource("2_lts0u")
-load_scenes = "res://scenes/kopernik/pokoj_planetki.tscn"
-drzwiSFX = NodePath("../drzwiSFX")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=620709713]
-position = Vector2(151, -4)
-shape = SubResource("RectangleShape2D_igf7e")
-
-[node name="Drzwi_prawo" type="Sprite2D" parent="Area2D3" unique_id=1091461202]
-texture_filter = 1
-position = Vector2(158, -2)
-rotation = -1.5707964
-texture = ExtResource("3_lts0u")
-
-[node name="Area2D4" type="Area2D" parent="." unique_id=1708280322 node_paths=PackedStringArray("drzwiSFX")]
-script = ExtResource("2_lts0u")
-load_scenes = "res://scenes/kopernik/obserwatorium.tscn"
-drzwiSFX = NodePath("../drzwiSFX")
-target_spawn_id = "down"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=226871159]
-position = Vector2(-132, 73)
-shape = SubResource("RectangleShape2D_igf7e")
-
-[node name="Drzwi_dol" type="Sprite2D" parent="Area2D4" unique_id=1374674695]
-position = Vector2(-132, 88)
-texture = ExtResource("3_lts0u")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko4" unique_id=126823107]
+position = Vector2(124, -39)
+rotation = -0.0059906407
+shape = SubResource("RectangleShape2D_j02d6")
 
 [node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=1222383233]
 position = Vector2(-140, -1)
@@ -130,9 +119,7 @@ stream = ExtResource("5_igf7e")
 volume_db = 9.545
 
 [node name="Player" parent="." unique_id=1882407171 instance=ExtResource("6_igf7e")]
-position = Vector2(-82, 18)
-
-[node name="spawn_left" type="Marker2D" parent="." unique_id=1385844019]
+position = Vector2(-59, -6)
 
 [node name="spawn_up" type="Marker2D" parent="." unique_id=1870902233]
 position = Vector2(-78, -53)
@@ -205,16 +192,90 @@ position = Vector2(81, -55)
 texture = ExtResource("10_sncp5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=1174028812]
-position = Vector2(76, -52)
+position = Vector2(81, -52)
 shape = SubResource("RectangleShape2D_nxcu2")
 
 [node name="slonce" parent="szafa" unique_id=187813077 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_j02d6")]
-position = Vector2(72, -44)
+position = Vector2(73, -43)
 itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1789536442]
+position = Vector2(-141, 0)
 stream = ExtResource("15_vj344")
 
 [node name="notka3" parent="." unique_id=1301335267 node_paths=PackedStringArray("itemSFX") instance=ExtResource("12_nxcu2")]
 position = Vector2(4, -49)
 itemSFX = NodePath("../item_podnoszenieSFX")
+
+[node name="spawn_left" type="Marker2D" parent="." unique_id=1385844019]
+position = Vector2(-141, 0)
+
+[node name="drzwi" type="Node" parent="." unique_id=6228230]
+
+[node name="Area2D4" type="Area2D" parent="drzwi" unique_id=1708280322 node_paths=PackedStringArray("drzwiSFX")]
+script = ExtResource("2_lts0u")
+load_scenes = "res://scenes/kopernik/obserwatorium.tscn"
+drzwiSFX = NodePath("../../drzwiSFX")
+target_spawn_id = "down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi/Area2D4" unique_id=226871159]
+position = Vector2(-132, 73)
+shape = SubResource("RectangleShape2D_igf7e")
+
+[node name="Drzwi_dol" type="Sprite2D" parent="drzwi/Area2D4" unique_id=1374674695]
+texture_filter = 1
+position = Vector2(-132, 88)
+texture = SubResource("AtlasTexture_tw23o")
+
+[node name="Area2D3" type="Area2D" parent="drzwi" unique_id=438979995 node_paths=PackedStringArray("drzwiSFX")]
+script = ExtResource("2_lts0u")
+load_scenes = "res://scenes/kopernik/pokoj_planetki.tscn"
+drzwiSFX = NodePath("../../drzwiSFX")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi/Area2D3" unique_id=620709713]
+position = Vector2(151, -4)
+shape = SubResource("RectangleShape2D_igf7e")
+
+[node name="Drzwi_prawo" type="Sprite2D" parent="drzwi/Area2D3" unique_id=1091461202]
+texture_filter = 1
+position = Vector2(158, -2)
+rotation = -1.5707964
+texture = SubResource("AtlasTexture_2ukvl")
+
+[node name="drzwi_lewo" type="Area2D" parent="drzwi" unique_id=1203321519 node_paths=PackedStringArray("drzwiSFX")]
+script = ExtResource("2_lts0u")
+load_scenes = "res://scenes/kopernik/biblioteka.tscn"
+drzwiSFX = NodePath("../../drzwiSFX")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi/drzwi_lewo" unique_id=1892779248]
+position = Vector2(-143, -2)
+shape = SubResource("RectangleShape2D_igf7e")
+
+[node name="Drzwilewo" type="Sprite2D" parent="drzwi/drzwi_lewo" unique_id=976247254]
+texture_filter = 1
+position = Vector2(-157, 1)
+rotation = 1.5707964
+texture = SubResource("AtlasTexture_dnj0k")
+
+[node name="drzwi_gora" type="Area2D" parent="drzwi" unique_id=1953536480 node_paths=PackedStringArray("drzwiSFX")]
+script = ExtResource("2_lts0u")
+load_scenes = "res://scenes/kopernik/pokoj_konstelacje.tscn"
+drzwiSFX = NodePath("../../drzwiSFX")
+
+[node name="Drzwi_gora" type="Sprite2D" parent="drzwi/drzwi_gora" unique_id=379449436]
+texture_filter = 1
+position = Vector2(-77, -54)
+texture = SubResource("AtlasTexture_yg566")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi/drzwi_gora" unique_id=1737308784]
+position = Vector2(-77, -51)
+shape = SubResource("RectangleShape2D_igf7e")
+
+[connection signal="mouse_entered" from="drzwi/Area2D4" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="drzwi/Area2D4" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="drzwi/Area2D3" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="drzwi/Area2D3" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="drzwi/drzwi_lewo" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="drzwi/drzwi_lewo" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="drzwi/drzwi_gora" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="drzwi/drzwi_gora" to="." method="_on_drzwi_mouse_exited"]

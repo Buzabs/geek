@@ -12,16 +12,14 @@ func _on_texture_button_pressed() -> void:
 
 func _ready():
 	# ustaw wartości startowe (1 = 100%)
-	master_slider.value = 100.0
-
-	
+	master_slider.value = GlobalC.volume_state	
 	master_slider.value_changed.connect(_on_master_changed)
 
 
 
 func _on_master_changed(value):
 	set_volume("Master", value)
-
+	GlobalC.volume_state = value
 
 
 

@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://u0saddwwrwyf"]
 
 [ext_resource type="Texture2D" uid="uid://dsf3nus8pivtt" path="res://sprites/kopernik/obraz_maly_woz.png" id="1_u405a"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_xl8u8"]
 [ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="2_8e3p4"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_p6vjg"]
 [ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="3_8e3p4"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="6_xflup"]
 
 [node name="MalyWoz" type="Node2D" unique_id=1839241292]
+script = ExtResource("1_xl8u8")
+pause_scene = ExtResource("2_p6vjg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1233908482]
 zoom = Vector2(4, 4)
@@ -23,3 +28,5 @@ icon = ExtResource("2_8e3p4")
 script = ExtResource("3_8e3p4")
 load_scenes = "res://scenes/kopernik/pokoj_konstelacje.tscn"
 target_spawn = "maly"
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("6_xflup")]

@@ -49,7 +49,8 @@ func _input_event(viewport, event, shape_idx):
 				#await get_tree().create_timer(2.5).timeout
 				await $portal.animation_finished
 				MusicManager.play_music("res://soundtracki/magical_theme.wav")
-				MusicManager.set_volume(-10)
+		
 				await get_tree().create_timer(0.1).timeout
+				
 				get_tree().change_scene_to_file("res://scenes/kopernik/obserwatorium.tscn")
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "poczatek")

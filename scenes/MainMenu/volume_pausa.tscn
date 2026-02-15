@@ -11,25 +11,25 @@ process_mode = 2
 script = ExtResource("1_0soq7")
 
 [node name="VolumeBackground" type="Sprite2D" parent="." unique_id=222443823]
-position = Vector2(308, 177)
+position = Vector2(307, 219)
 texture = ExtResource("3_3urbs")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1291925533]
 texture_filter = 1
-offset_left = 129.0
-offset_top = 246.0
-offset_right = 223.0
-offset_bottom = 274.0
+offset_left = 105.0
+offset_top = 230.0
+offset_right = 199.0
+offset_bottom = 258.0
 texture_normal = ExtResource("4_cexxa")
 texture_pressed = ExtResource("5_l0cgf")
 texture_hover = ExtResource("6_iu8xx")
 
 [node name="MasterSlider" type="HSlider" parent="." unique_id=1178860433]
 z_index = 1
-offset_left = 269.0
-offset_top = 149.0
-offset_right = 369.025
-offset_bottom = 165.0
+offset_left = 240.0
+offset_top = 151.0
+offset_right = 340.025
+offset_bottom = 167.0
 step = 0.01
 value = 1.0
 

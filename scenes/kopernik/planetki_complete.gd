@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var pause_scene: PackedScene
 func _ready():
 	GameSignals.solution_checked.connect(_on_solution_checked)
 

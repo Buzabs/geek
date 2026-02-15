@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://dfvchrlja1cun"]
 
 [ext_resource type="Texture2D" uid="uid://cw0em6mmlggry" path="res://sprites/kopernik/obraz_skorpion.png" id="1_d2q2b"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_ukdei"]
 [ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="2_7c5rh"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_i7ep0"]
 [ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="3_7c5rh"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="6_vas4n"]
 
 [node name="Skorpion" type="Node2D" unique_id=1039992684]
+script = ExtResource("1_ukdei")
+pause_scene = ExtResource("2_i7ep0")
 
 [node name="ObrazSkorpion" type="Sprite2D" parent="." unique_id=1632984045]
 texture_filter = 1
@@ -23,3 +28,5 @@ icon = ExtResource("2_7c5rh")
 script = ExtResource("3_7c5rh")
 load_scenes = "res://scenes/kopernik/pokoj_konstelacje.tscn"
 target_spawn = "skorpion"
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("6_vas4n")]

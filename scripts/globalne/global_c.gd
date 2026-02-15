@@ -40,6 +40,7 @@ var spawn_id: String = ""
 var textura_cyferki := {}
 var textura_planetki := {} 
 
+var volume_state:float = 50
 
 func _ready():
 	await get_tree().process_frame

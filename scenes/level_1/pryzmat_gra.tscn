@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dtuhsuaw1u437"]
 
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_2vq85"]
 [ext_resource type="Texture2D" uid="uid://bftd2c30lpbl5" path="res://sprites/anglia/sad.png" id="1_3urhl"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="1_ha1cg"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_mymxs"]
 [ext_resource type="Script" uid="uid://bjdb44rau53p1" path="res://scripts/anglia/pryzmat_gra.gd" id="3_2ybuf"]
 [ext_resource type="PackedScene" uid="uid://cavxvca8q55m8" path="res://scenes/postacie/newton.tscn" id="3_8oje4"]
 [ext_resource type="Script" uid="uid://beox1xaj5haq0" path="res://scripts/anglia/ok_pryzmat.gd" id="5_guqlp"]
@@ -56,6 +58,8 @@ atlas = ExtResource("6_8xw8b")
 region = Rect2(29, 8, 29, 7)
 
 [node name="PryzmatGra" type="Node2D" unique_id=779693977]
+script = ExtResource("1_2vq85")
+pause_scene = ExtResource("2_mymxs")
 
 [node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("1_ha1cg")]
 

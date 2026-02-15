@@ -110,5 +110,9 @@ stream = ExtResource("10_2ve40")
 
 [connection signal="mouse_entered" from="enviroment/Grandma" to="." method="_on_grandma_mouse_entered"]
 [connection signal="mouse_exited" from="enviroment/Grandma" to="." method="_on_grandma_mouse_exited"]
+[connection signal="mouse_entered" from="enters/MoreLondon" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="enters/MoreLondon" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="enters/OrchardEnterance" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="enters/OrchardEnterance" to="." method="_on_drzwi_mouse_exited"]
 [connection signal="mouse_entered" from="enters/Drzwi" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="enters/Drzwi" to="." method="_on_drzwi_mouse_exited"]

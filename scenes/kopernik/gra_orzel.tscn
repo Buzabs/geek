@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://dk6gmulfh7xdx"]
 
 [ext_resource type="Texture2D" uid="uid://bxlqod711i6pt" path="res://sprites/kopernik/orzel.png" id="1_85i1v"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_y4rst"]
 [ext_resource type="Script" uid="uid://banypwwtpa7ek" path="res://scenes/kopernik/wybor_konstelacji.gd" id="2_dli5b"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_q2yvg"]
 [ext_resource type="Texture2D" uid="uid://cad8vaa5543tg" path="res://sprites/kopernik/napisy_konstelacje/napis_orzel.png" id="2_rc4em"]
 [ext_resource type="Texture2D" uid="uid://cp4fv5twec3ht" path="res://sprites/kopernik/orzel_complete.png" id="3_dli5b"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_g4crd"]
 [ext_resource type="Texture2D" uid="uid://bumjdl6tmuv4t" path="res://sprites/kopernik/napisy_konstelacje/napis_strzelec.png" id="4_qmcut"]
 [ext_resource type="Texture2D" uid="uid://dkbclnfv0y75t" path="res://sprites/kopernik/napisy_konstelacje/napis_panna.png" id="5_po4rp"]
 
 [node name="Konstelacje" type="Node2D" unique_id=228921636]
+script = ExtResource("1_y4rst")
+pause_scene = ExtResource("2_q2yvg")
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("3_g4crd")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112216559]
 zoom = Vector2(2, 2)

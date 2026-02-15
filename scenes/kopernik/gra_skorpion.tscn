@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://b64ggrqv58mci"]
 
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_666tu"]
 [ext_resource type="Texture2D" uid="uid://c4w7d75dtr8xt" path="res://sprites/kopernik/skorpion.png" id="1_e378j"]
 [ext_resource type="Script" uid="uid://banypwwtpa7ek" path="res://scenes/kopernik/wybor_konstelacji.gd" id="2_krb6x"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_kre7c"]
 [ext_resource type="Texture2D" uid="uid://dl23hwigcfw4f" path="res://sprites/kopernik/napisy_konstelacje/napis_waz.png" id="2_oiibq"]
 [ext_resource type="Texture2D" uid="uid://d0hfmb313wtbb" path="res://sprites/kopernik/napisy_konstelacje/napis_skorpion.png" id="3_go7to"]
 [ext_resource type="Texture2D" uid="uid://buqlrrhuorb70" path="res://sprites/kopernik/skorpion_skorpion.png" id="3_krb6x"]
 [ext_resource type="Texture2D" uid="uid://cad8vaa5543tg" path="res://sprites/kopernik/napisy_konstelacje/napis_orzel.png" id="5_oiibq"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="9_kre7c"]
 
 [node name="Konstelacje" type="Node2D" unique_id=228921636]
+script = ExtResource("1_666tu")
+pause_scene = ExtResource("2_kre7c")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112216559]
 zoom = Vector2(2, 2)
@@ -50,3 +55,5 @@ script = ExtResource("2_krb6x")
 visible = false
 texture_filter = 1
 texture = ExtResource("3_krb6x")
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("9_kre7c")]

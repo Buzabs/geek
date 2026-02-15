@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://u4q8raqxrjsv"]
 
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_dmai6"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="1_naj2l"]
 [ext_resource type="Texture2D" uid="uid://sr00rau6ug2o" path="res://sprites/kopernik/planetki_pokój.png" id="1_rqh14"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="2_pppx8"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_vic2t"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_5lbyh"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_vic2t"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
@@ -14,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="15_rp3hp"]
 [ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="16_xafkd"]
 [ext_resource type="Texture2D" uid="uid://c7yt3gh4h70ww" path="res://sprites/meble/wardrobe.png" id="17_58y8r"]
+[ext_resource type="Texture2D" uid="uid://nfoa1obplpa0" path="res://sprites/kopernik/plakat_uklad_sloneczny.png" id="18_quwyi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_quwyi"]
 atlas = ExtResource("1_rqh14")
@@ -36,6 +40,9 @@ size = Vector2(36, 37)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rp3hp"]
 size = Vector2(321, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xafkd"]
+size = Vector2(4.5, 12)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0odi"]
 size = Vector2(41, 55)
 
@@ -45,7 +52,14 @@ size = Vector2(75, 56)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eunia"]
 size = Vector2(59, 58.125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_quwyi"]
+size = Vector2(51, 49)
+
 [node name="Planetki" type="Node2D" unique_id=1592809711]
+script = ExtResource("1_dmai6")
+pause_scene = ExtResource("2_vic2t")
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("3_vic2t")]
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=618990149]
 texture_filter = 1
@@ -65,10 +79,14 @@ shape = SubResource("RectangleShape2D_pbkw3")
 position = Vector2(-1, -61)
 shape = SubResource("RectangleShape2D_rp3hp")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1947749356]
+position = Vector2(2.25, -36)
+shape = SubResource("RectangleShape2D_xafkd")
+
 [node name="Area2D" type="Area2D" parent="." unique_id=1313578213 node_paths=PackedStringArray("drzwiSFX")]
 script = ExtResource("4_pppx8")
 load_scenes = "res://scenes/kopernik/lacznik.tscn"
-drzwiSFX = NodePath("../drzwiSFX")
+drzwiSFX = NodePath("drzwiSFX")
 target_spawn_id = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1456771980]
@@ -81,6 +99,10 @@ position = Vector2(-157.2804, 24)
 rotation = 1.5707964
 scale = Vector2(1, 1.1121582)
 texture = ExtResource("2_pppx8")
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="Area2D" unique_id=988037882]
+stream = ExtResource("15_rp3hp")
+volume_db = 9.545
 
 [node name="planetki" type="Area2D" parent="." unique_id=58538378]
 position = Vector2(2, 2)
@@ -107,10 +129,6 @@ offset_bottom = 47.0
 
 [node name="spawn_planetki" type="Marker2D" parent="." unique_id=1747291054]
 position = Vector2(79, -1)
-
-[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=1288695715]
-stream = ExtResource("15_rp3hp")
-volume_db = 9.545
 
 [node name="szafa" type="Area2D" parent="." unique_id=1163212566 node_paths=PackedStringArray("sprite", "item")]
 z_index = 1
@@ -144,3 +162,22 @@ stream = ExtResource("1_naj2l")
 position = Vector2(3, -24)
 rotation = 1.5707964
 itemSFX = NodePath("../item_podnoszenieSFX")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1324917865]
+script = ExtResource("4_pppx8")
+load_scenes = "res://scenes/kopernik/plakat_uklad_sloneczny.tscn"
+
+[node name="PlakatUkladSloneczny" type="Sprite2D" parent="Area2D2" unique_id=1007683190]
+texture_filter = 1
+position = Vector2(42, -48)
+texture = ExtResource("18_quwyi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=476504532]
+position = Vector2(41.5, -43.5)
+shape = SubResource("RectangleShape2D_quwyi")
+
+[node name="spawn_plakat" type="Marker2D" parent="." unique_id=163687415]
+position = Vector2(35, -26)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]

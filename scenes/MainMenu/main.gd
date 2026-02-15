@@ -4,7 +4,7 @@ extends CanvasLayer
 
 func _ready():
 	MusicManager.play_music("res://soundtracki/story time.ogg")
-	MusicManager.set_volume(-10)
+
 
 
 func _on_start_pressed() -> void:

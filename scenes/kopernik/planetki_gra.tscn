@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bi5526jj0et4r" path="res://scenes/kopernik/planetki_complete.gd" id="1_hw6re"]
 [ext_resource type="Texture2D" uid="uid://bk50vbyy0kghq" path="res://sprites/kopernik/planetki_gra.png" id="1_w27te"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="2_jp20w"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="2_tsr8k"]
 [ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="3_cmean"]
 [ext_resource type="Texture2D" uid="uid://btt374uwvhw8m" path="res://sprites/kopernik/cutscene_planetkij.png" id="3_og5nf"]
 [ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="4_cmean"]
@@ -14,6 +15,7 @@
 [ext_resource type="Script" uid="uid://qmsskh2cppib" path="res://computer_puzzle/script/submit.gd" id="9_tyek0"]
 [ext_resource type="Texture2D" uid="uid://guchlljgy8b4" path="res://sprites/kopernik/submit.png" id="12_tsr8k"]
 [ext_resource type="Texture2D" uid="uid://bm6hkvo06f04p" path="res://sprites/kopernik/submit_correct.png" id="14_k47jg"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="15_tsr8k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aa0gw"]
 atlas = ExtResource("3_og5nf")
@@ -151,6 +153,9 @@ radius = 16.124516
 
 [node name="PlanetkiGra" type="Node2D" unique_id=2012275368]
 script = ExtResource("1_hw6re")
+pause_scene = ExtResource("15_tsr8k")
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("2_tsr8k")]
 
 [node name="PlanetkiGra" type="Sprite2D" parent="." unique_id=1820995163]
 texture_filter = 1
