@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cjfkajh7amdbh" path="res://sprites/kopernik/planetki.png" id="6_yj3vn"]
 [ext_resource type="Texture2D" uid="uid://dng05tj840hco" path="res://itemy/sprites/items_kopernik.png" id="7_eqedd"]
 [ext_resource type="Script" uid="uid://qmsskh2cppib" path="res://computer_puzzle/script/submit.gd" id="9_tyek0"]
-[ext_resource type="Texture2D" uid="uid://sx0ir6ryutje" path="res://computer_puzzle/sprite/violet_down.png" id="10_xksgi"]
-[ext_resource type="Texture2D" uid="uid://5p546ecpaooo" path="res://computer_puzzle/sprite/violet_up.png" id="11_hw6re"]
+[ext_resource type="Texture2D" uid="uid://guchlljgy8b4" path="res://sprites/kopernik/submit.png" id="12_tsr8k"]
+[ext_resource type="Texture2D" uid="uid://bm6hkvo06f04p" path="res://sprites/kopernik/submit_correct.png" id="14_k47jg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aa0gw"]
 atlas = ExtResource("3_og5nf")
@@ -159,6 +159,7 @@ texture = ExtResource("1_w27te")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=506936057]
 visible = false
+z_index = 7
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_0f73g")
 animation = &"koniec"
@@ -319,15 +320,15 @@ position = Vector2(190, 67)
 shape = SubResource("CircleShape2D_w27te")
 
 [node name="ok" type="Button" parent="." unique_id=1582822067 node_paths=PackedStringArray("slots", "ok_button")]
-offset_left = -152.0
-offset_top = 18.0
-offset_right = -98.0
-offset_bottom = 58.0
-text = "d"
-icon = ExtResource("11_hw6re")
+texture_filter = 1
+offset_left = -148.0
+offset_top = 35.0
+offset_right = -108.0
+offset_bottom = 57.0
+icon = ExtResource("12_tsr8k")
 script = ExtResource("9_tyek0")
 required_id = Array[int]([0, 1, 2, 3, 4, 5, 6])
 slots = [NodePath("../Node/slonce"), NodePath("../Node/merkury"), NodePath("../Node/venus"), NodePath("../Node/ziemia"), NodePath("../Node/mars"), NodePath("../Node/jowisz"), NodePath("../Node/saturn")]
 ok_button = NodePath(".")
-ok_icon_correct = ExtResource("10_xksgi")
-ok_icon_default = ExtResource("11_hw6re")
+ok_icon_correct = ExtResource("14_k47jg")
+ok_icon_default = ExtResource("12_tsr8k")

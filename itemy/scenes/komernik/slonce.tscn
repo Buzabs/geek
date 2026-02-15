@@ -14,7 +14,7 @@ region = Rect2(104, 16, 16, 16)
 atlas = ExtResource("2_hobks")
 region = Rect2(107, 19, 10, 10)
 
-[node name="slonce" type="Area2D" unique_id=404466428]
+[node name="slonce" type="Area2D" unique_id=404466428 groups=["planets"]]
 script = ExtResource("1_spn0i")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "slonce"

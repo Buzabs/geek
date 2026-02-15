@@ -47,7 +47,6 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 [global_group]
 
 doors=""
-planets="items which is platen"
 
 [input]
 

@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c77ipj5u2xx0m" path="res://sprites/UI/back.png" id="4_dxsr0"]
 [ext_resource type="Texture2D" uid="uid://d1r8hmmvcvgqw" path="res://sprites/UI/back_pressed.png" id="4_jxpaa"]
 [ext_resource type="Texture2D" uid="uid://46hqivawti33" path="res://sprites/UI/back_hover.png" id="4_v35qo"]
+[ext_resource type="PackedScene" uid="uid://ccn52enstpw1a" path="res://scenes/MainMenu/volume_pausa.tscn" id="5_cd01g"]
 [ext_resource type="Texture2D" uid="uid://ceu3a3c2oam6h" path="res://sprites/UI/exit_hover.png" id="7_jxpaa"]
 [ext_resource type="Texture2D" uid="uid://qubhxbjjvypp" path="res://sprites/UI/exit_pressed.png" id="8_yyxxn"]
 [ext_resource type="Texture2D" uid="uid://ps2gmdjgkd4q" path="res://sprites/UI/volume.png" id="12_cd01g"]
@@ -18,10 +19,16 @@
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
+offset_left = 299.0
+offset_top = 180.0
+offset_right = 299.0
+offset_bottom = 180.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_dxsr0")
 audio_manager = NodePath("AudioManager")
+
+[node name="Volume" parent="." unique_id=893809875 instance=ExtResource("5_cd01g")]
 
 [node name="AudioManager" type="AudioStreamPlayer2D" parent="." unique_id=1002924303]
 stream = ExtResource("2_cmpgo")
@@ -89,4 +96,5 @@ texture_pressed = ExtResource("8_yyxxn")
 texture_hover = ExtResource("7_jxpaa")
 
 [connection signal="pressed" from="Buttons/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Buttons/Volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

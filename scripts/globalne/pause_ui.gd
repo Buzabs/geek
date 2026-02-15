@@ -8,7 +8,8 @@ var is_paused: bool
 func _ready() -> void:
 	is_paused = false
 	hide()
-
+	$Volume.visible=false
+	
 func toggle_pause():
 	is_paused = !is_paused
 	get_tree().paused = is_paused
@@ -32,3 +33,7 @@ func _on_exit_pressed() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
 		toggle_pause()
+
+
+func _on_volume_pressed() -> void:
+	$Volume.visible= true

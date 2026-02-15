@@ -114,6 +114,7 @@ texture = ExtResource("3_lts0u")
 script = ExtResource("2_lts0u")
 load_scenes = "res://scenes/kopernik/obserwatorium.tscn"
 drzwiSFX = NodePath("../drzwiSFX")
+target_spawn_id = "down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=226871159]
 position = Vector2(-132, 73)

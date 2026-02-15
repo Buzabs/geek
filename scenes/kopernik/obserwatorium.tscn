@@ -78,3 +78,6 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 texture_filter = 1
 position = Vector2(-49, -3)
 texture = ExtResource("12_l06o1")
+
+[node name="spawn_down" type="Marker2D" parent="." unique_id=108158847]
+position = Vector2(-104, 68)

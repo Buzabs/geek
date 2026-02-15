@@ -10,6 +10,9 @@ var can_pick := false
 var player_ref: Node = null
 
 func _ready():
+	if is_in_group("planets") :
+		if not GlobalC.rzut:
+			visible= true
 	if GlobalC.collected_items.get(item_id, false):
 		queue_free()
 		return
@@ -39,11 +42,9 @@ func _on_exit(body):
 		
 
 func _process(_delta):		
-	if is_in_group("planets"):
+	if is_in_group("planets") and GlobalC.rzut:
 		if GlobalC.rzut:
 			visible = false
-		if not GlobalC.rzut:
-			visible= true
 	if can_pick and Input.is_action_just_pressed("items") and visible :
 			if GlobalEq.add_item(item_icon, item_id)  :
 				itemSFX.play()

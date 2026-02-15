@@ -65,4 +65,5 @@ texture_pressed = ExtResource("6_mo1hc")
 texture_hover = ExtResource("7_nmfl3")
 
 [connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/Volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
