@@ -15,7 +15,7 @@ region = Rect2(68, 17, 16, 16)
 atlas = ExtResource("3_w2w74")
 region = Rect2(36, 7, 10, 6)
 
-[node name="jowisz" type="Area2D" unique_id=404466428]
+[node name="jowisz" type="Area2D" unique_id=404466428 groups=["planets"]]
 script = ExtResource("1_2d04p")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "jowisz"

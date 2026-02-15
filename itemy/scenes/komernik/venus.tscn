@@ -15,7 +15,7 @@ region = Rect2(19, 18, 16, 16)
 atlas = ExtResource("2_g7bmx")
 region = Rect2(3, 9, 10, 6)
 
-[node name="venus" type="Area2D" unique_id=404466428]
+[node name="venus" type="Area2D" unique_id=404466428 groups=["planets"]]
 script = ExtResource("1_6owf1")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "venus"

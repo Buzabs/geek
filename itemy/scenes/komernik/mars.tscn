@@ -14,7 +14,7 @@ region = Rect2(52, 17, 16, 16)
 atlas = ExtResource("2_k2pfh")
 region = Rect2(55, 20, 10, 10)
 
-[node name="mars" type="Area2D" unique_id=404466428]
+[node name="mars" type="Area2D" unique_id=404466428 groups=["planets"]]
 script = ExtResource("1_bv1b7")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "mars"

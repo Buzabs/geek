@@ -14,7 +14,7 @@ region = Rect2(2, 17, 16, 16)
 atlas = ExtResource("2_7k3vi")
 region = Rect2(5, 20, 10, 10)
 
-[node name="merkury" type="Area2D" unique_id=404466428]
+[node name="merkury" type="Area2D" unique_id=404466428 groups=["planets"]]
 script = ExtResource("1_ae7l7")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "merkury"

@@ -14,7 +14,7 @@ region = Rect2(84, 16, 16, 16)
 atlas = ExtResource("2_xofrc")
 region = Rect2(84, 20, 16, 10)
 
-[node name="saturn" type="Area2D" unique_id=404466428]
+[node name="saturn" type="Area2D" unique_id=404466428 groups=["planets"]]
 script = ExtResource("1_qpkq4")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "saturn"

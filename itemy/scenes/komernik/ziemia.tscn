@@ -15,7 +15,7 @@ region = Rect2(36, 17, 16, 16)
 atlas = ExtResource("2_lmltd")
 region = Rect2(20, 8, 10, 6)
 
-[node name="Ziemia" type="Area2D" unique_id=404466428]
+[node name="Ziemia" type="Area2D" unique_id=404466428 groups=["planets"]]
 script = ExtResource("1_jhxo3")
 item_icon = SubResource("AtlasTexture_lmltd")
 item_id = "ziemia"

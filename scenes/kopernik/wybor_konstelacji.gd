@@ -24,12 +24,14 @@ func _on_button_pressed():
 			await get_tree().create_timer(2.0).timeout
 			GlobalC.spawn_id = target_spawn_id
 			get_tree().change_scene_to_file("res://scenes/kopernik/obserwatorium.tscn")
+			GlobalC.rzut = false
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety")	
+			
 			return
-		if id_wyboru != "orzel"  or id_wyboru != "skorpion"  or id_wyboru != "wielki_woz":
-			GlobalC.spawn_id = target_spawn_id
-			get_tree().change_scene_to_file("res://scenes/kopernik/obserwatorium.tscn")
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje_nieudany")	
-			return
+		
+		GlobalC.spawn_id = target_spawn_id
+		get_tree().change_scene_to_file("res://scenes/kopernik/obserwatorium.tscn")
+		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje_nieudany")	
+		return
 		
 		

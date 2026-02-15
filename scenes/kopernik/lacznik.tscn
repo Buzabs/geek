@@ -214,5 +214,6 @@ itemSFX = NodePath("../../item_podnoszenieSFX")
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1789536442]
 stream = ExtResource("15_vj344")
 
-[node name="notka3" parent="." unique_id=1301335267 instance=ExtResource("12_nxcu2")]
+[node name="notka3" parent="." unique_id=1301335267 node_paths=PackedStringArray("itemSFX") instance=ExtResource("12_nxcu2")]
 position = Vector2(4, -49)
+itemSFX = NodePath("../item_podnoszenieSFX")
