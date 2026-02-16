@@ -17,6 +17,9 @@ var wake_up := true
 #other
 var isLocked: bool = true
 
+#pause
+signal volumeOff
+
 func next():
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "podnoszenie2")
 	await DialogueManager.dialogue_ended

@@ -1,7 +1,9 @@
 extends Control
 
 @onready var buttons: VBoxContainer = $Buttons
+@onready var pauseBg: TextureRect = $PauseBg
 @export var audio_manager: AudioStreamPlayer2D
+
 
 var is_paused: bool
 
@@ -9,6 +11,8 @@ func _ready() -> void:
 	is_paused = false
 	hide()
 	$Volume.visible=false
+	
+	GlobalC.volumeOff.connect(_on_volume_off)
 	
 func toggle_pause():
 	is_paused = !is_paused
@@ -37,4 +41,14 @@ func _input(event: InputEvent) -> void:
 
 
 func _on_volume_pressed() -> void:
+	audio_manager.play()
+	await audio_manager.finished
 	$Volume.visible= true
+	pauseBg.visible = false
+	buttons.visible = false
+	
+func _on_volume_off() -> void:
+	pauseBg.visible = true
+	buttons.visible = true
+	
+	

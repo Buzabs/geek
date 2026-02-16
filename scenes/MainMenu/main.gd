@@ -28,4 +28,6 @@ func _on_exit_pressed() -> void:
 
 
 func _on_volume_pressed() -> void:
+	audio_manager.play()
+	await audio_manager.finished
 	get_tree().change_scene_to_file("res://scenes/MainMenu/volume.tscn")
