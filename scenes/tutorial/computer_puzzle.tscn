@@ -14,12 +14,19 @@
 [ext_resource type="Texture2D" uid="uid://lrqrequgxs23" path="res://computer_puzzle/sprite/orange_up.png" id="17_18dca"]
 [ext_resource type="Texture2D" uid="uid://dot80dex7ed3i" path="res://computer_puzzle/sprite/orange_down.png" id="18_wx832"]
 [ext_resource type="Script" uid="uid://qmsskh2cppib" path="res://computer_puzzle/script/submit.gd" id="18_yuk6o"]
+[ext_resource type="Texture2D" uid="uid://c3ersu3ikfwub" path="res://computer_puzzle/sprite/back.png" id="19_plqth"]
 [ext_resource type="Texture2D" uid="uid://cbsoajsxk6frr" path="res://computer_puzzle/sprite/cyan_down.png" id="19_ywhde"]
 [ext_resource type="Texture2D" uid="uid://mg831srwc5v6" path="res://computer_puzzle/sprite/cyan_up.png" id="20_765sk"]
 [ext_resource type="AudioStream" uid="uid://dyrpvxc3icidg" path="res://sounds/click.wav" id="20_k36tr"]
+[ext_resource type="Texture2D" uid="uid://u5kxxbmo30ua" path="res://computer_puzzle/sprite/back_hover.png" id="21_fyjc3"]
+[ext_resource type="Texture2D" uid="uid://1gifcalrkut8" path="res://computer_puzzle/sprite/back_pressed.png" id="21_hhxvw"]
 [ext_resource type="Texture2D" uid="uid://q33sjnv3hpsg" path="res://computer_puzzle/sprite/red_numbers.png" id="21_n4nou"]
 [ext_resource type="Texture2D" uid="uid://c5kurjwyjgxq5" path="res://computer_puzzle/sprite/red_down.png" id="21_ytpue"]
 [ext_resource type="Texture2D" uid="uid://chrwrhmbwq62j" path="res://computer_puzzle/sprite/red_up.png" id="22_04ngh"]
+[ext_resource type="Texture2D" uid="uid://mc8nbcoxykrg" path="res://computer_puzzle/sprite/ok.png" id="23_f2m24"]
+[ext_resource type="Texture2D" uid="uid://cnc2tkseucb1" path="res://computer_puzzle/sprite/ok_hover.png" id="24_0vbm3"]
+[ext_resource type="Texture2D" uid="uid://d241ioahfnt6t" path="res://computer_puzzle/sprite/ok_pressed.png" id="24_sie88"]
+[ext_resource type="Texture2D" uid="uid://bv4uodmydkuyh" path="res://computer_puzzle/sprite/ok_correct.png" id="27_ht3xa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lt3wm"]
 atlas = ExtResource("4_4iys0")
@@ -198,8 +205,6 @@ region = Rect2(118.81931, 59.06057, 32.343956, 48.48011)
 [sub_resource type="AtlasTexture" id="AtlasTexture_n4nou"]
 atlas = ExtResource("21_n4nou")
 region = Rect2(8, 4, 32, 48)
-
-[sub_resource type="Theme" id="Theme_lt3wm"]
 
 [node name="Computer" type="Control" unique_id=1897484245 node_paths=PackedStringArray("finish")]
 z_index = 8
@@ -415,22 +420,6 @@ icon_alignment = 1
 script = ExtResource("3_d7bu3")
 manager = NodePath("../../Control4")
 
-[node name="submit" type="Button" parent="." unique_id=977082619 node_paths=PackedStringArray("slots", "ok_button")]
-texture_filter = 1
-layout_mode = 0
-offset_left = 75.0
-offset_top = -22.0
-offset_right = 132.0
-offset_bottom = 20.0
-theme = SubResource("Theme_lt3wm")
-text = "OK"
-script = ExtResource("18_yuk6o")
-required_id = Array[int]([6, 4, 7, 2])
-slots = [NodePath("../HBoxContainer/control1"), NodePath("../HBoxContainer/Control2"), NodePath("../HBoxContainer/Control3"), NodePath("../HBoxContainer/Control4")]
-ok_button = NodePath(".")
-ok_icon_correct = ExtResource("13_wbvtg")
-ok_icon_default = ExtResource("15_n4nou")
-
 [node name="ColorRect" type="ColorRect" parent="." unique_id=562699325]
 visible = false
 modulate = Color(0.76862746, 0.8627451, 0.89411765, 1)
@@ -443,15 +432,32 @@ offset_right = 164.0
 offset_bottom = 107.0
 color = Color(0.17254902, 0.99607843, 0.28235295, 0.72156864)
 
-[node name="back" type="Button" parent="." unique_id=601917621]
-texture_filter = 1
-layout_mode = 0
-offset_left = 78.0
-offset_top = 31.0
-offset_right = 130.0
-offset_bottom = 62.0
-text = "BACK"
-script = ExtResource("16_v1hl6")
-
 [node name="clickSFX" type="AudioStreamPlayer2D" parent="." unique_id=833003753]
 stream = ExtResource("20_k36tr")
+
+[node name="Back" type="TextureButton" parent="." unique_id=1903703846]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 27.0
+offset_right = 134.0
+offset_bottom = 55.0
+texture_normal = ExtResource("19_plqth")
+texture_pressed = ExtResource("21_hhxvw")
+texture_hover = ExtResource("21_fyjc3")
+script = ExtResource("16_v1hl6")
+
+[node name="Submit" type="TextureButton" parent="." unique_id=914544991 node_paths=PackedStringArray("slots", "ok_button")]
+layout_mode = 0
+offset_left = 82.0
+offset_top = -8.0
+offset_right = 130.0
+offset_bottom = 20.0
+texture_normal = ExtResource("23_f2m24")
+texture_pressed = ExtResource("24_sie88")
+texture_hover = ExtResource("24_0vbm3")
+texture_disabled = ExtResource("27_ht3xa")
+script = ExtResource("18_yuk6o")
+required_id = Array[int]([6, 4, 7, 2])
+slots = [NodePath("../HBoxContainer/control1"), NodePath("../HBoxContainer/Control2"), NodePath("../HBoxContainer/Control3"), NodePath("../HBoxContainer/Control4")]
+ok_button = NodePath(".")
+ok_icon_correct = ExtResource("27_ht3xa")

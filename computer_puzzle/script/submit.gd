@@ -1,17 +1,15 @@
-extends Button
+extends TextureButton
 
 @export var required_id: Array[int]
 @export var slots: Array[Node]
 
 
-@export var ok_button: Button
-@export var ok_icon_correct: Texture2D
-@export var ok_icon_default: Texture2D
+@export var ok_button: TextureButton
+@export var ok_icon_correct: CompressedTexture2D
 
 
 
 func _ready():
-	ok_button.icon = ok_icon_default
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	
@@ -27,7 +25,8 @@ func _pressed():
 		
 				return
 		
-		ok_button.icon = ok_icon_correct
+		ok_button.texture_normal = ok_icon_correct
+		ok_button.disabled = true
 		GameSignals.solution_ok = true
 		GameSignals.solution_checked.emit()
 					
