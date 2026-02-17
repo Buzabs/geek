@@ -74,6 +74,12 @@ ENZO: Co dokładnie mam przynieść?
 DZIECKO: Przynieś mi NITKĘ oraz jakąś GAŁĄZKĘ przypominającą kształt procy.
 => END
 
+~ proca3
+DZIECKO: Super! To wszystko, czego potrzebowałem.
+DZIECKO: Zrobiłem dla ciebie procę.
+DZIECKO: Proszę, użyj jej dobrze!
+=> END
+
 ~ newton_jablko
 NEWTON: Ała! Idealnie w głowę...
 NEWTON: Spokojnie... pomyślmy.

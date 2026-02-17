@@ -1,8 +1,9 @@
 ~ poczatek
-ENZO: co sie stało! gdzie ja jestem !
-ENZO: czy tam stoi Kopernik?
-ENZO: cóż zobaczmy...
+ENZO: Co się stało?! Gdzie ja jestem?!
+ENZO: Czy tam stoi Kopernik?
+ENZO: Cóż... zobaczmy.
 => END
+
 ~ start
 MIKOŁAJ: Szukasz mnie?
 MIKOŁAJ: Chodź. Zanim porozmawiamy o wszechświecie, mam dla ciebie zadanie.
@@ -11,6 +12,11 @@ MIKOŁAJ: Widzisz, od lat obserwuję wszechświat, jednak zgubiłem kilka moich 
 
 ~ start2
 MIKOŁAJ: Mógłbyś pomóc mi je odnaleźć i przynieść do mnie?
+=> END
+
+~ nie_tykac
+ENZO: Lepiej tego na razie nie ruszać.
+ENZO: Może później dowiem się do czego to służy.
 => END
 
 ~ k_misja
@@ -32,26 +38,35 @@ MIKOŁAJ: Najpierw chciałbym ci zadać kilka pytań odnośnie konstelacji na ni
 	=> END
 - NIE
 	=> END
+=> END
+
 ~ konstelacje_tlumaczenie
-MIKOŁAJ: popatrz sie w gwiazdy i zobacz jakie konstelacje widzisz
+MIKOŁAJ: Popatrz w gwiazdy i zobacz, jakie konstelacje potrafisz rozpoznać.
 => END
+
 ~ konstelacje_nieudany
-MIKOŁAJ: niestety to nie ta konstelacja
-MIKOŁAJ: pamiętam, że mam obrazy konstelacji w jednym z pokoi 
+MIKOŁAJ: Niestety, to nie ta konstelacja.
+MIKOŁAJ: Pamiętam, że mam obrazy konstelacji w jednym z pokoi.
 => END
+
 ~ planety
 MIKOŁAJ: Świetnie, że sobie poradziłeś z konstelacjami!
 MIKOŁAJ: Teraz mam dla ciebie kolejne zadanie, tym razem związane z planetami.
 MIKOŁAJ: Musisz odnaleźć planety. Są gdzies porozrzucane, nie wiem gdzie bo zawsze je gubię
 ENZO: Jasne, zbieram się do roboty!
 => END
+
 ~ planety_next
-MIKOŁAJ: Musisz odnaleźć planety. Są gdzies porozrzucane, nie wiem gdzie bo zawsze je gubię
-MIKOŁAJ: potem miło byłoby jakbyś złożył z nich układ słoneczny 
-MIKOŁAJ: stół do ich układania znajdziesz w pokoju po prawo taki niebieski
+MIKOŁAJ: Musisz odnaleźć planety. Są gdzieś porozrzucane, nie wiem gdzie bo zawsze je gubię.
+MIKOŁAJ: Następnie ułóż z nich układ planet.
+MIKOŁAJ: Stół do ich układania znajdziesz w pokoju po prawej taki niebieski.
 ENZO: Jasne, zbieram się do roboty!
 => END
 
+~ ukladanie_planet
+ENZO: Okej, planety wkłada się poprzez wybranie ich z ekwipunku i kliknięcie w miejsce, gdzie chcemy je umieścić.
+ENZO: A żeby je wyjąć... O! Wystarczy kliknąć na planetę prawym przyciskiem myszy.
+=> END
 
 ~ k_planety
 MIKOŁAJ: Niesamowite! Udało ci się je ułożyć!
@@ -64,5 +79,6 @@ ENZO: Chyba dzięki mnie Kopernik odkrył, że tak naprawdę żyjemy w układzie
 => END
 
 ~ teleportacja
-ENZO: Ej, co się dzieje?! Chyba mnie przenosi... AAAAAAA!
+ENZO: Co się dzieje?! Coś jest nie tak!
+ENZO: Czuję... że znowu mnie przenosi!
 => END

@@ -47,7 +47,7 @@ ENZO: Wracam do portalu. Co może pójść nie tak?
 ~ uzycie
 ENZO: Żeby użyć przedmiotu, trzeba go najpierw wybrać w ekwipunku,
 ENZO: a następnie kliknąć w miejscu, gdzie chcemy go zastosować.
-ENZO: spróbujmy zastosować go w portalu co sie może stać?
+ENZO: Spróbujmy użyć go na portalu. Co może się stać?
 => END
 
 ~ portal
@@ -65,8 +65,10 @@ ENZO: Chwila, chyba mnie wciąga! AAAAAAAAAA...!
 - TAK
 	do  PrismSwap.ciii()
 	=> END
+=> END
 	
 ~ powrot
-ENZO: OOOOOOOOO!!!!!!
-ENZO: Wkońcu wróciłem...
-ENZO: Wystarczy zabaw z portalami lepiej wymyśle coś innego
+ENZO: OOOOOOOOO!!!
+ENZO: W końcu wróciłem...
+ENZO: Wystarczy zabaw z portalami. Lepiej wymyślę coś innego.
+=> END
