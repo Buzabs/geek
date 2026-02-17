@@ -51,4 +51,5 @@ func _input_event(_viewport, event, _shape_idx):
 			if load_scenes == "res://scenes/tutorial/magazyn.tscn" and GlobalC.loaded == 2:
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "sus")			
 			if load_scenes == "res://scenes/tutorial/test_scene.tscn" and GlobalEq.dialogue:
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "uzycie")			
+				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "uzycie")	
+				GlobalEq.dialogue = false		

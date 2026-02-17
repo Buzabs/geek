@@ -22,6 +22,7 @@ func _on_solution_checked():
 		
 		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "teleportacja")
 		$AnimatedSprite2D.play("koniec")
+		MusicManager.play_music("res://soundtracki/Magic Town.mp3")
 		await $AnimatedSprite2D.animation_finished
 		get_tree().change_scene_to_file("res://scenes/level_1/anglia.tscn")
 		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "teleportacja")

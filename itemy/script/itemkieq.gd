@@ -26,7 +26,7 @@ func collect():
 		GlobalC.next()
 	if item_id == "portal_open":
 		DialogueManager.show_example_dialogue_balloon(preload("res://Dialogi/Tutorial.dialogue"), "find")
-
+		GlobalEq.dialogue = true
 	queue_free()
 		
 func _on_enter(body):

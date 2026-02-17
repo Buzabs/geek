@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_dmai6"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="1_naj2l"]
-[ext_resource type="Texture2D" uid="uid://sr00rau6ug2o" path="res://sprites/kopernik/planetki_pokój.png" id="1_rqh14"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="2_pppx8"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_vic2t"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_5lbyh"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_vic2t"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
+[ext_resource type="Texture2D" uid="uid://c0q6wsc4aiufm" path="res://sprites/kopernik/pokoj_planetki.png" id="4_quwyi"]
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
 [ext_resource type="PackedScene" uid="uid://cd680feg5aewv" path="res://itemy/scenes/komernik/saturn.tscn" id="11_rp3hp"]
@@ -18,21 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="16_xafkd"]
 [ext_resource type="Texture2D" uid="uid://c7yt3gh4h70ww" path="res://sprites/meble/wardrobe.png" id="17_58y8r"]
 [ext_resource type="Texture2D" uid="uid://nfoa1obplpa0" path="res://sprites/kopernik/plakat_uklad_sloneczny.png" id="18_quwyi"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_quwyi"]
-atlas = ExtResource("1_rqh14")
-region = Rect2(0, 0, 320, 180)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_58y8r"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_quwyi")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbkw3"]
 size = Vector2(36, 37)
@@ -61,13 +46,12 @@ pause_scene = ExtResource("2_vic2t")
 
 [node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("3_vic2t")]
 
-[node name="animation" type="AnimatedSprite2D" parent="." unique_id=618990149]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_58y8r")
-autoplay = "default"
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1104355638]
 zoom = Vector2(2, 2)
+
+[node name="PokojPlanetki" type="Sprite2D" parent="." unique_id=408422383]
+texture_filter = 1
+texture = ExtResource("4_quwyi")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=653834661]
 

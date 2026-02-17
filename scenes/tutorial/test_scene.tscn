@@ -30,7 +30,7 @@
 [ext_resource type="Script" uid="uid://bg5u6rbxvrj25" path="res://scenes/tutorial/ciiii.gd" id="26_uk77x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd71p"]
-size = Vector2(320, 22.5)
+size = Vector2(321, 19.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtsjf"]
 size = Vector2(17, 12.5)
@@ -335,7 +335,7 @@ position = Vector2(-7, 7)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2007621895]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1455287239]
-position = Vector2(-1, -68)
+position = Vector2(-1.5, -69.625)
 shape = SubResource("RectangleShape2D_nd71p")
 
 [node name="Environment" type="Node" parent="." unique_id=1405605651]
@@ -452,7 +452,7 @@ stream = ExtResource("24_wyjub")
 
 [node name="animation_ciii" type="AnimatedSprite2D" parent="." unique_id=1554392622]
 texture_filter = 1
-position = Vector2(-7, 8)
+position = Vector2(-7, 7)
 sprite_frames = SubResource("SpriteFrames_h5fkl")
 animation = &"ciii"
 autoplay = "new_animation"

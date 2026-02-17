@@ -38,8 +38,8 @@ func _input_event(viewport, event, shape_idx):
 				GlobalC.next_dialog = false
 				player_ref.visible = false
 				$portal.play("open")
-				GlobalEq.remove_item("portal_open")
 				await $portal.animation_finished
+				GlobalEq.remove_item("portal_open")
 				portalSFX.play()
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "portal")	
 				$portal.play("open_portal")

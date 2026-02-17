@@ -15,6 +15,7 @@ func rzucanie(rzut):
 		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_jablko")
 		await DialogueManager.dialogue_ended
 		get_tree().change_scene_to_file("res://scenes/tutorial/test_scene.tscn")
+		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "powrot")
 	player.visible = true
 	if GlobalEq.selected_item_id == "kamyk" :
 			GlobalEq.remove_item("kamyk")
@@ -29,6 +30,8 @@ func _input_event(viewport, event, shape_idx):
 				
 				MusicManager.set_volume(-10)
 				GlobalEq.remove_item("proca")
+				GlobalEq.remove_item("kamyk")
+				GlobalEq.remove_item("kamyczek")
 				GlobalC.first_puzzle_open = false
 				GlobalC.dialog = false
 				GlobalC.open= false
