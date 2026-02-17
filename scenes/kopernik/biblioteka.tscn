@@ -29,7 +29,7 @@ size = Vector2(36, 36)
 size = Vector2(357.5, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amkl2"]
-size = Vector2(94, 2)
+size = Vector2(94, 0.5)
 
 [node name="Biblioteka" type="Node" unique_id=831778411]
 script = ExtResource("1_6e4r4")
@@ -39,7 +39,7 @@ pause_scene = ExtResource("2_tg35t")
 
 [node name="Biblioteka" type="Sprite2D" parent="." unique_id=1140119676]
 texture_filter = 1
-position = Vector2(18, -7)
+position = Vector2(18, -8)
 texture = ExtResource("1_8lx6i")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1301625387]
@@ -55,16 +55,16 @@ item = NodePath("Ziemia")
 
 [node name="Ziemia" parent="pudelko" unique_id=1141234364 node_paths=PackedStringArray("itemSFX") instance=ExtResource("15_ay7dm")]
 z_index = 1
-position = Vector2(-33, 35)
+position = Vector2(-160, 72)
 itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="Pudelko" type="Sprite2D" parent="pudelko" unique_id=445170086]
 texture_filter = 1
-position = Vector2(-33, 41)
+position = Vector2(-160, 77)
 texture = ExtResource("4_ay7dm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=278066550]
-position = Vector2(-33, 39)
+position = Vector2(-156, 74)
 shape = SubResource("RectangleShape2D_mwb1q")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1738928262 node_paths=PackedStringArray("drzwiSFX")]
@@ -95,12 +95,12 @@ volume_db = 9.545
 [node name="PolowaStolu" type="Sprite2D" parent="." unique_id=1973807459]
 z_index = 6
 texture_filter = 1
-position = Vector2(49, 38)
+position = Vector2(49, 36)
 texture = ExtResource("7_c2yfa")
 
 [node name="PolowaStoluDol" type="Sprite2D" parent="." unique_id=24607710]
 texture_filter = 1
-position = Vector2(49, 56)
+position = Vector2(49, 54)
 texture = ExtResource("8_0wjok")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1091464061]
@@ -111,7 +111,7 @@ position = Vector2(182, 91)
 shape = SubResource("RectangleShape2D_2x5lk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1333973185]
-position = Vector2(211, 144)
+position = Vector2(211, 140.75)
 shape = SubResource("RectangleShape2D_amkl2")
 
 [node name="eq" parent="." unique_id=634493244 instance=ExtResource("6_2x5lk")]
@@ -127,7 +127,7 @@ offset_bottom = -116.880005
 
 [node name="Drabina" type="Sprite2D" parent="." unique_id=245161722]
 texture_filter = 1
-position = Vector2(118, 3)
+position = Vector2(-57, 42)
 texture = ExtResource("9_0wjok")
 
 [node name="notka1" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("10_ostnl")]

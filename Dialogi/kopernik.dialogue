@@ -58,7 +58,7 @@ ENZO: Jasne, zbieram się do roboty!
 
 ~ planety_next
 MIKOŁAJ: Musisz odnaleźć planety. Są gdzieś porozrzucane, nie wiem gdzie bo zawsze je gubię.
-MIKOŁAJ: Następnie ułóż z nich układ planet.
+MIKOŁAJ: Następnie ułóż z nich system planetarny.
 MIKOŁAJ: Stół do ich układania znajdziesz w pokoju po prawej taki niebieski.
 ENZO: Jasne, zbieram się do roboty!
 => END
@@ -67,6 +67,8 @@ ENZO: Jasne, zbieram się do roboty!
 ENZO: Okej, planety wkłada się poprzez wybranie ich z ekwipunku i kliknięcie w miejsce, gdzie chcemy je umieścić.
 ENZO: A żeby je wyjąć... O! Wystarczy kliknąć na planetę prawym przyciskiem myszy.
 => END
+
+
 
 ~ k_planety
 MIKOŁAJ: Niesamowite! Udało ci się je ułożyć!

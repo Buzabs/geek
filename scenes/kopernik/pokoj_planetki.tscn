@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
 [ext_resource type="Texture2D" uid="uid://c0q6wsc4aiufm" path="res://sprites/kopernik/pokoj_planetki.png" id="4_quwyi"]
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
+[ext_resource type="Script" uid="uid://claia2bsglpwj" path="res://scenes/kopernik/planetki_pokoj.gd" id="8_xafkd"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
 [ext_resource type="PackedScene" uid="uid://cd680feg5aewv" path="res://itemy/scenes/komernik/saturn.tscn" id="11_rp3hp"]
 [ext_resource type="Texture2D" uid="uid://blw8cqfiwignk" path="res://sprites/meble/stol_2.png" id="14_pbkw3"]
@@ -90,8 +91,7 @@ volume_db = 9.545
 
 [node name="planetki" type="Area2D" parent="." unique_id=58538378]
 position = Vector2(2, 2)
-script = ExtResource("4_pppx8")
-load_scenes = "res://scenes/kopernik/planetki_gra.tscn"
+script = ExtResource("8_xafkd")
 
 [node name="StolPlan" type="Sprite2D" parent="planetki" unique_id=478400091]
 texture_filter = 1
@@ -123,7 +123,7 @@ item = NodePath("saturn")
 
 [node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1553074306]
 texture_filter = 1
-position = Vector2(-91, -39)
+position = Vector2(-93, -39)
 texture = ExtResource("17_58y8r")
 
 [node name="saturn" parent="szafa" unique_id=1346213407 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_rp3hp")]
@@ -131,19 +131,19 @@ position = Vector2(-93, -28)
 itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=35213589]
-position = Vector2(-93, -40)
+position = Vector2(-90, -40)
 shape = SubResource("RectangleShape2D_eunia")
 
 [node name="Stol2" type="Sprite2D" parent="." unique_id=548983024]
 texture_filter = 1
-position = Vector2(2, -14)
+position = Vector2(-2, -13)
 texture = ExtResource("14_pbkw3")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1465227298]
 stream = ExtResource("1_naj2l")
 
 [node name="notka2" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_rp3hp")]
-position = Vector2(3, -24)
+position = Vector2(-1, -23)
 rotation = 1.5707964
 itemSFX = NodePath("../item_podnoszenieSFX")
 
@@ -153,11 +153,11 @@ load_scenes = "res://scenes/kopernik/plakat_uklad_sloneczny.tscn"
 
 [node name="PlakatUkladSloneczny" type="Sprite2D" parent="Area2D2" unique_id=1007683190]
 texture_filter = 1
-position = Vector2(42, -48)
+position = Vector2(36, -51)
 texture = ExtResource("18_quwyi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=476504532]
-position = Vector2(41.5, -43.5)
+position = Vector2(37, -42)
 shape = SubResource("RectangleShape2D_quwyi")
 
 [node name="spawn_plakat" type="Marker2D" parent="." unique_id=163687415]

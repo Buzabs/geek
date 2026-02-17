@@ -15,6 +15,7 @@ var index : int = -1
 
 
 func _ready():
+	
 	if GlobalC.textura_planetki.has(slot_id):
 		index = GlobalC.textura_planetki[slot_id]
 		if index >= 0 and index < planeta.size():

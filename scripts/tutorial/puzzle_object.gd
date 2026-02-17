@@ -31,8 +31,8 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 			komputerSFX.play()
 			var ui = computer_ui.instantiate()
 			get_tree().root.add_child(ui)
-			if not GlobalC.first_puzzle_open and GlobalC.dialog :
-				GlobalC.first_puzzle_open = true
+			if  GlobalC.first_puzzle_open and GlobalC.dialog :
+				GlobalC.first_puzzle_open = false
 				await get_tree().create_timer(0.5).timeout
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "kod")
 				GlobalC.open = true

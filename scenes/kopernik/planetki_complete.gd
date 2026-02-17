@@ -1,9 +1,13 @@
 extends Node2D
 
+var target_spawn_id: String ="planetki"
 @export var pause_scene: PackedScene
+
 func _ready():
 	GameSignals.solution_checked.connect(_on_solution_checked)
-
+	if GlobalC.first_puzzle_open:
+		#DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety_wyjasnienie")
+		GlobalC.first_puzzle_open = false
 
 func _on_solution_checked():
 		$AnimatedSprite2D.visible=true

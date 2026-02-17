@@ -40,7 +40,7 @@ position = Vector2(-4, 22)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1760653050]
 position = Vector2(2, -27)
-polygon = PackedVector2Array(-155, 122, -152, 76, -148, 45, -105, -7, -62, -20, -19, -34, 27, -32, 68, -23, 96, -14, 158, 11, 164, 64, 165, 93, 163, 122, 153, 116, 149, 69, 137, 28, 109, 9, 78, -11, 60, -20, 31, -20, 0, -31, -55, -16, -86, 0, -105, 11, -133, 47, -140, 78, -142, 118)
+polygon = PackedVector2Array(-155, 122, -152, 76, -148, 45, -105, -7, -62, -20, -19, -34, 27, -32, 68, -23, 96, -14, 158, 11, 164, 64, 165, 93, 163, 122, 153, 116, 149, 69, 137, 28, 109, 8, 78, -11, 60, -20, 31, -20, 0, -31, -55, -16, -86, 0, -105, 11, -133, 47, -140, 78, -142, 118)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=488538800 node_paths=PackedStringArray("drzwiSFX")]
 script = ExtResource("14_1pvga")

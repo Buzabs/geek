@@ -5,7 +5,7 @@ extends Node
 #dialogue
 var loaded: int = 0
 var click_count := 0
-var first_puzzle_open := false
+var first_puzzle_open := true
 var dialog := false
 var open:= false
 var first_play := true

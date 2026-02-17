@@ -21,10 +21,11 @@ func _on_button_pressed():
 			return
 		if id_wyboru == "orzel":
 			$"../OrzelComplete".visible = true
+			GlobalC.next_dialog = true
 			await get_tree().create_timer(2.0).timeout
 			GlobalC.spawn_id = target_spawn_id
 			get_tree().change_scene_to_file("res://scenes/kopernik/obserwatorium.tscn")
-			GlobalC.rzut = false
+			
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety")	
 			
 			return

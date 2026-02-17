@@ -49,10 +49,9 @@ func _input_event(viewport, event, shape_idx):
 	if GlobalC.dialog and not GlobalC.next_dialog:
 		if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "konstelacje")
+			
 			return
 	if GlobalC.next_dialog:
-		if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :
-			if GlobalEq.has_item("ziemia") and  GlobalEq.has_item("slonce") and  GlobalEq.has_item("mars") and  GlobalEq.has_item("jowisz") and  GlobalEq.has_item("saturn") and  GlobalEq.has_item("merkury") and  GlobalEq.has_item("venus"):
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety2")
+		if event is InputEventMouseButton and event.pressed and can_interact:
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety_next")
 	

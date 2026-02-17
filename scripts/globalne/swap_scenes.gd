@@ -7,7 +7,7 @@ var can_open: bool = false
 var player_ref: Node = null
 @export var target_spawn_id: String 
 
-
+var movement_cursor = load("res://sprites/Other/movement_cursor.png")
  # scene_path : Vector2
 
 func _ready():
@@ -32,11 +32,6 @@ func _on_exit(body):
 	
 
 
-
-
-
-
-
 func _input_event(_viewport, event, _shape_idx):
 	if GlobalC.open:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and can_open:
@@ -46,6 +41,7 @@ func _input_event(_viewport, event, _shape_idx):
 				await drzwiSFX.finished
 			GlobalC.spawn_id = target_spawn_id
 			get_tree().change_scene_to_file(load_scenes)
+			Input.set_custom_mouse_cursor(movement_cursor)
 			GlobalC.loaded+=1
 
 			if load_scenes == "res://scenes/tutorial/magazyn.tscn" and GlobalC.loaded == 2:
