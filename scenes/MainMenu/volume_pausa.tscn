@@ -32,10 +32,10 @@ texture = ExtResource("3_3urbs")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1291925533]
 texture_filter = 1
-offset_left = 116.0
-offset_top = 234.0
-offset_right = 210.0
-offset_bottom = 262.0
+offset_left = 125.0
+offset_top = 235.0
+offset_right = 219.0
+offset_bottom = 263.0
 texture_normal = ExtResource("4_cexxa")
 texture_pressed = ExtResource("5_l0cgf")
 texture_hover = ExtResource("6_iu8xx")
