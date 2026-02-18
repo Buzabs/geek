@@ -24,7 +24,7 @@
 size = Vector2(314, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yg566"]
-size = Vector2(41, 22)
+size = Vector2(41, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j02d6"]
 size = Vector2(28.005798, 28.5)
@@ -33,7 +33,7 @@ size = Vector2(28.005798, 28.5)
 size = Vector2(18, 18.8125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxcu2"]
-size = Vector2(54.5, 58.125)
+size = Vector2(54.5, 43.0625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tw23o"]
 size = Vector2(18.5, 18)
@@ -76,7 +76,7 @@ texture = ExtResource("1_6xukf")
 
 [node name="SzafkaKopernik" type="Sprite2D" parent="." unique_id=479778935]
 texture_filter = 1
-position = Vector2(14, -55)
+position = Vector2(14, -59)
 texture = ExtResource("6_4lill")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1696149681]
@@ -86,11 +86,11 @@ position = Vector2(2, -77)
 shape = SubResource("RectangleShape2D_dnj0k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1245610345]
-position = Vector2(13.5, -70)
+position = Vector2(13, -75)
 shape = SubResource("RectangleShape2D_yg566")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=283025464]
-position = Vector2(83, -71)
+position = Vector2(81, -74.5)
 shape = SubResource("RectangleShape2D_yg566")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=290124119]
@@ -106,7 +106,7 @@ stream = ExtResource("5_igf7e")
 volume_db = 9.545
 
 [node name="Player" parent="." unique_id=1882407171 instance=ExtResource("6_igf7e")]
-position = Vector2(-59, -6)
+position = Vector2(-50, -25)
 
 [node name="spawn_up" type="Marker2D" parent="." unique_id=1870902233]
 position = Vector2(-78, -53)
@@ -152,7 +152,7 @@ position = Vector2(17, 8.59375)
 shape = SubResource("RectangleShape2D_vj344")
 
 [node name="venus" parent="pudelko3" unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_16sbj")]
-position = Vector2(43, 3)
+position = Vector2(14, 3)
 itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="pudelko2" type="Area2D" parent="." unique_id=676121386 node_paths=PackedStringArray("sprite")]
@@ -180,15 +180,15 @@ id_przedmiotu = "szafa2"
 
 [node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1283074749]
 texture_filter = 1
-position = Vector2(81, -55)
+position = Vector2(81, -58)
 texture = ExtResource("10_sncp5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=1174028812]
-position = Vector2(76.75, -49)
+position = Vector2(78, -45.46875)
 shape = SubResource("RectangleShape2D_nxcu2")
 
 [node name="slonce" parent="szafa" unique_id=187813077 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_j02d6")]
-position = Vector2(73, -43)
+position = Vector2(77, -44)
 itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1789536442]
@@ -212,7 +212,7 @@ position = Vector2(-232, 28)
 shape = SubResource("RectangleShape2D_tw23o")
 
 [node name="notka3" parent="." unique_id=1301335267 node_paths=PackedStringArray("itemSFX") instance=ExtResource("12_nxcu2")]
-position = Vector2(4, -49)
+position = Vector2(4, -52)
 itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="spawn_left" type="Marker2D" parent="." unique_id=1385844019]

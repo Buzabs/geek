@@ -1,4 +1,5 @@
 extends Node
+
 var ciiii := false
 
 func pryzmat() -> void:

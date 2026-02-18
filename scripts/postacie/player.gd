@@ -27,3 +27,11 @@ func _physics_process(delta: float) -> void:
 	
 func _process(delta: float) -> void:
 	state_machine.process_frame(delta)
+
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		DialogueManager.show_example_dialogue_balloon(
+			load("res://Dialogi/Tutorial.dialogue"), "ciii")
+
+		if GlobalEq.selected_item_id == "ciii" and PrismSwap.ciiii:
+			$animation.play("ciii")
