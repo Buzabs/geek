@@ -8,6 +8,7 @@ ENZO: Cóż... zobaczmy.
 MIKOŁAJ: Szukasz mnie?
 MIKOŁAJ: Chodź. Zanim porozmawiamy o wszechświecie, mam dla ciebie zadanie.
 MIKOŁAJ: Widzisz, od lat obserwuję wszechświat, jednak zgubiłem kilka moich notatek...
+
 => END
 
 ~ start2
@@ -66,6 +67,7 @@ ENZO: Jasne, zbieram się do roboty!
 ~ ukladanie_planet
 ENZO: Okej, planety wkłada się poprzez wybranie ich z ekwipunku i kliknięcie w miejsce, gdzie chcemy je umieścić.
 ENZO: A żeby je wyjąć... O! Wystarczy kliknąć na planetę prawym przyciskiem myszy.
+[space]
 => END
 
 

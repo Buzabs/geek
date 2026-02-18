@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://edd8qfvtk5tq"]
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_6e4r4"]
-[ext_resource type="Texture2D" uid="uid://cfx1701oj0rrm" path="res://sprites/kopernik/biblioteka.png" id="1_8lx6i"]
+[ext_resource type="Texture2D" uid="uid://cfx1701oj0rrm" path="res://sprites/kopernik/pokoje/biblioteka.png" id="1_8lx6i"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="1_mwb1q"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="2_brtu5"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_dwyeu"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_tg35t"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="3_4k0lh"]
-[ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="3_fxia4"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_p5n41"]
-[ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="4_ay7dm"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="5_p5n41"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_2x5lk"]
+[ext_resource type="Texture2D" uid="uid://caqhnheng2exc" path="res://sprites/meble/skrzynia_open.png" id="6_tg35t"]
 [ext_resource type="Texture2D" uid="uid://c1rwbh12b5lp8" path="res://sprites/meble/polowa_stolu.png" id="7_c2yfa"]
 [ext_resource type="Texture2D" uid="uid://6o3rbw3h7mu5" path="res://sprites/meble/polowa_stolu_dol.png" id="8_0wjok"]
+[ext_resource type="Texture2D" uid="uid://ccc2ejgf3f8wv" path="res://sprites/meble/skrzynia.png" id="8_1f4me"]
 [ext_resource type="Texture2D" uid="uid://wdb7mkjvbyy3" path="res://sprites/meble/drabina.png" id="9_0wjok"]
 [ext_resource type="PackedScene" uid="uid://cgdf54xxybek7" path="res://itemy/scenes/komernik/notka_1.tscn" id="10_ostnl"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="14_fxia4"]
@@ -49,9 +49,10 @@ zoom = Vector2(2, 2)
 [node name="pudelko" type="Area2D" parent="." unique_id=1605905375 node_paths=PackedStringArray("sprite", "item")]
 position = Vector2(18, -7)
 script = ExtResource("2_brtu5")
-open = ExtResource("3_fxia4")
+open = ExtResource("6_tg35t")
 sprite = NodePath("Pudelko")
 item = NodePath("Ziemia")
+id_przedmiotu = "pudelko_biblioteka"
 
 [node name="Ziemia" parent="pudelko" unique_id=1141234364 node_paths=PackedStringArray("itemSFX") instance=ExtResource("15_ay7dm")]
 z_index = 1
@@ -61,7 +62,7 @@ itemSFX = NodePath("../../item_podnoszenieSFX")
 [node name="Pudelko" type="Sprite2D" parent="pudelko" unique_id=445170086]
 texture_filter = 1
 position = Vector2(-160, 77)
-texture = ExtResource("4_ay7dm")
+texture = ExtResource("8_1f4me")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=278066550]
 position = Vector2(-156, 74)
@@ -140,5 +141,7 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 position = Vector2(-189, -105)
 stream = ExtResource("14_fxia4")
 
+[connection signal="mouse_entered" from="pudelko" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="pudelko" to="." method="_on_computer_click_mouse_exited"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]

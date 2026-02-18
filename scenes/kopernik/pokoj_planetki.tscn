@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_5lbyh"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_vic2t"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
-[ext_resource type="Texture2D" uid="uid://c0q6wsc4aiufm" path="res://sprites/kopernik/pokoj_planetki.png" id="4_quwyi"]
+[ext_resource type="Texture2D" uid="uid://c0q6wsc4aiufm" path="res://sprites/kopernik/pokoje/pokoj_planetki.png" id="4_quwyi"]
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
 [ext_resource type="Script" uid="uid://claia2bsglpwj" path="res://scenes/kopernik/planetki_pokoj.gd" id="8_xafkd"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
@@ -27,7 +27,7 @@ size = Vector2(36, 37)
 size = Vector2(321, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xafkd"]
-size = Vector2(4.5, 12)
+size = Vector2(12, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0odi"]
 size = Vector2(41, 55)
@@ -65,7 +65,7 @@ position = Vector2(-1, -61)
 shape = SubResource("RectangleShape2D_rp3hp")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1947749356]
-position = Vector2(2.25, -36)
+position = Vector2(-1, -35)
 shape = SubResource("RectangleShape2D_xafkd")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1313578213 node_paths=PackedStringArray("drzwiSFX")]
@@ -103,7 +103,7 @@ position = Vector2(101, 13)
 shape = SubResource("RectangleShape2D_nlq5b")
 
 [node name="Player" parent="." unique_id=1882407171 instance=ExtResource("3_5lbyh")]
-position = Vector2(-138, 23)
+position = Vector2(-144, 21)
 
 [node name="eq" parent="." unique_id=1901876111 instance=ExtResource("9_am3dt")]
 offset_left = -97.0
@@ -120,6 +120,7 @@ script = ExtResource("15_quwyi")
 open = ExtResource("16_xafkd")
 sprite = NodePath("Szafa")
 item = NodePath("saturn")
+id_przedmiotu = "szafa"
 
 [node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1553074306]
 texture_filter = 1
@@ -136,14 +137,14 @@ shape = SubResource("RectangleShape2D_eunia")
 
 [node name="Stol2" type="Sprite2D" parent="." unique_id=548983024]
 texture_filter = 1
-position = Vector2(-2, -13)
+position = Vector2(-2, -15)
 texture = ExtResource("14_pbkw3")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1465227298]
 stream = ExtResource("1_naj2l")
 
 [node name="notka2" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_rp3hp")]
-position = Vector2(-1, -23)
+position = Vector2(-2, -25)
 rotation = 1.5707964
 itemSFX = NodePath("../item_podnoszenieSFX")
 
@@ -165,3 +166,7 @@ position = Vector2(35, -26)
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="planetki" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="planetki" to="." method="_on_computer_click_mouse_exited"]
+[connection signal="mouse_entered" from="szafa" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="szafa" to="." method="_on_computer_click_mouse_exited"]

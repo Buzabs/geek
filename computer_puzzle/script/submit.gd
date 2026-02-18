@@ -10,6 +10,8 @@ extends TextureButton
 
 
 func _ready():
+	if GameSignals.puzzle_solved:
+		ok_button.texture_normal = ok_icon_correct
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	

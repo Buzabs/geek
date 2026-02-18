@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_kas2q"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_7ms7e"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_px8ry"]
-[ext_resource type="Texture2D" uid="uid://djq6f0gqs6wo" path="res://sprites/kopernik/taras.png" id="3_1pvga"]
+[ext_resource type="Texture2D" uid="uid://djq6f0gqs6wo" path="res://sprites/kopernik/pokoje/taras.png" id="3_1pvga"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_ope37"]
 [ext_resource type="PackedScene" uid="uid://c3jdl8rbvh6em" path="res://scenes/postacie/kopernik.tscn" id="4_fjwj2"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="7_focr7"]
@@ -87,3 +87,5 @@ position = Vector2(-104, 68)
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="Kopernik" to="." method="_on_grandma_mouse_entered"]
+[connection signal="mouse_exited" from="Kopernik" to="." method="_on_grandma_mouse_exited"]

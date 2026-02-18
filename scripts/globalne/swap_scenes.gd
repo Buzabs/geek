@@ -16,7 +16,7 @@ func _ready():
 
 func _on_enter(body):
 	if get_tree().current_scene.get_name() == "TestScene":
-		if body.is_in_group("player") && !GlobalC.isLocked:
+		if body.is_in_group("player"):
 			can_open = true
 			player_ref = body
 	else:

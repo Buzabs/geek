@@ -215,6 +215,7 @@ offset_top = 1.0
 offset_bottom = 1.0
 script = ExtResource("1_yuk6o")
 finish = NodePath("ColorRect")
+button_icon = ExtResource("27_ht3xa")
 
 [node name="PausaTlo" type="Sprite2D" parent="." unique_id=40476560]
 texture_filter = 1
@@ -420,6 +421,22 @@ icon_alignment = 1
 script = ExtResource("3_d7bu3")
 manager = NodePath("../../Control4")
 
+[node name="Submit" type="TextureButton" parent="." unique_id=914544991 node_paths=PackedStringArray("slots", "ok_button")]
+layout_mode = 0
+offset_left = 82.0
+offset_top = -8.0
+offset_right = 130.0
+offset_bottom = 20.0
+texture_normal = ExtResource("23_f2m24")
+texture_pressed = ExtResource("24_sie88")
+texture_hover = ExtResource("24_0vbm3")
+texture_disabled = ExtResource("27_ht3xa")
+script = ExtResource("18_yuk6o")
+required_id = Array[int]([6, 4, 7, 2])
+slots = [NodePath("../HBoxContainer/control1"), NodePath("../HBoxContainer/Control2"), NodePath("../HBoxContainer/Control3"), NodePath("../HBoxContainer/Control4")]
+ok_button = NodePath(".")
+ok_icon_correct = ExtResource("27_ht3xa")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=562699325]
 visible = false
 modulate = Color(0.76862746, 0.8627451, 0.89411765, 1)
@@ -445,19 +462,3 @@ texture_normal = ExtResource("19_plqth")
 texture_pressed = ExtResource("21_hhxvw")
 texture_hover = ExtResource("21_fyjc3")
 script = ExtResource("16_v1hl6")
-
-[node name="Submit" type="TextureButton" parent="." unique_id=914544991 node_paths=PackedStringArray("slots", "ok_button")]
-layout_mode = 0
-offset_left = 82.0
-offset_top = -8.0
-offset_right = 130.0
-offset_bottom = 20.0
-texture_normal = ExtResource("23_f2m24")
-texture_pressed = ExtResource("24_sie88")
-texture_hover = ExtResource("24_0vbm3")
-texture_disabled = ExtResource("27_ht3xa")
-script = ExtResource("18_yuk6o")
-required_id = Array[int]([6, 4, 7, 2])
-slots = [NodePath("../HBoxContainer/control1"), NodePath("../HBoxContainer/Control2"), NodePath("../HBoxContainer/Control3"), NodePath("../HBoxContainer/Control4")]
-ok_button = NodePath(".")
-ok_icon_correct = ExtResource("27_ht3xa")

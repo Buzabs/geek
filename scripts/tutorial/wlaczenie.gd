@@ -27,9 +27,6 @@ func _input_event(viewport, event, shape_idx):
 		return
 	if event is InputEventMouseButton and event.pressed  and can_interact :
 		if GlobalEq.selected_item_id == "portal_open":
-				GlobalEq.remove_item("potka")
-				GlobalEq.remove_item("sus")
-				GlobalEq.remove_item("ciii")
 				GlobalC.dialog = false
 				GlobalC.open= false
 				GameSignals.solution_ok = false
@@ -49,7 +46,9 @@ func _input_event(viewport, event, shape_idx):
 				#await get_tree().create_timer(2.5).timeout
 				await $portal.animation_finished
 				MusicManager.play_music("res://soundtracki/magical_theme.wav")
-		
+				GlobalEq.remove_item("potka")
+				GlobalEq.remove_item("sus")
+				GlobalEq.remove_item("ciii")
 				await get_tree().create_timer(0.1).timeout
 				
 				get_tree().change_scene_to_file("res://scenes/kopernik/obserwatorium.tscn")

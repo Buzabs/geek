@@ -8,6 +8,7 @@ extends Control
 var is_paused: bool
 
 func _ready() -> void:
+	
 	is_paused = false
 	hide()
 	$Volume.visible=false
@@ -19,6 +20,7 @@ func toggle_pause():
 	get_tree().paused = is_paused
 	
 	if is_paused:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		show()
 	else:
 		$Volume.visible=false

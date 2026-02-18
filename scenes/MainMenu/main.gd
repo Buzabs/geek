@@ -22,9 +22,7 @@ func _on_exit_pressed() -> void:
 	get_tree().quit()
 
 
-@onready var master_slider = $MasterSlider
-@onready var music_slider = $MusicSlider
-@onready var sfx_slider = $SFXSlider
+
 
 
 func _on_volume_pressed() -> void:

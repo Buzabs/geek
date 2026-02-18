@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://cexwdm2eemd2b"]
 
-[ext_resource type="Texture2D" uid="uid://cxqce63hf7eru" path="res://sprites/kopernik/lacznik.png" id="1_6xukf"]
+[ext_resource type="Texture2D" uid="uid://cxqce63hf7eru" path="res://sprites/kopernik/pokoje/lacznik.png" id="1_6xukf"]
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_bv6ow"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="2_jk7vo"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="2_lts0u"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_tw23o"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_dnj0k"]
-[ext_resource type="Texture2D" uid="uid://buv7eu1j2r1ur" path="res://sprites/meble/opeb_box.png" id="3_sncp5"]
-[ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="4_nxcu2"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="5_igf7e"]
 [ext_resource type="Texture2D" uid="uid://1h54p46a1qmo" path="res://sprites/meble/szafka_kopernik.png" id="6_4lill"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="6_igf7e"]
+[ext_resource type="Texture2D" uid="uid://ccc2ejgf3f8wv" path="res://sprites/meble/skrzynia.png" id="8_dnj0k"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="8_hpb5c"]
 [ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="9_uqisi"]
 [ext_resource type="Texture2D" uid="uid://c7yt3gh4h70ww" path="res://sprites/meble/wardrobe.png" id="10_sncp5"]
 [ext_resource type="PackedScene" uid="uid://wnie3cn1cc4l" path="res://itemy/scenes/komernik/jowisz.tscn" id="11_16sbj"]
+[ext_resource type="Texture2D" uid="uid://caqhnheng2exc" path="res://sprites/meble/skrzynia_open.png" id="11_tw23o"]
 [ext_resource type="PackedScene" uid="uid://cl2k87xogb0l0" path="res://itemy/scenes/komernik/notka_3.tscn" id="12_nxcu2"]
 [ext_resource type="PackedScene" uid="uid://dsd31cpvipt46" path="res://itemy/scenes/komernik/slonce.tscn" id="14_j02d6"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="15_vj344"]
@@ -27,13 +27,16 @@ size = Vector2(314, 20)
 size = Vector2(41, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j02d6"]
-size = Vector2(34, 28.5)
+size = Vector2(28.005798, 28.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vj344"]
-size = Vector2(24, 21.25)
+size = Vector2(18, 18.8125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nxcu2"]
-size = Vector2(59, 58.125)
+size = Vector2(54.5, 58.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tw23o"]
+size = Vector2(18.5, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igf7e"]
 size = Vector2(36.5, 36.5)
@@ -97,22 +100,6 @@ polygon = PackedVector2Array(-128, -65, -129, -52, -143, -52, -144, -45, -158, -
 [node name="Camera2D" type="Camera2D" parent="." unique_id=703120697]
 zoom = Vector2(2, 2)
 
-[node name="pudelko4" type="Area2D" parent="." unique_id=134257978 node_paths=PackedStringArray("sprite")]
-position = Vector2(1, 0)
-script = ExtResource("8_hpb5c")
-open = ExtResource("3_sncp5")
-sprite = NodePath("Pudelko")
-
-[node name="Pudelko" type="Sprite2D" parent="pudelko4" unique_id=1706255766]
-texture_filter = 1
-position = Vector2(121, -39)
-texture = ExtResource("4_nxcu2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko4" unique_id=126823107]
-position = Vector2(124, -39)
-rotation = -0.0059906407
-shape = SubResource("RectangleShape2D_j02d6")
-
 [node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=1222383233]
 position = Vector2(-140, -1)
 stream = ExtResource("5_igf7e")
@@ -130,54 +117,58 @@ position = Vector2(141, -2)
 [node name="spawn_down" type="Marker2D" parent="." unique_id=531714842]
 position = Vector2(-132, 73)
 
+[node name="pudelko4" type="Area2D" parent="." unique_id=134257978 node_paths=PackedStringArray("sprite")]
+position = Vector2(1, 0)
+script = ExtResource("8_hpb5c")
+open = ExtResource("11_tw23o")
+sprite = NodePath("skrzynia")
+id_przedmiotu = "skrzynia4"
+
+[node name="skrzynia" type="Sprite2D" parent="pudelko4" unique_id=1706255766]
+texture_filter = 1
+position = Vector2(121, -39)
+texture = ExtResource("8_dnj0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko4" unique_id=126823107]
+position = Vector2(124.00295, -38.982044)
+rotation = -0.0059906407
+shape = SubResource("RectangleShape2D_j02d6")
+
 [node name="pudelko3" type="Area2D" parent="." unique_id=1893339792 node_paths=PackedStringArray("sprite", "item")]
 position = Vector2(-150, -42)
 script = ExtResource("8_hpb5c")
-open = ExtResource("3_sncp5")
+open = ExtResource("11_tw23o")
 sprite = NodePath("Pudelko")
 item = NodePath("venus")
+id_przedmiotu = "pudelko3"
 
 [node name="Pudelko" type="Sprite2D" parent="pudelko3" unique_id=225658607]
 texture_filter = 1
 position = Vector2(14, 8)
-texture = ExtResource("4_nxcu2")
+texture = ExtResource("8_dnj0k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko3" unique_id=48628798]
-position = Vector2(20, 5)
+position = Vector2(17, 8.59375)
 shape = SubResource("RectangleShape2D_vj344")
 
 [node name="venus" parent="pudelko3" unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_16sbj")]
-position = Vector2(14, 3)
+position = Vector2(43, 3)
 itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="pudelko2" type="Area2D" parent="." unique_id=676121386 node_paths=PackedStringArray("sprite")]
 position = Vector2(-147, -21)
 script = ExtResource("8_hpb5c")
-open = ExtResource("3_sncp5")
+open = ExtResource("11_tw23o")
 sprite = NodePath("Pudelko")
+id_przedmiotu = "pudelko2"
 
 [node name="Pudelko" type="Sprite2D" parent="pudelko2" unique_id=994914748]
 texture_filter = 1
 position = Vector2(-5, -21)
-texture = ExtResource("4_nxcu2")
+texture = ExtResource("8_dnj0k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko2" unique_id=1673973566]
-position = Vector2(-2, -19)
-shape = SubResource("RectangleShape2D_vj344")
-
-[node name="pudelko" type="Area2D" parent="." unique_id=1171455070 node_paths=PackedStringArray("sprite")]
-position = Vector2(79, -52)
-script = ExtResource("8_hpb5c")
-open = ExtResource("3_sncp5")
-sprite = NodePath("Pudelko")
-
-[node name="Pudelko" type="Sprite2D" parent="pudelko" unique_id=1330304683]
-texture_filter = 1
-position = Vector2(-231, 26)
-texture = ExtResource("4_nxcu2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=106163297]
-position = Vector2(-234, 28.375)
+position = Vector2(-5, -22)
 shape = SubResource("RectangleShape2D_vj344")
 
 [node name="szafa" type="Area2D" parent="." unique_id=63380964 node_paths=PackedStringArray("sprite", "item2")]
@@ -185,6 +176,7 @@ script = ExtResource("8_hpb5c")
 open = ExtResource("9_uqisi")
 sprite = NodePath("Szafa")
 item2 = NodePath("slonce")
+id_przedmiotu = "szafa2"
 
 [node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1283074749]
 texture_filter = 1
@@ -192,7 +184,7 @@ position = Vector2(81, -55)
 texture = ExtResource("10_sncp5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=1174028812]
-position = Vector2(81, -52)
+position = Vector2(76.75, -49)
 shape = SubResource("RectangleShape2D_nxcu2")
 
 [node name="slonce" parent="szafa" unique_id=187813077 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_j02d6")]
@@ -202,6 +194,22 @@ itemSFX = NodePath("../../item_podnoszenieSFX")
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1789536442]
 position = Vector2(-141, 0)
 stream = ExtResource("15_vj344")
+
+[node name="pudelko" type="Area2D" parent="." unique_id=1171455070 node_paths=PackedStringArray("sprite")]
+position = Vector2(79, -52)
+script = ExtResource("8_hpb5c")
+open = ExtResource("11_tw23o")
+sprite = NodePath("Pudelko")
+id_przedmiotu = "pudelko1"
+
+[node name="Pudelko" type="Sprite2D" parent="pudelko" unique_id=1330304683]
+texture_filter = 1
+position = Vector2(-231, 25)
+texture = ExtResource("8_dnj0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pudelko" unique_id=1442182922]
+position = Vector2(-232, 28)
+shape = SubResource("RectangleShape2D_tw23o")
 
 [node name="notka3" parent="." unique_id=1301335267 node_paths=PackedStringArray("itemSFX") instance=ExtResource("12_nxcu2")]
 position = Vector2(4, -49)
@@ -248,7 +256,7 @@ load_scenes = "res://scenes/kopernik/biblioteka.tscn"
 drzwiSFX = NodePath("../../drzwiSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="drzwi/drzwi_lewo" unique_id=1892779248]
-position = Vector2(-143, -2)
+position = Vector2(-143, 7)
 shape = SubResource("RectangleShape2D_igf7e")
 
 [node name="Drzwilewo" type="Sprite2D" parent="drzwi/drzwi_lewo" unique_id=976247254]
@@ -271,6 +279,16 @@ texture = SubResource("AtlasTexture_yg566")
 position = Vector2(-77, -51)
 shape = SubResource("RectangleShape2D_igf7e")
 
+[connection signal="mouse_entered" from="pudelko4" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="pudelko4" to="." method="_on_computer_click_mouse_exited"]
+[connection signal="mouse_entered" from="pudelko3" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="pudelko3" to="." method="_on_computer_click_mouse_exited"]
+[connection signal="mouse_entered" from="pudelko2" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="pudelko2" to="." method="_on_computer_click_mouse_exited"]
+[connection signal="mouse_entered" from="szafa" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="szafa" to="." method="_on_computer_click_mouse_exited"]
+[connection signal="mouse_entered" from="pudelko" to="." method="_on_computer_click_mouse_entered"]
+[connection signal="mouse_exited" from="pudelko" to="." method="_on_computer_click_mouse_exited"]
 [connection signal="mouse_entered" from="drzwi/Area2D4" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="drzwi/Area2D4" to="." method="_on_drzwi_mouse_exited"]
 [connection signal="mouse_entered" from="drzwi/Area2D3" to="." method="_on_drzwi_mouse_entered"]

@@ -165,6 +165,7 @@ scroll_active = false
 
 [node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=231425254 instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
+texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 13
@@ -224,6 +225,14 @@ text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1918088995]
 unique_name_in_owner = true
+
+[node name="Label" type="Label" parent="." unique_id=432174487]
+offset_left = 294.0
+offset_top = 339.0
+offset_right = 335.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 11
+text = "[SPACE]"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

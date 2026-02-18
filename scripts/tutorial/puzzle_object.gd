@@ -34,5 +34,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 			if  GlobalC.first_puzzle_open and GlobalC.dialog :
 				GlobalC.first_puzzle_open = false
 				await get_tree().create_timer(0.5).timeout
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "kod")
-				GlobalC.open = true
+				await DialogueManager.dialogue_ended
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

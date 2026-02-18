@@ -35,15 +35,17 @@ func cos():
 	
 	
 #game stats
+
 var puzzle_states : Dictionary = {}
 var collected_items := {}
+var was_open:= {}
 
 var spawn_id: String = ""
 
 var textura_cyferki := {}
 var textura_planetki := {} 
 
-var volume_state:float = 60
+var volume_state:float = 40
 
 func _ready():
 	await get_tree().process_frame

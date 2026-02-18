@@ -24,7 +24,7 @@ func _input(event):
 func _init() -> void:
 	GlobalC.loaded+=1
 	if GlobalC.loaded == 1:
-		DialogueManager.show_example_dialogue_balloon(dialogue_resource, "chodzenie")		
 		
-
+		DialogueManager.show_example_dialogue_balloon(dialogue_resource, "chodzenie")		
+	
 	

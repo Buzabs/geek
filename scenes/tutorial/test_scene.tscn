@@ -158,25 +158,25 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.3,
+"duration": 1.4,
 "texture": SubResource("AtlasTexture_twoas")
 }, {
-"duration": 1.5,
+"duration": 1.6,
 "texture": SubResource("AtlasTexture_iqc20")
 }, {
-"duration": 1.5,
+"duration": 1.6,
 "texture": SubResource("AtlasTexture_5fywa")
 }, {
-"duration": 1.5,
+"duration": 1.6,
 "texture": SubResource("AtlasTexture_8b60m")
 }, {
-"duration": 1.4,
+"duration": 1.5,
 "texture": SubResource("AtlasTexture_7vbam")
 }, {
-"duration": 1.5,
+"duration": 1.6,
 "texture": SubResource("AtlasTexture_j7gxw")
 }, {
-"duration": 1.3,
+"duration": 1.4,
 "texture": SubResource("AtlasTexture_gp1je")
 }],
 "loop": false,
@@ -193,7 +193,7 @@ animations = [{
 "duration": 1.4,
 "texture": SubResource("AtlasTexture_qpmxk")
 }, {
-"duration": 1.7,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_2tj3m")
 }],
 "loop": false,
@@ -382,7 +382,7 @@ shape = SubResource("CircleShape2D_6qxox")
 texture_filter = 1
 position = Vector2(92, -39)
 sprite_frames = SubResource("SpriteFrames_muxsv")
-animation = &"open"
+animation = &"open_portal"
 autoplay = "default"
 speed_scale = 0.7
 
