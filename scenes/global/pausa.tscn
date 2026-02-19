@@ -14,6 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://ps2gmdjgkd4q" path="res://sprites/UI/volume.png" id="12_cd01g"]
 [ext_resource type="Texture2D" uid="uid://b2262pcje7yur" path="res://sprites/UI/volume_pressed.png" id="13_7inj0"]
 [ext_resource type="Texture2D" uid="uid://c4om6ubet3ymc" path="res://sprites/UI/volume_hover.png" id="14_m1u3w"]
+[ext_resource type="Texture2D" uid="uid://b7ra2hlqkdth5" path="res://sprites/UI/controls_button.png" id="15_gxo4q"]
+[ext_resource type="Texture2D" uid="uid://du7uq72ditjxv" path="res://sprites/UI/controls_button_pressed.png" id="16_hvs5u"]
+[ext_resource type="Texture2D" uid="uid://u7xfx8j1okd" path="res://sprites/UI/controls_button_hover.png" id="17_kynu0"]
+[ext_resource type="Texture2D" uid="uid://bt772xynmvxd4" path="res://sprites/UI/controls.png" id="18_kynu0"]
+[ext_resource type="Script" uid="uid://csccai0jwvw80" path="res://scripts/controls.gd" id="19_so05t"]
 
 [node name="Control" type="Control" unique_id=1232363862 node_paths=PackedStringArray("audio_manager")]
 process_mode = 3
@@ -29,6 +34,7 @@ script = ExtResource("1_dxsr0")
 audio_manager = NodePath("AudioManager")
 
 [node name="Volume" parent="." unique_id=893809875 instance=ExtResource("5_cd01g")]
+visible = false
 
 [node name="AudioManager" type="AudioStreamPlayer2D" parent="." unique_id=1002924303]
 stream = ExtResource("2_cmpgo")
@@ -69,9 +75,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = -89.0
-offset_bottom = 3.0
+offset_left = -80.0
+offset_top = -100.0
+offset_right = 14.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
@@ -95,6 +102,55 @@ texture_normal = ExtResource("2_kokf4")
 texture_pressed = ExtResource("8_yyxxn")
 texture_hover = ExtResource("7_jxpaa")
 
+[node name="ControlsButton" type="TextureButton" parent="." unique_id=658995491]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 160.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture_normal = ExtResource("15_gxo4q")
+texture_pressed = ExtResource("16_hvs5u")
+texture_hover = ExtResource("17_kynu0")
+
+[node name="Controls" type="TextureRect" parent="." unique_id=54304957 node_paths=PackedStringArray("audio_manager")]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -121.0
+offset_right = 242.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_kynu0")
+script = ExtResource("19_so05t")
+audio_manager = NodePath("../AudioManager")
+
+[node name="ControlsBack" type="TextureButton" parent="Controls" unique_id=2114025630]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 173.0
+offset_right = 132.0
+offset_bottom = 213.0
+texture_normal = ExtResource("4_dxsr0")
+texture_pressed = ExtResource("4_jxpaa")
+texture_hover = ExtResource("4_v35qo")
+
 [connection signal="pressed" from="Buttons/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Buttons/Volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="ControlsButton" to="Controls" method="_on_controls_button_pressed"]
+[connection signal="pressed" from="Controls/ControlsBack" to="Controls" method="_on_controls_back_pressed"]

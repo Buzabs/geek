@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bda2ri7em3me4" path="res://sprites/UI/volume_grabber.png" id="7_jphiq"]
 [ext_resource type="Texture2D" uid="uid://bwk4apjngd23t" path="res://sprites/UI/volume_grabber_hover.png" id="8_yalrp"]
 [ext_resource type="AudioStream" uid="uid://cmr2yve2xlukn" path="res://sounds/UI/click_001.ogg" id="9_3iomr"]
-[ext_resource type="Texture2D" uid="uid://bdle5jddp6oy6" path="res://sprites/UI/napis_volume.png" id="10_w6p17"]
 
 [node name="Volume" type="CanvasLayer" unique_id=893809875 node_paths=PackedStringArray("audio_manager")]
 script = ExtResource("1_gxmsf")
@@ -71,10 +70,5 @@ step = 0.1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1386757535]
 stream = ExtResource("9_3iomr")
-
-[node name="NapisVolume" type="Sprite2D" parent="." unique_id=1776300762]
-texture_filter = 1
-position = Vector2(318, 200)
-texture = ExtResource("10_w6p17")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
