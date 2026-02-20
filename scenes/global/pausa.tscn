@@ -141,10 +141,10 @@ audio_manager = NodePath("../AudioManager")
 
 [node name="ControlsBack" type="TextureButton" parent="Controls" unique_id=2114025630]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 173.0
-offset_right = 132.0
-offset_bottom = 213.0
+offset_left = 358.0
+offset_top = 181.0
+offset_right = 452.0
+offset_bottom = 221.0
 texture_normal = ExtResource("4_dxsr0")
 texture_pressed = ExtResource("4_jxpaa")
 texture_hover = ExtResource("4_v35qo")

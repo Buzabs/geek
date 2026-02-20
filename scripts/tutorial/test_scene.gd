@@ -58,3 +58,37 @@ func _on_grandma_mouse_entered() -> void:
 
 func _on_grandma_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(movement_cursor)
+	
+
+
+
+func _on_orzel_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(interaction_cursor)
+
+
+func _on_orzel_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(movement_cursor)
+
+
+func _on_skorpion_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(interaction_cursor)
+
+
+func _on_skorpion_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(movement_cursor)
+
+
+func _on_wielki_woz_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(interaction_cursor)
+
+
+func _on_wielki_woz_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(movement_cursor)
+
+
+func _on_maly_woz_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(interaction_cursor)
+
+
+func _on_maly_woz_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(movement_cursor)
