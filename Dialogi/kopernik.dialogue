@@ -13,6 +13,7 @@ MIKOŁAJ: Widzisz, od lat obserwuję wszechświat, jednak zgubiłem kilka moich 
 
 ~ start2
 MIKOŁAJ: Mógłbyś pomóc mi je odnaleźć i przynieść do mnie?
+MIKOŁAJ: Brakuje mi chyba 4..
 => END
 
 ~ nie_tykac
@@ -54,6 +55,8 @@ MIKOŁAJ: Pamiętam, że mam obrazy konstelacji w jednym z pokoi.
 MIKOŁAJ: Świetnie, że sobie poradziłeś z konstelacjami!
 MIKOŁAJ: Teraz mam dla ciebie kolejne zadanie, tym razem związane z planetami.
 MIKOŁAJ: Musisz odnaleźć planety. Są gdzies porozrzucane, nie wiem gdzie bo zawsze je gubię
+MIKOŁAJ: Następnie ułóż z nich system planetarny.
+MIKOŁAJ: Stół do ich układania znajdziesz w pokoju po prawej taki niebieski.
 ENZO: Jasne, zbieram się do roboty!
 => END
 

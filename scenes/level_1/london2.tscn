@@ -13,11 +13,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xwh"]
 size = Vector2(36, 63)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2uuv"]
-size = Vector2(43.5, 70)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iudcw"]
 size = Vector2(335, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm0hs"]
+size = Vector2(36, 41)
 
 [node name="London2" type="Node2D" unique_id=1898180347]
 script = ExtResource("1_edjt4")
@@ -48,15 +48,6 @@ target_spawn_id = "left"
 position = Vector2(142, 57)
 shape = SubResource("RectangleShape2D_o6xwh")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=1255668589]
-script = ExtResource("2_j2uuv")
-load_scenes = "res://scenes/level_1/sad.tscn"
-target_spawn_id = "right"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1046527349]
-position = Vector2(-138, 52)
-shape = SubResource("RectangleShape2D_j2uuv")
-
 [node name="Player" parent="." unique_id=1957595181 instance=ExtResource("3_j2uuv")]
 position = Vector2(1, 62)
 
@@ -79,7 +70,13 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=940553317]
 stream = ExtResource("6_20bjw")
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=1123314426]
+script = ExtResource("2_j2uuv")
+load_scenes = "res://scenes/level_1/sad.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1095027987]
+position = Vector2(-142, 70.5)
+shape = SubResource("RectangleShape2D_jm0hs")
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]
-[connection signal="mouse_entered" from="Area2D2" to="." method="_on_drzwi_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D2" to="." method="_on_drzwi_mouse_exited"]

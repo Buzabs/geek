@@ -19,7 +19,7 @@ size = Vector2(318.5, 52)
 size = Vector2(20, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5anef"]
-size = Vector2(27, 90)
+size = Vector2(27, 40.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in5km"]
 size = Vector2(51, 42)
@@ -76,7 +76,7 @@ load_scenes = "res://scenes/level_1/london1.tscn"
 target_spawn_id = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enters/MoreLondon" unique_id=15720479]
-position = Vector2(147, 45)
+position = Vector2(148, 66.25)
 shape = SubResource("RectangleShape2D_5anef")
 
 [node name="OrchardEnterance" type="Area2D" parent="enters" unique_id=1188628185]
@@ -85,7 +85,7 @@ load_scenes = "res://scenes/level_1/london2.tscn"
 target_spawn_id = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enters/OrchardEnterance" unique_id=1008537836]
-position = Vector2(-147, 48)
+position = Vector2(-146, 70)
 shape = SubResource("RectangleShape2D_5anef")
 
 [node name="Drzwi" type="Area2D" parent="enters" unique_id=344793469 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]

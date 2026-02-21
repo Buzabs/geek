@@ -6,7 +6,7 @@ var target_spawn_id: String ="planetki"
 func _ready():
 	GameSignals.solution_checked.connect(_on_solution_checked)
 	if GlobalC.first_puzzle_open:
-		#DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "planety_wyjasnienie")
+		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "ukladanie_planet")
 		GlobalC.first_puzzle_open = false
 
 func _on_solution_checked():

@@ -28,10 +28,28 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	state_machine.process_frame(delta)
 
-func _input_event(_viewport, event, _shape_idx):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		DialogueManager.show_example_dialogue_balloon(
-			load("res://Dialogi/Tutorial.dialogue"), "ciii")
+var current_dialog = null
 
-		if GlobalEq.selected_item_id == "ciii" and PrismSwap.ciiii:
-			$animation.play("ciii")
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton \
+	and event.button_index == MOUSE_BUTTON_LEFT \
+	and event.pressed:
+		
+		if GlobalEq.selected_item_id == "ciii":
+			
+			current_dialog = DialogueManager.show_example_dialogue_balloon(
+				load("res://Dialogi/Tutorial.dialogue"),
+				"ciii"
+			)
+			
+			await current_dialog.tree_exited
+			
+			if PrismSwap.ciiii:
+				$jet_pack.visible = true
+				$animation.visible = false
+				await get_tree().create_timer(2.5).timeout
+				$jet_pack.play("ciii")
+				GlobalEq.remove_item("ciii")
+				await $jet_pack.animation_finished
+				DialogueManager.show_example_dialogue_balloon(
+				load("res://Dialogi/Tutorial.dialogue"),"ciii2")

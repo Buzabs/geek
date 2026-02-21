@@ -69,6 +69,6 @@ shape = SubResource("RectangleShape2D_nb40j")
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=1608524451]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_yh0qi")
-animation = &"open_eyes"
+animation = &"wake_up"
 autoplay = "default"
 speed_scale = 0.7

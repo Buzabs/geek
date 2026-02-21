@@ -7,17 +7,17 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_5lbyh"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_vic2t"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
-[ext_resource type="Texture2D" uid="uid://c0q6wsc4aiufm" path="res://sprites/kopernik/pokoje/pokoj_planetki.png" id="4_quwyi"]
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
+[ext_resource type="Texture2D" uid="uid://bbtbs731k3nib" path="res://sprites/kopernik/pokoje/planetki_pokoj.png" id="4_xafkd"]
 [ext_resource type="Script" uid="uid://claia2bsglpwj" path="res://scenes/kopernik/planetki_pokoj.gd" id="8_xafkd"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
 [ext_resource type="PackedScene" uid="uid://cd680feg5aewv" path="res://itemy/scenes/komernik/saturn.tscn" id="11_rp3hp"]
+[ext_resource type="Texture2D" uid="uid://dk5mwmddyiyne" path="res://sprites/meble/szafa_open.png" id="13_58y8r"]
+[ext_resource type="Texture2D" uid="uid://byyeud16yb65c" path="res://sprites/meble/szafa.png" id="14_eunia"]
 [ext_resource type="Texture2D" uid="uid://blw8cqfiwignk" path="res://sprites/meble/stol_2.png" id="14_pbkw3"]
 [ext_resource type="PackedScene" uid="uid://tu5x0umdlatj" path="res://itemy/scenes/komernik/notka_2.tscn" id="14_rp3hp"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="15_quwyi"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="15_rp3hp"]
-[ext_resource type="Texture2D" uid="uid://b1w2f5gm4lpx8" path="res://sprites/meble/open_wardrobe.png" id="16_xafkd"]
-[ext_resource type="Texture2D" uid="uid://c7yt3gh4h70ww" path="res://sprites/meble/wardrobe.png" id="17_58y8r"]
 [ext_resource type="Texture2D" uid="uid://nfoa1obplpa0" path="res://sprites/kopernik/plakat_uklad_sloneczny.png" id="18_quwyi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbkw3"]
@@ -50,14 +50,14 @@ pause_scene = ExtResource("2_vic2t")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1104355638]
 zoom = Vector2(2, 2)
 
-[node name="PokojPlanetki" type="Sprite2D" parent="." unique_id=408422383]
+[node name="PlanetkiPokoj" type="Sprite2D" parent="." unique_id=677588199]
 texture_filter = 1
-texture = ExtResource("4_quwyi")
+texture = ExtResource("4_xafkd")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=653834661]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1499348516]
-position = Vector2(108, 17)
+position = Vector2(106, 19)
 shape = SubResource("RectangleShape2D_pbkw3")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1093830753]
@@ -95,11 +95,11 @@ script = ExtResource("8_xafkd")
 
 [node name="StolPlan" type="Sprite2D" parent="planetki" unique_id=478400091]
 texture_filter = 1
-position = Vector2(104, 15)
+position = Vector2(106, 9)
 texture = ExtResource("4_rudhe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="planetki" unique_id=1950444010]
-position = Vector2(101, 13)
+position = Vector2(105, 11)
 shape = SubResource("RectangleShape2D_nlq5b")
 
 [node name="Player" parent="." unique_id=1882407171 instance=ExtResource("3_5lbyh")]
@@ -117,27 +117,27 @@ position = Vector2(79, -1)
 [node name="szafa" type="Area2D" parent="." unique_id=1163212566 node_paths=PackedStringArray("sprite", "item")]
 z_index = 1
 script = ExtResource("15_quwyi")
-open = ExtResource("16_xafkd")
+open = ExtResource("13_58y8r")
 sprite = NodePath("Szafa")
 item = NodePath("saturn")
 id_przedmiotu = "szafa"
 
 [node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1553074306]
 texture_filter = 1
-position = Vector2(-93, -39)
-texture = ExtResource("17_58y8r")
+position = Vector2(-89, -38)
+texture = ExtResource("14_eunia")
 
 [node name="saturn" parent="szafa" unique_id=1346213407 node_paths=PackedStringArray("itemSFX") instance=ExtResource("11_rp3hp")]
-position = Vector2(-93, -28)
+position = Vector2(-89, -28)
 itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="szafa" unique_id=35213589]
-position = Vector2(-90, -40)
+position = Vector2(-88, -43)
 shape = SubResource("RectangleShape2D_eunia")
 
 [node name="Stol2" type="Sprite2D" parent="." unique_id=548983024]
 texture_filter = 1
-position = Vector2(-2, -15)
+position = Vector2(-6, -15)
 texture = ExtResource("14_pbkw3")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1465227298]

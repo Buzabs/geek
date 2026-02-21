@@ -18,15 +18,13 @@ func _on_exit(body):
 
 func dialogue_one():
 			if GlobalEq.has_item("notka1") and  GlobalEq.has_item("notka2") and  GlobalEq.has_item("notka2") and  GlobalEq.has_item("notka2"):
-				if GlobalEq.selected_item_id == "notka1" or GlobalEq.selected_item_id == "notka2" or  GlobalEq.selected_item_id == "notka3" or GlobalEq.selected_item_id == "notka4" : 
-						DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "k_misja")
-
-						GlobalC.dialog = true
-						GlobalEq.remove_item("notka1")
-						GlobalEq.remove_item("notka2")
-						GlobalEq.remove_item("notka3")
-						GlobalEq.remove_item("notka4")
-						return
+					DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "k_misja")
+					GlobalC.dialog = true
+					GlobalEq.remove_item("notka1")
+					GlobalEq.remove_item("notka2")
+					GlobalEq.remove_item("notka3")
+					GlobalEq.remove_item("notka4")
+					return
 			if GlobalC.first_play:
 				GlobalC.open = true
 				GlobalEq.pick = true

@@ -12,8 +12,8 @@ var first_play := true
 var first_play_next  := true
 var next_dialog := false
 var rzut=true
-var wake_up := true
-
+var wake_up := false
+var can_craft := false
 #other
 var isLocked: bool = true
 

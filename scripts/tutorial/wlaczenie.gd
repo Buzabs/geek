@@ -1,6 +1,6 @@
 extends Area2D
 
-
+var current_dialog = null
 var can_interact = false
 var player_ref: Node = null
 
@@ -21,7 +21,11 @@ func _on_exit(body):
 		can_interact = false
 		player_ref = null
 
-	
+func zamknij_dialog():
+	if current_dialog:
+		current_dialog.queue_free()
+		current_dialog = null
+
 func _input_event(viewport, event, shape_idx):
 	if not GameSignals.solution_ok:
 		return
@@ -32,15 +36,18 @@ func _input_event(viewport, event, shape_idx):
 				GameSignals.solution_ok = false
 				GlobalC.first_play = true
 				GlobalC.first_play_next = true
+				GlobalC.first_puzzle_open = true
 				GlobalC.next_dialog = false
 				player_ref.visible = false
 				$portal.play("open")
 				await $portal.animation_finished
 				GlobalEq.remove_item("portal_open")
 				portalSFX.play()
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "portal")	
+				current_dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"),"portal")
 				$portal.play("open_portal")
 				await $portal.animation_finished
+				zamknij_dialog()
+			
 				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "wessanie")	
 				$portal.play("teleportation")		
 				#await get_tree().create_timer(2.5).timeout

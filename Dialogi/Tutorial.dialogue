@@ -51,11 +51,11 @@ ENZO: Spróbujmy użyć go na portalu. Co może się stać?
 => END
 
 ~ portal
-ENZO: Okej... wkładam tą część. Ooo! Portal się aktywuje, zaraz, co się dzieje?!
+ENZO: Okej...  wkładam tą część. Ooo! Portal się aktywuje. Zaraz, co się dzieje...
 => END
 
 ~ wessanie
-ENZO: Chwila, chyba mnie wciąga! AAAAAAAAAA...!
+ENZO: wciąga mnie! AAAAAAAAAA...!
 => END
 
 ~ ciii
@@ -66,7 +66,10 @@ ENZO: Chwila, chyba mnie wciąga! AAAAAAAAAA...!
 	do  PrismSwap.ciii()
 	=> END
 => END
-	
+
+~ ciii2
+ŚWIAT: GRATULACJE!!!!
+ŚWIAT: Właśnie przegrałeś w gre edukacyjną
 ~ powrot
 ENZO: OOOOOOOOO!!!
 ENZO: W końcu wróciłem...

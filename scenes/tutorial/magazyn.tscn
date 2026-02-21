@@ -17,8 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://j8n3qa1y37su" path="res://sprites/meble/box.png" id="13_2meqn"]
 [ext_resource type="PackedScene" uid="uid://d2vtfhg5wnt78" path="res://itemy/scenes/tutorial/portal_items.tscn" id="15_5bx36"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="17_aqp31"]
-[ext_resource type="Texture2D" uid="uid://gnbwqqsvxxx6" path="res://sprites/Environment/jet_pack.png" id="18_g3bck"]
-[ext_resource type="Script" uid="uid://bg5u6rbxvrj25" path="res://scenes/tutorial/ciiii.gd" id="19_l3317"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r353"]
 size = Vector2(25, 110)
@@ -44,103 +42,6 @@ size = Vector2(59, 58.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bx36"]
 size = Vector2(34, 28.5)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uk77x"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4rh0u"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_spuqw"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c27oj"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r66l1"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uonvo"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsfxo"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kb8xq"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mslb4"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j6glp"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vngy4"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h5fkl"]
-atlas = ExtResource("18_g3bck")
-region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_l3317"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uk77x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4rh0u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_spuqw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c27oj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r66l1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uonvo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lsfxo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kb8xq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mslb4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j6glp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vngy4")
-}],
-"loop": false,
-"name": &"ciii",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h5fkl")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
 
 [node name="Magazyn" type="Node" unique_id=454308473]
 script = ExtResource("1_5bx36")
@@ -251,13 +152,6 @@ shape = SubResource("RectangleShape2D_5bx36")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1965004355]
 stream = ExtResource("17_aqp31")
-
-[node name="animation_ciii" type="AnimatedSprite2D" parent="." unique_id=559953643]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_l3317")
-animation = &"ciii"
-autoplay = "new_animation"
-script = ExtResource("19_l3317")
 
 [connection signal="mouse_entered" from="DrzwiMag" to="." method="_on_drzwi_mag_mouse_entered"]
 [connection signal="mouse_exited" from="DrzwiMag" to="." method="_on_drzwi_mag_mouse_exited"]

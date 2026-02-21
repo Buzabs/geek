@@ -29,7 +29,8 @@ func _on_exit(body):
 	if body == player_ref:
 		can_open = false
 		player_ref = null
-	
+
+		
 
 
 func _input_event(_viewport, event, _shape_idx):
