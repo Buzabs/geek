@@ -16,6 +16,10 @@ MIKOŁAJ: Mógłbyś pomóc mi je odnaleźć i przynieść do mnie?
 MIKOŁAJ: Brakuje mi chyba 4..
 => END
 
+~ schody
+ENZO: Nie powinienem schodzić na dół
+=> END
+
 ~ nie_tykac
 ENZO: Lepiej tego na razie nie ruszać.
 ENZO: Może później dowiem się do czego to służy.

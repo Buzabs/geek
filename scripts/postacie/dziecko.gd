@@ -21,8 +21,10 @@ func _on_exit(body):
 		can_interact = false
 
 func _proca():
+		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "proca3")
 		GlobalEq.remove_item("nitka")
 		GlobalEq.remove_item("galazka")
+		await DialogueManager.dialogue_ended
 		GlobalEq.add_item(item_icon, "proca")
 
 func _input_event(viewport, event, shape_idx):

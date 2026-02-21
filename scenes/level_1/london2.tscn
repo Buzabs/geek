@@ -80,3 +80,5 @@ shape = SubResource("RectangleShape2D_jm0hs")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D2" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D2" to="." method="_on_drzwi_mouse_exited"]

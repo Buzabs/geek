@@ -7,6 +7,8 @@ var player_ref: Node = null
 var movement_cursor = load("res://sprites/Other/movement_cursor.png")
 var dialogue_cursor = load("res://sprites/Other/dialogue_cursor.png")
 
+var dialog
+var balloon
 
 func _ready():
 	if not GlobalC.next_dialog:
@@ -37,14 +39,24 @@ func _input_event(viewport, event, shape_idx):
 				$animation.play("wake_up")	
 				GlobalC.wake_up = true
 				GlobalC.first_play = false
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_spotkanie")
+				dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_spotkanie")
+				await get_tree().process_frame  # poczekaj aż się zbuduje
+				balloon = dialog.get_child(0)
+				balloon.position = Vector2(90, 25)
+				
+				
 				await DialogueManager.dialogue_ended
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
+				dialog =DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
 				GlobalC.first_play_next  = true
-			
+				await get_tree().process_frame  # poczekaj aż się zbuduje
+				balloon = dialog.get_child(0)
+				balloon.position = Vector2(90, 25)
 				return
 			else:
-				DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
+				dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
+				await get_tree().process_frame  # poczekaj aż się zbuduje
+				balloon = dialog.get_child(0)
+				balloon.position = Vector2(90, 25)
 				return
 			
 

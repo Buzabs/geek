@@ -6,6 +6,8 @@ extends Button
 @export var ok_button: Button
 @export var ok_icon_default: Texture2D
 
+
+
 var target_spawn_id: String = "left"
 
 func _ready():
@@ -27,5 +29,6 @@ func _pressed():
 	
 	
 	get_tree().change_scene_to_file("res://scenes/level_1/sad.tscn")
-	GlobalC.cos()
-	GlobalC.wake_up = false
+	GlobalC.next_dialog 
+	GlobalC.koniec_pryzmat()
+	GlobalC.wake_up = true

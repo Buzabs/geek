@@ -27,12 +27,21 @@ func next():
 	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "komputer")
 	dialog= true    
 
-func cos():
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_zagadka")
+var dialog_pryzmat
+var balloon
+
+
+func koniec_pryzmat():
+	dialog_pryzmat = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_zagadka")
+	await get_tree().process_frame  # poczekaj aż się zbuduje
+	balloon = dialog_pryzmat.get_child(0)
+	balloon.position = Vector2(90, 25)
 	await DialogueManager.dialogue_ended
 	await get_tree().create_timer(2).timeout
-	DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "poczatek_proca")
-	
+	dialog_pryzmat = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "poczatek_proca")
+	await get_tree().process_frame  # poczekaj aż się zbuduje
+	balloon = dialog_pryzmat.get_child(0)
+	balloon.position = Vector2(90, 25)
 	
 #game stats
 

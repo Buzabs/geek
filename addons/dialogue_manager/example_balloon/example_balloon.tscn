@@ -188,18 +188,26 @@ polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 libraries/ = SubResource("AnimationLibrary_1337t")
 autoplay = &"progress"
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=2093370130 node_paths=PackedStringArray("response_template")]
+[node name="Label" type="Label" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=432174487]
+layout_mode = 0
+offset_left = -217.0
+offset_top = 9.0
+offset_right = -171.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 11
+text = "[SPACE]"
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="." unique_id=2093370130 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.43
 anchor_top = 0.536
 anchor_right = 0.43
 anchor_bottom = 0.536
-offset_left = -262.27002
-offset_top = -116.84801
-offset_right = 255.73
-offset_bottom = -52.848007
+offset_left = -233.20003
+offset_top = 21.039993
+offset_right = 284.8
+offset_bottom = 91.03999
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
@@ -208,17 +216,17 @@ alignment = 1
 script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
-[node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=1289108266]
+[node name="ResponseExample" type="Button" parent="ResponsesMenu" unique_id=1289108266]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Response example"
 
-[node name="ResponseExample2" type="Button" parent="Balloon/ResponsesMenu" unique_id=2001512569]
+[node name="ResponseExample2" type="Button" parent="ResponsesMenu" unique_id=2001512569]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Response example"
 
-[node name="ResponseExample3" type="Button" parent="Balloon/ResponsesMenu" unique_id=33128017]
+[node name="ResponseExample3" type="Button" parent="ResponsesMenu" unique_id=33128017]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "Response example"
@@ -226,13 +234,5 @@ text = "Response example"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1918088995]
 unique_name_in_owner = true
 
-[node name="Label" type="Label" parent="." unique_id=432174487]
-offset_left = 294.0
-offset_top = 339.0
-offset_right = 335.0
-offset_bottom = 355.0
-theme_override_font_sizes/font_size = 11
-text = "[SPACE]"
-
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
-[connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
+[connection signal="response_selected" from="ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

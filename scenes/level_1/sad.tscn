@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://k55dfxplyg6x" path="res://itemy/scenes/london/galazka.tscn" id="5_ogcwb"]
 [ext_resource type="Texture2D" uid="uid://c537fuox12yfy" path="res://sprites/Other/udany_rzut.png" id="5_otdhu"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_f3ngc"]
+[ext_resource type="Texture2D" uid="uid://bhhm5ghe6xxck" path="res://sprites/anglia/sad_przeniesienie.png" id="7_753nf"]
 [ext_resource type="Script" uid="uid://rmocs776m8b6" path="res://scripts/anglia/kamyczek_proca.gd" id="7_oy0c3"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="11_fww8k"]
 [ext_resource type="Texture2D" uid="uid://cx43eoee0k1q2" path="res://sprites/Environment/glaz.png" id="12_pf5o7"]
@@ -82,6 +83,34 @@ region = Rect2(640, 720, 320, 180)
 [sub_resource type="AtlasTexture" id="AtlasTexture_cb3kl"]
 atlas = ExtResource("1_or2ee")
 region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5agp"]
+atlas = ExtResource("7_753nf")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogy1o"]
+atlas = ExtResource("7_753nf")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_525j2"]
+atlas = ExtResource("7_753nf")
+region = Rect2(0, 180, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m5ta"]
+atlas = ExtResource("7_753nf")
+region = Rect2(320, 180, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6ilg"]
+atlas = ExtResource("7_753nf")
+region = Rect2(0, 360, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcehr"]
+atlas = ExtResource("7_753nf")
+region = Rect2(320, 360, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx2dv"]
+atlas = ExtResource("7_753nf")
+region = Rect2(0, 540, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_48sju"]
 atlas = ExtResource("5_otdhu")
@@ -167,10 +196,6 @@ region = Rect2(960, 720, 320, 180)
 atlas = ExtResource("5_otdhu")
 region = Rect2(0, 900, 320, 180)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pjepw"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(320, 900, 320, 180)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_udbkv"]
 animations = [{
 "frames": [{
@@ -232,6 +257,32 @@ animations = [{
 }],
 "loop": false,
 "name": &"nieudany_rzut",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_x5agp")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_ogy1o")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_525j2")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_2m5ta")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_w6ilg")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_xcehr")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_yx2dv")
+}],
+"loop": false,
+"name": &"przeniesienie",
 "speed": 5.0
 }, {
 "frames": [{
@@ -297,9 +348,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_el4g5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pjepw")
 }],
 "loop": false,
 "name": &"udany_rzut",
@@ -344,10 +392,11 @@ player = NodePath("../Player")
 [node name="animation" type="AnimatedSprite2D" parent="proca" unique_id=2050276184]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_udbkv")
-animation = &"nieudany_rzut"
+animation = &"przeniesienie"
 autoplay = "default"
-frame = 15
+frame = 6
 frame_progress = 1.0
+speed_scale = 0.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="proca" unique_id=526037]
 position = Vector2(-50, 53)
