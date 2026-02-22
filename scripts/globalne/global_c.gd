@@ -17,7 +17,7 @@ var can_craft := false
 var first_look:= true
 #other
 var isLocked: bool = true
-
+var can_see := false
 #pause
 signal volumeOff
 

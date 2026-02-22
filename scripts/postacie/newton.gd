@@ -13,6 +13,8 @@ var balloon
 func _ready():
 	if not GlobalC.next_dialog:
 			visible = false
+	if GlobalC.can_see:
+			visible = true
 	if GlobalC.wake_up :
 		$animation.play("open_eyes")	
 	body_entered.connect(_on_enter)
@@ -33,7 +35,7 @@ func _on_exit(body):
 
 func _input_event(viewport, event, shape_idx):
 	if  GlobalC.next_dialog  :
-		visible = true
+		GlobalC.can_see = true
 		if event is InputEventMouseButton and can_interact and event.pressed  :
 			if GlobalC.first_play :
 				$animation.play("wake_up")	

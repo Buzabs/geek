@@ -68,7 +68,7 @@ texture = ExtResource("5_wdkfl")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=737071481]
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="CharacterBody2D" unique_id=70405364]
-position = Vector2(-4, 99)
+position = Vector2(-4, 100)
 shape = SubResource("RectangleShape2D_uigpl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=474410203]
@@ -114,12 +114,12 @@ drzwiSFX = NodePath("../drzwiSFX")
 target_spawn_id = "up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=255872086]
-position = Vector2(-132, 64)
+position = Vector2(-133, 65)
 shape = SubResource("RectangleShape2D_78y6g")
 
 [node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=1540638120]
 texture_filter = 1
-position = Vector2(-132, 81)
+position = Vector2(-132, 82)
 texture = ExtResource("9_wdkfl")
 
 [node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=1097123247]
