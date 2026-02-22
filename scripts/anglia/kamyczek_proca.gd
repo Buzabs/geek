@@ -37,9 +37,11 @@ func rzucanie(rzut):
 		await $animation.animation_finished	
 		get_tree().change_scene_to_file("res://scenes/tutorial/test_scene.tscn")
 		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "powrot")
+		await DialogueManager.dialogue_ended
+		get_tree().change_scene_to_file("res://scenes/ending.tscn")
+		
 		
 	player.visible = true
-
 
 
 func _input_event(viewport, event, shape_idx):
