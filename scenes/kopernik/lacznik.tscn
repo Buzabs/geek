@@ -19,8 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://dsd31cpvipt46" path="res://itemy/scenes/komernik/slonce.tscn" id="14_j02d6"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="15_vj344"]
 [ext_resource type="Texture2D" uid="uid://byyeud16yb65c" path="res://sprites/meble/szafa.png" id="15_yg566"]
-[ext_resource type="Texture2D" uid="uid://cbpga1v0wl0v" path="res://sprites/meble/drzwi_dwoje.png" id="20_dnj0k"]
 [ext_resource type="Texture2D" uid="uid://bm3mde1atj86j" path="res://sprites/kopernik/barirrki_dol.png" id="21_2ukvl"]
+[ext_resource type="Texture2D" uid="uid://dt1hkfa25644b" path="res://sprites/meble/drzwi_kopernik.png" id="21_a001c"]
 [ext_resource type="Script" uid="uid://bfhoamemuhenx" path="res://scenes/kopernik/schody.gd" id="22_2ukvl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnj0k"]
@@ -44,18 +44,6 @@ size = Vector2(18.5, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igf7e"]
 size = Vector2(36.25, 28.25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tw23o"]
-atlas = ExtResource("20_dnj0k")
-region = Rect2(0, 29, 16, 5)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ukvl"]
-atlas = ExtResource("20_dnj0k")
-region = Rect2(0, 29, 16, 5)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dnj0k"]
-atlas = ExtResource("20_dnj0k")
-region = Rect2(0, 29, 16, 5)
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a001c"]
 radius = 28.000002
 height = 78.0
@@ -66,15 +54,15 @@ pause_scene = ExtResource("2_tw23o")
 
 [node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("3_dnj0k")]
 
-[node name="Schody2" type="Sprite2D" parent="." unique_id=2113529290]
-texture_filter = 1
-texture = ExtResource("4_tw23o")
-
 [node name="eq" parent="." unique_id=1185207575 instance=ExtResource("2_jk7vo")]
 offset_left = -75.0
 offset_top = 47.0
 offset_right = -75.0
 offset_bottom = 47.0
+
+[node name="Schody2" type="Sprite2D" parent="." unique_id=2113529290]
+texture_filter = 1
+texture = ExtResource("4_tw23o")
 
 [node name="SzafkaKopernik" type="Sprite2D" parent="." unique_id=479778935]
 texture_filter = 1
@@ -100,7 +88,8 @@ position = Vector2(-2, 12)
 polygon = PackedVector2Array(-128, -65, -129, -52, -134, -51, -143, -52, -144, -45, -158, -45, -158, -64)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=707655724]
-polygon = PackedVector2Array(49, 4, 61, 5, 50, 6, 49, 20, 41, 31, 35, 32, 32, 35, 23, 35, 16, 33, 10, 35, 6, 32, 1, 32, -6, 28, -8, 24, -12, 26, -13, 21, -12, 17, -10, 23, -6, 14, 2, 10, 10, 6, 17, 5, 33, 3)
+position = Vector2(1, -2)
+polygon = PackedVector2Array(49, 4, 61, 6, 61, 7, 50, 8, 38, 23, 20, 26, -1, 23, -12, 26, -13, 21, -12, 17, -10, 23, -6, 14, 2, 10, 10, 6, 17, 5, 33, 3)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=703120697]
 zoom = Vector2(2, 2)
@@ -111,7 +100,7 @@ stream = ExtResource("5_igf7e")
 volume_db = 9.545
 
 [node name="Player" parent="." unique_id=1882407171 instance=ExtResource("6_igf7e")]
-position = Vector2(81, 11)
+position = Vector2(86, 16)
 
 [node name="BarierkiGora" type="Sprite2D" parent="." unique_id=17008402]
 z_index = 8
@@ -182,11 +171,11 @@ texture = ExtResource("8_dnj0k")
 position = Vector2(-7, -13)
 shape = SubResource("RectangleShape2D_vj344")
 
-[node name="szafa" type="Area2D" parent="." unique_id=63380964 node_paths=PackedStringArray("sprite", "item2")]
+[node name="szafa" type="Area2D" parent="." unique_id=63380964 node_paths=PackedStringArray("sprite", "item")]
 script = ExtResource("8_hpb5c")
 open = ExtResource("9_uqisi")
 sprite = NodePath("Szafa")
-item2 = NodePath("slonce")
+item = NodePath("slonce")
 id_przedmiotu = "szafa2"
 
 [node name="Szafa" type="Sprite2D" parent="szafa" unique_id=1283074749]
@@ -199,7 +188,7 @@ position = Vector2(80, -41)
 shape = SubResource("RectangleShape2D_nxcu2")
 
 [node name="slonce" parent="szafa" unique_id=187813077 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_j02d6")]
-position = Vector2(81, -33)
+position = Vector2(90, -33)
 itemSFX = NodePath("../../item_podnoszenieSFX")
 
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=1789536442]
@@ -243,8 +232,8 @@ shape = SubResource("RectangleShape2D_igf7e")
 
 [node name="Drzwi_dol" type="Sprite2D" parent="drzwi/Area2D4" unique_id=1374674695]
 texture_filter = 1
-position = Vector2(-132, 88)
-texture = SubResource("AtlasTexture_tw23o")
+position = Vector2(-134, 82)
+texture = ExtResource("21_a001c")
 
 [node name="Area2D3" type="Area2D" parent="drzwi" unique_id=438979995 node_paths=PackedStringArray("drzwiSFX")]
 script = ExtResource("2_lts0u")
@@ -257,9 +246,9 @@ shape = SubResource("RectangleShape2D_igf7e")
 
 [node name="Drzwi_prawo" type="Sprite2D" parent="drzwi/Area2D3" unique_id=1091461202]
 texture_filter = 1
-position = Vector2(158, -2)
+position = Vector2(152, -2)
 rotation = -1.5707964
-texture = SubResource("AtlasTexture_2ukvl")
+texture = ExtResource("21_a001c")
 
 [node name="drzwi_lewo" type="Area2D" parent="drzwi" unique_id=1203321519 node_paths=PackedStringArray("drzwiSFX")]
 script = ExtResource("2_lts0u")
@@ -272,9 +261,9 @@ shape = SubResource("RectangleShape2D_igf7e")
 
 [node name="Drzwilewo" type="Sprite2D" parent="drzwi/drzwi_lewo" unique_id=976247254]
 texture_filter = 1
-position = Vector2(-157, 13)
+position = Vector2(-152, 13)
 rotation = 1.5707964
-texture = SubResource("AtlasTexture_dnj0k")
+texture = ExtResource("21_a001c")
 
 [node name="drzwi_gora" type="Area2D" parent="drzwi" unique_id=1953536480 node_paths=PackedStringArray("drzwiSFX")]
 script = ExtResource("2_lts0u")
@@ -294,7 +283,7 @@ texture = ExtResource("21_2ukvl")
 script = ExtResource("22_2ukvl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=306157151]
-position = Vector2(23, 21)
+position = Vector2(39, -5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_a001c")
 

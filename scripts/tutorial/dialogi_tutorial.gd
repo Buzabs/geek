@@ -8,11 +8,7 @@ var clicks_enabled := false
 
 
 func _input(event):
-	if event is InputEventMouseButton and event.pressed:
-		if not clicks_enabled:
-			await DialogueManager.dialogue_ended
-			clicks_enabled = true
-			return 
+	if event is InputEventMouseButton and event.pressed and clicks_enabled:
 		GlobalC.click_count += 1
 		if GlobalC.click_count == 2:
 			DialogueManager.show_example_dialogue_balloon(dialogue_resource, "podnoszenie")
@@ -26,5 +22,6 @@ func _init() -> void:
 	if GlobalC.loaded == 1:
 		
 		DialogueManager.show_example_dialogue_balloon(dialogue_resource, "chodzenie")		
-	
+		await DialogueManager.dialogue_ended
+		clicks_enabled = true
 	

@@ -11,7 +11,7 @@ ENZO: Dziękuję pani bardzo.
 MYŚLI ENZO: Jeśli to 1670... Newton MUSI tu gdzieś być.
 ENZO: Przepraszam, gdzie mógłbym znaleźć pana Newtona?
 BABCIA: Ach, tego młodego uczonego?
-=> END
+
 
 ~ babcia2
 BABCIA: Ostatnio widziałam go u miejscowego zielarza. Spróbuj go tam znaleźć. Niełatwo go dorwać.
@@ -34,7 +34,7 @@ ZIELARKA: Widziałam go, jak wędrował w stronę sadów za miastem. Często tam
 ENZO: Pan Newton? 
 NEWTON: O, gość. Jeśli chcesz rozmawiać o nauce...
 NEWTON: Potrzebuję najpierw pomocy przy pewnym drobiazgu.
-=> END
+
 
 ~ newton_lisc
 NEWTON: Próbuję zrozumieć, jak światło zmienia kolory, przechodząc przez pryzmat.
@@ -68,7 +68,7 @@ DZIECKO: Pewnie!
 ENZO: To świetnie, potrzebuję jednej. Pomożesz mi?
 DZIECKO: Oczywiście, ale potrzebuję odpowiednich materiałów.
 ENZO: Co dokładnie mam przynieść?
-=> END
+
 
 ~ proca2
 DZIECKO: Przynieś mi NITKĘ oraz jakąś GAŁĄZKĘ przypominającą kształt procy.

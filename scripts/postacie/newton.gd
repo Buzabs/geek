@@ -42,21 +42,14 @@ func _input_event(viewport, event, shape_idx):
 				dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_spotkanie")
 				await get_tree().process_frame  # poczekaj aż się zbuduje
 				balloon = dialog.get_child(0)
-				balloon.position = Vector2(90, 25)
-				
-				
-				await DialogueManager.dialogue_ended
-				dialog =DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
+				balloon.position = Vector2(50, 25)
 				GlobalC.first_play_next  = true
-				await get_tree().process_frame  # poczekaj aż się zbuduje
-				balloon = dialog.get_child(0)
-				balloon.position = Vector2(90, 25)
 				return
 			else:
 				dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_lisc")
 				await get_tree().process_frame  # poczekaj aż się zbuduje
 				balloon = dialog.get_child(0)
-				balloon.position = Vector2(90, 25)
+				balloon.position = Vector2(50, 25)
 				return
 			
 

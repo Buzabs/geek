@@ -2,6 +2,9 @@ extends Area2D
 var can_interact = false
 var player_ref: Node = null
 
+var dialog
+var balloon
+
 
 func _ready():
 	$animacja.play("default")
@@ -26,11 +29,15 @@ func _input_event(viewport, event, shape_idx):
 		GlobalEq.pick = true
 		if GlobalC.first_play:
 			GlobalC.first_play= false
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia1")
-			await DialogueManager.dialogue_ended
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia2")
+			dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia1")
+			await get_tree().process_frame  # poczekaj aż się zbuduje
+			balloon = dialog.get_child(0)
+			balloon.position = Vector2(50, 25)
 			return
 		else:
 			GlobalC.open = true
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "babcia2")
+			await get_tree().process_frame  # poczekaj aż się zbuduje
+			balloon = dialog.get_child(0)
+			balloon.position = Vector2(50, 25)
 			return

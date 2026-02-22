@@ -15,6 +15,9 @@ func _ready():
 		if item != null:
 			item.visible = true
 			return
+		if item2 != null:
+			item.visible = true
+			return
 	if item != null :
 		item.visible = false
 	if item2 != null:

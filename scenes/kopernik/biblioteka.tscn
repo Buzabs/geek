@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="2_brtu5"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="2_dwyeu"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_tg35t"]
-[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="3_4k0lh"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_p5n41"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="5_p5n41"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_2x5lk"]
@@ -14,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ccc2ejgf3f8wv" path="res://sprites/meble/skrzynia.png" id="8_1f4me"]
 [ext_resource type="Texture2D" uid="uid://wdb7mkjvbyy3" path="res://sprites/meble/drabina.png" id="9_0wjok"]
 [ext_resource type="PackedScene" uid="uid://cgdf54xxybek7" path="res://itemy/scenes/komernik/notka_1.tscn" id="10_ostnl"]
+[ext_resource type="Texture2D" uid="uid://dt1hkfa25644b" path="res://sprites/meble/drzwi_kopernik.png" id="10_tg35t"]
 [ext_resource type="Texture2D" uid="uid://c5osrujxn070p" path="res://sprites/meble/stol_gora.png" id="13_tg35t"]
 [ext_resource type="Texture2D" uid="uid://gwfilvxul15y" path="res://sprites/meble/stol_dol.png" id="14_1f4me"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="14_fxia4"]
@@ -83,9 +83,9 @@ target_spawn_id = "left"
 
 [node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=735442142]
 texture_filter = 1
-position = Vector2(318, 157)
+position = Vector2(313, 156)
 rotation = -1.5707964
-texture = ExtResource("3_4k0lh")
+texture = ExtResource("10_tg35t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1773571574]
 position = Vector2(303, 158)

@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="4_haphb"]
 [ext_resource type="PackedScene" uid="uid://bu12f8knmw3jr" path="res://itemy/scenes/komernik/merkury.tscn" id="5_uigpl"]
 [ext_resource type="Texture2D" uid="uid://bub3cipxxgltq" path="res://sprites/kopernik/pokoje/pokoj_konstelacj.png" id="5_wdkfl"]
-[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="6_co88u"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="7_78y6g"]
 [ext_resource type="Texture2D" uid="uid://bapih2u5tawh7" path="res://sprites/meble/stol.png" id="9_1f8s5"]
+[ext_resource type="Texture2D" uid="uid://dt1hkfa25644b" path="res://sprites/meble/drzwi_kopernik.png" id="9_wdkfl"]
 [ext_resource type="Script" uid="uid://c87rt3sv8ebdt" path="res://scripts/globalne/open.gd" id="10_mcay7"]
 [ext_resource type="PackedScene" uid="uid://wi24xc5qeodp" path="res://itemy/scenes/komernik/notka_4.tscn" id="13_0558m"]
 [ext_resource type="PackedScene" uid="uid://c5ps7wj11hyu6" path="res://itemy/scenes/komernik/venus.tscn" id="14_ti13s"]
@@ -110,10 +110,10 @@ target_spawn_id = "up"
 position = Vector2(-128, 66)
 shape = SubResource("RectangleShape2D_78y6g")
 
-[node name="DrzwiGora" type="Sprite2D" parent="." unique_id=1540638120]
+[node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=1540638120]
 texture_filter = 1
-position = Vector2(-133, 87)
-texture = ExtResource("6_co88u")
+position = Vector2(-132, 81)
+texture = ExtResource("9_wdkfl")
 
 [node name="drzwiSFX" type="AudioStreamPlayer2D" parent="." unique_id=1097123247]
 stream = ExtResource("7_78y6g")

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c3jdl8rbvh6em" path="res://scenes/postacie/kopernik.tscn" id="4_fjwj2"]
 [ext_resource type="AudioStream" uid="uid://b4vjxxnire65u" path="res://sounds/qubodup-DoorSet/ogg/qubodup-DoorOpen01.ogg" id="7_focr7"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="8_6sug6"]
-[ext_resource type="Texture2D" uid="uid://cbpga1v0wl0v" path="res://sprites/meble/drzwi_dwoje.png" id="8_ope37"]
+[ext_resource type="Texture2D" uid="uid://dt1hkfa25644b" path="res://sprites/meble/drzwi_kopernik.png" id="8_ope37"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="11_b4l48"]
 [ext_resource type="Texture2D" uid="uid://cyqbrdqtaoweu" path="res://sprites/meble/zegar_sloneczny.png" id="12_l06o1"]
 [ext_resource type="PackedScene" uid="uid://b1fmrji86f5fy" path="res://itemy/scenes/komernik/mars.tscn" id="13_ope37"]
@@ -16,10 +16,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pvga"]
 size = Vector2(51.5, 44)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f4e8l"]
-atlas = ExtResource("8_ope37")
-region = Rect2(0, 29, 16, 5)
 
 [node name="Obserwatorium" type="Node" unique_id=276483008]
 script = ExtResource("1_kas2q")
@@ -62,8 +58,8 @@ volume_db = 9.545
 
 [node name="Drzwi_prawo" type="Sprite2D" parent="Area2D" unique_id=113292211]
 texture_filter = 1
-position = Vector2(-106, 87)
-texture = SubResource("AtlasTexture_f4e8l")
+position = Vector2(-106, 82)
+texture = ExtResource("8_ope37")
 
 [node name="Kopernik" parent="." unique_id=1061417716 instance=ExtResource("4_fjwj2")]
 position = Vector2(32, -33)

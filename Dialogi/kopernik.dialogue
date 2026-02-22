@@ -71,10 +71,15 @@ MIKOŁAJ: Stół do ich układania znajdziesz w pokoju po prawej taki niebieski.
 ENZO: Jasne, zbieram się do roboty!
 => END
 
+~ geocentryzm
+ENZO: Hmmm na plakacie jesy układ geocentryczny a Kopernik odkrył heliocentryzm
+ENZO: To może zamiast układu geocentrycznego ułożę układ heliocentryczny
+ENZO: z tego co widze wystarczy zamienić ziemie ze słońcem i nie dawać księżyca
+=> END
+
 ~ ukladanie_planet
 ENZO: Okej, planety wkłada się poprzez wybranie ich z ekwipunku i kliknięcie w miejsce, gdzie chcemy je umieścić.
 ENZO: A żeby je wyjąć... O! Wystarczy kliknąć na planetę prawym przyciskiem myszy.
-[space]
 => END
 
 

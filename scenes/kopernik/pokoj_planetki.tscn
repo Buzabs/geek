@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_dmai6"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="1_naj2l"]
-[ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="2_pppx8"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_vic2t"]
 [ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_5lbyh"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="3_vic2t"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="4_pppx8"]
 [ext_resource type="Texture2D" uid="uid://cjqn1wbgcq5oa" path="res://sprites/kopernik/stol_plan.png" id="4_rudhe"]
 [ext_resource type="Texture2D" uid="uid://bbtbs731k3nib" path="res://sprites/kopernik/pokoje/planetki_pokoj.png" id="4_xafkd"]
+[ext_resource type="Texture2D" uid="uid://dt1hkfa25644b" path="res://sprites/meble/drzwi_kopernik.png" id="6_xafkd"]
 [ext_resource type="Script" uid="uid://claia2bsglpwj" path="res://scenes/kopernik/planetki_pokoj.gd" id="8_xafkd"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="9_am3dt"]
 [ext_resource type="PackedScene" uid="uid://cd680feg5aewv" path="res://itemy/scenes/komernik/saturn.tscn" id="11_rp3hp"]
@@ -80,10 +80,10 @@ shape = SubResource("RectangleShape2D_c0odi")
 
 [node name="DrzwiGora" type="Sprite2D" parent="Area2D" unique_id=1406535128]
 texture_filter = 1
-position = Vector2(-157.2804, 24)
+position = Vector2(-151.00002, 24)
 rotation = 1.5707964
 scale = Vector2(1, 1.1121582)
-texture = ExtResource("2_pppx8")
+texture = ExtResource("6_xafkd")
 
 [node name="drzwiSFX" type="AudioStreamPlayer2D" parent="Area2D" unique_id=988037882]
 stream = ExtResource("15_rp3hp")

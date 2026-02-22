@@ -2,6 +2,8 @@ extends Area2D
 var can_interact = false
 var player_ref: Node = null
 
+var dialog
+var balloon
 
 func _ready():
 	
@@ -26,12 +28,16 @@ func _input_event(viewport, event, shape_idx):
 			return
 		if GlobalC.first_play_next :
 			GlobalC.first_play_next = false
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka1")
-			await DialogueManager.dialogue_ended
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka2")
+			dialog =DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka1")
+			await get_tree().process_frame  # poczekaj aż się zbuduje
+			balloon = dialog.get_child(0)
+			balloon.position = Vector2(50, 25)
 			GlobalC.next_dialog= true
 			GlobalC.first_play=true
 			return
 		else: 
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka2")
+			await get_tree().process_frame  # poczekaj aż się zbuduje
+			balloon = dialog.get_child(0)
+			balloon.position = Vector2(50, 25)			
 			return

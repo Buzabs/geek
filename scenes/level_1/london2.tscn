@@ -10,14 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://cjrxotfrwbieg" path="res://itemy/scenes/london/kamyk.tscn" id="5_nesmw"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="6_20bjw"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm0hs"]
+size = Vector2(36, 53)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xwh"]
 size = Vector2(36, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iudcw"]
 size = Vector2(335, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm0hs"]
-size = Vector2(36, 41)
 
 [node name="London2" type="Node2D" unique_id=1898180347]
 script = ExtResource("1_edjt4")
@@ -27,17 +27,26 @@ pause_scene = ExtResource("2_8lwe2")
 
 [node name="Londynver1" type="Sprite2D" parent="." unique_id=1399471928]
 texture_filter = 1
-position = Vector2(0.124993324, 0)
+position = Vector2(6, 0)
 texture = ExtResource("1_o6xwh")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=22185234]
-zoom = Vector2(2, 2)
 
 [node name="spawn_right" type="Marker2D" parent="." unique_id=807513842]
 position = Vector2(133, 61)
 
 [node name="spawn_left" type="Marker2D" parent="." unique_id=886887754]
 position = Vector2(-140, 61)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=22185234]
+zoom = Vector2(2, 2)
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1123314426]
+script = ExtResource("2_j2uuv")
+load_scenes = "res://scenes/level_1/sad.tscn"
+target_spawn_id = "right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1095027987]
+position = Vector2(-141, 59)
+shape = SubResource("RectangleShape2D_jm0hs")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1520829489]
 script = ExtResource("2_j2uuv")
@@ -70,15 +79,7 @@ itemSFX = NodePath("../item_podnoszenieSFX")
 [node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=940553317]
 stream = ExtResource("6_20bjw")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=1123314426]
-script = ExtResource("2_j2uuv")
-load_scenes = "res://scenes/level_1/sad.tscn"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1095027987]
-position = Vector2(-142, 70.5)
-shape = SubResource("RectangleShape2D_jm0hs")
-
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]
 [connection signal="mouse_entered" from="Area2D2" to="." method="_on_drzwi_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D2" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]
