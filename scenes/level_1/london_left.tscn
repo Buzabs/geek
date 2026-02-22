@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bvxkjvgux8lpr"]
+
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_jlgu6"]
+[ext_resource type="Texture2D" uid="uid://duxxsnomga4by" path="res://sprites/anglia/londynver1.png" id="1_pvmlm"]
+[ext_resource type="PackedScene" uid="uid://cjrxotfrwbieg" path="res://itemy/scenes/london/kamyk.tscn" id="2_gvgjo"]
+[ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="2_mn0em"]
+[ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_3sc2d"]
+[ext_resource type="PackedScene" uid="uid://8d8gar38poer" path="res://scenes/global/player.tscn" id="3_mn0em"]
+[ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="5_3sc2d"]
+[ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="8_yyc1w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sc2d"]
+size = Vector2(335, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvgjo"]
+size = Vector2(32.75, 72.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlgu6"]
+size = Vector2(32.75, 72.5)
+
+[node name="LondonLeft" type="Node2D" unique_id=1130768210]
+script = ExtResource("1_jlgu6")
+
+[node name="LondynNext" type="Sprite2D" parent="." unique_id=1899078150]
+texture_filter = 1
+texture = ExtResource("1_pvmlm")
+
+[node name="spawn_right" type="Marker2D" parent="." unique_id=639067453]
+position = Vector2(133, 61)
+
+[node name="spawn_left" type="Marker2D" parent="." unique_id=243434473]
+position = Vector2(-130, 63)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1861646399]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=431125737]
+position = Vector2(3, 13)
+shape = SubResource("RectangleShape2D_3sc2d")
+
+[node name="kamyczek" parent="StaticBody2D" unique_id=1137858492 node_paths=PackedStringArray("itemSFX") instance=ExtResource("2_gvgjo")]
+position = Vector2(-74, 60)
+itemSFX = NodePath("../../item_podnoszenieSFX")
+
+[node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("2_mn0em")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1951209882]
+zoom = Vector2(2, 2)
+
+[node name="Player" parent="." unique_id=1882407171 instance=ExtResource("3_mn0em")]
+position = Vector2(-7, 67)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=79101202]
+script = ExtResource("3_3sc2d")
+load_scenes = "res://scenes/level_1/sad.tscn"
+target_spawn_id = "right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1995547814]
+position = Vector2(-137, 54)
+shape = SubResource("RectangleShape2D_gvgjo")
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="Area2D" unique_id=1350173926]
+volume_db = 9.545
+
+[node name="eq" parent="." unique_id=339320733 instance=ExtResource("5_3sc2d")]
+offset_left = -94.0
+offset_top = -90.0
+offset_right = -94.0
+offset_bottom = -90.0
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1720826100]
+script = ExtResource("3_3sc2d")
+load_scenes = "res://scenes/level_1/anglia.tscn"
+target_spawn_id = "left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=800332874]
+position = Vector2(145, 55)
+shape = SubResource("RectangleShape2D_jlgu6")
+
+[node name="drzwiSFX" type="AudioStreamPlayer2D" parent="Area2D2" unique_id=427188580]
+volume_db = 9.545
+
+[node name="item_podnoszenieSFX" type="AudioStreamPlayer2D" parent="." unique_id=81873950]
+stream = ExtResource("8_yyc1w")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_drzwi_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D2" to="." method="_on_drzwi_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D2" to="." method="_on_drzwi_2_mouse_exited"]

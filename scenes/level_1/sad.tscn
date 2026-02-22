@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cavxvca8q55m8" path="res://scenes/postacie/newton.tscn" id="5_f3ngc"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="5_nouha"]
 [ext_resource type="PackedScene" uid="uid://k55dfxplyg6x" path="res://itemy/scenes/london/galazka.tscn" id="5_ogcwb"]
-[ext_resource type="Texture2D" uid="uid://c537fuox12yfy" path="res://sprites/Other/udany_rzut.png" id="5_otdhu"]
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="6_f3ngc"]
 [ext_resource type="Texture2D" uid="uid://bhhm5ghe6xxck" path="res://sprites/anglia/sad_przeniesienie.png" id="7_753nf"]
 [ext_resource type="Script" uid="uid://rmocs776m8b6" path="res://scripts/anglia/kamyczek_proca.gd" id="7_oy0c3"]
+[ext_resource type="Texture2D" uid="uid://ckhv3mursot1i" path="res://sprites/anglia/sad_udany_rzut.png" id="8_753nf"]
 [ext_resource type="AudioStream" uid="uid://c28knv0m3ghw7" path="res://sounds/Item2A.wav" id="11_fww8k"]
 [ext_resource type="Texture2D" uid="uid://cx43eoee0k1q2" path="res://sprites/Environment/glaz.png" id="12_pf5o7"]
 
@@ -113,87 +113,91 @@ atlas = ExtResource("7_753nf")
 region = Rect2(0, 540, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_48sju"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(0, 0, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(320, 900, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pq7d1"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(320, 0, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(0, 0, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7ci2"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(640, 0, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(320, 0, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wuhu6"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(960, 0, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(640, 0, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m5yp6"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(0, 180, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(960, 0, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8tme0"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(320, 180, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(0, 180, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5r0qm"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(640, 180, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(320, 180, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iue0i"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(960, 180, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(640, 180, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_56s86"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(0, 360, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(960, 180, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n4gbm"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(320, 360, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(0, 360, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ii8u"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(640, 360, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(320, 360, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m5vp0"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(960, 360, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(640, 360, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmxoi"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(0, 540, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(960, 360, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5a57w"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(320, 540, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(0, 540, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mf4gm"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(640, 540, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(320, 540, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_el25s"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(960, 540, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(640, 540, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hn6f7"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(0, 720, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(960, 540, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4u8oo"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(320, 720, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(0, 720, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3rnx"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(640, 720, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(320, 720, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7x7vf"]
-atlas = ExtResource("5_otdhu")
-region = Rect2(960, 720, 320, 180)
+atlas = ExtResource("8_753nf")
+region = Rect2(640, 720, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_el4g5"]
-atlas = ExtResource("5_otdhu")
+atlas = ExtResource("8_753nf")
+region = Rect2(960, 720, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjepw"]
+atlas = ExtResource("8_753nf")
 region = Rect2(0, 900, 320, 180)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_udbkv"]
@@ -348,6 +352,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_el4g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjepw")
 }],
 "loop": false,
 "name": &"udany_rzut",
@@ -366,7 +373,7 @@ size = Vector2(14, 12)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oy0c3"]
 size = Vector2(31, 53)
 
-[node name="Sad" type="Node" unique_id=1871021329]
+[node name="Sad" type="Node2D" unique_id=1492848599]
 script = ExtResource("1_fww8k")
 pause_scene = ExtResource("2_csn26")
 
@@ -379,11 +386,11 @@ zoom = Vector2(2, 2)
 texture_filter = 1
 texture = ExtResource("1_or2ee")
 
-[node name="spawn_right" type="Marker2D" parent="." unique_id=1237592479]
-position = Vector2(144, 64)
-
 [node name="spawn_left" type="Marker2D" parent="." unique_id=1177560668]
 position = Vector2(-38, 64)
+
+[node name="spawn_right" type="Marker2D" parent="." unique_id=1237592479]
+position = Vector2(137, 61)
 
 [node name="proca" type="Area2D" parent="." unique_id=1202200406 node_paths=PackedStringArray("player")]
 script = ExtResource("7_oy0c3")
@@ -392,9 +399,9 @@ player = NodePath("../Player")
 [node name="animation" type="AnimatedSprite2D" parent="proca" unique_id=2050276184]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_udbkv")
-animation = &"przeniesienie"
+animation = &"udany_rzut"
 autoplay = "default"
-frame = 6
+frame = 21
 frame_progress = 1.0
 speed_scale = 0.9
 
@@ -417,11 +424,11 @@ position = Vector2(142, 68)
 
 [node name="przejscie" type="Area2D" parent="." unique_id=1906288866]
 script = ExtResource("5_nouha")
-load_scenes = "res://scenes/level_1/london2.tscn"
+load_scenes = "res://scenes/level_1/london_left.tscn"
 target_spawn_id = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="przejscie" unique_id=1190551032]
-position = Vector2(144, 63)
+position = Vector2(145, 63)
 shape = SubResource("RectangleShape2D_oy0c3")
 
 [node name="eq" parent="." unique_id=2033397746 instance=ExtResource("6_f3ngc")]

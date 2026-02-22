@@ -81,7 +81,7 @@ shape = SubResource("RectangleShape2D_5anef")
 
 [node name="OrchardEnterance" type="Area2D" parent="enters" unique_id=1188628185]
 script = ExtResource("4_x0t1q")
-load_scenes = "res://scenes/level_1/london2.tscn"
+load_scenes = "res://scenes/level_1/london_left.tscn"
 target_spawn_id = "right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enters/OrchardEnterance" unique_id=1008537836]

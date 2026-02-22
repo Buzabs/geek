@@ -65,10 +65,10 @@ position = Vector2(-1, -61)
 shape = SubResource("RectangleShape2D_rp3hp")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1947749356]
-position = Vector2(-1, -35)
+position = Vector2(-5, -35)
 shape = SubResource("RectangleShape2D_xafkd")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1313578213 node_paths=PackedStringArray("drzwiSFX")]
+[node name="Area2D" type="Area2D" parent="." unique_id=1313578213 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
 script = ExtResource("4_pppx8")
 load_scenes = "res://scenes/kopernik/lacznik.tscn"
 drzwiSFX = NodePath("drzwiSFX")
@@ -144,7 +144,7 @@ texture = ExtResource("14_pbkw3")
 stream = ExtResource("1_naj2l")
 
 [node name="notka2" parent="." unique_id=404466428 node_paths=PackedStringArray("itemSFX") instance=ExtResource("14_rp3hp")]
-position = Vector2(-2, -25)
+position = Vector2(-5, -25)
 rotation = 1.5707964
 itemSFX = NodePath("../item_podnoszenieSFX")
 

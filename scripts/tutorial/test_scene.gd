@@ -92,3 +92,7 @@ func _on_maly_woz_mouse_entered() -> void:
 
 func _on_maly_woz_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(movement_cursor)
+
+
+func _on_drzwi_2_mouse_exited() -> void:
+	pass # Replace with function body.

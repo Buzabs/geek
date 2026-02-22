@@ -50,3 +50,8 @@ func _process(_delta):
 				itemSFX.play()
 				collect()
 				queue_free()
+
+
+
+func _on_drzwi_mouse_entered() -> void:
+	pass # Replace with function body.
