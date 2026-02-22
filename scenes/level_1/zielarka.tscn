@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cw8jcmper42en"]
 
 [ext_resource type="Texture2D" uid="uid://bwgm574fq2611" path="res://sprites/anglia/zielarnia2.png" id="1_d1ee0"]
-[ext_resource type="Script" uid="uid://dgu43e0jrr8k2" path="res://scripts/anglia/zielarka_cursors.gd" id="1_x3j47"]
+[ext_resource type="Script" uid="uid://cyuup88v80ef4" path="res://scripts/tutorial/test_scene.gd" id="1_j4bnx"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="2_7yurd"]
+[ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="2_8l2yj"]
 [ext_resource type="Texture2D" uid="uid://568jrd26vha0" path="res://sprites/anglia/table_zielarnia.png" id="2_frige"]
 [ext_resource type="Script" uid="uid://cdkl08ebdy2e1" path="res://scripts/globalne/swap_scenes.gd" id="3_uj2r0"]
 [ext_resource type="Texture2D" uid="uid://dthxpkqwj0d44" path="res://sprites/meble/drzwi_gora.png" id="4_le3at"]
@@ -35,7 +36,8 @@ size = Vector2(74, 20)
 size = Vector2(36, 20)
 
 [node name="Zielarka" type="Node2D" unique_id=1725537558]
-script = ExtResource("1_x3j47")
+script = ExtResource("1_j4bnx")
+pause_scene = ExtResource("2_8l2yj")
 
 [node name="Pause" parent="." unique_id=1581730630 instance=ExtResource("2_7yurd")]
 

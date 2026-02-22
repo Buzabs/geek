@@ -46,6 +46,8 @@ func koniec_pryzmat():
 	
 #game stats
 
+var END := false
+
 var puzzle_states : Dictionary = {}
 var collected_items := {}
 var was_open:= {}

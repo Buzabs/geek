@@ -24,7 +24,6 @@ func rzucanie(rzut):
 		await get_tree().process_frame  # poczekaj aż się zbuduje
 		balloon = dialog.get_child(0)
 		balloon.position = Vector2(90,25)
-		
 		await DialogueManager.dialogue_ended
 		await get_tree().create_timer(0.5).timeout
 		
@@ -32,13 +31,13 @@ func rzucanie(rzut):
 		await get_tree().process_frame  # poczekaj aż się zbuduje
 		balloon = dialog.get_child(0)
 		balloon.position = Vector2(90, 25)
-		
+		await get_tree().create_timer(0.5).timeout
 		$animation.play("przeniesienie")
 		await $animation.animation_finished	
 		get_tree().change_scene_to_file("res://scenes/tutorial/test_scene.tscn")
-		DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/Tutorial.dialogue"), "powrot")
-		await DialogueManager.dialogue_ended
-		get_tree().change_scene_to_file("res://scenes/ending.tscn")
+
+
+
 		
 		
 	player.visible = true
@@ -60,7 +59,7 @@ func _input_event(viewport, event, shape_idx):
 				GlobalC.first_play_next = true
 				GlobalC.next_dialog = false
 				GlobalC.rzut=true
-				
+				GlobalC.END = true		
 
 				return
 		if GlobalC.dialog and  GlobalC.rzut :

@@ -94,5 +94,15 @@ func _on_maly_woz_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(movement_cursor)
 
 
-func _on_drzwi_2_mouse_exited() -> void:
-	pass # Replace with function body.
+
+func _on_area_2d_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(door_cursor)
+
+func _on_area_2d_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(movement_cursor)
+
+func _on_zielarka_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(dialogue_cursor)
+
+func _on_zielarka_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(movement_cursor)
