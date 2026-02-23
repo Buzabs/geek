@@ -12,10 +12,15 @@ func _on_texture_button_pressed() -> void:
 @onready var master_slider = $MasterSlider
 
 
+	
 func _ready():
 	# ustaw wartości startowe (1 = 100%)
+	var bus_index = AudioServer.get_bus_index("Master")
+	var linear = GlobalC.volume_state	 / 100.0
 	master_slider.value = GlobalC.volume_state	
+	AudioServer.set_bus_volume_db(bus_index, linear_to_db(linear))
 	master_slider.value_changed.connect(_on_master_changed)
+
 
 
 

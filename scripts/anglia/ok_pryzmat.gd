@@ -8,9 +8,7 @@ extends Button
 
 var wymagania = {
 	0: 2,
-	1: 3,
-	2: 0,
-	3: 1
+	2: 0
 }
 
 var target_spawn_id: String = "left"

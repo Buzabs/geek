@@ -9,9 +9,8 @@ var index := 0
 
 var wymagania = {
 	0: 2,
-	1: 3,
-	2: 0,
-	3: 1
+	2: 0
+	
 }
 
 

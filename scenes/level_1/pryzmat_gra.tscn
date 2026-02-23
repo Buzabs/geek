@@ -12,77 +12,77 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phhhv"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(29, 8, 29, 7)
+region = Rect2(51, 5, 29, 7)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4avhi"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(26, 18, 48, 2)
+region = Rect2(32, 17, 48, 2)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vq85"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(64, 23, 18, 8)
+region = Rect2(41, 23, 18, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mymxs"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(19, 23, 16, 8)
+region = Rect2(23, 26, 15, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r83c4"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(43, 23, 18, 8)
+region = Rect2(61, 23, 18, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4lij4"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(0, 24, 16, 8)
+region = Rect2(3, 26, 15, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_guqlp"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(64, 23, 18, 8)
+region = Rect2(41, 23, 18, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2vq85"]
 radius = 9.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hx2i0"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(29, 8, 29, 7)
+region = Rect2(51, 5, 29, 7)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_exfn4"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(26, 18, 48, 2)
+region = Rect2(32, 17, 48, 2)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ybuf"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(64, 23, 18, 8)
+region = Rect2(41, 23, 18, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phiks"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(19, 23, 16, 8)
+region = Rect2(23, 26, 15, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ha1cg"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(43, 23, 18, 8)
+region = Rect2(61, 23, 18, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8xw8b"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(0, 24, 16, 8)
+region = Rect2(3, 26, 15, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7hb5k"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(64, 23, 18, 8)
+region = Rect2(41, 23, 18, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ybuf"]
 radius = 9.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1r84"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(28, 8, 30, 7)
+region = Rect2(51, 5, 29, 7)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2onh8"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(4, 6, 18, 18)
+region = Rect2(0, 0, 30, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lya7u"]
 atlas = ExtResource("6_8xw8b")
-region = Rect2(29, 8, 29, 7)
+region = Rect2(51, 5, 29, 7)
 
 [node name="PryzmatGra" type="Node2D" unique_id=779693977]
 script = ExtResource("1_2vq85")
@@ -152,7 +152,7 @@ position = Vector2(-15, 26)
 texture = SubResource("AtlasTexture_n1r84")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=477728217]
-position = Vector2(-45, 21)
+position = Vector2(-50, 20)
 texture = SubResource("AtlasTexture_2onh8")
 
 [node name="promien" type="Sprite2D" parent="." unique_id=473833319]

@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://baio7uhdkpsdj" path="res://scenes/global/eq.tscn" id="2_jp20w"]
 [ext_resource type="PackedScene" uid="uid://ci424k2x6oaio" path="res://scenes/global/pause_fixed.tscn" id="2_tsr8k"]
 [ext_resource type="Texture2D" uid="uid://dmdk3lks2oxqi" path="res://sprites/kopernik/back_konstelacje.png" id="3_cmean"]
-[ext_resource type="Texture2D" uid="uid://btt374uwvhw8m" path="res://sprites/kopernik/cutscene_planetkij.png" id="3_og5nf"]
 [ext_resource type="Script" uid="uid://da6nh6r882f5o" path="res://scenes/kopernik/back_konstelacje.gd" id="4_cmean"]
 [ext_resource type="Script" uid="uid://cvw61ipjg1lpc" path="res://scenes/kopernik/planetki_gra.gd" id="4_jp20w"]
 [ext_resource type="Texture2D" uid="uid://v8d4s5x48hfr" path="res://sprites/kopernik/cutscene_planety.png" id="4_k47jg"]
@@ -17,8 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://bm6hkvo06f04p" path="res://sprites/kopernik/submit_correct.png" id="14_k47jg"]
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="15_tsr8k"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tsr8k"]
+load_path = "res://.godot/imported/cutscene_planetkij.png-beabf4ba14a68c2c375059e14f3084ae.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_aa0gw"]
-atlas = ExtResource("3_og5nf")
+atlas = SubResource("CompressedTexture2D_tsr8k")
 region = Rect2(0, 0, 320, 180)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amrbc"]
