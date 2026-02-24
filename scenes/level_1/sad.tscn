@@ -264,25 +264,25 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 5.0,
+"duration": 4.4,
 "texture": SubResource("AtlasTexture_x5agp")
 }, {
-"duration": 3.0,
+"duration": 2.4,
 "texture": SubResource("AtlasTexture_ogy1o")
 }, {
-"duration": 3.0,
+"duration": 2.4,
 "texture": SubResource("AtlasTexture_525j2")
 }, {
-"duration": 3.0,
+"duration": 2.4,
 "texture": SubResource("AtlasTexture_2m5ta")
 }, {
-"duration": 3.0,
+"duration": 2.4,
 "texture": SubResource("AtlasTexture_w6ilg")
 }, {
-"duration": 3.0,
+"duration": 2.4,
 "texture": SubResource("AtlasTexture_xcehr")
 }, {
-"duration": 3.0,
+"duration": 2.4,
 "texture": SubResource("AtlasTexture_yx2dv")
 }],
 "loop": false,
@@ -399,9 +399,9 @@ player = NodePath("../Player")
 [node name="animation" type="AnimatedSprite2D" parent="proca" unique_id=2050276184]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_udbkv")
-animation = &"udany_rzut"
+animation = &"przeniesienie"
 autoplay = "default"
-frame = 21
+frame = 6
 frame_progress = 1.0
 speed_scale = 0.9
 

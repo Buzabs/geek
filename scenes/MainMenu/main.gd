@@ -6,7 +6,7 @@ func _ready():
 	var bus_index = AudioServer.get_bus_index("Master")
 	var linear = GlobalC.volume_state	 / 100.0
 	AudioServer.set_bus_volume_db(bus_index, linear_to_db(linear))
-	MusicManager.play_music("res://soundtracki/story time.ogg")
+	MusicManager.play_music("res://soundtracki/Nature Comes.wav")
 
 
 

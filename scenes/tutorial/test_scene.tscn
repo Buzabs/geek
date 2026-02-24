@@ -102,11 +102,11 @@ region = Rect2(240, 192, 80, 64)
 atlas = ExtResource("15_4rh0u")
 region = Rect2(0, 256, 80, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c2ntk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk77x"]
 atlas = ExtResource("15_4rh0u")
 region = Rect2(80, 256, 80, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_flo71"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rh0u"]
 atlas = ExtResource("15_4rh0u")
 region = Rect2(160, 256, 80, 64)
 
@@ -190,18 +190,18 @@ animations = [{
 }, {
 "duration": 1.6,
 "texture": SubResource("AtlasTexture_gp1je")
-}, {
-"duration": 1.8,
-"texture": SubResource("AtlasTexture_c2ntk")
-}, {
-"duration": 1.8,
-"texture": SubResource("AtlasTexture_flo71")
 }],
 "loop": false,
 "name": &"open_portal",
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk77x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rh0u")
+}, {
 "duration": 1.6,
 "texture": SubResource("AtlasTexture_2tj3m")
 }, {
@@ -307,10 +307,10 @@ shape = SubResource("CircleShape2D_6qxox")
 texture_filter = 1
 position = Vector2(92, -39)
 sprite_frames = SubResource("SpriteFrames_muxsv")
-animation = &"open_portal"
+animation = &"teleportation"
 autoplay = "default"
-frame = 10
-frame_progress = 1.0
+frame = 5
+frame_progress = 0.96871686
 speed_scale = 0.5
 
 [node name="portalSFX" type="AudioStreamPlayer2D" parent="Environment/portal_area" unique_id=2127469039]

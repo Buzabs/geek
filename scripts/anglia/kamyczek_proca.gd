@@ -17,11 +17,15 @@ func rzucanie(rzut):
 			GlobalEq.remove_item("kamyk")
 	if GlobalEq.selected_item_id == "kamyczek" :
 			GlobalEq.remove_item("kamyczek")
-			
+	if rzut == "nieudany_rzut":
+		dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "nieudany_rzut")
+		await get_tree().process_frame  # poczekaj aż się zbuduje
+		balloon = dialog.get_child(0)
+		balloon.position = Vector2(90,25)
 	if rzut == "udany_rzut":
 		
 		dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "newton_jablko")
-		await get_tree().process_frame  # poczekaj aż się zbuduje
+		await get_tree().process_frame  
 		balloon = dialog.get_child(0)
 		balloon.position = Vector2(90,25)
 		await DialogueManager.dialogue_ended
@@ -34,6 +38,7 @@ func rzucanie(rzut):
 		await get_tree().create_timer(0.5).timeout
 		$animation.play("przeniesienie")
 		await $animation.animation_finished	
+		MusicManager.play_music("res://soundtracki/Magic Town.mp3")
 		get_tree().change_scene_to_file("res://scenes/tutorial/test_scene.tscn")
 
 

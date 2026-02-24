@@ -62,6 +62,12 @@ ENZO: Mówi się, że Newton odkrył grawitację, gdy jabłko spadło mu na gło
 ENZO: Spróbuję znaleźć coś, co mogłoby mi w tym pomóc.
 => END
 
+~ nieudany_rzut
+ENZO: Nie mam wystarczająca siły by rzućic kamykiem w jabłko
+ENZO: Musze znaleść inny sposób... Może procą by sie udało
+ENZO: Tylko jak ją zdobyć. Nigdy nie bawiłem sie procą więc nie wiem 
+ENZO: Może jakieć dziecko będzie wiedzieć jak ją zrobić
+
 ~ proca
 ENZO: Hej! Umiesz zrobić procę?
 DZIECKO: Pewnie!
