@@ -3,8 +3,7 @@ extends Node2D
 var target_spawn_id: String ="planetki"
 @export var pause_scene: PackedScene
 
-var dialog
-var balloon
+
 
 
 func _ready():
@@ -32,12 +31,11 @@ func _on_solution_checked():
 		$AnimatedSprite2D.play("koniec")
 		await $AnimatedSprite2D.animation_finished
 		get_tree().change_scene_to_file("res://scenes/level_1/anglia.tscn")
+		var dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "teleportacja")
 		MusicManager.play_music("res://soundtracki/Magic Town.mp3")
-		dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "teleportacja")
 		await get_tree().process_frame  # poczekaj aż się zbuduje
-		balloon = dialog.get_child(0)
-		balloon.position = Vector2(90,25)
-	
+		var  balloon = dialog.get_child(0)
+		balloon.position = Vector2(50, 25)
 
 		
 	

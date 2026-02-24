@@ -47,9 +47,11 @@ func _input_event(_viewport, event, _shape_idx):
 			if PrismSwap.ciiii:
 				$jet_pack.visible = true
 				$animation.visible = false
-				await get_tree().create_timer(2.5).timeout
+				await get_tree().create_timer(1.5).timeout
 				$jet_pack.play("ciii")
 				GlobalEq.remove_item("ciii")
 				await $jet_pack.animation_finished
 				DialogueManager.show_example_dialogue_balloon(
 				load("res://Dialogi/Tutorial.dialogue"),"ciii2")
+				await DialogueManager.dialogue_ended
+				get_tree().change_scene_to_file("res://scenes/ending.tscn")

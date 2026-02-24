@@ -42,7 +42,7 @@ position = Vector2(1, 21)
 position = Vector2(2, -27)
 polygon = PackedVector2Array(-155, 122, -152, 76, -148, 45, -105, -7, -64, -25, -19, -34, 27, -32, 68, -23, 96, -14, 158, 11, 164, 64, 165, 93, 163, 122, 153, 116, 149, 69, 137, 28, 109, 8, 78, -11, 60, -20, 31, -20, 0, -31, -53, -23, -93, -4, -120, 19, -138, 48, -149, 82, -147, 119)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=488538800 node_paths=PackedStringArray("drzwiSFX")]
+[node name="Area2D" type="Area2D" parent="." unique_id=488538800 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
 script = ExtResource("14_1pvga")
 load_scenes = "res://scenes/kopernik/lacznik.tscn"
 drzwiSFX = NodePath("drzwiSFX")

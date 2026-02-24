@@ -13,8 +13,11 @@ func _ready():
 	if target:
 		target.texture = default_texture
 
-
-	
+func deselect():
+	is_selected = false
+	target.texture = default_texture
+	GlobalEq.selected_item = null
+	GlobalEq.selected_item_id = ""
 
 func _on_pressed():
 	if not target:
@@ -22,9 +25,12 @@ func _on_pressed():
 	if item_id != "" and not GlobalEq.has_item(item_id):
 		item_id = ""
 		return
+	if is_selected:
+		deselect()
+		return
 	# reset rodzeństwa
 	for sibling in get_parent().get_children():
-		if sibling is SlotButton:
+		if sibling is SlotButton and sibling != self:
 			sibling.is_selected = false
 			if sibling.target:
 				sibling.target.texture = sibling.default_texture

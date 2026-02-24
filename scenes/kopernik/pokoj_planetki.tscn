@@ -92,6 +92,7 @@ volume_db = 9.545
 [node name="planetki" type="Area2D" parent="." unique_id=58538378]
 position = Vector2(2, 2)
 script = ExtResource("8_xafkd")
+load_scenes = "res://scenes/kopernik/planetki_gra.tscn"
 
 [node name="StolPlan" type="Sprite2D" parent="planetki" unique_id=478400091]
 texture_filter = 1
@@ -149,7 +150,7 @@ rotation = 1.5707964
 itemSFX = NodePath("../item_podnoszenieSFX")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=1324917865]
-script = ExtResource("4_pppx8")
+script = ExtResource("8_xafkd")
 load_scenes = "res://scenes/kopernik/plakat_uklad_sloneczny.tscn"
 
 [node name="PlakatUkladSloneczny" type="Sprite2D" parent="Area2D2" unique_id=1007683190]

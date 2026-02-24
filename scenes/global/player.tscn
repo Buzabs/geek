@@ -279,6 +279,7 @@ shape = SubResource("RectangleShape2D_g2els")
 
 [node name="jet_pack" type="AnimatedSprite2D" parent="." unique_id=1633452402]
 visible = false
+z_index = 6
 texture_filter = 1
 position = Vector2(0, -40)
 sprite_frames = SubResource("SpriteFrames_6li8s")

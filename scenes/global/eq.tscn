@@ -77,6 +77,7 @@ offset_top = 5.0
 offset_right = 181.0
 offset_bottom = 37.0
 size_flags_vertical = 8
+alignment = 1
 script = ExtResource("2_vqyee")
 
 [node name="Button2" type="TextureButton" parent="PanelContainer/HBoxContainer" unique_id=1566471630 node_paths=PackedStringArray("target")]

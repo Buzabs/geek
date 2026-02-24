@@ -63,10 +63,11 @@ ENZO: Spróbuję znaleźć coś, co mogłoby mi w tym pomóc.
 => END
 
 ~ nieudany_rzut
-ENZO: Nie mam wystarczająca siły by rzućic kamykiem w jabłko
-ENZO: Musze znaleść inny sposób... Może procą by sie udało
-ENZO: Tylko jak ją zdobyć. Nigdy nie bawiłem sie procą więc nie wiem 
-ENZO: Może jakieć dziecko będzie wiedzieć jak ją zrobić
+ENZO: Nie mam wystarczająca siły żeby rzucić kamykiem w jabłko.
+ENZO: Musze znaleść inny sposób... Może procą by się udało.
+ENZO: Tylko jak ją zdobyć? Nigdy nie bawiłem się procą więc nie wiem.
+ENZO: Może jakieś dziecko będzie wiedzieć jak ją zrobić.
+=> END
 
 ~ proca
 ENZO: Hej! Umiesz zrobić procę?

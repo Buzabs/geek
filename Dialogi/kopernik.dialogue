@@ -13,7 +13,7 @@ MIKOŁAJ: Widzisz, od lat obserwuję wszechświat, jednak zgubiłem kilka moich 
 
 ~ start2
 MIKOŁAJ: Mógłbyś pomóc mi je odnaleźć i przynieść do mnie?
-MIKOŁAJ: Brakuje mi chyba 4..
+MIKOŁAJ: Brakuje mi... chyba 4
 => END
 
 ~ schody
@@ -72,7 +72,7 @@ ENZO: Jasne, zbieram się do roboty!
 => END
 
 ~ geocentryzm
-ENZO: Hmmm na plakacie jesy układ geocentryczny a Kopernik odkrył heliocentryzm
+ENZO: Hmmm na plakacie jest układ geocentryczny a Kopernik odkrył heliocentryzm
 ENZO: To może zamiast układu geocentrycznego ułożę układ heliocentryczny
 ENZO: z tego co widze wystarczy zamienić ziemie ze słońcem i nie dawać księżyca
 => END

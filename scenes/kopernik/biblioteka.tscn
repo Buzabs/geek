@@ -74,7 +74,7 @@ texture = ExtResource("8_1f4me")
 position = Vector2(-156, 74)
 shape = SubResource("RectangleShape2D_mwb1q")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1738928262 node_paths=PackedStringArray("drzwiSFX")]
+[node name="Area2D" type="Area2D" parent="." unique_id=1738928262 node_paths=PackedStringArray("drzwiSFX") groups=["doors"]]
 position = Vector2(-162, -98)
 script = ExtResource("3_p5n41")
 load_scenes = "res://scenes/kopernik/lacznik.tscn"

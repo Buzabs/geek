@@ -3,6 +3,10 @@ extends Area2D
 var player_ref: Node = null
 var can_open: bool
 var movement_cursor = load("res://sprites/Other/movement_cursor.png")
+@export var load_scenes: String
+
+
+
 
 func _ready():
 	body_entered.connect(_on_enter)
@@ -29,7 +33,7 @@ func _input_event(_viewport, event, _shape_idx):
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed and can_open:
 			can_open = false
 			if GlobalC.next_dialog:
-				get_tree().change_scene_to_file("res://scenes/kopernik/planetki_gra.tscn")
+				get_tree().change_scene_to_file(load_scenes)
 				Input.set_custom_mouse_cursor(movement_cursor)
 				return
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/kopernik.dialogue"), "nie_tykac")		
