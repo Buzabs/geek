@@ -47,19 +47,19 @@ ENZO: Wracam do portalu. Co może pójść nie tak?
 ~ uzycie
 ENZO: Żeby użyć przedmiotu, trzeba go najpierw wybrać w ekwipunku,
 ENZO: a następnie kliknąć w miejscu, gdzie chcemy go zastosować.
-ENZO: Spróbujmy użyć go na portalu. Co może się stać?
+ENZO: Spróbujmy użyć go w portalu. Co może się stać?
 => END
 
 ~ portal
-ENZO: Okej...  wkładam tą część. Ooo! Portal się aktywuje. Zaraz, co się dzieje...
+ENZO: Okej...  wkładam tę część. Ooo! Portal się aktywuje. Zaraz, co się dzieje...
 => END
 
 ~ wessanie
-ENZO: wciąga mnie! AAAAAAAAAA...!
+ENZO: Wciąga mnie! AAAAAAAAAA...!
 => END
 
 ~ ciii
-Świat: Czy na pewno chcesz założyć JETPACKA?
+ŚWIAT: Czy na pewno chcesz założyć JETPACKA?
 - NIE
 	=> END
 - TAK
@@ -69,9 +69,8 @@ ENZO: wciąga mnie! AAAAAAAAAA...!
 
 ~ ciii2
 ŚWIAT: GRATULACJE!!!!
-ŚWIAT: Właśnie przegrałeś w gre edukacyjną
+ŚWIAT: Właśnie przegrałeś w grze edukacyjnej!
 => END
-
 
 ~ powrot
 ENZO: OOOOOOOOO!!!
