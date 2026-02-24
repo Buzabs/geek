@@ -1,86 +1,80 @@
 [gd_scene format=3 uid="uid://baio7uhdkpsdj"]
 
-[ext_resource type="Texture2D" uid="uid://buaveo1j8qyh" path="res://itemy/equ/equ-tlo.png" id="1_vqyee"]
+[ext_resource type="Texture2D" uid="uid://vyvtovfunq5s" path="res://itemy/equ/eq.png" id="1_ds3dq"]
 [ext_resource type="Texture2D" uid="uid://0u1ahcqq6ok1" path="res://itemy/equ/slot.png" id="2_b30ko"]
 [ext_resource type="Script" uid="uid://c7uytnycpvl2" path="res://itemy/script/panel_eq.gd" id="2_vqyee"]
 [ext_resource type="Script" uid="uid://6nbovuhk0j4c" path="res://itemy/script/slot.gd" id="3_c53vi"]
 [ext_resource type="Texture2D" uid="uid://de6npgw123okx" path="res://itemy/equ/click_slot.png" id="4_jrwqy"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5f2j7"]
-texture = ExtResource("1_vqyee")
-
 [node name="eq" type="Control" unique_id=339320733]
+z_index = 10
 z_as_relative = false
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 0
+mouse_filter = 2
 
-[node name="PanelContainer" type="Panel" parent="." unique_id=1465171246]
-z_index = 7
-texture_filter = 1
-layout_mode = 0
-offset_left = 1.0
-offset_right = 187.0
-offset_bottom = 43.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_5f2j7")
+[node name="Eq" type="Sprite2D" parent="." unique_id=1852006837]
+position = Vector2(92, 22)
+texture = ExtResource("1_ds3dq")
 
-[node name="TextureRect9" type="TextureRect" parent="PanelContainer" unique_id=1875458687]
+[node name="TextureRect9" type="TextureRect" parent="." unique_id=1875458687]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 5.0
-offset_top = 5.0
+offset_top = 6.0
 offset_right = 37.0
-offset_bottom = 37.0
+offset_bottom = 38.0
 texture = ExtResource("2_b30ko")
 
-[node name="TextureRect8" type="TextureRect" parent="PanelContainer" unique_id=1945129033]
+[node name="TextureRect8" type="TextureRect" parent="." unique_id=1945129033]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 41.0
-offset_top = 5.0
+offset_top = 6.0
 offset_right = 73.0
-offset_bottom = 37.0
+offset_bottom = 38.0
 texture = ExtResource("2_b30ko")
 
-[node name="TextureRect7" type="TextureRect" parent="PanelContainer" unique_id=1219938321]
+[node name="TextureRect7" type="TextureRect" parent="." unique_id=1219938321]
 layout_mode = 0
 offset_left = 77.0
-offset_top = 5.0
+offset_top = 6.0
 offset_right = 109.0
-offset_bottom = 37.0
+offset_bottom = 38.0
 texture = ExtResource("2_b30ko")
 
-[node name="TextureRect6" type="TextureRect" parent="PanelContainer" unique_id=1668923462]
+[node name="TextureRect6" type="TextureRect" parent="." unique_id=1668923462]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 113.0
-offset_top = 5.0
+offset_top = 6.0
 offset_right = 145.0
-offset_bottom = 37.0
+offset_bottom = 38.0
 texture = ExtResource("2_b30ko")
 
-[node name="TextureRect5" type="TextureRect" parent="PanelContainer" unique_id=1308300095]
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1308300095]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 148.0
-offset_top = 5.0
+offset_top = 6.0
 offset_right = 180.0
-offset_bottom = 37.0
+offset_bottom = 38.0
 texture = ExtResource("2_b30ko")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1192843189]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1192843189]
 texture_repeat = 2
 layout_mode = 0
 offset_left = 5.0
-offset_top = 5.0
+offset_top = 6.0
 offset_right = 181.0
-offset_bottom = 37.0
+offset_bottom = 38.0
 size_flags_vertical = 8
 alignment = 1
 script = ExtResource("2_vqyee")
 
-[node name="Button2" type="TextureButton" parent="PanelContainer/HBoxContainer" unique_id=1566471630 node_paths=PackedStringArray("target")]
+[node name="Button2" type="TextureButton" parent="HBoxContainer" unique_id=1566471630 node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -91,7 +85,7 @@ selected_texture = ExtResource("4_jrwqy")
 target = NodePath("../../TextureRect9")
 default_texture = ExtResource("2_b30ko")
 
-[node name="Button3" type="TextureButton" parent="PanelContainer/HBoxContainer" unique_id=1315301731 node_paths=PackedStringArray("target")]
+[node name="Button3" type="TextureButton" parent="HBoxContainer" unique_id=1315301731 node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4
@@ -100,7 +94,7 @@ selected_texture = ExtResource("4_jrwqy")
 target = NodePath("../../TextureRect8")
 default_texture = ExtResource("2_b30ko")
 
-[node name="Button4" type="TextureButton" parent="PanelContainer/HBoxContainer" unique_id=1543432413 node_paths=PackedStringArray("target")]
+[node name="Button4" type="TextureButton" parent="HBoxContainer" unique_id=1543432413 node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4
@@ -109,7 +103,7 @@ selected_texture = ExtResource("4_jrwqy")
 target = NodePath("../../TextureRect7")
 default_texture = ExtResource("2_b30ko")
 
-[node name="Button5" type="TextureButton" parent="PanelContainer/HBoxContainer" unique_id=890635881 node_paths=PackedStringArray("target")]
+[node name="Button5" type="TextureButton" parent="HBoxContainer" unique_id=890635881 node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4
@@ -118,7 +112,7 @@ selected_texture = ExtResource("4_jrwqy")
 target = NodePath("../../TextureRect6")
 default_texture = ExtResource("2_b30ko")
 
-[node name="Button1" type="TextureButton" parent="PanelContainer/HBoxContainer" unique_id=1333887478 node_paths=PackedStringArray("target")]
+[node name="Button1" type="TextureButton" parent="HBoxContainer" unique_id=1333887478 node_paths=PackedStringArray("target")]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 stretch_mode = 4

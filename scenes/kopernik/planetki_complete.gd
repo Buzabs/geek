@@ -32,7 +32,7 @@ func _on_solution_checked():
 		await $AnimatedSprite2D.animation_finished
 		get_tree().change_scene_to_file("res://scenes/level_1/anglia.tscn")
 		var dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "teleportacja")
-		MusicManager.play_music("res://soundtracki/Magic Town.mp3")
+		MusicManager.play_music("res://soundtracki/magical_theme.wav")
 		await get_tree().process_frame  # poczekaj aż się zbuduje
 		var  balloon = dialog.get_child(0)
 		balloon.position = Vector2(50, 25)

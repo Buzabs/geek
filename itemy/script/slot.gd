@@ -13,11 +13,7 @@ func _ready():
 	if target:
 		target.texture = default_texture
 
-func deselect():
-	is_selected = false
-	target.texture = default_texture
-	GlobalEq.selected_item = null
-	GlobalEq.selected_item_id = ""
+
 
 func _on_pressed():
 	if not target:
@@ -26,7 +22,6 @@ func _on_pressed():
 		item_id = ""
 		return
 	if is_selected:
-		deselect()
 		return
 	# reset rodzeństwa
 	for sibling in get_parent().get_children():

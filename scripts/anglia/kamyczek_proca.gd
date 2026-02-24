@@ -38,7 +38,6 @@ func rzucanie(rzut):
 		await get_tree().create_timer(0.5).timeout
 		$animation.play("przeniesienie")
 		await $animation.animation_finished	
-		MusicManager.play_music("res://soundtracki/Magic Town.mp3")
 		get_tree().change_scene_to_file("res://scenes/tutorial/test_scene.tscn")
 
 
