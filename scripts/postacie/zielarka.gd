@@ -33,7 +33,7 @@ func _input_event(viewport, event, shape_idx):
 			balloon = dialog.get_child(0)
 			balloon.position = Vector2(50, 25)
 			await DialogueManager.dialogue_ended
-			dialog =DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka2")
+			dialog = DialogueManager.show_example_dialogue_balloon(load("res://Dialogi/anglia.dialogue"), "zielarka2")
 			await get_tree().process_frame  # poczekaj aż się zbuduje
 			balloon = dialog.get_child(0)
 			balloon.position = Vector2(50, 25)

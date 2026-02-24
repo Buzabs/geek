@@ -12,7 +12,9 @@ z_as_relative = false
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
-size_flags_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
 mouse_filter = 2
 
 [node name="Eq" type="Sprite2D" parent="." unique_id=1852006837]
@@ -26,6 +28,7 @@ offset_left = 5.0
 offset_top = 6.0
 offset_right = 37.0
 offset_bottom = 38.0
+mouse_filter = 2
 texture = ExtResource("2_b30ko")
 
 [node name="TextureRect8" type="TextureRect" parent="." unique_id=1945129033]
@@ -35,6 +38,7 @@ offset_left = 41.0
 offset_top = 6.0
 offset_right = 73.0
 offset_bottom = 38.0
+mouse_filter = 2
 texture = ExtResource("2_b30ko")
 
 [node name="TextureRect7" type="TextureRect" parent="." unique_id=1219938321]
@@ -43,6 +47,7 @@ offset_left = 77.0
 offset_top = 6.0
 offset_right = 109.0
 offset_bottom = 38.0
+mouse_filter = 2
 texture = ExtResource("2_b30ko")
 
 [node name="TextureRect6" type="TextureRect" parent="." unique_id=1668923462]
@@ -52,6 +57,7 @@ offset_left = 113.0
 offset_top = 6.0
 offset_right = 145.0
 offset_bottom = 38.0
+mouse_filter = 2
 texture = ExtResource("2_b30ko")
 
 [node name="TextureRect5" type="TextureRect" parent="." unique_id=1308300095]
@@ -61,6 +67,7 @@ offset_left = 148.0
 offset_top = 6.0
 offset_right = 180.0
 offset_bottom = 38.0
+mouse_filter = 2
 texture = ExtResource("2_b30ko")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1192843189]
@@ -71,6 +78,7 @@ offset_top = 6.0
 offset_right = 181.0
 offset_bottom = 38.0
 size_flags_vertical = 8
+mouse_filter = 2
 alignment = 1
 script = ExtResource("2_vqyee")
 

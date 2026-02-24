@@ -21,8 +21,7 @@ func _on_pressed():
 	if item_id != "" and not GlobalEq.has_item(item_id):
 		item_id = ""
 		return
-	if is_selected:
-		return
+
 	# reset rodzeństwa
 	for sibling in get_parent().get_children():
 		if sibling is SlotButton and sibling != self:

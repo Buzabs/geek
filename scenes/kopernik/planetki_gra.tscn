@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://cla3577hp8lop" path="res://scenes/global/pausa.tscn" id="15_tsr8k"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tsr8k"]
-load_path = "res://.godot/imported/cutscene_planetkij.png-beabf4ba14a68c2c375059e14f3084ae.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aa0gw"]
 atlas = SubResource("CompressedTexture2D_tsr8k")
@@ -62,22 +61,22 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.1,
+"duration": 2.4,
 "texture": SubResource("AtlasTexture_amrbc")
 }, {
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_iw4y1")
 }, {
-"duration": 1.2,
+"duration": 1.8,
 "texture": SubResource("AtlasTexture_0o42v")
 }, {
-"duration": 1.4,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_gq0oh")
 }, {
-"duration": 1.4,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_tvmqk")
 }, {
-"duration": 1.4,
+"duration": 1.9,
 "texture": SubResource("AtlasTexture_dnsgu")
 }, {
 "duration": 1.5,

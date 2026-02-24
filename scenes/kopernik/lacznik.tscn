@@ -58,6 +58,15 @@ pause_scene = ExtResource("2_tw23o")
 texture_filter = 1
 texture = ExtResource("4_tw23o")
 
+[node name="eq" parent="." unique_id=1185207575 instance=ExtResource("2_jk7vo")]
+anchors_preset = 0
+offset_left = -71.0
+offset_top = 49.0
+offset_right = -71.0
+offset_bottom = 49.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
 [node name="SzafkaKopernik" type="Sprite2D" parent="." unique_id=479778935]
 texture_filter = 1
 position = Vector2(14, -45)
@@ -272,12 +281,6 @@ shape = SubResource("RectangleShape2D_igf7e")
 texture_filter = 1
 position = Vector2(25, 37)
 texture = ExtResource("21_2ukvl")
-
-[node name="eq" parent="." unique_id=1185207575 instance=ExtResource("2_jk7vo")]
-offset_left = -71.0
-offset_top = 49.0
-offset_right = -71.0
-offset_bottom = 49.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1445011292]
 script = ExtResource("22_2ukvl")

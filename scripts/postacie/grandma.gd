@@ -20,7 +20,7 @@ func _on_exit(body):
 		can_interact = false
 
 func _input_event(viewport, event, shape_idx):
-	if GlobalC.next_dialog:
+	if GlobalC.can_see:
 		return
 	if event is InputEventMouseButton and event.pressed and can_interact and not GlobalC.next_dialog :
 		
